@@ -1,5 +1,5 @@
 # J-SSSynth
-NU EECS 392: VLSI/FPGA Capstone Design
+NU EECS392: VLSI/FPGA Capstone Design
 
 ```
 14APR15: Project Proposal
