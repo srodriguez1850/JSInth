@@ -50,3 +50,50 @@ set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name VHDL_FILE VGA_top_level.vhd
+set_global_assignment -name VHDL_FILE vga_sync.vhd
+set_global_assignment -name VHDL_FILE pixelGenerator.vhd
+set_global_assignment -name VHDL_FILE colorROM.vhd
+set_global_assignment -name VHDL_FILE JSInth.vhd
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_Y2 -to clk
+set_location_assignment PIN_G13 -to horiz_sync
+set_location_assignment PIN_F11 -to vga_blank
+set_location_assignment PIN_C13 -to vert_sync
+set_location_assignment PIN_H13 -to vga_blue[9]
+set_location_assignment PIN_J13 -to vga_blue[8]
+set_location_assignment PIN_D12 -to vga_blue[7]
+set_location_assignment PIN_D11 -to vga_blue[6]
+set_location_assignment PIN_C12 -to vga_blue[5]
+set_location_assignment PIN_A11 -to vga_blue[4]
+set_location_assignment PIN_B11 -to vga_blue[3]
+set_location_assignment PIN_C11 -to vga_blue[2]
+set_location_assignment PIN_A10 -to vga_blue[1]
+set_location_assignment PIN_B10 -to vga_blue[0]
+set_location_assignment PIN_A12 -to vga_clk
+set_location_assignment PIN_C10 -to vga_green[9]
+set_location_assignment PIN_B7 -to vga_green[8]
+set_location_assignment PIN_C9 -to vga_green[7]
+set_location_assignment PIN_F10 -to vga_green[6]
+set_location_assignment PIN_B8 -to vga_green[5]
+set_location_assignment PIN_C8 -to vga_green[4]
+set_location_assignment PIN_H12 -to vga_green[3]
+set_location_assignment PIN_F8 -to vga_green[2]
+set_location_assignment PIN_G11 -to vga_green[1]
+set_location_assignment PIN_G8 -to vga_green[0]
+set_location_assignment PIN_A7 -to vga_red[9]
+set_location_assignment PIN_F14 -to vga_red[8]
+set_location_assignment PIN_H10 -to vga_red[7]
+set_location_assignment PIN_H8 -to vga_red[6]
+set_location_assignment PIN_J12 -to vga_red[5]
+set_location_assignment PIN_G10 -to vga_red[4]
+set_location_assignment PIN_F12 -to vga_red[3]
+set_location_assignment PIN_D10 -to vga_red[2]
+set_location_assignment PIN_E11 -to vga_red[1]
+set_location_assignment PIN_E10 -to vga_red[0]
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
