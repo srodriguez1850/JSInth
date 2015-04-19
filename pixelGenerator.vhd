@@ -124,8 +124,20 @@ begin
 			end if;
 			
 			----draw octave blocks
-			if (31 < pixel_column_int AND pixel_column_int < 51 AND 200 < pixel_row_int AND pixel_row_int < 220) then
+			--high block
+			if (31 < pixel_column_int AND pixel_column_int < 51 AND 300 < pixel_row_int AND pixel_row_int < 320) then
 				colorAddress <= color_cyan;
+			--mid block
+			elsif (31 < pixel_column_int AND pixel_column_int < 51 AND 330 < pixel_row_int AND pixel_row_int < 350) then
+				colorAddress <= color_cyan;
+			--low block
+			elsif (31 < pixel_column_int AND pixel_column_int < 51 AND 360 < pixel_row_int AND pixel_row_int < 380) then
+				colorAddress <= color_cyan;
+			end if;
+			
+			----draw mute block
+			if ( 589 < pixel_column_int AND pixel_column_int < 609 AND 200 < pixel_row_int AND pixel_row_int < 220) then
+				colorAddress <= color_red;
 			end if;
 			
 		end if;
