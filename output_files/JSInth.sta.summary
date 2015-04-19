@@ -3,19 +3,19 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -4.581
-TNS   : -13.374
+Slack : -5.010
+TNS   : -15.321
 
 Type  : Slow 1200mV 85C Model Setup 'VGA_top_level:vgamap|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : -2.710
-TNS   : -90.911
-
-Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.332
-TNS   : 0.000
+Slack : -2.784
+TNS   : -87.866
 
 Type  : Slow 1200mV 85C Model Hold 'VGA_top_level:vgamap|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : 0.387
+Slack : 0.285
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.408
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
@@ -27,19 +27,19 @@ Slack : -2.693
 TNS   : -60.518
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -4.056
-TNS   : -11.826
+Slack : -4.471
+TNS   : -13.635
 
 Type  : Slow 1200mV 0C Model Setup 'VGA_top_level:vgamap|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : -2.399
-TNS   : -79.351
-
-Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.304
-TNS   : 0.000
+Slack : -2.486
+TNS   : -76.546
 
 Type  : Slow 1200mV 0C Model Hold 'VGA_top_level:vgamap|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : 0.340
+Slack : 0.316
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.377
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
@@ -51,24 +51,24 @@ Slack : -2.649
 TNS   : -60.474
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -1.683
-TNS   : -4.729
+Slack : -1.978
+TNS   : -5.716
 
 Type  : Fast 1200mV 0C Model Setup 'VGA_top_level:vgamap|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : -0.816
-TNS   : -22.056
+Slack : -0.844
+TNS   : -20.622
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.032
+Slack : 0.049
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'VGA_top_level:vgamap|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : 0.174
+Slack : 0.131
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -7.248
+TNS   : -7.243
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'VGA_top_level:vgamap|VGA_SYNC:videoSync|pixel_clock_int'
 Slack : -1.000

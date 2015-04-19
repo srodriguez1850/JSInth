@@ -15,7 +15,8 @@ entity VGA_top_level is
 			keys_vga: in std_logic_vector(16 downto 0);
 			vol_sel_vga: in std_logic;
 			oct_sel_vga: in std_logic;
-			synth_sel_vga: in std_logic
+			synth_sel_vga: in std_logic;
+			mute_sel_vga: in std_logic
 		);
 end entity VGA_top_level;
 
@@ -31,7 +32,8 @@ component pixelGenerator is
 			keys_vga: in std_logic_vector(16 downto 0);
 			vol_sel_vga: in std_logic;
 			oct_sel_vga: in std_logic;
-			synth_sel_vga: in std_logic
+			synth_sel_vga: in std_logic;
+			mute_sel_vga: in std_logic
 		);
 end component pixelGenerator;
 
@@ -57,7 +59,7 @@ begin
 
 	videoGen : pixelGenerator
 		port map(CLOCK_50, VGA_clk_int, RESET_N, video_on_int, eof, pixel_row_int, pixel_column_int, VGA_RED, VGA_GREEN,
-		VGA_BLUE, keys_vga, vol_sel_vga, oct_sel_vga, synth_sel_vga);
+		VGA_BLUE, keys_vga, vol_sel_vga, oct_sel_vga, synth_sel_vga, mute_sel_vga);
 
 --------------------------------------------------------------------------------------------
 --This section should not be modified in your design.  This section handles the VGA timing signals

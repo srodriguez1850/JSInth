@@ -11,6 +11,7 @@ ENTITY JSInth IS
 		vol_sel: in std_logic;
 		oct_sel: in std_logic;
 		synth_sel: in std_logic;
+		mute_sel: in std_logic;
 		----main outputs
 		--VGA
 		vga_red, vga_green, vga_blue: out std_logic_vector(9 downto 0);
@@ -29,12 +30,13 @@ COMPONENT VGA_top_level IS
 		keys_vga: in std_logic_vector(16 downto 0);
 		vol_sel_vga: in std_logic;
 		oct_sel_vga: in std_logic;
-		synth_sel_vga: in std_logic
+		synth_sel_vga: in std_logic;
+		mute_sel_vga: in std_logic
 	);
 END COMPONENT VGA_top_level;
 
 BEGIN
 --map VGA monitor
-vgamap: VGA_top_level port map(clk, reset, vga_red, vga_green, vga_blue, horiz_sync, vert_sync, vga_blank, vga_clk, keys, vol_sel, oct_sel, synth_sel);
+vgamap: VGA_top_level port map(clk, reset, vga_red, vga_green, vga_blue, horiz_sync, vert_sync, vga_blank, vga_clk, keys, vol_sel, oct_sel, synth_sel, mute_sel);
 
 END ARCHITECTURE main;
