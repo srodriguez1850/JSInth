@@ -1,0 +1,4 @@
+ENTITY FSM_volume IS
+	PORT(
+	);
+END ENTITY FSM_volume;

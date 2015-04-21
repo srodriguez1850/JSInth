@@ -10,7 +10,7 @@ entity pixelGenerator is
 			red_out, green_out, blue_out					: out std_logic_vector(9 downto 0);
 			--synth inputs
 			keys_vga: in std_logic_vector(16 downto 0);
-			vol_sel_vga: in std_logic;
+			vol_vga: in std_logic_vector(2 downto 0);
 			oct_sel_vga: in std_logic;
 			synth_sel_vga: in std_logic;
 			mute_sel_vga: in std_logic
@@ -215,15 +215,35 @@ begin
 			
 			----draw volume blocks
 			if (31 < pixel_column_int AND pixel_column_int < 41 AND 420 < pixel_row_int AND pixel_row_int < 430) then
-				colorAddress <= color_white;
+				if (vol_vga >= "000" ) then
+					colorAddress <= color_white;
+				else
+					colorAddress <= color_black;
+				end if;
 			elsif (43 < pixel_column_int AND pixel_column_int < 53 AND 415 < pixel_row_int AND pixel_row_int < 430) then
-				colorAddress <= color_white;
+				if (vol_vga >= "001" ) then
+					colorAddress <= color_white;
+				else
+					colorAddress <= color_black;
+				end if;
 			elsif (55 < pixel_column_int AND pixel_column_int < 65 AND 410 < pixel_row_int AND pixel_row_int < 430) then
-				colorAddress <= color_white;
+				if (vol_vga >= "010" ) then
+					colorAddress <= color_white;
+				else
+					colorAddress <= color_black;
+				end if;
 			elsif (67 < pixel_column_int AND pixel_column_int < 77 AND 405 < pixel_row_int AND pixel_row_int < 430) then
-				colorAddress <= color_white;
+				if (vol_vga >= "011" ) then
+					colorAddress <= color_white;
+				else
+					colorAddress <= color_black;
+				end if;
 			elsif (79 < pixel_column_int AND pixel_column_int < 89 AND 400 < pixel_row_int AND pixel_row_int < 430) then
-				colorAddress <= color_white;
+				if (vol_vga >= "100" ) then
+					colorAddress <= color_white;
+				else
+					colorAddress <= color_black;
+				end if;
 			end if;
 			
 			----draw synth blocks

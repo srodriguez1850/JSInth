@@ -8,7 +8,8 @@ ENTITY JSInth IS
 		reset: in std_logic; --not applicable
 		clk: in std_logic;
 		keys: in std_logic_vector(16 downto 0);
-		vol_sel: in std_logic;
+		vol_up: in std_logic;
+		vol_down: in std_logic;
 		oct_sel: in std_logic;
 		synth_sel: in std_logic;
 		mute_sel: in std_logic;
@@ -28,15 +29,27 @@ COMPONENT VGA_top_level IS
 		HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK: out std_logic;
 		--main inputs
 		keys_vga: in std_logic_vector(16 downto 0);
-		vol_sel_vga: in std_logic;
+		vol_vga: in std_logic_vector(2 downto 0);
 		oct_sel_vga: in std_logic;
 		synth_sel_vga: in std_logic;
 		mute_sel_vga: in std_logic
 	);
 END COMPONENT VGA_top_level;
 
+COMPONENT FSM_volume IS
+	PORT(
+		up, down: in std_logic;
+		clk: in std_logic;
+		z: out std_logic_vector(2 downto 0)
+	);
+END COMPONENT FSM_volume;
+
+SIGNAL current_volume: std_logic_vector (2 downto 0);
+
 BEGIN
+--map volume FSM
+volmap: FSM_volume port map(vol_up, vol_down, clk, current_volume);
 --map VGA monitor
-vgamap: VGA_top_level port map(clk, reset, vga_red, vga_green, vga_blue, horiz_sync, vert_sync, vga_blank, vga_clk, keys, vol_sel, oct_sel, synth_sel, mute_sel);
+vgamap: VGA_top_level port map(clk, reset, vga_red, vga_green, vga_blue, horiz_sync, vert_sync, vga_blank, vga_clk, keys, current_volume, oct_sel, synth_sel, mute_sel);
 
 END ARCHITECTURE main;
