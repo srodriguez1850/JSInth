@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 14.1.0 Build 186 12/03/2014 SJ Web Edition"
 
--- DATE "04/21/2015 17:16:14"
+-- DATE "04/21/2015 17:23:05"
 
 -- 
 -- Device: Altera EP4CE115F29C7 Package FBGA780
@@ -57,7 +57,7 @@ END JSInth;
 -- Design Ports Information
 -- reset	=>  Location: PIN_A14,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- oct_sel	=>  Location: PIN_B14,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- synth_sel	=>  Location: PIN_V7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- synth_sel	=>  Location: PIN_AH3,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- vga_red[0]	=>  Location: PIN_E10,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- vga_red[1]	=>  Location: PIN_E11,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- vga_red[2]	=>  Location: PIN_D10,	 I/O Standard: 2.5 V,	 Current Strength: Default
@@ -196,10 +196,10 @@ SIGNAL \vgamap|videoSync|Add0~14_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|Add0~15\ : std_logic;
 SIGNAL \vgamap|videoSync|Add0~16_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|h_count~0_combout\ : std_logic;
+SIGNAL \vgamap|videoSync|Equal0~2_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|Add0~17\ : std_logic;
 SIGNAL \vgamap|videoSync|Add0~18_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|h_count~1_combout\ : std_logic;
-SIGNAL \vgamap|videoSync|Equal0~2_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|Equal0~0_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|Equal0~3_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|h_count~3_combout\ : std_logic;
@@ -215,21 +215,19 @@ SIGNAL \vgamap|videoSync|Add0~9\ : std_logic;
 SIGNAL \vgamap|videoSync|Add0~10_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|h_count~2_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|LessThan5~0_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|LessThan22~1_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~12_combout\ : std_logic;
+SIGNAL \vgamap|videoSync|Add1~5\ : std_logic;
+SIGNAL \vgamap|videoSync|Add1~6_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|process_1~3_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|Equal1~0_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|Equal0~1_combout\ : std_logic;
+SIGNAL \vgamap|videoSync|LessThan1~1_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|Add1~0_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|v_count~8_combout\ : std_logic;
-SIGNAL \vgamap|videoSync|Add1~1\ : std_logic;
-SIGNAL \vgamap|videoSync|Add1~2_combout\ : std_logic;
-SIGNAL \vgamap|videoSync|v_count~9_combout\ : std_logic;
-SIGNAL \vgamap|videoSync|Add1~3\ : std_logic;
-SIGNAL \vgamap|videoSync|Add1~4_combout\ : std_logic;
-SIGNAL \vgamap|videoSync|v_count[2]~10_combout\ : std_logic;
-SIGNAL \vgamap|videoSync|Add1~5\ : std_logic;
-SIGNAL \vgamap|videoSync|Add1~6_combout\ : std_logic;
+SIGNAL \vgamap|videoSync|LessThan1~0_combout\ : std_logic;
+SIGNAL \vgamap|videoSync|LessThan1~2_combout\ : std_logic;
+SIGNAL \vgamap|videoSync|v_count[9]~1_combout\ : std_logic;
+SIGNAL \vgamap|videoSync|v_count[4]~0_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|v_count[3]~11_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|Add1~7\ : std_logic;
 SIGNAL \vgamap|videoSync|Add1~8_combout\ : std_logic;
@@ -238,61 +236,56 @@ SIGNAL \vgamap|videoSync|Add1~9\ : std_logic;
 SIGNAL \vgamap|videoSync|Add1~10_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|v_count[5]~3_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|Add1~11\ : std_logic;
+SIGNAL \vgamap|videoSync|Add1~12_combout\ : std_logic;
+SIGNAL \vgamap|videoSync|v_count[6]~4_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|Add1~13\ : std_logic;
 SIGNAL \vgamap|videoSync|Add1~14_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|v_count[7]~5_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|Add1~15\ : std_logic;
 SIGNAL \vgamap|videoSync|Add1~16_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|v_count[8]~6_combout\ : std_logic;
-SIGNAL \vgamap|videoSync|LessThan1~1_combout\ : std_logic;
-SIGNAL \vgamap|videoSync|LessThan1~0_combout\ : std_logic;
-SIGNAL \vgamap|videoSync|LessThan1~2_combout\ : std_logic;
-SIGNAL \vgamap|videoSync|v_count[4]~0_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|Add1~17\ : std_logic;
 SIGNAL \vgamap|videoSync|Add1~18_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|v_count[9]~2_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|process_1~7_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|process_1~0_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|process_1~8_combout\ : std_logic;
-SIGNAL \vgamap|videoSync|v_count[9]~1_combout\ : std_logic;
-SIGNAL \vgamap|videoSync|Add1~12_combout\ : std_logic;
-SIGNAL \vgamap|videoSync|v_count[6]~4_combout\ : std_logic;
-SIGNAL \vgamap|videoSync|LessThan6~1_combout\ : std_logic;
+SIGNAL \vgamap|videoSync|Add1~1\ : std_logic;
+SIGNAL \vgamap|videoSync|Add1~2_combout\ : std_logic;
+SIGNAL \vgamap|videoSync|v_count~9_combout\ : std_logic;
+SIGNAL \vgamap|videoSync|Add1~3\ : std_logic;
+SIGNAL \vgamap|videoSync|Add1~4_combout\ : std_logic;
+SIGNAL \vgamap|videoSync|v_count[2]~10_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|LessThan6~0_combout\ : std_logic;
+SIGNAL \vgamap|videoSync|LessThan6~1_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|LessThan6~2_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|LessThan34~0_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|LessThan48~0_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|LessThan44~0_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|LessThan22~2_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|LessThan22~3_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~92_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|LessThan36~0_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|LessThan65~0_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~13_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~93_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~18_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~21_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|LessThan44~0_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|LessThan10~0_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|LessThan18~0_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~22_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~23_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|LessThan5~0_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~17_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~19_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~20_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|LessThan14~0_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|LessThan33~2_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~24_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|LessThan3~0_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~25_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|colorAddress~3_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|LessThan35~0_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|LessThan35~1_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~98_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~14_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~15_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~16_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~18_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~17_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~19_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~20_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|colorAddress~2_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~22_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|LessThan18~0_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~23_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~21_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|LessThan3~0_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|LessThan33~2_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~24_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|LessThan14~0_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~25_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|LessThan10~0_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|colorAddress~3_combout\ : std_logic;
 SIGNAL \volmap|divide_clock:count[0]~1_combout\ : std_logic;
 SIGNAL \volmap|divide_clock:count[0]~q\ : std_logic;
 SIGNAL \volmap|divide_clock:count[0]~2\ : std_logic;
@@ -358,6 +351,7 @@ SIGNAL \volmap|divide_clock:count[20]~q\ : std_logic;
 SIGNAL \volmap|divide_clock:count[20]~2\ : std_logic;
 SIGNAL \volmap|divide_clock:count[21]~1_combout\ : std_logic;
 SIGNAL \volmap|divide_clock:count[21]~q\ : std_logic;
+SIGNAL \volmap|LessThan0~9_combout\ : std_logic;
 SIGNAL \volmap|divide_clock:count[21]~2\ : std_logic;
 SIGNAL \volmap|divide_clock:count[22]~1_combout\ : std_logic;
 SIGNAL \volmap|divide_clock:count[22]~q\ : std_logic;
@@ -388,18 +382,16 @@ SIGNAL \volmap|divide_clock:count[30]~q\ : std_logic;
 SIGNAL \volmap|divide_clock:count[30]~2\ : std_logic;
 SIGNAL \volmap|divide_clock:count[31]~1_combout\ : std_logic;
 SIGNAL \volmap|divide_clock:count[31]~q\ : std_logic;
-SIGNAL \volmap|LessThan0~8_combout\ : std_logic;
-SIGNAL \volmap|LessThan0~9_combout\ : std_logic;
-SIGNAL \volmap|LessThan0~10_combout\ : std_logic;
-SIGNAL \volmap|LessThan0~4_combout\ : std_logic;
-SIGNAL \volmap|LessThan0~1_combout\ : std_logic;
 SIGNAL \volmap|LessThan0~0_combout\ : std_logic;
+SIGNAL \volmap|LessThan0~1_combout\ : std_logic;
 SIGNAL \volmap|LessThan0~2_combout\ : std_logic;
+SIGNAL \volmap|LessThan0~7_combout\ : std_logic;
 SIGNAL \volmap|LessThan0~3_combout\ : std_logic;
+SIGNAL \volmap|LessThan0~4_combout\ : std_logic;
 SIGNAL \volmap|LessThan0~5_combout\ : std_logic;
 SIGNAL \volmap|LessThan0~6_combout\ : std_logic;
-SIGNAL \volmap|LessThan0~7_combout\ : std_logic;
-SIGNAL \volmap|LessThan0~11_combout\ : std_logic;
+SIGNAL \volmap|LessThan0~8_combout\ : std_logic;
+SIGNAL \volmap|LessThan0~10_combout\ : std_logic;
 SIGNAL \volmap|div_clk~0_combout\ : std_logic;
 SIGNAL \volmap|div_clk~feeder_combout\ : std_logic;
 SIGNAL \volmap|div_clk~q\ : std_logic;
@@ -412,51 +404,81 @@ SIGNAL \volmap|Mux5~0_combout\ : std_logic;
 SIGNAL \volmap|Mux5~1_combout\ : std_logic;
 SIGNAL \volmap|Mux3~0_combout\ : std_logic;
 SIGNAL \volmap|Mux3~1_combout\ : std_logic;
-SIGNAL \volmap|z[2]~feeder_combout\ : std_logic;
 SIGNAL \volmap|z[2]~0_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~48_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|LessThan37~0_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~47_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~48_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~50_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~102_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|LessThan5~1_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~49_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~102_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~51_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~52_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~85_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|LessThan12~0_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~85_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~86_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~87_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~88_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~89_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~90_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~91_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~88_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|colorAddress~22_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|colorAddress~23_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|colorAddress~24_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|colorAddress~25_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|colorAddress~26_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|colorAddress~47_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|LessThan22~1_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|LessThan34~0_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|LessThan48~0_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|LessThan22~2_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|LessThan22~3_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~92_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~93_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|colorAddress~4_combout\ : std_logic;
+SIGNAL \keys[16]~input_o\ : std_logic;
+SIGNAL \vgamap|videoGen|LessThan16~0_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~58_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|LessThan33~3_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|LessThan33~4_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|LessThan33~5_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~56_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~57_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~59_combout\ : std_logic;
+SIGNAL \keys[12]~input_o\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~60_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~61_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~62_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~63_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~64_combout\ : std_logic;
+SIGNAL \keys[14]~input_o\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~65_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~32_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~66_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~34_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~67_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~68_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|colorAddress~8_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|colorAddress~9_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|LessThan34~1_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|LessThan33~5_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~31_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~45_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~101_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~46_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~99_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|LessThan9~0_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|LessThan9~1_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~53_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|LessThan9~1_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~54_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~55_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~35_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~100_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~32_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~33_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|LessThan33~3_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~31_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~36_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~29_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~28_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~26_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~27_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~29_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~30_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~37_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|LessThan22~0_combout\ : std_logic;
@@ -470,66 +492,42 @@ SIGNAL \vgamap|videoGen|LessThan24~0_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~42_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|colorAddress~5_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|colorAddress~6_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~101_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~45_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~46_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|colorAddress~7_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|colorAddress~4_combout\ : std_logic;
-SIGNAL \keys[16]~input_o\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~56_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~57_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|LessThan16~0_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~58_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~59_combout\ : std_logic;
-SIGNAL \keys[14]~input_o\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~62_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~61_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~63_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~60_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~64_combout\ : std_logic;
-SIGNAL \keys[12]~input_o\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~65_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~34_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~66_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~67_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~68_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|colorAddress~8_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|colorAddress~9_combout\ : std_logic;
+SIGNAL \keys[5]~input_o\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~74_combout\ : std_logic;
+SIGNAL \keys[7]~input_o\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~69_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|colorAddress~17_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~76_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~75_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~77_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|colorAddress~18_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|colorAddress~19_combout\ : std_logic;
 SIGNAL \keys[9]~input_o\ : std_logic;
 SIGNAL \keys[11]~input_o\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~70_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~69_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~71_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|LessThan6~0_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~72_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~73_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|colorAddress~10_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|colorAddress~11_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~82_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~83_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~84_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|colorAddress~12_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|colorAddress~13_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|colorAddress~14_combout\ : std_logic;
 SIGNAL \keys[4]~input_o\ : std_logic;
-SIGNAL \keys[0]~input_o\ : std_logic;
 SIGNAL \keys[2]~input_o\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~80_combout\ : std_logic;
+SIGNAL \keys[0]~input_o\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~103_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~80_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~81_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~78_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~79_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|colorAddress~15_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~75_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~76_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~77_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|pixelDraw~74_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|colorAddress~14_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~82_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~83_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|pixelDraw~84_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|colorAddress~16_combout\ : std_logic;
-SIGNAL \keys[5]~input_o\ : std_logic;
-SIGNAL \vgamap|videoGen|colorAddress~18_combout\ : std_logic;
-SIGNAL \keys[7]~input_o\ : std_logic;
-SIGNAL \vgamap|videoGen|colorAddress~17_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|colorAddress~19_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|colorAddress~12_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|colorAddress~13_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|colorAddress~20_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|colorAddress~21_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|pixelDraw~96_combout\ : std_logic;
@@ -544,37 +542,37 @@ SIGNAL \volmap|Mux2~0_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|colorAddress~27_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|colorAddress~31_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|colorAddress~32_combout\ : std_logic;
-SIGNAL \keys[15]~input_o\ : std_logic;
 SIGNAL \keys[13]~input_o\ : std_logic;
+SIGNAL \keys[15]~input_o\ : std_logic;
 SIGNAL \vgamap|videoGen|colorAddress~42_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|colorAddress~43_combout\ : std_logic;
+SIGNAL \mute_sel~input_o\ : std_logic;
+SIGNAL \vgamap|videoGen|colorAddress~44_combout\ : std_logic;
 SIGNAL \keys[3]~input_o\ : std_logic;
-SIGNAL \vgamap|videoGen|colorAddress~38_combout\ : std_logic;
 SIGNAL \keys[1]~input_o\ : std_logic;
 SIGNAL \vgamap|videoGen|colorAddress~39_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|colorAddress~38_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|colorAddress~40_combout\ : std_logic;
+SIGNAL \vgamap|videoGen|colorAddress~33_combout\ : std_logic;
 SIGNAL \keys[10]~input_o\ : std_logic;
-SIGNAL \keys[6]~input_o\ : std_logic;
 SIGNAL \keys[8]~input_o\ : std_logic;
+SIGNAL \keys[6]~input_o\ : std_logic;
 SIGNAL \vgamap|videoGen|colorAddress~34_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|colorAddress~35_combout\ : std_logic;
-SIGNAL \vgamap|videoGen|colorAddress~33_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|colorAddress~36_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|colorAddress~37_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|colorAddress~41_combout\ : std_logic;
-SIGNAL \mute_sel~input_o\ : std_logic;
-SIGNAL \vgamap|videoGen|colorAddress~44_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|colorAddress~45_combout\ : std_logic;
 SIGNAL \vgamap|videoGen|colorAddress~46_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|process_1~1_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|process_1~2_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|process_1~4_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|horiz_sync~q\ : std_logic;
+SIGNAL \vgamap|videoSync|horiz_sync_out~feeder_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|horiz_sync_out~q\ : std_logic;
 SIGNAL \vgamap|videoSync|process_1~5_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|process_1~6_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|vert_sync~q\ : std_logic;
-SIGNAL \vgamap|videoSync|vert_sync_out~feeder_combout\ : std_logic;
 SIGNAL \vgamap|videoSync|vert_sync_out~q\ : std_logic;
 SIGNAL \vgamap|videoSync|video_on_v~q\ : std_logic;
 SIGNAL \vgamap|videoSync|video_on_h~feeder_combout\ : std_logic;
@@ -1095,21 +1093,21 @@ PORT MAP (
 	datab => \vgamap|videoSync|pixel_clock_int~q\,
 	combout => \vgamap|videoSync|pixel_clock_int~0_combout\);
 
--- Location: LCCOMB_X55_Y72_N24
+-- Location: LCCOMB_X55_Y72_N2
 \vgamap|videoSync|pixel_clock_int~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoSync|pixel_clock_int~feeder_combout\ = \vgamap|videoSync|pixel_clock_int~0_combout\
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111000011110000",
+	lut_mask => "1010101010101010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => \vgamap|videoSync|pixel_clock_int~0_combout\,
+	dataa => \vgamap|videoSync|pixel_clock_int~0_combout\,
 	combout => \vgamap|videoSync|pixel_clock_int~feeder_combout\);
 
--- Location: FF_X55_Y72_N25
+-- Location: FF_X55_Y72_N3
 \vgamap|videoSync|pixel_clock_int\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1123,7 +1121,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \vgamap|videoSync|pixel_clock_int~q\);
 
--- Location: CLKCTRL_G14
+-- Location: CLKCTRL_G11
 \vgamap|videoSync|pixel_clock_int~clkctrl\ : cycloneive_clkctrl
 -- pragma translate_off
 GENERIC MAP (
@@ -1136,7 +1134,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	outclk => \vgamap|videoSync|pixel_clock_int~clkctrl_outclk\);
 
--- Location: LCCOMB_X59_Y72_N6
+-- Location: LCCOMB_X54_Y63_N6
 \vgamap|videoSync|Add0~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoSync|Add0~0_combout\ = \vgamap|videoSync|h_count\(0) $ (VCC)
@@ -1153,7 +1151,7 @@ PORT MAP (
 	combout => \vgamap|videoSync|Add0~0_combout\,
 	cout => \vgamap|videoSync|Add0~1\);
 
--- Location: LCCOMB_X59_Y72_N16
+-- Location: LCCOMB_X54_Y63_N16
 \vgamap|videoSync|Add0~10\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoSync|Add0~10_combout\ = (\vgamap|videoSync|h_count\(5) & (!\vgamap|videoSync|Add0~9\)) # (!\vgamap|videoSync|h_count\(5) & ((\vgamap|videoSync|Add0~9\) # (GND)))
@@ -1161,17 +1159,17 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011110000111111",
+	lut_mask => "0101101001011111",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \vgamap|videoSync|h_count\(5),
+	dataa => \vgamap|videoSync|h_count\(5),
 	datad => VCC,
 	cin => \vgamap|videoSync|Add0~9\,
 	combout => \vgamap|videoSync|Add0~10_combout\,
 	cout => \vgamap|videoSync|Add0~11\);
 
--- Location: LCCOMB_X59_Y72_N18
+-- Location: LCCOMB_X54_Y63_N18
 \vgamap|videoSync|Add0~12\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoSync|Add0~12_combout\ = (\vgamap|videoSync|h_count\(6) & (\vgamap|videoSync|Add0~11\ $ (GND))) # (!\vgamap|videoSync|h_count\(6) & (!\vgamap|videoSync|Add0~11\ & VCC))
@@ -1189,7 +1187,7 @@ PORT MAP (
 	combout => \vgamap|videoSync|Add0~12_combout\,
 	cout => \vgamap|videoSync|Add0~13\);
 
--- Location: FF_X59_Y72_N19
+-- Location: FF_X54_Y63_N19
 \vgamap|videoSync|h_count[6]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1203,7 +1201,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \vgamap|videoSync|h_count\(6));
 
--- Location: LCCOMB_X59_Y72_N20
+-- Location: LCCOMB_X54_Y63_N20
 \vgamap|videoSync|Add0~14\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoSync|Add0~14_combout\ = (\vgamap|videoSync|h_count\(7) & (!\vgamap|videoSync|Add0~13\)) # (!\vgamap|videoSync|h_count\(7) & ((\vgamap|videoSync|Add0~13\) # (GND)))
@@ -1221,7 +1219,7 @@ PORT MAP (
 	combout => \vgamap|videoSync|Add0~14_combout\,
 	cout => \vgamap|videoSync|Add0~15\);
 
--- Location: FF_X59_Y72_N21
+-- Location: FF_X54_Y63_N21
 \vgamap|videoSync|h_count[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1235,7 +1233,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \vgamap|videoSync|h_count\(7));
 
--- Location: LCCOMB_X59_Y72_N22
+-- Location: LCCOMB_X54_Y63_N22
 \vgamap|videoSync|Add0~16\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoSync|Add0~16_combout\ = (\vgamap|videoSync|h_count\(8) & (\vgamap|videoSync|Add0~15\ $ (GND))) # (!\vgamap|videoSync|h_count\(8) & (!\vgamap|videoSync|Add0~15\ & VCC))
@@ -1253,7 +1251,7 @@ PORT MAP (
 	combout => \vgamap|videoSync|Add0~16_combout\,
 	cout => \vgamap|videoSync|Add0~17\);
 
--- Location: LCCOMB_X59_Y72_N4
+-- Location: LCCOMB_X54_Y63_N0
 \vgamap|videoSync|h_count~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoSync|h_count~0_combout\ = (!\vgamap|videoSync|Equal0~3_combout\ & \vgamap|videoSync|Add0~16_combout\)
@@ -1268,7 +1266,7 @@ PORT MAP (
 	datac => \vgamap|videoSync|Add0~16_combout\,
 	combout => \vgamap|videoSync|h_count~0_combout\);
 
--- Location: FF_X59_Y72_N5
+-- Location: FF_X54_Y63_N1
 \vgamap|videoSync|h_count[8]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1282,22 +1280,39 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \vgamap|videoSync|h_count\(8));
 
--- Location: LCCOMB_X59_Y72_N24
-\vgamap|videoSync|Add0~18\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X55_Y63_N14
+\vgamap|videoSync|Equal0~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoSync|Add0~18_combout\ = \vgamap|videoSync|Add0~17\ $ (\vgamap|videoSync|h_count\(9))
+-- \vgamap|videoSync|Equal0~2_combout\ = (!\vgamap|videoSync|h_count\(3) & (!\vgamap|videoSync|h_count\(7) & (\vgamap|videoSync|h_count\(5) & !\vgamap|videoSync|h_count\(4))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000111111110000",
+	lut_mask => "0000000000010000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|h_count\(3),
+	datab => \vgamap|videoSync|h_count\(7),
+	datac => \vgamap|videoSync|h_count\(5),
+	datad => \vgamap|videoSync|h_count\(4),
+	combout => \vgamap|videoSync|Equal0~2_combout\);
+
+-- Location: LCCOMB_X54_Y63_N24
+\vgamap|videoSync|Add0~18\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoSync|Add0~18_combout\ = \vgamap|videoSync|h_count\(9) $ (\vgamap|videoSync|Add0~17\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101101001011010",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datad => \vgamap|videoSync|h_count\(9),
+	dataa => \vgamap|videoSync|h_count\(9),
 	cin => \vgamap|videoSync|Add0~17\,
 	combout => \vgamap|videoSync|Add0~18_combout\);
 
--- Location: LCCOMB_X59_Y72_N2
+-- Location: LCCOMB_X54_Y63_N26
 \vgamap|videoSync|h_count~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoSync|h_count~1_combout\ = (!\vgamap|videoSync|Equal0~3_combout\ & \vgamap|videoSync|Add0~18_combout\)
@@ -1312,7 +1327,7 @@ PORT MAP (
 	datad => \vgamap|videoSync|Add0~18_combout\,
 	combout => \vgamap|videoSync|h_count~1_combout\);
 
--- Location: FF_X59_Y72_N3
+-- Location: FF_X54_Y63_N27
 \vgamap|videoSync|h_count[9]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1326,27 +1341,10 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \vgamap|videoSync|h_count\(9));
 
--- Location: LCCOMB_X60_Y72_N14
-\vgamap|videoSync|Equal0~2\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoSync|Equal0~2_combout\ = (!\vgamap|videoSync|h_count\(4) & (!\vgamap|videoSync|h_count\(7) & (\vgamap|videoSync|h_count\(5) & !\vgamap|videoSync|h_count\(3))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000010000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|h_count\(4),
-	datab => \vgamap|videoSync|h_count\(7),
-	datac => \vgamap|videoSync|h_count\(5),
-	datad => \vgamap|videoSync|h_count\(3),
-	combout => \vgamap|videoSync|Equal0~2_combout\);
-
--- Location: LCCOMB_X59_Y72_N30
+-- Location: LCCOMB_X54_Y63_N30
 \vgamap|videoSync|Equal0~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoSync|Equal0~0_combout\ = (!\vgamap|videoSync|h_count\(2) & (!\vgamap|videoSync|h_count\(1) & (!\vgamap|videoSync|h_count\(0) & !\vgamap|videoSync|h_count\(6))))
+-- \vgamap|videoSync|Equal0~0_combout\ = (!\vgamap|videoSync|h_count\(2) & (!\vgamap|videoSync|h_count\(0) & (!\vgamap|videoSync|h_count\(1) & !\vgamap|videoSync|h_count\(6))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1355,15 +1353,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \vgamap|videoSync|h_count\(2),
-	datab => \vgamap|videoSync|h_count\(1),
-	datac => \vgamap|videoSync|h_count\(0),
+	datab => \vgamap|videoSync|h_count\(0),
+	datac => \vgamap|videoSync|h_count\(1),
 	datad => \vgamap|videoSync|h_count\(6),
 	combout => \vgamap|videoSync|Equal0~0_combout\);
 
--- Location: LCCOMB_X60_Y72_N20
+-- Location: LCCOMB_X55_Y63_N20
 \vgamap|videoSync|Equal0~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoSync|Equal0~3_combout\ = (\vgamap|videoSync|h_count\(9) & (\vgamap|videoSync|h_count\(8) & (\vgamap|videoSync|Equal0~2_combout\ & \vgamap|videoSync|Equal0~0_combout\)))
+-- \vgamap|videoSync|Equal0~3_combout\ = (\vgamap|videoSync|h_count\(8) & (\vgamap|videoSync|Equal0~2_combout\ & (\vgamap|videoSync|h_count\(9) & \vgamap|videoSync|Equal0~0_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1371,13 +1369,13 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|h_count\(9),
-	datab => \vgamap|videoSync|h_count\(8),
-	datac => \vgamap|videoSync|Equal0~2_combout\,
+	dataa => \vgamap|videoSync|h_count\(8),
+	datab => \vgamap|videoSync|Equal0~2_combout\,
+	datac => \vgamap|videoSync|h_count\(9),
 	datad => \vgamap|videoSync|Equal0~0_combout\,
 	combout => \vgamap|videoSync|Equal0~3_combout\);
 
--- Location: LCCOMB_X59_Y72_N26
+-- Location: LCCOMB_X54_Y63_N4
 \vgamap|videoSync|h_count~3\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoSync|h_count~3_combout\ = (\vgamap|videoSync|Add0~0_combout\ & !\vgamap|videoSync|Equal0~3_combout\)
@@ -1392,7 +1390,7 @@ PORT MAP (
 	datac => \vgamap|videoSync|Equal0~3_combout\,
 	combout => \vgamap|videoSync|h_count~3_combout\);
 
--- Location: FF_X59_Y72_N27
+-- Location: FF_X54_Y63_N5
 \vgamap|videoSync|h_count[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1406,7 +1404,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \vgamap|videoSync|h_count\(0));
 
--- Location: LCCOMB_X59_Y72_N8
+-- Location: LCCOMB_X54_Y63_N8
 \vgamap|videoSync|Add0~2\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoSync|Add0~2_combout\ = (\vgamap|videoSync|h_count\(1) & (!\vgamap|videoSync|Add0~1\)) # (!\vgamap|videoSync|h_count\(1) & ((\vgamap|videoSync|Add0~1\) # (GND)))
@@ -1424,7 +1422,7 @@ PORT MAP (
 	combout => \vgamap|videoSync|Add0~2_combout\,
 	cout => \vgamap|videoSync|Add0~3\);
 
--- Location: FF_X59_Y72_N9
+-- Location: FF_X54_Y63_N9
 \vgamap|videoSync|h_count[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1438,7 +1436,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \vgamap|videoSync|h_count\(1));
 
--- Location: LCCOMB_X59_Y72_N10
+-- Location: LCCOMB_X54_Y63_N10
 \vgamap|videoSync|Add0~4\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoSync|Add0~4_combout\ = (\vgamap|videoSync|h_count\(2) & (\vgamap|videoSync|Add0~3\ $ (GND))) # (!\vgamap|videoSync|h_count\(2) & (!\vgamap|videoSync|Add0~3\ & VCC))
@@ -1456,7 +1454,7 @@ PORT MAP (
 	combout => \vgamap|videoSync|Add0~4_combout\,
 	cout => \vgamap|videoSync|Add0~5\);
 
--- Location: FF_X59_Y72_N11
+-- Location: FF_X54_Y63_N11
 \vgamap|videoSync|h_count[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1470,7 +1468,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \vgamap|videoSync|h_count\(2));
 
--- Location: LCCOMB_X59_Y72_N12
+-- Location: LCCOMB_X54_Y63_N12
 \vgamap|videoSync|Add0~6\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoSync|Add0~6_combout\ = (\vgamap|videoSync|h_count\(3) & (!\vgamap|videoSync|Add0~5\)) # (!\vgamap|videoSync|h_count\(3) & ((\vgamap|videoSync|Add0~5\) # (GND)))
@@ -1488,7 +1486,7 @@ PORT MAP (
 	combout => \vgamap|videoSync|Add0~6_combout\,
 	cout => \vgamap|videoSync|Add0~7\);
 
--- Location: FF_X59_Y72_N13
+-- Location: FF_X54_Y63_N13
 \vgamap|videoSync|h_count[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1502,7 +1500,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \vgamap|videoSync|h_count\(3));
 
--- Location: LCCOMB_X59_Y72_N14
+-- Location: LCCOMB_X54_Y63_N14
 \vgamap|videoSync|Add0~8\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoSync|Add0~8_combout\ = (\vgamap|videoSync|h_count\(4) & (\vgamap|videoSync|Add0~7\ $ (GND))) # (!\vgamap|videoSync|h_count\(4) & (!\vgamap|videoSync|Add0~7\ & VCC))
@@ -1510,17 +1508,17 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100001100001100",
+	lut_mask => "1010010100001010",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \vgamap|videoSync|h_count\(4),
+	dataa => \vgamap|videoSync|h_count\(4),
 	datad => VCC,
 	cin => \vgamap|videoSync|Add0~7\,
 	combout => \vgamap|videoSync|Add0~8_combout\,
 	cout => \vgamap|videoSync|Add0~9\);
 
--- Location: FF_X59_Y72_N15
+-- Location: FF_X54_Y63_N15
 \vgamap|videoSync|h_count[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1534,7 +1532,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \vgamap|videoSync|h_count\(4));
 
--- Location: LCCOMB_X59_Y72_N0
+-- Location: LCCOMB_X54_Y63_N28
 \vgamap|videoSync|h_count~2\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoSync|h_count~2_combout\ = (\vgamap|videoSync|Add0~10_combout\ & !\vgamap|videoSync|Equal0~3_combout\)
@@ -1549,7 +1547,7 @@ PORT MAP (
 	datac => \vgamap|videoSync|Equal0~3_combout\,
 	combout => \vgamap|videoSync|h_count~2_combout\);
 
--- Location: FF_X59_Y72_N1
+-- Location: FF_X54_Y63_N29
 \vgamap|videoSync|h_count[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1563,23 +1561,23 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \vgamap|videoSync|h_count\(5));
 
--- Location: LCCOMB_X58_Y72_N30
+-- Location: LCCOMB_X55_Y63_N16
 \vgamap|videoSync|LessThan5~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoSync|LessThan5~0_combout\ = ((!\vgamap|videoSync|h_count\(7) & !\vgamap|videoSync|h_count\(8))) # (!\vgamap|videoSync|h_count\(9))
+-- \vgamap|videoSync|LessThan5~0_combout\ = ((!\vgamap|videoSync|h_count\(8) & !\vgamap|videoSync|h_count\(7))) # (!\vgamap|videoSync|h_count\(9))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101010101011111",
+	lut_mask => "0000111101011111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|h_count\(9),
-	datac => \vgamap|videoSync|h_count\(7),
-	datad => \vgamap|videoSync|h_count\(8),
+	dataa => \vgamap|videoSync|h_count\(8),
+	datac => \vgamap|videoSync|h_count\(9),
+	datad => \vgamap|videoSync|h_count\(7),
 	combout => \vgamap|videoSync|LessThan5~0_combout\);
 
--- Location: FF_X58_Y71_N5
+-- Location: FF_X56_Y62_N13
 \vgamap|videoSync|pixel_column[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1595,7 +1593,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \vgamap|videoSync|pixel_column\(5));
 
--- Location: FF_X57_Y71_N13
+-- Location: FF_X57_Y62_N31
 \vgamap|videoSync|pixel_column[6]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1611,38 +1609,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \vgamap|videoSync|pixel_column\(6));
 
--- Location: LCCOMB_X58_Y71_N20
-\vgamap|videoGen|LessThan22~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|LessThan22~1_combout\ = (!\vgamap|videoSync|pixel_column\(5) & !\vgamap|videoSync|pixel_column\(6))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000001111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datac => \vgamap|videoSync|pixel_column\(5),
-	datad => \vgamap|videoSync|pixel_column\(6),
-	combout => \vgamap|videoGen|LessThan22~1_combout\);
-
--- Location: FF_X57_Y71_N23
-\vgamap|videoSync|pixel_column[9]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \vgamap|videoSync|pixel_clock_int~clkctrl_outclk\,
-	asdata => \vgamap|videoSync|h_count\(9),
-	sload => VCC,
-	ena => \vgamap|videoSync|LessThan5~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \vgamap|videoSync|pixel_column\(9));
-
--- Location: FF_X57_Y71_N9
+-- Location: FF_X57_Y62_N17
 \vgamap|videoSync|pixel_column[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1658,7 +1625,23 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \vgamap|videoSync|pixel_column\(7));
 
--- Location: FF_X57_Y71_N17
+-- Location: FF_X57_Y62_N7
+\vgamap|videoSync|pixel_column[9]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \vgamap|videoSync|pixel_clock_int~clkctrl_outclk\,
+	asdata => \vgamap|videoSync|h_count\(9),
+	sload => VCC,
+	ena => \vgamap|videoSync|LessThan5~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \vgamap|videoSync|pixel_column\(9));
+
+-- Location: FF_X57_Y62_N21
 \vgamap|videoSync|pixel_column[8]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1674,167 +1657,23 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \vgamap|videoSync|pixel_column\(8));
 
--- Location: LCCOMB_X57_Y71_N10
+-- Location: LCCOMB_X57_Y62_N6
 \vgamap|videoGen|pixelDraw~12\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|pixelDraw~12_combout\ = (!\vgamap|videoSync|pixel_column\(9) & (!\vgamap|videoSync|pixel_column\(7) & !\vgamap|videoSync|pixel_column\(8)))
+-- \vgamap|videoGen|pixelDraw~12_combout\ = (!\vgamap|videoSync|pixel_column\(7) & (!\vgamap|videoSync|pixel_column\(9) & !\vgamap|videoSync|pixel_column\(8)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000000000101",
+	lut_mask => "0000000000000011",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(9),
-	datac => \vgamap|videoSync|pixel_column\(7),
+	datab => \vgamap|videoSync|pixel_column\(7),
+	datac => \vgamap|videoSync|pixel_column\(9),
 	datad => \vgamap|videoSync|pixel_column\(8),
 	combout => \vgamap|videoGen|pixelDraw~12_combout\);
 
--- Location: LCCOMB_X60_Y72_N24
-\vgamap|videoSync|process_1~3\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoSync|process_1~3_combout\ = (\vgamap|videoSync|h_count\(4) & \vgamap|videoSync|h_count\(3))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010101000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|h_count\(4),
-	datad => \vgamap|videoSync|h_count\(3),
-	combout => \vgamap|videoSync|process_1~3_combout\);
-
--- Location: LCCOMB_X60_Y72_N8
-\vgamap|videoSync|Equal1~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoSync|Equal1~0_combout\ = (\vgamap|videoSync|h_count\(5)) # (((\vgamap|videoSync|h_count\(8)) # (!\vgamap|videoSync|process_1~3_combout\)) # (!\vgamap|videoSync|h_count\(7)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111101111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|h_count\(5),
-	datab => \vgamap|videoSync|h_count\(7),
-	datac => \vgamap|videoSync|h_count\(8),
-	datad => \vgamap|videoSync|process_1~3_combout\,
-	combout => \vgamap|videoSync|Equal1~0_combout\);
-
--- Location: LCCOMB_X60_Y72_N22
-\vgamap|videoSync|Equal0~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoSync|Equal0~1_combout\ = (\vgamap|videoSync|h_count\(9) & \vgamap|videoSync|Equal0~0_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010101000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|h_count\(9),
-	datad => \vgamap|videoSync|Equal0~0_combout\,
-	combout => \vgamap|videoSync|Equal0~1_combout\);
-
--- Location: LCCOMB_X61_Y72_N6
-\vgamap|videoSync|Add1~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoSync|Add1~0_combout\ = \vgamap|videoSync|v_count\(0) $ (VCC)
--- \vgamap|videoSync|Add1~1\ = CARRY(\vgamap|videoSync|v_count\(0))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101010110101010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|v_count\(0),
-	datad => VCC,
-	combout => \vgamap|videoSync|Add1~0_combout\,
-	cout => \vgamap|videoSync|Add1~1\);
-
--- Location: LCCOMB_X60_Y72_N26
-\vgamap|videoSync|v_count~8\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoSync|v_count~8_combout\ = (\vgamap|videoSync|Add1~0_combout\ & ((\vgamap|videoSync|process_1~8_combout\) # (\vgamap|videoSync|LessThan1~2_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010101010100000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|Add1~0_combout\,
-	datac => \vgamap|videoSync|process_1~8_combout\,
-	datad => \vgamap|videoSync|LessThan1~2_combout\,
-	combout => \vgamap|videoSync|v_count~8_combout\);
-
--- Location: FF_X60_Y72_N27
-\vgamap|videoSync|v_count[0]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \vgamap|videoSync|pixel_clock_int~clkctrl_outclk\,
-	d => \vgamap|videoSync|v_count~8_combout\,
-	ena => \vgamap|videoSync|v_count[9]~1_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \vgamap|videoSync|v_count\(0));
-
--- Location: LCCOMB_X61_Y72_N8
-\vgamap|videoSync|Add1~2\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoSync|Add1~2_combout\ = (\vgamap|videoSync|v_count\(1) & (!\vgamap|videoSync|Add1~1\)) # (!\vgamap|videoSync|v_count\(1) & ((\vgamap|videoSync|Add1~1\) # (GND)))
--- \vgamap|videoSync|Add1~3\ = CARRY((!\vgamap|videoSync|Add1~1\) # (!\vgamap|videoSync|v_count\(1)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|v_count\(1),
-	datad => VCC,
-	cin => \vgamap|videoSync|Add1~1\,
-	combout => \vgamap|videoSync|Add1~2_combout\,
-	cout => \vgamap|videoSync|Add1~3\);
-
--- Location: LCCOMB_X60_Y72_N16
-\vgamap|videoSync|v_count~9\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoSync|v_count~9_combout\ = (\vgamap|videoSync|Add1~2_combout\ & ((\vgamap|videoSync|process_1~8_combout\) # (\vgamap|videoSync|LessThan1~2_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111000010100000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|process_1~8_combout\,
-	datac => \vgamap|videoSync|Add1~2_combout\,
-	datad => \vgamap|videoSync|LessThan1~2_combout\,
-	combout => \vgamap|videoSync|v_count~9_combout\);
-
--- Location: FF_X60_Y72_N17
-\vgamap|videoSync|v_count[1]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \vgamap|videoSync|pixel_clock_int~clkctrl_outclk\,
-	d => \vgamap|videoSync|v_count~9_combout\,
-	ena => \vgamap|videoSync|v_count[9]~1_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \vgamap|videoSync|v_count\(1));
-
--- Location: LCCOMB_X61_Y72_N10
+-- Location: LCCOMB_X56_Y63_N10
 \vgamap|videoSync|Add1~4\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoSync|Add1~4_combout\ = (\vgamap|videoSync|v_count\(2) & (\vgamap|videoSync|Add1~3\ $ (GND))) # (!\vgamap|videoSync|v_count\(2) & (!\vgamap|videoSync|Add1~3\ & VCC))
@@ -1852,39 +1691,7 @@ PORT MAP (
 	combout => \vgamap|videoSync|Add1~4_combout\,
 	cout => \vgamap|videoSync|Add1~5\);
 
--- Location: LCCOMB_X61_Y72_N4
-\vgamap|videoSync|v_count[2]~10\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoSync|v_count[2]~10_combout\ = (\vgamap|videoSync|v_count[9]~1_combout\ & (\vgamap|videoSync|v_count[4]~0_combout\ & ((\vgamap|videoSync|Add1~4_combout\)))) # (!\vgamap|videoSync|v_count[9]~1_combout\ & ((\vgamap|videoSync|v_count\(2)) # 
--- ((\vgamap|videoSync|v_count[4]~0_combout\ & \vgamap|videoSync|Add1~4_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1101110001010000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|v_count[9]~1_combout\,
-	datab => \vgamap|videoSync|v_count[4]~0_combout\,
-	datac => \vgamap|videoSync|v_count\(2),
-	datad => \vgamap|videoSync|Add1~4_combout\,
-	combout => \vgamap|videoSync|v_count[2]~10_combout\);
-
--- Location: FF_X61_Y72_N5
-\vgamap|videoSync|v_count[2]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \vgamap|videoSync|pixel_clock_int~clkctrl_outclk\,
-	d => \vgamap|videoSync|v_count[2]~10_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \vgamap|videoSync|v_count\(2));
-
--- Location: LCCOMB_X61_Y72_N12
+-- Location: LCCOMB_X56_Y63_N12
 \vgamap|videoSync|Add1~6\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoSync|Add1~6_combout\ = (\vgamap|videoSync|v_count\(3) & (!\vgamap|videoSync|Add1~5\)) # (!\vgamap|videoSync|v_count\(3) & ((\vgamap|videoSync|Add1~5\) # (GND)))
@@ -1892,35 +1699,215 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101101001011111",
+	lut_mask => "0011110000111111",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|v_count\(3),
+	datab => \vgamap|videoSync|v_count\(3),
 	datad => VCC,
 	cin => \vgamap|videoSync|Add1~5\,
 	combout => \vgamap|videoSync|Add1~6_combout\,
 	cout => \vgamap|videoSync|Add1~7\);
 
--- Location: LCCOMB_X61_Y72_N26
-\vgamap|videoSync|v_count[3]~11\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X55_Y63_N10
+\vgamap|videoSync|process_1~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoSync|v_count[3]~11_combout\ = (\vgamap|videoSync|v_count[9]~1_combout\ & (\vgamap|videoSync|v_count[4]~0_combout\ & ((\vgamap|videoSync|Add1~6_combout\)))) # (!\vgamap|videoSync|v_count[9]~1_combout\ & ((\vgamap|videoSync|v_count\(3)) # 
--- ((\vgamap|videoSync|v_count[4]~0_combout\ & \vgamap|videoSync|Add1~6_combout\))))
+-- \vgamap|videoSync|process_1~3_combout\ = (\vgamap|videoSync|h_count\(4) & \vgamap|videoSync|h_count\(3))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1101110001010000",
+	lut_mask => "1010101000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|v_count[9]~1_combout\,
-	datab => \vgamap|videoSync|v_count[4]~0_combout\,
+	dataa => \vgamap|videoSync|h_count\(4),
+	datad => \vgamap|videoSync|h_count\(3),
+	combout => \vgamap|videoSync|process_1~3_combout\);
+
+-- Location: LCCOMB_X55_Y63_N18
+\vgamap|videoSync|Equal1~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoSync|Equal1~0_combout\ = (\vgamap|videoSync|h_count\(8)) # (((\vgamap|videoSync|h_count\(5)) # (!\vgamap|videoSync|process_1~3_combout\)) # (!\vgamap|videoSync|h_count\(7)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111101111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|h_count\(8),
+	datab => \vgamap|videoSync|h_count\(7),
+	datac => \vgamap|videoSync|h_count\(5),
+	datad => \vgamap|videoSync|process_1~3_combout\,
+	combout => \vgamap|videoSync|Equal1~0_combout\);
+
+-- Location: LCCOMB_X55_Y63_N24
+\vgamap|videoSync|Equal0~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoSync|Equal0~1_combout\ = (\vgamap|videoSync|h_count\(9) & \vgamap|videoSync|Equal0~0_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \vgamap|videoSync|h_count\(9),
+	datad => \vgamap|videoSync|Equal0~0_combout\,
+	combout => \vgamap|videoSync|Equal0~1_combout\);
+
+-- Location: LCCOMB_X57_Y63_N26
+\vgamap|videoSync|LessThan1~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoSync|LessThan1~1_combout\ = (!\vgamap|videoSync|v_count\(6) & (!\vgamap|videoSync|v_count\(7) & (!\vgamap|videoSync|v_count\(5) & !\vgamap|videoSync|v_count\(4))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|v_count\(6),
+	datab => \vgamap|videoSync|v_count\(7),
+	datac => \vgamap|videoSync|v_count\(5),
+	datad => \vgamap|videoSync|v_count\(4),
+	combout => \vgamap|videoSync|LessThan1~1_combout\);
+
+-- Location: LCCOMB_X56_Y63_N6
+\vgamap|videoSync|Add1~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoSync|Add1~0_combout\ = \vgamap|videoSync|v_count\(0) $ (VCC)
+-- \vgamap|videoSync|Add1~1\ = CARRY(\vgamap|videoSync|v_count\(0))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101010110101010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|v_count\(0),
+	datad => VCC,
+	combout => \vgamap|videoSync|Add1~0_combout\,
+	cout => \vgamap|videoSync|Add1~1\);
+
+-- Location: LCCOMB_X55_Y63_N8
+\vgamap|videoSync|v_count~8\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoSync|v_count~8_combout\ = (\vgamap|videoSync|Add1~0_combout\ & ((\vgamap|videoSync|LessThan1~2_combout\) # (\vgamap|videoSync|process_1~8_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111101000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|LessThan1~2_combout\,
+	datac => \vgamap|videoSync|process_1~8_combout\,
+	datad => \vgamap|videoSync|Add1~0_combout\,
+	combout => \vgamap|videoSync|v_count~8_combout\);
+
+-- Location: FF_X55_Y63_N9
+\vgamap|videoSync|v_count[0]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \vgamap|videoSync|pixel_clock_int~clkctrl_outclk\,
+	d => \vgamap|videoSync|v_count~8_combout\,
+	ena => \vgamap|videoSync|v_count[9]~1_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \vgamap|videoSync|v_count\(0));
+
+-- Location: LCCOMB_X57_Y63_N20
+\vgamap|videoSync|LessThan1~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoSync|LessThan1~0_combout\ = (((!\vgamap|videoSync|v_count\(0) & !\vgamap|videoSync|v_count\(1))) # (!\vgamap|videoSync|v_count\(2))) # (!\vgamap|videoSync|v_count\(3))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111011101111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|v_count\(3),
+	datab => \vgamap|videoSync|v_count\(2),
+	datac => \vgamap|videoSync|v_count\(0),
+	datad => \vgamap|videoSync|v_count\(1),
+	combout => \vgamap|videoSync|LessThan1~0_combout\);
+
+-- Location: LCCOMB_X57_Y63_N4
+\vgamap|videoSync|LessThan1~2\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoSync|LessThan1~2_combout\ = (!\vgamap|videoSync|v_count\(8) & (\vgamap|videoSync|LessThan1~1_combout\ & \vgamap|videoSync|LessThan1~0_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|v_count\(8),
+	datac => \vgamap|videoSync|LessThan1~1_combout\,
+	datad => \vgamap|videoSync|LessThan1~0_combout\,
+	combout => \vgamap|videoSync|LessThan1~2_combout\);
+
+-- Location: LCCOMB_X55_Y63_N28
+\vgamap|videoSync|v_count[9]~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoSync|v_count[9]~1_combout\ = (\vgamap|videoSync|Equal1~0_combout\ & (!\vgamap|videoSync|process_1~8_combout\ & ((!\vgamap|videoSync|LessThan1~2_combout\)))) # (!\vgamap|videoSync|Equal1~0_combout\ & ((\vgamap|videoSync|Equal0~1_combout\) # 
+-- ((!\vgamap|videoSync|process_1~8_combout\ & !\vgamap|videoSync|LessThan1~2_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101000001110011",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|Equal1~0_combout\,
+	datab => \vgamap|videoSync|process_1~8_combout\,
+	datac => \vgamap|videoSync|Equal0~1_combout\,
+	datad => \vgamap|videoSync|LessThan1~2_combout\,
+	combout => \vgamap|videoSync|v_count[9]~1_combout\);
+
+-- Location: LCCOMB_X57_Y63_N2
+\vgamap|videoSync|v_count[4]~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoSync|v_count[4]~0_combout\ = (!\vgamap|videoSync|Equal1~0_combout\ & (\vgamap|videoSync|Equal0~1_combout\ & ((\vgamap|videoSync|LessThan1~2_combout\) # (\vgamap|videoSync|process_1~8_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000111000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|LessThan1~2_combout\,
+	datab => \vgamap|videoSync|process_1~8_combout\,
+	datac => \vgamap|videoSync|Equal1~0_combout\,
+	datad => \vgamap|videoSync|Equal0~1_combout\,
+	combout => \vgamap|videoSync|v_count[4]~0_combout\);
+
+-- Location: LCCOMB_X56_Y63_N2
+\vgamap|videoSync|v_count[3]~11\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoSync|v_count[3]~11_combout\ = (\vgamap|videoSync|Add1~6_combout\ & ((\vgamap|videoSync|v_count[4]~0_combout\) # ((!\vgamap|videoSync|v_count[9]~1_combout\ & \vgamap|videoSync|v_count\(3))))) # (!\vgamap|videoSync|Add1~6_combout\ & 
+-- (!\vgamap|videoSync|v_count[9]~1_combout\ & (\vgamap|videoSync|v_count\(3))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1011101000110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|Add1~6_combout\,
+	datab => \vgamap|videoSync|v_count[9]~1_combout\,
 	datac => \vgamap|videoSync|v_count\(3),
-	datad => \vgamap|videoSync|Add1~6_combout\,
+	datad => \vgamap|videoSync|v_count[4]~0_combout\,
 	combout => \vgamap|videoSync|v_count[3]~11_combout\);
 
--- Location: FF_X61_Y72_N27
+-- Location: FF_X56_Y63_N3
 \vgamap|videoSync|v_count[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1934,7 +1921,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \vgamap|videoSync|v_count\(3));
 
--- Location: LCCOMB_X61_Y72_N14
+-- Location: LCCOMB_X56_Y63_N14
 \vgamap|videoSync|Add1~8\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoSync|Add1~8_combout\ = (\vgamap|videoSync|v_count\(4) & (\vgamap|videoSync|Add1~7\ $ (GND))) # (!\vgamap|videoSync|v_count\(4) & (!\vgamap|videoSync|Add1~7\ & VCC))
@@ -1952,25 +1939,25 @@ PORT MAP (
 	combout => \vgamap|videoSync|Add1~8_combout\,
 	cout => \vgamap|videoSync|Add1~9\);
 
--- Location: LCCOMB_X61_Y72_N2
+-- Location: LCCOMB_X56_Y63_N30
 \vgamap|videoSync|v_count[4]~7\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoSync|v_count[4]~7_combout\ = (\vgamap|videoSync|v_count[9]~1_combout\ & (\vgamap|videoSync|v_count[4]~0_combout\ & ((\vgamap|videoSync|Add1~8_combout\)))) # (!\vgamap|videoSync|v_count[9]~1_combout\ & ((\vgamap|videoSync|v_count\(4)) # 
--- ((\vgamap|videoSync|v_count[4]~0_combout\ & \vgamap|videoSync|Add1~8_combout\))))
+-- \vgamap|videoSync|v_count[4]~7_combout\ = (\vgamap|videoSync|Add1~8_combout\ & ((\vgamap|videoSync|v_count[4]~0_combout\) # ((!\vgamap|videoSync|v_count[9]~1_combout\ & \vgamap|videoSync|v_count\(4))))) # (!\vgamap|videoSync|Add1~8_combout\ & 
+-- (!\vgamap|videoSync|v_count[9]~1_combout\ & (\vgamap|videoSync|v_count\(4))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1101110001010000",
+	lut_mask => "1011101000110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|v_count[9]~1_combout\,
-	datab => \vgamap|videoSync|v_count[4]~0_combout\,
+	dataa => \vgamap|videoSync|Add1~8_combout\,
+	datab => \vgamap|videoSync|v_count[9]~1_combout\,
 	datac => \vgamap|videoSync|v_count\(4),
-	datad => \vgamap|videoSync|Add1~8_combout\,
+	datad => \vgamap|videoSync|v_count[4]~0_combout\,
 	combout => \vgamap|videoSync|v_count[4]~7_combout\);
 
--- Location: FF_X61_Y72_N3
+-- Location: FF_X56_Y63_N31
 \vgamap|videoSync|v_count[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1984,7 +1971,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \vgamap|videoSync|v_count\(4));
 
--- Location: LCCOMB_X61_Y72_N16
+-- Location: LCCOMB_X56_Y63_N16
 \vgamap|videoSync|Add1~10\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoSync|Add1~10_combout\ = (\vgamap|videoSync|v_count\(5) & (!\vgamap|videoSync|Add1~9\)) # (!\vgamap|videoSync|v_count\(5) & ((\vgamap|videoSync|Add1~9\) # (GND)))
@@ -1992,35 +1979,35 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101101001011111",
+	lut_mask => "0011110000111111",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|v_count\(5),
+	datab => \vgamap|videoSync|v_count\(5),
 	datad => VCC,
 	cin => \vgamap|videoSync|Add1~9\,
 	combout => \vgamap|videoSync|Add1~10_combout\,
 	cout => \vgamap|videoSync|Add1~11\);
 
--- Location: LCCOMB_X61_Y72_N28
+-- Location: LCCOMB_X56_Y63_N0
 \vgamap|videoSync|v_count[5]~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoSync|v_count[5]~3_combout\ = (\vgamap|videoSync|Add1~10_combout\ & ((\vgamap|videoSync|v_count[4]~0_combout\) # ((\vgamap|videoSync|v_count\(5) & !\vgamap|videoSync|v_count[9]~1_combout\)))) # (!\vgamap|videoSync|Add1~10_combout\ & 
--- (((\vgamap|videoSync|v_count\(5) & !\vgamap|videoSync|v_count[9]~1_combout\))))
+-- \vgamap|videoSync|v_count[5]~3_combout\ = (\vgamap|videoSync|Add1~10_combout\ & ((\vgamap|videoSync|v_count[4]~0_combout\) # ((!\vgamap|videoSync|v_count[9]~1_combout\ & \vgamap|videoSync|v_count\(5))))) # (!\vgamap|videoSync|Add1~10_combout\ & 
+-- (!\vgamap|videoSync|v_count[9]~1_combout\ & (\vgamap|videoSync|v_count\(5))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1000100011111000",
+	lut_mask => "1011101000110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vgamap|videoSync|Add1~10_combout\,
-	datab => \vgamap|videoSync|v_count[4]~0_combout\,
+	datab => \vgamap|videoSync|v_count[9]~1_combout\,
 	datac => \vgamap|videoSync|v_count\(5),
-	datad => \vgamap|videoSync|v_count[9]~1_combout\,
+	datad => \vgamap|videoSync|v_count[4]~0_combout\,
 	combout => \vgamap|videoSync|v_count[5]~3_combout\);
 
--- Location: FF_X61_Y72_N29
+-- Location: FF_X56_Y63_N1
 \vgamap|videoSync|v_count[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2034,7 +2021,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \vgamap|videoSync|v_count\(5));
 
--- Location: LCCOMB_X61_Y72_N18
+-- Location: LCCOMB_X56_Y63_N18
 \vgamap|videoSync|Add1~12\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoSync|Add1~12_combout\ = (\vgamap|videoSync|v_count\(6) & (\vgamap|videoSync|Add1~11\ $ (GND))) # (!\vgamap|videoSync|v_count\(6) & (!\vgamap|videoSync|Add1~11\ & VCC))
@@ -2052,7 +2039,39 @@ PORT MAP (
 	combout => \vgamap|videoSync|Add1~12_combout\,
 	cout => \vgamap|videoSync|Add1~13\);
 
--- Location: LCCOMB_X61_Y72_N20
+-- Location: LCCOMB_X56_Y63_N26
+\vgamap|videoSync|v_count[6]~4\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoSync|v_count[6]~4_combout\ = (\vgamap|videoSync|Add1~12_combout\ & ((\vgamap|videoSync|v_count[4]~0_combout\) # ((!\vgamap|videoSync|v_count[9]~1_combout\ & \vgamap|videoSync|v_count\(6))))) # (!\vgamap|videoSync|Add1~12_combout\ & 
+-- (!\vgamap|videoSync|v_count[9]~1_combout\ & (\vgamap|videoSync|v_count\(6))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1011101000110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|Add1~12_combout\,
+	datab => \vgamap|videoSync|v_count[9]~1_combout\,
+	datac => \vgamap|videoSync|v_count\(6),
+	datad => \vgamap|videoSync|v_count[4]~0_combout\,
+	combout => \vgamap|videoSync|v_count[6]~4_combout\);
+
+-- Location: FF_X56_Y63_N27
+\vgamap|videoSync|v_count[6]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \vgamap|videoSync|pixel_clock_int~clkctrl_outclk\,
+	d => \vgamap|videoSync|v_count[6]~4_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \vgamap|videoSync|v_count\(6));
+
+-- Location: LCCOMB_X56_Y63_N20
 \vgamap|videoSync|Add1~14\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoSync|Add1~14_combout\ = (\vgamap|videoSync|v_count\(7) & (!\vgamap|videoSync|Add1~13\)) # (!\vgamap|videoSync|v_count\(7) & ((\vgamap|videoSync|Add1~13\) # (GND)))
@@ -2070,25 +2089,25 @@ PORT MAP (
 	combout => \vgamap|videoSync|Add1~14_combout\,
 	cout => \vgamap|videoSync|Add1~15\);
 
--- Location: LCCOMB_X61_Y72_N0
+-- Location: LCCOMB_X56_Y63_N28
 \vgamap|videoSync|v_count[7]~5\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoSync|v_count[7]~5_combout\ = (\vgamap|videoSync|v_count[9]~1_combout\ & (\vgamap|videoSync|v_count[4]~0_combout\ & ((\vgamap|videoSync|Add1~14_combout\)))) # (!\vgamap|videoSync|v_count[9]~1_combout\ & ((\vgamap|videoSync|v_count\(7)) # 
--- ((\vgamap|videoSync|v_count[4]~0_combout\ & \vgamap|videoSync|Add1~14_combout\))))
+-- \vgamap|videoSync|v_count[7]~5_combout\ = (\vgamap|videoSync|Add1~14_combout\ & ((\vgamap|videoSync|v_count[4]~0_combout\) # ((!\vgamap|videoSync|v_count[9]~1_combout\ & \vgamap|videoSync|v_count\(7))))) # (!\vgamap|videoSync|Add1~14_combout\ & 
+-- (!\vgamap|videoSync|v_count[9]~1_combout\ & (\vgamap|videoSync|v_count\(7))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1101110001010000",
+	lut_mask => "1011101000110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|v_count[9]~1_combout\,
-	datab => \vgamap|videoSync|v_count[4]~0_combout\,
+	dataa => \vgamap|videoSync|Add1~14_combout\,
+	datab => \vgamap|videoSync|v_count[9]~1_combout\,
 	datac => \vgamap|videoSync|v_count\(7),
-	datad => \vgamap|videoSync|Add1~14_combout\,
+	datad => \vgamap|videoSync|v_count[4]~0_combout\,
 	combout => \vgamap|videoSync|v_count[7]~5_combout\);
 
--- Location: FF_X61_Y72_N1
+-- Location: FF_X56_Y63_N29
 \vgamap|videoSync|v_count[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2102,7 +2121,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \vgamap|videoSync|v_count\(7));
 
--- Location: LCCOMB_X61_Y72_N22
+-- Location: LCCOMB_X56_Y63_N22
 \vgamap|videoSync|Add1~16\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoSync|Add1~16_combout\ = (\vgamap|videoSync|v_count\(8) & (\vgamap|videoSync|Add1~15\ $ (GND))) # (!\vgamap|videoSync|v_count\(8) & (!\vgamap|videoSync|Add1~15\ & VCC))
@@ -2120,25 +2139,25 @@ PORT MAP (
 	combout => \vgamap|videoSync|Add1~16_combout\,
 	cout => \vgamap|videoSync|Add1~17\);
 
--- Location: LCCOMB_X62_Y72_N30
+-- Location: LCCOMB_X57_Y63_N30
 \vgamap|videoSync|v_count[8]~6\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoSync|v_count[8]~6_combout\ = (\vgamap|videoSync|Add1~16_combout\ & ((\vgamap|videoSync|v_count[4]~0_combout\) # ((!\vgamap|videoSync|v_count[9]~1_combout\ & \vgamap|videoSync|v_count\(8))))) # (!\vgamap|videoSync|Add1~16_combout\ & 
--- (!\vgamap|videoSync|v_count[9]~1_combout\ & (\vgamap|videoSync|v_count\(8))))
+-- \vgamap|videoSync|v_count[8]~6_combout\ = (\vgamap|videoSync|Add1~16_combout\ & ((\vgamap|videoSync|v_count[4]~0_combout\) # ((\vgamap|videoSync|v_count\(8) & !\vgamap|videoSync|v_count[9]~1_combout\)))) # (!\vgamap|videoSync|Add1~16_combout\ & 
+-- (((\vgamap|videoSync|v_count\(8) & !\vgamap|videoSync|v_count[9]~1_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1011101000110000",
+	lut_mask => "1000100011111000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vgamap|videoSync|Add1~16_combout\,
-	datab => \vgamap|videoSync|v_count[9]~1_combout\,
+	datab => \vgamap|videoSync|v_count[4]~0_combout\,
 	datac => \vgamap|videoSync|v_count\(8),
-	datad => \vgamap|videoSync|v_count[4]~0_combout\,
+	datad => \vgamap|videoSync|v_count[9]~1_combout\,
 	combout => \vgamap|videoSync|v_count[8]~6_combout\);
 
--- Location: FF_X62_Y72_N31
+-- Location: FF_X57_Y63_N31
 \vgamap|videoSync|v_count[8]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2152,74 +2171,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \vgamap|videoSync|v_count\(8));
 
--- Location: LCCOMB_X62_Y72_N22
-\vgamap|videoSync|LessThan1~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoSync|LessThan1~1_combout\ = (!\vgamap|videoSync|v_count\(4) & (!\vgamap|videoSync|v_count\(5) & (!\vgamap|videoSync|v_count\(7) & !\vgamap|videoSync|v_count\(6))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|v_count\(4),
-	datab => \vgamap|videoSync|v_count\(5),
-	datac => \vgamap|videoSync|v_count\(7),
-	datad => \vgamap|videoSync|v_count\(6),
-	combout => \vgamap|videoSync|LessThan1~1_combout\);
-
--- Location: LCCOMB_X62_Y72_N12
-\vgamap|videoSync|LessThan1~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoSync|LessThan1~0_combout\ = (((!\vgamap|videoSync|v_count\(0) & !\vgamap|videoSync|v_count\(1))) # (!\vgamap|videoSync|v_count\(2))) # (!\vgamap|videoSync|v_count\(3))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111011101111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|v_count\(3),
-	datab => \vgamap|videoSync|v_count\(2),
-	datac => \vgamap|videoSync|v_count\(0),
-	datad => \vgamap|videoSync|v_count\(1),
-	combout => \vgamap|videoSync|LessThan1~0_combout\);
-
--- Location: LCCOMB_X62_Y72_N24
-\vgamap|videoSync|LessThan1~2\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoSync|LessThan1~2_combout\ = (!\vgamap|videoSync|v_count\(8) & (\vgamap|videoSync|LessThan1~1_combout\ & \vgamap|videoSync|LessThan1~0_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|v_count\(8),
-	datac => \vgamap|videoSync|LessThan1~1_combout\,
-	datad => \vgamap|videoSync|LessThan1~0_combout\,
-	combout => \vgamap|videoSync|LessThan1~2_combout\);
-
--- Location: LCCOMB_X60_Y72_N6
-\vgamap|videoSync|v_count[4]~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoSync|v_count[4]~0_combout\ = (!\vgamap|videoSync|Equal1~0_combout\ & (\vgamap|videoSync|Equal0~1_combout\ & ((\vgamap|videoSync|process_1~8_combout\) # (\vgamap|videoSync|LessThan1~2_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011000000100000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|process_1~8_combout\,
-	datab => \vgamap|videoSync|Equal1~0_combout\,
-	datac => \vgamap|videoSync|Equal0~1_combout\,
-	datad => \vgamap|videoSync|LessThan1~2_combout\,
-	combout => \vgamap|videoSync|v_count[4]~0_combout\);
-
--- Location: LCCOMB_X61_Y72_N24
+-- Location: LCCOMB_X56_Y63_N24
 \vgamap|videoSync|Add1~18\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoSync|Add1~18_combout\ = \vgamap|videoSync|Add1~17\ $ (\vgamap|videoSync|v_count\(9))
@@ -2234,10 +2186,10 @@ PORT MAP (
 	cin => \vgamap|videoSync|Add1~17\,
 	combout => \vgamap|videoSync|Add1~18_combout\);
 
--- Location: LCCOMB_X60_Y72_N28
+-- Location: LCCOMB_X55_Y63_N26
 \vgamap|videoSync|v_count[9]~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoSync|v_count[9]~2_combout\ = (\vgamap|videoSync|v_count[4]~0_combout\ & ((\vgamap|videoSync|Add1~18_combout\) # ((!\vgamap|videoSync|v_count[9]~1_combout\ & \vgamap|videoSync|v_count\(9))))) # (!\vgamap|videoSync|v_count[4]~0_combout\ & 
+-- \vgamap|videoSync|v_count[9]~2_combout\ = (\vgamap|videoSync|Add1~18_combout\ & ((\vgamap|videoSync|v_count[4]~0_combout\) # ((!\vgamap|videoSync|v_count[9]~1_combout\ & \vgamap|videoSync|v_count\(9))))) # (!\vgamap|videoSync|Add1~18_combout\ & 
 -- (!\vgamap|videoSync|v_count[9]~1_combout\ & (\vgamap|videoSync|v_count\(9))))
 
 -- pragma translate_off
@@ -2246,13 +2198,13 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|v_count[4]~0_combout\,
+	dataa => \vgamap|videoSync|Add1~18_combout\,
 	datab => \vgamap|videoSync|v_count[9]~1_combout\,
 	datac => \vgamap|videoSync|v_count\(9),
-	datad => \vgamap|videoSync|Add1~18_combout\,
+	datad => \vgamap|videoSync|v_count[4]~0_combout\,
 	combout => \vgamap|videoSync|v_count[9]~2_combout\);
 
--- Location: FF_X60_Y72_N29
+-- Location: FF_X55_Y63_N27
 \vgamap|videoSync|v_count[9]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2266,10 +2218,10 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \vgamap|videoSync|v_count\(9));
 
--- Location: LCCOMB_X60_Y72_N4
+-- Location: LCCOMB_X55_Y63_N22
 \vgamap|videoSync|process_1~7\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoSync|process_1~7_combout\ = (!\vgamap|videoSync|h_count\(9)) # (!\vgamap|videoSync|v_count\(9))
+-- \vgamap|videoSync|process_1~7_combout\ = (!\vgamap|videoSync|v_count\(9)) # (!\vgamap|videoSync|h_count\(9))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2277,82 +2229,80 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => \vgamap|videoSync|v_count\(9),
-	datad => \vgamap|videoSync|h_count\(9),
+	datac => \vgamap|videoSync|h_count\(9),
+	datad => \vgamap|videoSync|v_count\(9),
 	combout => \vgamap|videoSync|process_1~7_combout\);
 
--- Location: LCCOMB_X60_Y72_N10
+-- Location: LCCOMB_X54_Y63_N2
 \vgamap|videoSync|process_1~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoSync|process_1~0_combout\ = (!\vgamap|videoSync|h_count\(6) & (!\vgamap|videoSync|h_count\(5) & ((!\vgamap|videoSync|h_count\(3)) # (!\vgamap|videoSync|h_count\(4)))))
+-- \vgamap|videoSync|process_1~0_combout\ = (!\vgamap|videoSync|h_count\(5) & (!\vgamap|videoSync|h_count\(6) & ((!\vgamap|videoSync|h_count\(4)) # (!\vgamap|videoSync|h_count\(3)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000100000011",
+	lut_mask => "0000000000010011",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|h_count\(4),
-	datab => \vgamap|videoSync|h_count\(6),
-	datac => \vgamap|videoSync|h_count\(5),
-	datad => \vgamap|videoSync|h_count\(3),
+	dataa => \vgamap|videoSync|h_count\(3),
+	datab => \vgamap|videoSync|h_count\(5),
+	datac => \vgamap|videoSync|h_count\(4),
+	datad => \vgamap|videoSync|h_count\(6),
 	combout => \vgamap|videoSync|process_1~0_combout\);
 
--- Location: LCCOMB_X60_Y72_N30
+-- Location: LCCOMB_X55_Y63_N0
 \vgamap|videoSync|process_1~8\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoSync|process_1~8_combout\ = (\vgamap|videoSync|process_1~7_combout\) # ((!\vgamap|videoSync|h_count\(8) & ((\vgamap|videoSync|process_1~0_combout\) # (!\vgamap|videoSync|h_count\(7)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111001111110001",
+	lut_mask => "1111010111110001",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|h_count\(7),
-	datab => \vgamap|videoSync|h_count\(8),
+	dataa => \vgamap|videoSync|h_count\(8),
+	datab => \vgamap|videoSync|h_count\(7),
 	datac => \vgamap|videoSync|process_1~7_combout\,
 	datad => \vgamap|videoSync|process_1~0_combout\,
 	combout => \vgamap|videoSync|process_1~8_combout\);
 
--- Location: LCCOMB_X60_Y72_N0
-\vgamap|videoSync|v_count[9]~1\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X56_Y63_N8
+\vgamap|videoSync|Add1~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoSync|v_count[9]~1_combout\ = (\vgamap|videoSync|process_1~8_combout\ & (!\vgamap|videoSync|Equal1~0_combout\ & (\vgamap|videoSync|Equal0~1_combout\))) # (!\vgamap|videoSync|process_1~8_combout\ & (((!\vgamap|videoSync|Equal1~0_combout\ & 
--- \vgamap|videoSync|Equal0~1_combout\)) # (!\vgamap|videoSync|LessThan1~2_combout\)))
+-- \vgamap|videoSync|Add1~2_combout\ = (\vgamap|videoSync|v_count\(1) & (!\vgamap|videoSync|Add1~1\)) # (!\vgamap|videoSync|v_count\(1) & ((\vgamap|videoSync|Add1~1\) # (GND)))
+-- \vgamap|videoSync|Add1~3\ = CARRY((!\vgamap|videoSync|Add1~1\) # (!\vgamap|videoSync|v_count\(1)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011000001110101",
+	lut_mask => "0011110000111111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \vgamap|videoSync|v_count\(1),
+	datad => VCC,
+	cin => \vgamap|videoSync|Add1~1\,
+	combout => \vgamap|videoSync|Add1~2_combout\,
+	cout => \vgamap|videoSync|Add1~3\);
+
+-- Location: LCCOMB_X55_Y63_N6
+\vgamap|videoSync|v_count~9\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoSync|v_count~9_combout\ = (\vgamap|videoSync|Add1~2_combout\ & ((\vgamap|videoSync|process_1~8_combout\) # (\vgamap|videoSync|LessThan1~2_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111000011000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|process_1~8_combout\,
-	datab => \vgamap|videoSync|Equal1~0_combout\,
-	datac => \vgamap|videoSync|Equal0~1_combout\,
+	datab => \vgamap|videoSync|process_1~8_combout\,
+	datac => \vgamap|videoSync|Add1~2_combout\,
 	datad => \vgamap|videoSync|LessThan1~2_combout\,
-	combout => \vgamap|videoSync|v_count[9]~1_combout\);
+	combout => \vgamap|videoSync|v_count~9_combout\);
 
--- Location: LCCOMB_X61_Y72_N30
-\vgamap|videoSync|v_count[6]~4\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoSync|v_count[6]~4_combout\ = (\vgamap|videoSync|v_count[9]~1_combout\ & (\vgamap|videoSync|v_count[4]~0_combout\ & ((\vgamap|videoSync|Add1~12_combout\)))) # (!\vgamap|videoSync|v_count[9]~1_combout\ & ((\vgamap|videoSync|v_count\(6)) # 
--- ((\vgamap|videoSync|v_count[4]~0_combout\ & \vgamap|videoSync|Add1~12_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1101110001010000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|v_count[9]~1_combout\,
-	datab => \vgamap|videoSync|v_count[4]~0_combout\,
-	datac => \vgamap|videoSync|v_count\(6),
-	datad => \vgamap|videoSync|Add1~12_combout\,
-	combout => \vgamap|videoSync|v_count[6]~4_combout\);
-
--- Location: FF_X61_Y72_N31
-\vgamap|videoSync|v_count[6]\ : dffeas
+-- Location: FF_X55_Y63_N7
+\vgamap|videoSync|v_count[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2360,32 +2310,48 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \vgamap|videoSync|pixel_clock_int~clkctrl_outclk\,
-	d => \vgamap|videoSync|v_count[6]~4_combout\,
+	d => \vgamap|videoSync|v_count~9_combout\,
+	ena => \vgamap|videoSync|v_count[9]~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \vgamap|videoSync|v_count\(6));
+	q => \vgamap|videoSync|v_count\(1));
 
--- Location: LCCOMB_X62_Y72_N14
-\vgamap|videoSync|LessThan6~1\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X56_Y63_N4
+\vgamap|videoSync|v_count[2]~10\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoSync|LessThan6~1_combout\ = (\vgamap|videoSync|v_count\(3)) # ((\vgamap|videoSync|v_count\(2)) # ((\vgamap|videoSync|v_count\(0)) # (\vgamap|videoSync|v_count\(1))))
+-- \vgamap|videoSync|v_count[2]~10_combout\ = (\vgamap|videoSync|Add1~4_combout\ & ((\vgamap|videoSync|v_count[4]~0_combout\) # ((!\vgamap|videoSync|v_count[9]~1_combout\ & \vgamap|videoSync|v_count\(2))))) # (!\vgamap|videoSync|Add1~4_combout\ & 
+-- (!\vgamap|videoSync|v_count[9]~1_combout\ & (\vgamap|videoSync|v_count\(2))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111111111110",
+	lut_mask => "1011101000110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|v_count\(3),
-	datab => \vgamap|videoSync|v_count\(2),
-	datac => \vgamap|videoSync|v_count\(0),
-	datad => \vgamap|videoSync|v_count\(1),
-	combout => \vgamap|videoSync|LessThan6~1_combout\);
+	dataa => \vgamap|videoSync|Add1~4_combout\,
+	datab => \vgamap|videoSync|v_count[9]~1_combout\,
+	datac => \vgamap|videoSync|v_count\(2),
+	datad => \vgamap|videoSync|v_count[4]~0_combout\,
+	combout => \vgamap|videoSync|v_count[2]~10_combout\);
 
--- Location: LCCOMB_X62_Y72_N0
+-- Location: FF_X56_Y63_N5
+\vgamap|videoSync|v_count[2]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \vgamap|videoSync|pixel_clock_int~clkctrl_outclk\,
+	d => \vgamap|videoSync|v_count[2]~10_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \vgamap|videoSync|v_count\(2));
+
+-- Location: LCCOMB_X57_Y63_N16
 \vgamap|videoSync|LessThan6~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoSync|LessThan6~0_combout\ = (\vgamap|videoSync|v_count\(8) & (\vgamap|videoSync|v_count\(5) & (\vgamap|videoSync|v_count\(7) & \vgamap|videoSync|v_count\(6))))
+-- \vgamap|videoSync|LessThan6~0_combout\ = (\vgamap|videoSync|v_count\(8) & (\vgamap|videoSync|v_count\(6) & (\vgamap|videoSync|v_count\(5) & \vgamap|videoSync|v_count\(7))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2394,77 +2360,46 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \vgamap|videoSync|v_count\(8),
-	datab => \vgamap|videoSync|v_count\(5),
-	datac => \vgamap|videoSync|v_count\(7),
-	datad => \vgamap|videoSync|v_count\(6),
+	datab => \vgamap|videoSync|v_count\(6),
+	datac => \vgamap|videoSync|v_count\(5),
+	datad => \vgamap|videoSync|v_count\(7),
 	combout => \vgamap|videoSync|LessThan6~0_combout\);
 
--- Location: LCCOMB_X62_Y72_N8
+-- Location: LCCOMB_X57_Y63_N6
+\vgamap|videoSync|LessThan6~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoSync|LessThan6~1_combout\ = (\vgamap|videoSync|v_count\(1)) # ((\vgamap|videoSync|v_count\(3)) # ((\vgamap|videoSync|v_count\(2)) # (\vgamap|videoSync|v_count\(0))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111111110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|v_count\(1),
+	datab => \vgamap|videoSync|v_count\(3),
+	datac => \vgamap|videoSync|v_count\(2),
+	datad => \vgamap|videoSync|v_count\(0),
+	combout => \vgamap|videoSync|LessThan6~1_combout\);
+
+-- Location: LCCOMB_X57_Y63_N12
 \vgamap|videoSync|LessThan6~2\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoSync|LessThan6~2_combout\ = (!\vgamap|videoSync|v_count\(9) & (((!\vgamap|videoSync|v_count\(4) & !\vgamap|videoSync|LessThan6~1_combout\)) # (!\vgamap|videoSync|LessThan6~0_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000100110011",
+	lut_mask => "0001000100010101",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|v_count\(4),
-	datab => \vgamap|videoSync|v_count\(9),
-	datac => \vgamap|videoSync|LessThan6~1_combout\,
-	datad => \vgamap|videoSync|LessThan6~0_combout\,
+	dataa => \vgamap|videoSync|v_count\(9),
+	datab => \vgamap|videoSync|LessThan6~0_combout\,
+	datac => \vgamap|videoSync|v_count\(4),
+	datad => \vgamap|videoSync|LessThan6~1_combout\,
 	combout => \vgamap|videoSync|LessThan6~2_combout\);
 
--- Location: FF_X62_Y71_N3
-\vgamap|videoSync|pixel_row[6]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \vgamap|videoSync|pixel_clock_int~clkctrl_outclk\,
-	asdata => \vgamap|videoSync|v_count\(6),
-	sload => VCC,
-	ena => \vgamap|videoSync|LessThan6~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \vgamap|videoSync|pixel_row\(6));
-
--- Location: FF_X62_Y71_N13
-\vgamap|videoSync|pixel_row[5]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \vgamap|videoSync|pixel_clock_int~clkctrl_outclk\,
-	asdata => \vgamap|videoSync|v_count\(5),
-	sload => VCC,
-	ena => \vgamap|videoSync|LessThan6~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \vgamap|videoSync|pixel_row\(5));
-
--- Location: FF_X62_Y71_N1
-\vgamap|videoSync|pixel_row[0]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \vgamap|videoSync|pixel_clock_int~clkctrl_outclk\,
-	asdata => \vgamap|videoSync|v_count\(0),
-	sload => VCC,
-	ena => \vgamap|videoSync|LessThan6~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \vgamap|videoSync|pixel_row\(0));
-
--- Location: FF_X62_Y71_N27
+-- Location: FF_X58_Y63_N27
 \vgamap|videoSync|pixel_row[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2480,7 +2415,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \vgamap|videoSync|pixel_row\(2));
 
--- Location: FF_X62_Y71_N23
+-- Location: FF_X58_Y63_N15
 \vgamap|videoSync|pixel_row[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2496,38 +2431,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \vgamap|videoSync|pixel_row\(3));
 
--- Location: FF_X62_Y71_N21
-\vgamap|videoSync|pixel_row[4]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \vgamap|videoSync|pixel_clock_int~clkctrl_outclk\,
-	asdata => \vgamap|videoSync|v_count\(4),
-	sload => VCC,
-	ena => \vgamap|videoSync|LessThan6~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \vgamap|videoSync|pixel_row\(4));
-
--- Location: LCCOMB_X62_Y71_N10
-\vgamap|videoGen|LessThan34~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|LessThan34~0_combout\ = (!\vgamap|videoSync|pixel_row\(3) & !\vgamap|videoSync|pixel_row\(4))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000001010101",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_row\(3),
-	datad => \vgamap|videoSync|pixel_row\(4),
-	combout => \vgamap|videoGen|LessThan34~0_combout\);
-
--- Location: FF_X62_Y71_N25
+-- Location: FF_X58_Y63_N29
 \vgamap|videoSync|pixel_row[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2543,25 +2447,8 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \vgamap|videoSync|pixel_row\(1));
 
--- Location: LCCOMB_X61_Y71_N14
-\vgamap|videoGen|LessThan48~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|LessThan48~0_combout\ = ((\vgamap|videoSync|pixel_row\(2) & ((\vgamap|videoSync|pixel_row\(0)) # (\vgamap|videoSync|pixel_row\(1))))) # (!\vgamap|videoGen|LessThan34~0_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100111110001111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_row\(0),
-	datab => \vgamap|videoSync|pixel_row\(2),
-	datac => \vgamap|videoGen|LessThan34~0_combout\,
-	datad => \vgamap|videoSync|pixel_row\(1),
-	combout => \vgamap|videoGen|LessThan48~0_combout\);
-
--- Location: FF_X58_Y71_N19
-\vgamap|videoSync|pixel_column[4]\ : dffeas
+-- Location: FF_X58_Y63_N21
+\vgamap|videoSync|pixel_row[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2569,162 +2456,63 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \vgamap|videoSync|pixel_clock_int~clkctrl_outclk\,
-	asdata => \vgamap|videoSync|h_count\(4),
+	asdata => \vgamap|videoSync|v_count\(4),
 	sload => VCC,
-	ena => \vgamap|videoSync|LessThan5~0_combout\,
+	ena => \vgamap|videoSync|LessThan6~2_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \vgamap|videoSync|pixel_column\(4));
+	q => \vgamap|videoSync|pixel_row\(4));
 
--- Location: FF_X58_Y71_N23
-\vgamap|videoSync|pixel_column[0]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \vgamap|videoSync|pixel_clock_int~clkctrl_outclk\,
-	asdata => \vgamap|videoSync|h_count\(0),
-	sload => VCC,
-	ena => \vgamap|videoSync|LessThan5~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \vgamap|videoSync|pixel_column\(0));
-
--- Location: FF_X58_Y71_N3
-\vgamap|videoSync|pixel_column[2]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \vgamap|videoSync|pixel_clock_int~clkctrl_outclk\,
-	asdata => \vgamap|videoSync|h_count\(2),
-	sload => VCC,
-	ena => \vgamap|videoSync|LessThan5~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \vgamap|videoSync|pixel_column\(2));
-
--- Location: FF_X58_Y71_N29
-\vgamap|videoSync|pixel_column[1]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \vgamap|videoSync|pixel_clock_int~clkctrl_outclk\,
-	asdata => \vgamap|videoSync|h_count\(1),
-	sload => VCC,
-	ena => \vgamap|videoSync|LessThan5~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \vgamap|videoSync|pixel_column\(1));
-
--- Location: LCCOMB_X58_Y71_N24
-\vgamap|videoGen|LessThan44~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|LessThan44~0_combout\ = (\vgamap|videoSync|pixel_column\(0)) # ((\vgamap|videoSync|pixel_column\(2)) # (\vgamap|videoSync|pixel_column\(1)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111111101110",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(0),
-	datab => \vgamap|videoSync|pixel_column\(2),
-	datad => \vgamap|videoSync|pixel_column\(1),
-	combout => \vgamap|videoGen|LessThan44~0_combout\);
-
--- Location: FF_X58_Y71_N13
-\vgamap|videoSync|pixel_column[3]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \vgamap|videoSync|pixel_clock_int~clkctrl_outclk\,
-	asdata => \vgamap|videoSync|h_count\(3),
-	sload => VCC,
-	ena => \vgamap|videoSync|LessThan5~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \vgamap|videoSync|pixel_column\(3));
-
--- Location: LCCOMB_X60_Y71_N2
-\vgamap|videoGen|LessThan22~2\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|LessThan22~2_combout\ = (!\vgamap|videoSync|pixel_column\(6) & (((!\vgamap|videoSync|pixel_column\(3) & !\vgamap|videoSync|pixel_column\(4))) # (!\vgamap|videoSync|pixel_column\(5))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000110111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(3),
-	datab => \vgamap|videoSync|pixel_column\(5),
-	datac => \vgamap|videoSync|pixel_column\(4),
-	datad => \vgamap|videoSync|pixel_column\(6),
-	combout => \vgamap|videoGen|LessThan22~2_combout\);
-
--- Location: LCCOMB_X60_Y71_N16
-\vgamap|videoGen|LessThan22~3\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|LessThan22~3_combout\ = (\vgamap|videoGen|LessThan22~2_combout\) # ((!\vgamap|videoSync|pixel_column\(6) & (!\vgamap|videoSync|pixel_column\(4) & !\vgamap|videoGen|LessThan44~0_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111100000001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(6),
-	datab => \vgamap|videoSync|pixel_column\(4),
-	datac => \vgamap|videoGen|LessThan44~0_combout\,
-	datad => \vgamap|videoGen|LessThan22~2_combout\,
-	combout => \vgamap|videoGen|LessThan22~3_combout\);
-
--- Location: LCCOMB_X60_Y71_N26
-\vgamap|videoGen|pixelDraw~92\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~92_combout\ = (\vgamap|videoGen|LessThan22~3_combout\ & ((\vgamap|videoSync|pixel_row\(6)) # ((\vgamap|videoSync|pixel_row\(5) & \vgamap|videoGen|LessThan48~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1110101000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_row\(6),
-	datab => \vgamap|videoSync|pixel_row\(5),
-	datac => \vgamap|videoGen|LessThan48~0_combout\,
-	datad => \vgamap|videoGen|LessThan22~3_combout\,
-	combout => \vgamap|videoGen|pixelDraw~92_combout\);
-
--- Location: LCCOMB_X62_Y71_N18
+-- Location: LCCOMB_X58_Y63_N28
 \vgamap|videoGen|LessThan36~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|LessThan36~0_combout\ = (!\vgamap|videoSync|pixel_row\(4) & (((!\vgamap|videoSync|pixel_row\(1)) # (!\vgamap|videoSync|pixel_row\(2))) # (!\vgamap|videoSync|pixel_row\(3))))
+-- \vgamap|videoGen|LessThan36~0_combout\ = (!\vgamap|videoSync|pixel_row\(4) & (((!\vgamap|videoSync|pixel_row\(1)) # (!\vgamap|videoSync|pixel_row\(3))) # (!\vgamap|videoSync|pixel_row\(2))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0001001100110011",
+	lut_mask => "0000000001111111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|pixel_row\(3),
-	datab => \vgamap|videoSync|pixel_row\(4),
-	datac => \vgamap|videoSync|pixel_row\(2),
-	datad => \vgamap|videoSync|pixel_row\(1),
+	dataa => \vgamap|videoSync|pixel_row\(2),
+	datab => \vgamap|videoSync|pixel_row\(3),
+	datac => \vgamap|videoSync|pixel_row\(1),
+	datad => \vgamap|videoSync|pixel_row\(4),
 	combout => \vgamap|videoGen|LessThan36~0_combout\);
 
--- Location: FF_X62_Y71_N11
+-- Location: FF_X58_Y63_N1
+\vgamap|videoSync|pixel_row[6]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \vgamap|videoSync|pixel_clock_int~clkctrl_outclk\,
+	asdata => \vgamap|videoSync|v_count\(6),
+	sload => VCC,
+	ena => \vgamap|videoSync|LessThan6~2_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \vgamap|videoSync|pixel_row\(6));
+
+-- Location: FF_X58_Y63_N23
+\vgamap|videoSync|pixel_row[5]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \vgamap|videoSync|pixel_clock_int~clkctrl_outclk\,
+	asdata => \vgamap|videoSync|v_count\(5),
+	sload => VCC,
+	ena => \vgamap|videoSync|LessThan6~2_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \vgamap|videoSync|pixel_row\(5));
+
+-- Location: FF_X58_Y63_N31
 \vgamap|videoSync|pixel_row[8]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2740,7 +2528,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \vgamap|videoSync|pixel_row\(8));
 
--- Location: FF_X62_Y71_N9
+-- Location: FF_X58_Y63_N17
 \vgamap|videoSync|pixel_row[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2756,7 +2544,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \vgamap|videoSync|pixel_row\(7));
 
--- Location: LCCOMB_X62_Y71_N16
+-- Location: LCCOMB_X58_Y63_N4
 \vgamap|videoGen|LessThan65~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoGen|LessThan65~0_combout\ = (\vgamap|videoSync|pixel_row\(8) & \vgamap|videoSync|pixel_row\(7))
@@ -2771,7 +2559,7 @@ PORT MAP (
 	datad => \vgamap|videoSync|pixel_row\(7),
 	combout => \vgamap|videoGen|LessThan65~0_combout\);
 
--- Location: LCCOMB_X62_Y71_N12
+-- Location: LCCOMB_X58_Y63_N22
 \vgamap|videoGen|pixelDraw~13\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoGen|pixelDraw~13_combout\ = (!\vgamap|videoSync|pixel_row\(6) & (\vgamap|videoGen|LessThan65~0_combout\ & ((\vgamap|videoGen|LessThan36~0_combout\) # (!\vgamap|videoSync|pixel_row\(5)))))
@@ -2788,10 +2576,10 @@ PORT MAP (
 	datad => \vgamap|videoGen|LessThan65~0_combout\,
 	combout => \vgamap|videoGen|pixelDraw~13_combout\);
 
--- Location: LCCOMB_X60_Y71_N12
-\vgamap|videoGen|pixelDraw~93\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X58_Y62_N12
+\vgamap|videoGen|pixelDraw~21\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|pixelDraw~93_combout\ = (!\vgamap|videoGen|LessThan22~1_combout\ & (\vgamap|videoGen|pixelDraw~12_combout\ & (\vgamap|videoGen|pixelDraw~92_combout\ & \vgamap|videoGen|pixelDraw~13_combout\)))
+-- \vgamap|videoGen|pixelDraw~21_combout\ = (!\vgamap|videoSync|pixel_column\(5) & (\vgamap|videoSync|pixel_column\(6) & (\vgamap|videoGen|pixelDraw~12_combout\ & \vgamap|videoGen|pixelDraw~13_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2799,82 +2587,357 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoGen|LessThan22~1_combout\,
-	datab => \vgamap|videoGen|pixelDraw~12_combout\,
-	datac => \vgamap|videoGen|pixelDraw~92_combout\,
+	dataa => \vgamap|videoSync|pixel_column\(5),
+	datab => \vgamap|videoSync|pixel_column\(6),
+	datac => \vgamap|videoGen|pixelDraw~12_combout\,
 	datad => \vgamap|videoGen|pixelDraw~13_combout\,
-	combout => \vgamap|videoGen|pixelDraw~93_combout\);
+	combout => \vgamap|videoGen|pixelDraw~21_combout\);
 
--- Location: LCCOMB_X58_Y71_N14
-\vgamap|videoGen|pixelDraw~18\ : cycloneive_lcell_comb
+-- Location: FF_X55_Y62_N19
+\vgamap|videoSync|pixel_column[3]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \vgamap|videoSync|pixel_clock_int~clkctrl_outclk\,
+	asdata => \vgamap|videoSync|h_count\(3),
+	sload => VCC,
+	ena => \vgamap|videoSync|LessThan5~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \vgamap|videoSync|pixel_column\(3));
+
+-- Location: FF_X55_Y62_N1
+\vgamap|videoSync|pixel_column[4]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \vgamap|videoSync|pixel_clock_int~clkctrl_outclk\,
+	asdata => \vgamap|videoSync|h_count\(4),
+	sload => VCC,
+	ena => \vgamap|videoSync|LessThan5~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \vgamap|videoSync|pixel_column\(4));
+
+-- Location: FF_X55_Y62_N11
+\vgamap|videoSync|pixel_column[1]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \vgamap|videoSync|pixel_clock_int~clkctrl_outclk\,
+	asdata => \vgamap|videoSync|h_count\(1),
+	sload => VCC,
+	ena => \vgamap|videoSync|LessThan5~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \vgamap|videoSync|pixel_column\(1));
+
+-- Location: FF_X55_Y62_N5
+\vgamap|videoSync|pixel_column[0]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \vgamap|videoSync|pixel_clock_int~clkctrl_outclk\,
+	asdata => \vgamap|videoSync|h_count\(0),
+	sload => VCC,
+	ena => \vgamap|videoSync|LessThan5~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \vgamap|videoSync|pixel_column\(0));
+
+-- Location: FF_X55_Y62_N29
+\vgamap|videoSync|pixel_column[2]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \vgamap|videoSync|pixel_clock_int~clkctrl_outclk\,
+	asdata => \vgamap|videoSync|h_count\(2),
+	sload => VCC,
+	ena => \vgamap|videoSync|LessThan5~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \vgamap|videoSync|pixel_column\(2));
+
+-- Location: LCCOMB_X55_Y62_N26
+\vgamap|videoGen|LessThan44~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|pixelDraw~18_combout\ = (!\vgamap|videoSync|pixel_column\(3) & (((!\vgamap|videoSync|pixel_column\(1) & !\vgamap|videoSync|pixel_column\(0))) # (!\vgamap|videoSync|pixel_column\(2))))
+-- \vgamap|videoGen|LessThan44~0_combout\ = (\vgamap|videoSync|pixel_column\(1)) # ((\vgamap|videoSync|pixel_column\(0)) # (\vgamap|videoSync|pixel_column\(2)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000001010111",
+	lut_mask => "1111111111111010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(2),
-	datab => \vgamap|videoSync|pixel_column\(1),
+	dataa => \vgamap|videoSync|pixel_column\(1),
 	datac => \vgamap|videoSync|pixel_column\(0),
-	datad => \vgamap|videoSync|pixel_column\(3),
-	combout => \vgamap|videoGen|pixelDraw~18_combout\);
+	datad => \vgamap|videoSync|pixel_column\(2),
+	combout => \vgamap|videoGen|LessThan44~0_combout\);
 
--- Location: LCCOMB_X58_Y71_N4
+-- Location: LCCOMB_X54_Y62_N8
+\vgamap|videoGen|LessThan10~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|LessThan10~0_combout\ = ((!\vgamap|videoGen|LessThan44~0_combout\) # (!\vgamap|videoSync|pixel_column\(4))) # (!\vgamap|videoSync|pixel_column\(3))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011111111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vgamap|videoSync|pixel_column\(3),
+	datac => \vgamap|videoSync|pixel_column\(4),
+	datad => \vgamap|videoGen|LessThan44~0_combout\,
+	combout => \vgamap|videoGen|LessThan10~0_combout\);
+
+-- Location: LCCOMB_X59_Y63_N20
+\vgamap|videoGen|LessThan18~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|LessThan18~0_combout\ = (!\vgamap|videoSync|pixel_row\(6) & !\vgamap|videoSync|pixel_row\(5))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000001111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \vgamap|videoSync|pixel_row\(6),
+	datad => \vgamap|videoSync|pixel_row\(5),
+	combout => \vgamap|videoGen|LessThan18~0_combout\);
+
+-- Location: FF_X58_Y63_N5
+\vgamap|videoSync|pixel_row[0]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \vgamap|videoSync|pixel_clock_int~clkctrl_outclk\,
+	asdata => \vgamap|videoSync|v_count\(0),
+	sload => VCC,
+	ena => \vgamap|videoSync|LessThan6~2_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \vgamap|videoSync|pixel_row\(0));
+
+-- Location: LCCOMB_X59_Y63_N2
+\vgamap|videoGen|pixelDraw~22\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~22_combout\ = (\vgamap|videoSync|pixel_row\(3)) # ((\vgamap|videoSync|pixel_row\(0)) # ((\vgamap|videoSync|pixel_row\(2)) # (\vgamap|videoSync|pixel_row\(1))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111111110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_row\(3),
+	datab => \vgamap|videoSync|pixel_row\(0),
+	datac => \vgamap|videoSync|pixel_row\(2),
+	datad => \vgamap|videoSync|pixel_row\(1),
+	combout => \vgamap|videoGen|pixelDraw~22_combout\);
+
+-- Location: LCCOMB_X59_Y63_N28
+\vgamap|videoGen|pixelDraw~23\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~23_combout\ = (\vgamap|videoSync|pixel_column\(4) & (((\vgamap|videoSync|pixel_row\(4) & \vgamap|videoGen|pixelDraw~22_combout\)) # (!\vgamap|videoGen|LessThan18~0_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1011000000110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_row\(4),
+	datab => \vgamap|videoGen|LessThan18~0_combout\,
+	datac => \vgamap|videoSync|pixel_column\(4),
+	datad => \vgamap|videoGen|pixelDraw~22_combout\,
+	combout => \vgamap|videoGen|pixelDraw~23_combout\);
+
+-- Location: LCCOMB_X55_Y62_N24
 \vgamap|videoGen|LessThan5~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|LessThan5~0_combout\ = (\vgamap|videoSync|pixel_column\(2) & \vgamap|videoSync|pixel_column\(3))
+-- \vgamap|videoGen|LessThan5~0_combout\ = (\vgamap|videoSync|pixel_column\(3) & \vgamap|videoSync|pixel_column\(2))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100110000000000",
+	lut_mask => "1111000000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \vgamap|videoSync|pixel_column\(2),
-	datad => \vgamap|videoSync|pixel_column\(3),
+	datac => \vgamap|videoSync|pixel_column\(3),
+	datad => \vgamap|videoSync|pixel_column\(2),
 	combout => \vgamap|videoGen|LessThan5~0_combout\);
 
--- Location: LCCOMB_X60_Y71_N28
-\vgamap|videoGen|pixelDraw~17\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X55_Y62_N4
+\vgamap|videoGen|LessThan14~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|pixelDraw~17_combout\ = (!\vgamap|videoSync|pixel_column\(6) & (\vgamap|videoSync|pixel_column\(5) & ((\vgamap|videoSync|pixel_row\(5)) # (\vgamap|videoSync|pixel_row\(6)))))
+-- \vgamap|videoGen|LessThan14~0_combout\ = (!\vgamap|videoSync|pixel_column\(4) & (((!\vgamap|videoSync|pixel_column\(1) & !\vgamap|videoSync|pixel_column\(0))) # (!\vgamap|videoGen|LessThan5~0_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0100010001000000",
+	lut_mask => "0000000000110111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(6),
-	datab => \vgamap|videoSync|pixel_column\(5),
-	datac => \vgamap|videoSync|pixel_row\(5),
+	dataa => \vgamap|videoSync|pixel_column\(1),
+	datab => \vgamap|videoGen|LessThan5~0_combout\,
+	datac => \vgamap|videoSync|pixel_column\(0),
+	datad => \vgamap|videoSync|pixel_column\(4),
+	combout => \vgamap|videoGen|LessThan14~0_combout\);
+
+-- Location: LCCOMB_X58_Y63_N2
+\vgamap|videoGen|LessThan33~2\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|LessThan33~2_combout\ = (!\vgamap|videoSync|pixel_row\(5) & (!\vgamap|videoSync|pixel_row\(6) & ((!\vgamap|videoSync|pixel_row\(3)) # (!\vgamap|videoSync|pixel_row\(4)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000010101",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_row\(5),
+	datab => \vgamap|videoSync|pixel_row\(4),
+	datac => \vgamap|videoSync|pixel_row\(3),
 	datad => \vgamap|videoSync|pixel_row\(6),
-	combout => \vgamap|videoGen|pixelDraw~17_combout\);
+	combout => \vgamap|videoGen|LessThan33~2_combout\);
 
--- Location: LCCOMB_X60_Y71_N18
-\vgamap|videoGen|pixelDraw~19\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X59_Y63_N30
+\vgamap|videoGen|pixelDraw~24\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|pixelDraw~19_combout\ = (\vgamap|videoGen|pixelDraw~17_combout\ & ((\vgamap|videoSync|pixel_column\(4) & (\vgamap|videoGen|pixelDraw~18_combout\)) # (!\vgamap|videoSync|pixel_column\(4) & ((\vgamap|videoGen|LessThan5~0_combout\)))))
+-- \vgamap|videoGen|pixelDraw~24_combout\ = ((\vgamap|videoSync|pixel_row\(1) & (\vgamap|videoSync|pixel_row\(4) & \vgamap|videoSync|pixel_row\(2)))) # (!\vgamap|videoGen|LessThan33~2_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1011100000000000",
+	lut_mask => "1000000011111111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoGen|pixelDraw~18_combout\,
-	datab => \vgamap|videoSync|pixel_column\(4),
-	datac => \vgamap|videoGen|LessThan5~0_combout\,
-	datad => \vgamap|videoGen|pixelDraw~17_combout\,
-	combout => \vgamap|videoGen|pixelDraw~19_combout\);
+	dataa => \vgamap|videoSync|pixel_row\(1),
+	datab => \vgamap|videoSync|pixel_row\(4),
+	datac => \vgamap|videoSync|pixel_row\(2),
+	datad => \vgamap|videoGen|LessThan33~2_combout\,
+	combout => \vgamap|videoGen|pixelDraw~24_combout\);
 
--- Location: LCCOMB_X60_Y71_N4
-\vgamap|videoGen|pixelDraw~20\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X63_Y62_N4
+\vgamap|videoGen|LessThan3~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|pixelDraw~20_combout\ = (\vgamap|videoGen|pixelDraw~13_combout\ & (\vgamap|videoGen|pixelDraw~12_combout\ & \vgamap|videoGen|pixelDraw~19_combout\))
+-- \vgamap|videoGen|LessThan3~0_combout\ = (\vgamap|videoSync|pixel_column\(3)) # (\vgamap|videoSync|pixel_column\(2))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \vgamap|videoSync|pixel_column\(3),
+	datad => \vgamap|videoSync|pixel_column\(2),
+	combout => \vgamap|videoGen|LessThan3~0_combout\);
+
+-- Location: LCCOMB_X58_Y62_N10
+\vgamap|videoGen|pixelDraw~25\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~25_combout\ = (\vgamap|videoGen|LessThan14~0_combout\ & (\vgamap|videoGen|pixelDraw~24_combout\ & (\vgamap|videoGen|LessThan3~0_combout\ & \vgamap|videoGen|pixelDraw~21_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoGen|LessThan14~0_combout\,
+	datab => \vgamap|videoGen|pixelDraw~24_combout\,
+	datac => \vgamap|videoGen|LessThan3~0_combout\,
+	datad => \vgamap|videoGen|pixelDraw~21_combout\,
+	combout => \vgamap|videoGen|pixelDraw~25_combout\);
+
+-- Location: LCCOMB_X58_Y62_N16
+\vgamap|videoGen|colorAddress~3\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|colorAddress~3_combout\ = (!\vgamap|videoGen|pixelDraw~25_combout\ & (((!\vgamap|videoGen|pixelDraw~23_combout\) # (!\vgamap|videoGen|LessThan10~0_combout\)) # (!\vgamap|videoGen|pixelDraw~21_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000001111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoGen|pixelDraw~21_combout\,
+	datab => \vgamap|videoGen|LessThan10~0_combout\,
+	datac => \vgamap|videoGen|pixelDraw~23_combout\,
+	datad => \vgamap|videoGen|pixelDraw~25_combout\,
+	combout => \vgamap|videoGen|colorAddress~3_combout\);
+
+-- Location: LCCOMB_X58_Y63_N20
+\vgamap|videoGen|LessThan35~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|LessThan35~0_combout\ = (\vgamap|videoSync|pixel_row\(2)) # ((\vgamap|videoSync|pixel_row\(0) & \vgamap|videoSync|pixel_row\(1)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1110111010101010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_row\(2),
+	datab => \vgamap|videoSync|pixel_row\(0),
+	datad => \vgamap|videoSync|pixel_row\(1),
+	combout => \vgamap|videoGen|LessThan35~0_combout\);
+
+-- Location: LCCOMB_X58_Y63_N16
+\vgamap|videoGen|LessThan35~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|LessThan35~1_combout\ = (\vgamap|videoGen|LessThan35~0_combout\ & (\vgamap|videoSync|pixel_row\(4) & \vgamap|videoSync|pixel_row\(3)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000100000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoGen|LessThan35~0_combout\,
+	datab => \vgamap|videoSync|pixel_row\(4),
+	datad => \vgamap|videoSync|pixel_row\(3),
+	combout => \vgamap|videoGen|LessThan35~1_combout\);
+
+-- Location: LCCOMB_X59_Y63_N16
+\vgamap|videoGen|pixelDraw~98\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~98_combout\ = (\vgamap|videoGen|pixelDraw~13_combout\ & ((\vgamap|videoSync|pixel_row\(6)) # ((\vgamap|videoSync|pixel_row\(5)) # (\vgamap|videoGen|LessThan35~1_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_row\(6),
+	datab => \vgamap|videoSync|pixel_row\(5),
+	datac => \vgamap|videoGen|LessThan35~1_combout\,
+	datad => \vgamap|videoGen|pixelDraw~13_combout\,
+	combout => \vgamap|videoGen|pixelDraw~98_combout\);
+
+-- Location: LCCOMB_X54_Y62_N28
+\vgamap|videoGen|pixelDraw~14\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~14_combout\ = (\vgamap|videoSync|pixel_column\(3) & (\vgamap|videoSync|pixel_column\(4) & \vgamap|videoSync|pixel_column\(5)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2882,80 +2945,15 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \vgamap|videoGen|pixelDraw~13_combout\,
-	datac => \vgamap|videoGen|pixelDraw~12_combout\,
-	datad => \vgamap|videoGen|pixelDraw~19_combout\,
-	combout => \vgamap|videoGen|pixelDraw~20_combout\);
-
--- Location: LCCOMB_X62_Y71_N0
-\vgamap|videoGen|LessThan35~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|LessThan35~0_combout\ = (\vgamap|videoSync|pixel_row\(2)) # ((\vgamap|videoSync|pixel_row\(0) & \vgamap|videoSync|pixel_row\(1)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111101010101010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_row\(2),
-	datac => \vgamap|videoSync|pixel_row\(0),
-	datad => \vgamap|videoSync|pixel_row\(1),
-	combout => \vgamap|videoGen|LessThan35~0_combout\);
-
--- Location: LCCOMB_X62_Y71_N22
-\vgamap|videoGen|LessThan35~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|LessThan35~1_combout\ = (\vgamap|videoGen|LessThan35~0_combout\ & (\vgamap|videoSync|pixel_row\(3) & \vgamap|videoSync|pixel_row\(4)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoGen|LessThan35~0_combout\,
-	datac => \vgamap|videoSync|pixel_row\(3),
-	datad => \vgamap|videoSync|pixel_row\(4),
-	combout => \vgamap|videoGen|LessThan35~1_combout\);
-
--- Location: LCCOMB_X62_Y71_N2
-\vgamap|videoGen|pixelDraw~98\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~98_combout\ = (\vgamap|videoGen|pixelDraw~13_combout\ & ((\vgamap|videoSync|pixel_row\(5)) # ((\vgamap|videoSync|pixel_row\(6)) # (\vgamap|videoGen|LessThan35~1_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100110011001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_row\(5),
-	datab => \vgamap|videoGen|pixelDraw~13_combout\,
-	datac => \vgamap|videoSync|pixel_row\(6),
-	datad => \vgamap|videoGen|LessThan35~1_combout\,
-	combout => \vgamap|videoGen|pixelDraw~98_combout\);
-
--- Location: LCCOMB_X59_Y70_N0
-\vgamap|videoGen|pixelDraw~14\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~14_combout\ = (\vgamap|videoSync|pixel_column\(3) & (\vgamap|videoSync|pixel_column\(4) & \vgamap|videoSync|pixel_column\(5)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(3),
+	datab => \vgamap|videoSync|pixel_column\(3),
 	datac => \vgamap|videoSync|pixel_column\(4),
 	datad => \vgamap|videoSync|pixel_column\(5),
 	combout => \vgamap|videoGen|pixelDraw~14_combout\);
 
--- Location: LCCOMB_X59_Y70_N6
+-- Location: LCCOMB_X56_Y62_N22
 \vgamap|videoGen|pixelDraw~15\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|pixelDraw~15_combout\ = (!\vgamap|videoSync|pixel_column\(4) & (!\vgamap|videoSync|pixel_column\(3) & (\vgamap|videoSync|pixel_column\(6) & !\vgamap|videoSync|pixel_column\(5))))
+-- \vgamap|videoGen|pixelDraw~15_combout\ = (!\vgamap|videoSync|pixel_column\(5) & (!\vgamap|videoSync|pixel_column\(4) & (\vgamap|videoSync|pixel_column\(6) & !\vgamap|videoSync|pixel_column\(3))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2963,13 +2961,13 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(4),
-	datab => \vgamap|videoSync|pixel_column\(3),
+	dataa => \vgamap|videoSync|pixel_column\(5),
+	datab => \vgamap|videoSync|pixel_column\(4),
 	datac => \vgamap|videoSync|pixel_column\(6),
-	datad => \vgamap|videoSync|pixel_column\(5),
+	datad => \vgamap|videoSync|pixel_column\(3),
 	combout => \vgamap|videoGen|pixelDraw~15_combout\);
 
--- Location: LCCOMB_X59_Y70_N8
+-- Location: LCCOMB_X54_Y62_N26
 \vgamap|videoGen|pixelDraw~16\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoGen|pixelDraw~16_combout\ = (\vgamap|videoSync|pixel_column\(6) & (((!\vgamap|videoGen|LessThan44~0_combout\ & \vgamap|videoGen|pixelDraw~15_combout\)))) # (!\vgamap|videoSync|pixel_column\(6) & ((\vgamap|videoGen|pixelDraw~14_combout\) # 
@@ -2987,206 +2985,91 @@ PORT MAP (
 	datad => \vgamap|videoGen|pixelDraw~15_combout\,
 	combout => \vgamap|videoGen|pixelDraw~16_combout\);
 
--- Location: LCCOMB_X60_Y71_N30
+-- Location: LCCOMB_X55_Y62_N28
+\vgamap|videoGen|pixelDraw~18\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~18_combout\ = (!\vgamap|videoSync|pixel_column\(3) & (((!\vgamap|videoSync|pixel_column\(0) & !\vgamap|videoSync|pixel_column\(1))) # (!\vgamap|videoSync|pixel_column\(2))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000010100010101",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(3),
+	datab => \vgamap|videoSync|pixel_column\(0),
+	datac => \vgamap|videoSync|pixel_column\(2),
+	datad => \vgamap|videoSync|pixel_column\(1),
+	combout => \vgamap|videoGen|pixelDraw~18_combout\);
+
+-- Location: LCCOMB_X58_Y62_N0
+\vgamap|videoGen|pixelDraw~17\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~17_combout\ = (\vgamap|videoSync|pixel_column\(5) & (!\vgamap|videoSync|pixel_column\(6) & ((\vgamap|videoSync|pixel_row\(6)) # (\vgamap|videoSync|pixel_row\(5)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000011001000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_row\(6),
+	datab => \vgamap|videoSync|pixel_column\(5),
+	datac => \vgamap|videoSync|pixel_row\(5),
+	datad => \vgamap|videoSync|pixel_column\(6),
+	combout => \vgamap|videoGen|pixelDraw~17_combout\);
+
+-- Location: LCCOMB_X58_Y62_N26
+\vgamap|videoGen|pixelDraw~19\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~19_combout\ = (\vgamap|videoGen|pixelDraw~17_combout\ & ((\vgamap|videoSync|pixel_column\(4) & ((\vgamap|videoGen|pixelDraw~18_combout\))) # (!\vgamap|videoSync|pixel_column\(4) & (\vgamap|videoGen|LessThan5~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1110010000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(4),
+	datab => \vgamap|videoGen|LessThan5~0_combout\,
+	datac => \vgamap|videoGen|pixelDraw~18_combout\,
+	datad => \vgamap|videoGen|pixelDraw~17_combout\,
+	combout => \vgamap|videoGen|pixelDraw~19_combout\);
+
+-- Location: LCCOMB_X58_Y62_N20
+\vgamap|videoGen|pixelDraw~20\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~20_combout\ = (\vgamap|videoGen|pixelDraw~12_combout\ & (\vgamap|videoGen|pixelDraw~19_combout\ & \vgamap|videoGen|pixelDraw~13_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vgamap|videoGen|pixelDraw~12_combout\,
+	datac => \vgamap|videoGen|pixelDraw~19_combout\,
+	datad => \vgamap|videoGen|pixelDraw~13_combout\,
+	combout => \vgamap|videoGen|pixelDraw~20_combout\);
+
+-- Location: LCCOMB_X58_Y62_N30
 \vgamap|videoGen|colorAddress~2\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoGen|colorAddress~2_combout\ = (!\vgamap|videoGen|pixelDraw~20_combout\ & (((!\vgamap|videoGen|pixelDraw~16_combout\) # (!\vgamap|videoGen|pixelDraw~98_combout\)) # (!\vgamap|videoGen|pixelDraw~12_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0001001100110011",
+	lut_mask => "0000000001111111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vgamap|videoGen|pixelDraw~12_combout\,
-	datab => \vgamap|videoGen|pixelDraw~20_combout\,
-	datac => \vgamap|videoGen|pixelDraw~98_combout\,
-	datad => \vgamap|videoGen|pixelDraw~16_combout\,
+	datab => \vgamap|videoGen|pixelDraw~98_combout\,
+	datac => \vgamap|videoGen|pixelDraw~16_combout\,
+	datad => \vgamap|videoGen|pixelDraw~20_combout\,
 	combout => \vgamap|videoGen|colorAddress~2_combout\);
 
--- Location: LCCOMB_X63_Y71_N30
-\vgamap|videoGen|pixelDraw~22\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~22_combout\ = (\vgamap|videoSync|pixel_row\(2)) # ((\vgamap|videoSync|pixel_row\(1)) # ((\vgamap|videoSync|pixel_row\(0)) # (\vgamap|videoSync|pixel_row\(3))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111111111110",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_row\(2),
-	datab => \vgamap|videoSync|pixel_row\(1),
-	datac => \vgamap|videoSync|pixel_row\(0),
-	datad => \vgamap|videoSync|pixel_row\(3),
-	combout => \vgamap|videoGen|pixelDraw~22_combout\);
-
--- Location: LCCOMB_X63_Y71_N0
-\vgamap|videoGen|LessThan18~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|LessThan18~0_combout\ = (!\vgamap|videoSync|pixel_row\(6) & !\vgamap|videoSync|pixel_row\(5))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000001010101",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_row\(6),
-	datad => \vgamap|videoSync|pixel_row\(5),
-	combout => \vgamap|videoGen|LessThan18~0_combout\);
-
--- Location: LCCOMB_X63_Y71_N24
-\vgamap|videoGen|pixelDraw~23\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~23_combout\ = (\vgamap|videoSync|pixel_column\(4) & (((\vgamap|videoGen|pixelDraw~22_combout\ & \vgamap|videoSync|pixel_row\(4))) # (!\vgamap|videoGen|LessThan18~0_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000011110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoGen|pixelDraw~22_combout\,
-	datab => \vgamap|videoSync|pixel_row\(4),
-	datac => \vgamap|videoSync|pixel_column\(4),
-	datad => \vgamap|videoGen|LessThan18~0_combout\,
-	combout => \vgamap|videoGen|pixelDraw~23_combout\);
-
--- Location: LCCOMB_X60_Y71_N24
-\vgamap|videoGen|pixelDraw~21\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~21_combout\ = (\vgamap|videoSync|pixel_column\(6) & (!\vgamap|videoSync|pixel_column\(5) & (\vgamap|videoGen|pixelDraw~12_combout\ & \vgamap|videoGen|pixelDraw~13_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0010000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(6),
-	datab => \vgamap|videoSync|pixel_column\(5),
-	datac => \vgamap|videoGen|pixelDraw~12_combout\,
-	datad => \vgamap|videoGen|pixelDraw~13_combout\,
-	combout => \vgamap|videoGen|pixelDraw~21_combout\);
-
--- Location: LCCOMB_X60_Y71_N6
-\vgamap|videoGen|LessThan3~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|LessThan3~0_combout\ = (\vgamap|videoSync|pixel_column\(2)) # (\vgamap|videoSync|pixel_column\(3))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111111110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datac => \vgamap|videoSync|pixel_column\(2),
-	datad => \vgamap|videoSync|pixel_column\(3),
-	combout => \vgamap|videoGen|LessThan3~0_combout\);
-
--- Location: LCCOMB_X62_Y71_N14
-\vgamap|videoGen|LessThan33~2\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|LessThan33~2_combout\ = (!\vgamap|videoSync|pixel_row\(5) & (!\vgamap|videoSync|pixel_row\(6) & ((!\vgamap|videoSync|pixel_row\(3)) # (!\vgamap|videoSync|pixel_row\(4)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000010101",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_row\(5),
-	datab => \vgamap|videoSync|pixel_row\(4),
-	datac => \vgamap|videoSync|pixel_row\(3),
-	datad => \vgamap|videoSync|pixel_row\(6),
-	combout => \vgamap|videoGen|LessThan33~2_combout\);
-
--- Location: LCCOMB_X62_Y71_N24
-\vgamap|videoGen|pixelDraw~24\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~24_combout\ = ((\vgamap|videoSync|pixel_row\(2) & (\vgamap|videoSync|pixel_row\(4) & \vgamap|videoSync|pixel_row\(1)))) # (!\vgamap|videoGen|LessThan33~2_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000011111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_row\(2),
-	datab => \vgamap|videoSync|pixel_row\(4),
-	datac => \vgamap|videoSync|pixel_row\(1),
-	datad => \vgamap|videoGen|LessThan33~2_combout\,
-	combout => \vgamap|videoGen|pixelDraw~24_combout\);
-
--- Location: LCCOMB_X58_Y71_N18
-\vgamap|videoGen|LessThan14~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|LessThan14~0_combout\ = (!\vgamap|videoSync|pixel_column\(4) & (((!\vgamap|videoSync|pixel_column\(0) & !\vgamap|videoSync|pixel_column\(1))) # (!\vgamap|videoGen|LessThan5~0_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000001100000111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(0),
-	datab => \vgamap|videoGen|LessThan5~0_combout\,
-	datac => \vgamap|videoSync|pixel_column\(4),
-	datad => \vgamap|videoSync|pixel_column\(1),
-	combout => \vgamap|videoGen|LessThan14~0_combout\);
-
--- Location: LCCOMB_X60_Y71_N8
-\vgamap|videoGen|pixelDraw~25\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~25_combout\ = (\vgamap|videoGen|LessThan3~0_combout\ & (\vgamap|videoGen|pixelDraw~24_combout\ & (\vgamap|videoGen|LessThan14~0_combout\ & \vgamap|videoGen|pixelDraw~21_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoGen|LessThan3~0_combout\,
-	datab => \vgamap|videoGen|pixelDraw~24_combout\,
-	datac => \vgamap|videoGen|LessThan14~0_combout\,
-	datad => \vgamap|videoGen|pixelDraw~21_combout\,
-	combout => \vgamap|videoGen|pixelDraw~25_combout\);
-
--- Location: LCCOMB_X53_Y71_N24
-\vgamap|videoGen|LessThan10~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|LessThan10~0_combout\ = ((!\vgamap|videoGen|LessThan44~0_combout\) # (!\vgamap|videoSync|pixel_column\(3))) # (!\vgamap|videoSync|pixel_column\(4))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011111111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vgamap|videoSync|pixel_column\(4),
-	datac => \vgamap|videoSync|pixel_column\(3),
-	datad => \vgamap|videoGen|LessThan44~0_combout\,
-	combout => \vgamap|videoGen|LessThan10~0_combout\);
-
--- Location: LCCOMB_X60_Y71_N10
-\vgamap|videoGen|colorAddress~3\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|colorAddress~3_combout\ = (!\vgamap|videoGen|pixelDraw~25_combout\ & (((!\vgamap|videoGen|LessThan10~0_combout\) # (!\vgamap|videoGen|pixelDraw~21_combout\)) # (!\vgamap|videoGen|pixelDraw~23_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000011100001111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoGen|pixelDraw~23_combout\,
-	datab => \vgamap|videoGen|pixelDraw~21_combout\,
-	datac => \vgamap|videoGen|pixelDraw~25_combout\,
-	datad => \vgamap|videoGen|LessThan10~0_combout\,
-	combout => \vgamap|videoGen|colorAddress~3_combout\);
-
--- Location: LCCOMB_X5_Y19_N0
+-- Location: LCCOMB_X66_Y63_N0
 \volmap|divide_clock:count[0]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|divide_clock:count[0]~1_combout\ = \volmap|divide_clock:count[0]~q\ $ (VCC)
@@ -3203,7 +3086,7 @@ PORT MAP (
 	combout => \volmap|divide_clock:count[0]~1_combout\,
 	cout => \volmap|divide_clock:count[0]~2\);
 
--- Location: FF_X5_Y19_N1
+-- Location: FF_X66_Y63_N1
 \volmap|divide_clock:count[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3213,12 +3096,12 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \volmap|divide_clock:count[0]~1_combout\,
-	sclr => \volmap|LessThan0~11_combout\,
+	sclr => \volmap|LessThan0~10_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \volmap|divide_clock:count[0]~q\);
 
--- Location: LCCOMB_X5_Y19_N2
+-- Location: LCCOMB_X66_Y63_N2
 \volmap|divide_clock:count[1]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|divide_clock:count[1]~1_combout\ = (\volmap|divide_clock:count[1]~q\ & (!\volmap|divide_clock:count[0]~2\)) # (!\volmap|divide_clock:count[1]~q\ & ((\volmap|divide_clock:count[0]~2\) # (GND)))
@@ -3236,7 +3119,7 @@ PORT MAP (
 	combout => \volmap|divide_clock:count[1]~1_combout\,
 	cout => \volmap|divide_clock:count[1]~2\);
 
--- Location: FF_X5_Y19_N3
+-- Location: FF_X66_Y63_N3
 \volmap|divide_clock:count[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3246,12 +3129,12 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \volmap|divide_clock:count[1]~1_combout\,
-	sclr => \volmap|LessThan0~11_combout\,
+	sclr => \volmap|LessThan0~10_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \volmap|divide_clock:count[1]~q\);
 
--- Location: LCCOMB_X5_Y19_N4
+-- Location: LCCOMB_X66_Y63_N4
 \volmap|divide_clock:count[2]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|divide_clock:count[2]~1_combout\ = (\volmap|divide_clock:count[2]~q\ & (\volmap|divide_clock:count[1]~2\ $ (GND))) # (!\volmap|divide_clock:count[2]~q\ & (!\volmap|divide_clock:count[1]~2\ & VCC))
@@ -3269,7 +3152,7 @@ PORT MAP (
 	combout => \volmap|divide_clock:count[2]~1_combout\,
 	cout => \volmap|divide_clock:count[2]~2\);
 
--- Location: FF_X5_Y19_N5
+-- Location: FF_X66_Y63_N5
 \volmap|divide_clock:count[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3279,12 +3162,12 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \volmap|divide_clock:count[2]~1_combout\,
-	sclr => \volmap|LessThan0~11_combout\,
+	sclr => \volmap|LessThan0~10_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \volmap|divide_clock:count[2]~q\);
 
--- Location: LCCOMB_X5_Y19_N6
+-- Location: LCCOMB_X66_Y63_N6
 \volmap|divide_clock:count[3]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|divide_clock:count[3]~1_combout\ = (\volmap|divide_clock:count[3]~q\ & (!\volmap|divide_clock:count[2]~2\)) # (!\volmap|divide_clock:count[3]~q\ & ((\volmap|divide_clock:count[2]~2\) # (GND)))
@@ -3302,7 +3185,7 @@ PORT MAP (
 	combout => \volmap|divide_clock:count[3]~1_combout\,
 	cout => \volmap|divide_clock:count[3]~2\);
 
--- Location: FF_X5_Y19_N7
+-- Location: FF_X66_Y63_N7
 \volmap|divide_clock:count[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3312,12 +3195,12 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \volmap|divide_clock:count[3]~1_combout\,
-	sclr => \volmap|LessThan0~11_combout\,
+	sclr => \volmap|LessThan0~10_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \volmap|divide_clock:count[3]~q\);
 
--- Location: LCCOMB_X5_Y19_N8
+-- Location: LCCOMB_X66_Y63_N8
 \volmap|divide_clock:count[4]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|divide_clock:count[4]~1_combout\ = (\volmap|divide_clock:count[4]~q\ & (\volmap|divide_clock:count[3]~2\ $ (GND))) # (!\volmap|divide_clock:count[4]~q\ & (!\volmap|divide_clock:count[3]~2\ & VCC))
@@ -3335,7 +3218,7 @@ PORT MAP (
 	combout => \volmap|divide_clock:count[4]~1_combout\,
 	cout => \volmap|divide_clock:count[4]~2\);
 
--- Location: FF_X5_Y19_N9
+-- Location: FF_X66_Y63_N9
 \volmap|divide_clock:count[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3345,12 +3228,12 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \volmap|divide_clock:count[4]~1_combout\,
-	sclr => \volmap|LessThan0~11_combout\,
+	sclr => \volmap|LessThan0~10_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \volmap|divide_clock:count[4]~q\);
 
--- Location: LCCOMB_X5_Y19_N10
+-- Location: LCCOMB_X66_Y63_N10
 \volmap|divide_clock:count[5]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|divide_clock:count[5]~1_combout\ = (\volmap|divide_clock:count[5]~q\ & (!\volmap|divide_clock:count[4]~2\)) # (!\volmap|divide_clock:count[5]~q\ & ((\volmap|divide_clock:count[4]~2\) # (GND)))
@@ -3358,17 +3241,17 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011110000111111",
+	lut_mask => "0101101001011111",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \volmap|divide_clock:count[5]~q\,
+	dataa => \volmap|divide_clock:count[5]~q\,
 	datad => VCC,
 	cin => \volmap|divide_clock:count[4]~2\,
 	combout => \volmap|divide_clock:count[5]~1_combout\,
 	cout => \volmap|divide_clock:count[5]~2\);
 
--- Location: FF_X4_Y19_N19
+-- Location: FF_X66_Y63_N11
 \volmap|divide_clock:count[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3377,14 +3260,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	asdata => \volmap|divide_clock:count[5]~1_combout\,
-	sclr => \volmap|LessThan0~11_combout\,
-	sload => VCC,
+	d => \volmap|divide_clock:count[5]~1_combout\,
+	sclr => \volmap|LessThan0~10_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \volmap|divide_clock:count[5]~q\);
 
--- Location: LCCOMB_X5_Y19_N12
+-- Location: LCCOMB_X66_Y63_N12
 \volmap|divide_clock:count[6]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|divide_clock:count[6]~1_combout\ = (\volmap|divide_clock:count[6]~q\ & (\volmap|divide_clock:count[5]~2\ $ (GND))) # (!\volmap|divide_clock:count[6]~q\ & (!\volmap|divide_clock:count[5]~2\ & VCC))
@@ -3402,7 +3284,7 @@ PORT MAP (
 	combout => \volmap|divide_clock:count[6]~1_combout\,
 	cout => \volmap|divide_clock:count[6]~2\);
 
--- Location: FF_X5_Y19_N13
+-- Location: FF_X66_Y63_N13
 \volmap|divide_clock:count[6]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3412,12 +3294,12 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \volmap|divide_clock:count[6]~1_combout\,
-	sclr => \volmap|LessThan0~11_combout\,
+	sclr => \volmap|LessThan0~10_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \volmap|divide_clock:count[6]~q\);
 
--- Location: LCCOMB_X5_Y19_N14
+-- Location: LCCOMB_X66_Y63_N14
 \volmap|divide_clock:count[7]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|divide_clock:count[7]~1_combout\ = (\volmap|divide_clock:count[7]~q\ & (!\volmap|divide_clock:count[6]~2\)) # (!\volmap|divide_clock:count[7]~q\ & ((\volmap|divide_clock:count[6]~2\) # (GND)))
@@ -3435,7 +3317,7 @@ PORT MAP (
 	combout => \volmap|divide_clock:count[7]~1_combout\,
 	cout => \volmap|divide_clock:count[7]~2\);
 
--- Location: FF_X5_Y19_N15
+-- Location: FF_X66_Y63_N15
 \volmap|divide_clock:count[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3445,12 +3327,12 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \volmap|divide_clock:count[7]~1_combout\,
-	sclr => \volmap|LessThan0~11_combout\,
+	sclr => \volmap|LessThan0~10_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \volmap|divide_clock:count[7]~q\);
 
--- Location: LCCOMB_X5_Y19_N16
+-- Location: LCCOMB_X66_Y63_N16
 \volmap|divide_clock:count[8]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|divide_clock:count[8]~1_combout\ = (\volmap|divide_clock:count[8]~q\ & (\volmap|divide_clock:count[7]~2\ $ (GND))) # (!\volmap|divide_clock:count[8]~q\ & (!\volmap|divide_clock:count[7]~2\ & VCC))
@@ -3468,7 +3350,7 @@ PORT MAP (
 	combout => \volmap|divide_clock:count[8]~1_combout\,
 	cout => \volmap|divide_clock:count[8]~2\);
 
--- Location: FF_X4_Y19_N21
+-- Location: FF_X66_Y63_N17
 \volmap|divide_clock:count[8]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3477,14 +3359,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	asdata => \volmap|divide_clock:count[8]~1_combout\,
-	sclr => \volmap|LessThan0~11_combout\,
-	sload => VCC,
+	d => \volmap|divide_clock:count[8]~1_combout\,
+	sclr => \volmap|LessThan0~10_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \volmap|divide_clock:count[8]~q\);
 
--- Location: LCCOMB_X5_Y19_N18
+-- Location: LCCOMB_X66_Y63_N18
 \volmap|divide_clock:count[9]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|divide_clock:count[9]~1_combout\ = (\volmap|divide_clock:count[9]~q\ & (!\volmap|divide_clock:count[8]~2\)) # (!\volmap|divide_clock:count[9]~q\ & ((\volmap|divide_clock:count[8]~2\) # (GND)))
@@ -3492,17 +3373,17 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101101001011111",
+	lut_mask => "0011110000111111",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \volmap|divide_clock:count[9]~q\,
+	datab => \volmap|divide_clock:count[9]~q\,
 	datad => VCC,
 	cin => \volmap|divide_clock:count[8]~2\,
 	combout => \volmap|divide_clock:count[9]~1_combout\,
 	cout => \volmap|divide_clock:count[9]~2\);
 
--- Location: FF_X4_Y19_N17
+-- Location: FF_X66_Y63_N19
 \volmap|divide_clock:count[9]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3511,14 +3392,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	asdata => \volmap|divide_clock:count[9]~1_combout\,
-	sclr => \volmap|LessThan0~11_combout\,
-	sload => VCC,
+	d => \volmap|divide_clock:count[9]~1_combout\,
+	sclr => \volmap|LessThan0~10_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \volmap|divide_clock:count[9]~q\);
 
--- Location: LCCOMB_X5_Y19_N20
+-- Location: LCCOMB_X66_Y63_N20
 \volmap|divide_clock:count[10]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|divide_clock:count[10]~1_combout\ = (\volmap|divide_clock:count[10]~q\ & (\volmap|divide_clock:count[9]~2\ $ (GND))) # (!\volmap|divide_clock:count[10]~q\ & (!\volmap|divide_clock:count[9]~2\ & VCC))
@@ -3536,7 +3416,7 @@ PORT MAP (
 	combout => \volmap|divide_clock:count[10]~1_combout\,
 	cout => \volmap|divide_clock:count[10]~2\);
 
--- Location: FF_X5_Y19_N21
+-- Location: FF_X66_Y63_N21
 \volmap|divide_clock:count[10]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3546,12 +3426,12 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \volmap|divide_clock:count[10]~1_combout\,
-	sclr => \volmap|LessThan0~11_combout\,
+	sclr => \volmap|LessThan0~10_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \volmap|divide_clock:count[10]~q\);
 
--- Location: LCCOMB_X5_Y19_N22
+-- Location: LCCOMB_X66_Y63_N22
 \volmap|divide_clock:count[11]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|divide_clock:count[11]~1_combout\ = (\volmap|divide_clock:count[11]~q\ & (!\volmap|divide_clock:count[10]~2\)) # (!\volmap|divide_clock:count[11]~q\ & ((\volmap|divide_clock:count[10]~2\) # (GND)))
@@ -3559,17 +3439,17 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011110000111111",
+	lut_mask => "0101101001011111",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \volmap|divide_clock:count[11]~q\,
+	dataa => \volmap|divide_clock:count[11]~q\,
 	datad => VCC,
 	cin => \volmap|divide_clock:count[10]~2\,
 	combout => \volmap|divide_clock:count[11]~1_combout\,
 	cout => \volmap|divide_clock:count[11]~2\);
 
--- Location: FF_X4_Y19_N7
+-- Location: FF_X66_Y63_N23
 \volmap|divide_clock:count[11]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3578,14 +3458,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	asdata => \volmap|divide_clock:count[11]~1_combout\,
-	sclr => \volmap|LessThan0~11_combout\,
-	sload => VCC,
+	d => \volmap|divide_clock:count[11]~1_combout\,
+	sclr => \volmap|LessThan0~10_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \volmap|divide_clock:count[11]~q\);
 
--- Location: LCCOMB_X5_Y19_N24
+-- Location: LCCOMB_X66_Y63_N24
 \volmap|divide_clock:count[12]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|divide_clock:count[12]~1_combout\ = (\volmap|divide_clock:count[12]~q\ & (\volmap|divide_clock:count[11]~2\ $ (GND))) # (!\volmap|divide_clock:count[12]~q\ & (!\volmap|divide_clock:count[11]~2\ & VCC))
@@ -3593,17 +3472,17 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010010100001010",
+	lut_mask => "1100001100001100",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \volmap|divide_clock:count[12]~q\,
+	datab => \volmap|divide_clock:count[12]~q\,
 	datad => VCC,
 	cin => \volmap|divide_clock:count[11]~2\,
 	combout => \volmap|divide_clock:count[12]~1_combout\,
 	cout => \volmap|divide_clock:count[12]~2\);
 
--- Location: FF_X4_Y19_N27
+-- Location: FF_X66_Y63_N25
 \volmap|divide_clock:count[12]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3612,14 +3491,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	asdata => \volmap|divide_clock:count[12]~1_combout\,
-	sclr => \volmap|LessThan0~11_combout\,
-	sload => VCC,
+	d => \volmap|divide_clock:count[12]~1_combout\,
+	sclr => \volmap|LessThan0~10_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \volmap|divide_clock:count[12]~q\);
 
--- Location: LCCOMB_X5_Y19_N26
+-- Location: LCCOMB_X66_Y63_N26
 \volmap|divide_clock:count[13]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|divide_clock:count[13]~1_combout\ = (\volmap|divide_clock:count[13]~q\ & (!\volmap|divide_clock:count[12]~2\)) # (!\volmap|divide_clock:count[13]~q\ & ((\volmap|divide_clock:count[12]~2\) # (GND)))
@@ -3627,17 +3505,17 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011110000111111",
+	lut_mask => "0101101001011111",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \volmap|divide_clock:count[13]~q\,
+	dataa => \volmap|divide_clock:count[13]~q\,
 	datad => VCC,
 	cin => \volmap|divide_clock:count[12]~2\,
 	combout => \volmap|divide_clock:count[13]~1_combout\,
 	cout => \volmap|divide_clock:count[13]~2\);
 
--- Location: FF_X4_Y19_N5
+-- Location: FF_X66_Y63_N27
 \volmap|divide_clock:count[13]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3646,14 +3524,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	asdata => \volmap|divide_clock:count[13]~1_combout\,
-	sclr => \volmap|LessThan0~11_combout\,
-	sload => VCC,
+	d => \volmap|divide_clock:count[13]~1_combout\,
+	sclr => \volmap|LessThan0~10_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \volmap|divide_clock:count[13]~q\);
 
--- Location: LCCOMB_X5_Y19_N28
+-- Location: LCCOMB_X66_Y63_N28
 \volmap|divide_clock:count[14]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|divide_clock:count[14]~1_combout\ = (\volmap|divide_clock:count[14]~q\ & (\volmap|divide_clock:count[13]~2\ $ (GND))) # (!\volmap|divide_clock:count[14]~q\ & (!\volmap|divide_clock:count[13]~2\ & VCC))
@@ -3671,7 +3548,7 @@ PORT MAP (
 	combout => \volmap|divide_clock:count[14]~1_combout\,
 	cout => \volmap|divide_clock:count[14]~2\);
 
--- Location: FF_X5_Y19_N29
+-- Location: FF_X66_Y63_N29
 \volmap|divide_clock:count[14]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3681,12 +3558,12 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \volmap|divide_clock:count[14]~1_combout\,
-	sclr => \volmap|LessThan0~11_combout\,
+	sclr => \volmap|LessThan0~10_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \volmap|divide_clock:count[14]~q\);
 
--- Location: LCCOMB_X5_Y19_N30
+-- Location: LCCOMB_X66_Y63_N30
 \volmap|divide_clock:count[15]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|divide_clock:count[15]~1_combout\ = (\volmap|divide_clock:count[15]~q\ & (!\volmap|divide_clock:count[14]~2\)) # (!\volmap|divide_clock:count[15]~q\ & ((\volmap|divide_clock:count[14]~2\) # (GND)))
@@ -3704,7 +3581,7 @@ PORT MAP (
 	combout => \volmap|divide_clock:count[15]~1_combout\,
 	cout => \volmap|divide_clock:count[15]~2\);
 
--- Location: FF_X5_Y19_N31
+-- Location: FF_X66_Y63_N31
 \volmap|divide_clock:count[15]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3714,12 +3591,12 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \volmap|divide_clock:count[15]~1_combout\,
-	sclr => \volmap|LessThan0~11_combout\,
+	sclr => \volmap|LessThan0~10_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \volmap|divide_clock:count[15]~q\);
 
--- Location: LCCOMB_X5_Y18_N0
+-- Location: LCCOMB_X66_Y62_N0
 \volmap|divide_clock:count[16]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|divide_clock:count[16]~1_combout\ = (\volmap|divide_clock:count[16]~q\ & (\volmap|divide_clock:count[15]~2\ $ (GND))) # (!\volmap|divide_clock:count[16]~q\ & (!\volmap|divide_clock:count[15]~2\ & VCC))
@@ -3727,17 +3604,17 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100001100001100",
+	lut_mask => "1010010100001010",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \volmap|divide_clock:count[16]~q\,
+	dataa => \volmap|divide_clock:count[16]~q\,
 	datad => VCC,
 	cin => \volmap|divide_clock:count[15]~2\,
 	combout => \volmap|divide_clock:count[16]~1_combout\,
 	cout => \volmap|divide_clock:count[16]~2\);
 
--- Location: FF_X4_Y19_N3
+-- Location: FF_X65_Y63_N19
 \volmap|divide_clock:count[16]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3747,13 +3624,13 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	asdata => \volmap|divide_clock:count[16]~1_combout\,
-	sclr => \volmap|LessThan0~11_combout\,
+	sclr => \volmap|LessThan0~10_combout\,
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \volmap|divide_clock:count[16]~q\);
 
--- Location: LCCOMB_X5_Y18_N2
+-- Location: LCCOMB_X66_Y62_N2
 \volmap|divide_clock:count[17]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|divide_clock:count[17]~1_combout\ = (\volmap|divide_clock:count[17]~q\ & (!\volmap|divide_clock:count[16]~2\)) # (!\volmap|divide_clock:count[17]~q\ & ((\volmap|divide_clock:count[16]~2\) # (GND)))
@@ -3771,7 +3648,7 @@ PORT MAP (
 	combout => \volmap|divide_clock:count[17]~1_combout\,
 	cout => \volmap|divide_clock:count[17]~2\);
 
--- Location: FF_X4_Y19_N23
+-- Location: FF_X66_Y62_N3
 \volmap|divide_clock:count[17]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3780,14 +3657,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	asdata => \volmap|divide_clock:count[17]~1_combout\,
-	sclr => \volmap|LessThan0~11_combout\,
-	sload => VCC,
+	d => \volmap|divide_clock:count[17]~1_combout\,
+	sclr => \volmap|LessThan0~10_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \volmap|divide_clock:count[17]~q\);
 
--- Location: LCCOMB_X5_Y18_N4
+-- Location: LCCOMB_X66_Y62_N4
 \volmap|divide_clock:count[18]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|divide_clock:count[18]~1_combout\ = (\volmap|divide_clock:count[18]~q\ & (\volmap|divide_clock:count[17]~2\ $ (GND))) # (!\volmap|divide_clock:count[18]~q\ & (!\volmap|divide_clock:count[17]~2\ & VCC))
@@ -3805,7 +3681,7 @@ PORT MAP (
 	combout => \volmap|divide_clock:count[18]~1_combout\,
 	cout => \volmap|divide_clock:count[18]~2\);
 
--- Location: FF_X5_Y18_N5
+-- Location: FF_X66_Y62_N5
 \volmap|divide_clock:count[18]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3815,12 +3691,12 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \volmap|divide_clock:count[18]~1_combout\,
-	sclr => \volmap|LessThan0~11_combout\,
+	sclr => \volmap|LessThan0~10_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \volmap|divide_clock:count[18]~q\);
 
--- Location: LCCOMB_X5_Y18_N6
+-- Location: LCCOMB_X66_Y62_N6
 \volmap|divide_clock:count[19]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|divide_clock:count[19]~1_combout\ = (\volmap|divide_clock:count[19]~q\ & (!\volmap|divide_clock:count[18]~2\)) # (!\volmap|divide_clock:count[19]~q\ & ((\volmap|divide_clock:count[18]~2\) # (GND)))
@@ -3838,7 +3714,7 @@ PORT MAP (
 	combout => \volmap|divide_clock:count[19]~1_combout\,
 	cout => \volmap|divide_clock:count[19]~2\);
 
--- Location: FF_X5_Y18_N7
+-- Location: FF_X66_Y62_N7
 \volmap|divide_clock:count[19]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3848,12 +3724,12 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \volmap|divide_clock:count[19]~1_combout\,
-	sclr => \volmap|LessThan0~11_combout\,
+	sclr => \volmap|LessThan0~10_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \volmap|divide_clock:count[19]~q\);
 
--- Location: LCCOMB_X5_Y18_N8
+-- Location: LCCOMB_X66_Y62_N8
 \volmap|divide_clock:count[20]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|divide_clock:count[20]~1_combout\ = (\volmap|divide_clock:count[20]~q\ & (\volmap|divide_clock:count[19]~2\ $ (GND))) # (!\volmap|divide_clock:count[20]~q\ & (!\volmap|divide_clock:count[19]~2\ & VCC))
@@ -3871,7 +3747,7 @@ PORT MAP (
 	combout => \volmap|divide_clock:count[20]~1_combout\,
 	cout => \volmap|divide_clock:count[20]~2\);
 
--- Location: FF_X5_Y18_N9
+-- Location: FF_X66_Y62_N9
 \volmap|divide_clock:count[20]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3881,12 +3757,12 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \volmap|divide_clock:count[20]~1_combout\,
-	sclr => \volmap|LessThan0~11_combout\,
+	sclr => \volmap|LessThan0~10_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \volmap|divide_clock:count[20]~q\);
 
--- Location: LCCOMB_X5_Y18_N10
+-- Location: LCCOMB_X66_Y62_N10
 \volmap|divide_clock:count[21]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|divide_clock:count[21]~1_combout\ = (\volmap|divide_clock:count[21]~q\ & (!\volmap|divide_clock:count[20]~2\)) # (!\volmap|divide_clock:count[21]~q\ & ((\volmap|divide_clock:count[20]~2\) # (GND)))
@@ -3904,7 +3780,7 @@ PORT MAP (
 	combout => \volmap|divide_clock:count[21]~1_combout\,
 	cout => \volmap|divide_clock:count[21]~2\);
 
--- Location: FF_X5_Y18_N11
+-- Location: FF_X66_Y62_N11
 \volmap|divide_clock:count[21]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3914,12 +3790,29 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \volmap|divide_clock:count[21]~1_combout\,
-	sclr => \volmap|LessThan0~11_combout\,
+	sclr => \volmap|LessThan0~10_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \volmap|divide_clock:count[21]~q\);
 
--- Location: LCCOMB_X5_Y18_N12
+-- Location: LCCOMB_X65_Y63_N26
+\volmap|LessThan0~9\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \volmap|LessThan0~9_combout\ = (\volmap|divide_clock:count[20]~q\ & (\volmap|divide_clock:count[18]~q\ & (\volmap|divide_clock:count[19]~q\ & \volmap|divide_clock:count[21]~q\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \volmap|divide_clock:count[20]~q\,
+	datab => \volmap|divide_clock:count[18]~q\,
+	datac => \volmap|divide_clock:count[19]~q\,
+	datad => \volmap|divide_clock:count[21]~q\,
+	combout => \volmap|LessThan0~9_combout\);
+
+-- Location: LCCOMB_X66_Y62_N12
 \volmap|divide_clock:count[22]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|divide_clock:count[22]~1_combout\ = (\volmap|divide_clock:count[22]~q\ & (\volmap|divide_clock:count[21]~2\ $ (GND))) # (!\volmap|divide_clock:count[22]~q\ & (!\volmap|divide_clock:count[21]~2\ & VCC))
@@ -3937,7 +3830,7 @@ PORT MAP (
 	combout => \volmap|divide_clock:count[22]~1_combout\,
 	cout => \volmap|divide_clock:count[22]~2\);
 
--- Location: FF_X5_Y18_N13
+-- Location: FF_X66_Y62_N13
 \volmap|divide_clock:count[22]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3947,12 +3840,12 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \volmap|divide_clock:count[22]~1_combout\,
-	sclr => \volmap|LessThan0~11_combout\,
+	sclr => \volmap|LessThan0~10_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \volmap|divide_clock:count[22]~q\);
 
--- Location: LCCOMB_X5_Y18_N14
+-- Location: LCCOMB_X66_Y62_N14
 \volmap|divide_clock:count[23]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|divide_clock:count[23]~1_combout\ = (\volmap|divide_clock:count[23]~q\ & (!\volmap|divide_clock:count[22]~2\)) # (!\volmap|divide_clock:count[23]~q\ & ((\volmap|divide_clock:count[22]~2\) # (GND)))
@@ -3970,7 +3863,7 @@ PORT MAP (
 	combout => \volmap|divide_clock:count[23]~1_combout\,
 	cout => \volmap|divide_clock:count[23]~2\);
 
--- Location: FF_X5_Y18_N15
+-- Location: FF_X66_Y62_N15
 \volmap|divide_clock:count[23]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3980,12 +3873,12 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \volmap|divide_clock:count[23]~1_combout\,
-	sclr => \volmap|LessThan0~11_combout\,
+	sclr => \volmap|LessThan0~10_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \volmap|divide_clock:count[23]~q\);
 
--- Location: LCCOMB_X5_Y18_N16
+-- Location: LCCOMB_X66_Y62_N16
 \volmap|divide_clock:count[24]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|divide_clock:count[24]~1_combout\ = (\volmap|divide_clock:count[24]~q\ & (\volmap|divide_clock:count[23]~2\ $ (GND))) # (!\volmap|divide_clock:count[24]~q\ & (!\volmap|divide_clock:count[23]~2\ & VCC))
@@ -4003,7 +3896,7 @@ PORT MAP (
 	combout => \volmap|divide_clock:count[24]~1_combout\,
 	cout => \volmap|divide_clock:count[24]~2\);
 
--- Location: FF_X5_Y18_N17
+-- Location: FF_X66_Y62_N17
 \volmap|divide_clock:count[24]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4013,12 +3906,12 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \volmap|divide_clock:count[24]~1_combout\,
-	sclr => \volmap|LessThan0~11_combout\,
+	sclr => \volmap|LessThan0~10_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \volmap|divide_clock:count[24]~q\);
 
--- Location: LCCOMB_X5_Y18_N18
+-- Location: LCCOMB_X66_Y62_N18
 \volmap|divide_clock:count[25]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|divide_clock:count[25]~1_combout\ = (\volmap|divide_clock:count[25]~q\ & (!\volmap|divide_clock:count[24]~2\)) # (!\volmap|divide_clock:count[25]~q\ & ((\volmap|divide_clock:count[24]~2\) # (GND)))
@@ -4036,7 +3929,7 @@ PORT MAP (
 	combout => \volmap|divide_clock:count[25]~1_combout\,
 	cout => \volmap|divide_clock:count[25]~2\);
 
--- Location: FF_X5_Y18_N19
+-- Location: FF_X66_Y62_N19
 \volmap|divide_clock:count[25]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4046,12 +3939,12 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \volmap|divide_clock:count[25]~1_combout\,
-	sclr => \volmap|LessThan0~11_combout\,
+	sclr => \volmap|LessThan0~10_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \volmap|divide_clock:count[25]~q\);
 
--- Location: LCCOMB_X5_Y18_N20
+-- Location: LCCOMB_X66_Y62_N20
 \volmap|divide_clock:count[26]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|divide_clock:count[26]~1_combout\ = (\volmap|divide_clock:count[26]~q\ & (\volmap|divide_clock:count[25]~2\ $ (GND))) # (!\volmap|divide_clock:count[26]~q\ & (!\volmap|divide_clock:count[25]~2\ & VCC))
@@ -4069,7 +3962,7 @@ PORT MAP (
 	combout => \volmap|divide_clock:count[26]~1_combout\,
 	cout => \volmap|divide_clock:count[26]~2\);
 
--- Location: FF_X5_Y18_N21
+-- Location: FF_X66_Y62_N21
 \volmap|divide_clock:count[26]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4079,12 +3972,12 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \volmap|divide_clock:count[26]~1_combout\,
-	sclr => \volmap|LessThan0~11_combout\,
+	sclr => \volmap|LessThan0~10_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \volmap|divide_clock:count[26]~q\);
 
--- Location: LCCOMB_X5_Y18_N22
+-- Location: LCCOMB_X66_Y62_N22
 \volmap|divide_clock:count[27]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|divide_clock:count[27]~1_combout\ = (\volmap|divide_clock:count[27]~q\ & (!\volmap|divide_clock:count[26]~2\)) # (!\volmap|divide_clock:count[27]~q\ & ((\volmap|divide_clock:count[26]~2\) # (GND)))
@@ -4102,7 +3995,7 @@ PORT MAP (
 	combout => \volmap|divide_clock:count[27]~1_combout\,
 	cout => \volmap|divide_clock:count[27]~2\);
 
--- Location: FF_X5_Y18_N23
+-- Location: FF_X66_Y62_N23
 \volmap|divide_clock:count[27]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4112,12 +4005,12 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \volmap|divide_clock:count[27]~1_combout\,
-	sclr => \volmap|LessThan0~11_combout\,
+	sclr => \volmap|LessThan0~10_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \volmap|divide_clock:count[27]~q\);
 
--- Location: LCCOMB_X5_Y18_N24
+-- Location: LCCOMB_X66_Y62_N24
 \volmap|divide_clock:count[28]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|divide_clock:count[28]~1_combout\ = (\volmap|divide_clock:count[28]~q\ & (\volmap|divide_clock:count[27]~2\ $ (GND))) # (!\volmap|divide_clock:count[28]~q\ & (!\volmap|divide_clock:count[27]~2\ & VCC))
@@ -4135,7 +4028,7 @@ PORT MAP (
 	combout => \volmap|divide_clock:count[28]~1_combout\,
 	cout => \volmap|divide_clock:count[28]~2\);
 
--- Location: FF_X5_Y18_N25
+-- Location: FF_X66_Y62_N25
 \volmap|divide_clock:count[28]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4145,12 +4038,12 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \volmap|divide_clock:count[28]~1_combout\,
-	sclr => \volmap|LessThan0~11_combout\,
+	sclr => \volmap|LessThan0~10_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \volmap|divide_clock:count[28]~q\);
 
--- Location: LCCOMB_X5_Y18_N26
+-- Location: LCCOMB_X66_Y62_N26
 \volmap|divide_clock:count[29]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|divide_clock:count[29]~1_combout\ = (\volmap|divide_clock:count[29]~q\ & (!\volmap|divide_clock:count[28]~2\)) # (!\volmap|divide_clock:count[29]~q\ & ((\volmap|divide_clock:count[28]~2\) # (GND)))
@@ -4168,7 +4061,7 @@ PORT MAP (
 	combout => \volmap|divide_clock:count[29]~1_combout\,
 	cout => \volmap|divide_clock:count[29]~2\);
 
--- Location: FF_X5_Y18_N27
+-- Location: FF_X66_Y62_N27
 \volmap|divide_clock:count[29]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4178,12 +4071,12 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \volmap|divide_clock:count[29]~1_combout\,
-	sclr => \volmap|LessThan0~11_combout\,
+	sclr => \volmap|LessThan0~10_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \volmap|divide_clock:count[29]~q\);
 
--- Location: LCCOMB_X5_Y18_N28
+-- Location: LCCOMB_X66_Y62_N28
 \volmap|divide_clock:count[30]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|divide_clock:count[30]~1_combout\ = (\volmap|divide_clock:count[30]~q\ & (\volmap|divide_clock:count[29]~2\ $ (GND))) # (!\volmap|divide_clock:count[30]~q\ & (!\volmap|divide_clock:count[29]~2\ & VCC))
@@ -4201,7 +4094,7 @@ PORT MAP (
 	combout => \volmap|divide_clock:count[30]~1_combout\,
 	cout => \volmap|divide_clock:count[30]~2\);
 
--- Location: FF_X5_Y18_N29
+-- Location: FF_X66_Y62_N29
 \volmap|divide_clock:count[30]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4211,12 +4104,12 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \volmap|divide_clock:count[30]~1_combout\,
-	sclr => \volmap|LessThan0~11_combout\,
+	sclr => \volmap|LessThan0~10_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \volmap|divide_clock:count[30]~q\);
 
--- Location: LCCOMB_X5_Y18_N30
+-- Location: LCCOMB_X66_Y62_N30
 \volmap|divide_clock:count[31]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|divide_clock:count[31]~1_combout\ = \volmap|divide_clock:count[31]~q\ $ (\volmap|divide_clock:count[30]~2\)
@@ -4231,7 +4124,7 @@ PORT MAP (
 	cin => \volmap|divide_clock:count[30]~2\,
 	combout => \volmap|divide_clock:count[31]~1_combout\);
 
--- Location: FF_X5_Y18_N31
+-- Location: FF_X66_Y62_N31
 \volmap|divide_clock:count[31]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4241,32 +4134,15 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \volmap|divide_clock:count[31]~1_combout\,
-	sclr => \volmap|LessThan0~11_combout\,
+	sclr => \volmap|LessThan0~10_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \volmap|divide_clock:count[31]~q\);
 
--- Location: LCCOMB_X4_Y18_N0
-\volmap|LessThan0~8\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X65_Y63_N22
+\volmap|LessThan0~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \volmap|LessThan0~8_combout\ = (\volmap|divide_clock:count[23]~q\) # ((\volmap|divide_clock:count[22]~q\ & ((\volmap|divide_clock:count[20]~q\) # (\volmap|divide_clock:count[21]~q\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111110011101100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \volmap|divide_clock:count[20]~q\,
-	datab => \volmap|divide_clock:count[23]~q\,
-	datac => \volmap|divide_clock:count[22]~q\,
-	datad => \volmap|divide_clock:count[21]~q\,
-	combout => \volmap|LessThan0~8_combout\);
-
--- Location: LCCOMB_X4_Y19_N14
-\volmap|LessThan0~9\ : cycloneive_lcell_comb
--- Equation(s):
--- \volmap|LessThan0~9_combout\ = (\volmap|divide_clock:count[26]~q\) # ((\volmap|divide_clock:count[27]~q\) # ((\volmap|divide_clock:count[24]~q\) # (\volmap|divide_clock:count[25]~q\)))
+-- \volmap|LessThan0~0_combout\ = (\volmap|divide_clock:count[25]~q\) # ((\volmap|divide_clock:count[24]~q\) # ((\volmap|divide_clock:count[22]~q\) # (\volmap|divide_clock:count[23]~q\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4274,16 +4150,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \volmap|divide_clock:count[26]~q\,
-	datab => \volmap|divide_clock:count[27]~q\,
-	datac => \volmap|divide_clock:count[24]~q\,
-	datad => \volmap|divide_clock:count[25]~q\,
-	combout => \volmap|LessThan0~9_combout\);
+	dataa => \volmap|divide_clock:count[25]~q\,
+	datab => \volmap|divide_clock:count[24]~q\,
+	datac => \volmap|divide_clock:count[22]~q\,
+	datad => \volmap|divide_clock:count[23]~q\,
+	combout => \volmap|LessThan0~0_combout\);
 
--- Location: LCCOMB_X4_Y19_N8
-\volmap|LessThan0~10\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X65_Y63_N0
+\volmap|LessThan0~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \volmap|LessThan0~10_combout\ = (\volmap|divide_clock:count[28]~q\) # ((\volmap|divide_clock:count[30]~q\) # ((\volmap|LessThan0~9_combout\) # (\volmap|divide_clock:count[29]~q\)))
+-- \volmap|LessThan0~1_combout\ = (\volmap|divide_clock:count[28]~q\) # ((\volmap|divide_clock:count[27]~q\) # ((\volmap|divide_clock:count[26]~q\) # (\volmap|divide_clock:count[29]~q\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4292,179 +4168,161 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \volmap|divide_clock:count[28]~q\,
-	datab => \volmap|divide_clock:count[30]~q\,
-	datac => \volmap|LessThan0~9_combout\,
+	datab => \volmap|divide_clock:count[27]~q\,
+	datac => \volmap|divide_clock:count[26]~q\,
 	datad => \volmap|divide_clock:count[29]~q\,
-	combout => \volmap|LessThan0~10_combout\);
+	combout => \volmap|LessThan0~1_combout\);
 
--- Location: LCCOMB_X4_Y19_N10
-\volmap|LessThan0~4\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X65_Y63_N14
+\volmap|LessThan0~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \volmap|LessThan0~4_combout\ = (\volmap|divide_clock:count[10]~q\) # ((\volmap|divide_clock:count[9]~q\ & (\volmap|divide_clock:count[7]~q\ & \volmap|divide_clock:count[8]~q\)))
+-- \volmap|LessThan0~2_combout\ = (\volmap|divide_clock:count[30]~q\) # ((\volmap|LessThan0~0_combout\) # (\volmap|LessThan0~1_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1110101010101010",
+	lut_mask => "1111111111111100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \volmap|divide_clock:count[30]~q\,
+	datac => \volmap|LessThan0~0_combout\,
+	datad => \volmap|LessThan0~1_combout\,
+	combout => \volmap|LessThan0~2_combout\);
+
+-- Location: LCCOMB_X65_Y63_N4
+\volmap|LessThan0~7\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \volmap|LessThan0~7_combout\ = (\volmap|divide_clock:count[12]~q\) # ((\volmap|divide_clock:count[15]~q\) # ((\volmap|divide_clock:count[14]~q\) # (\volmap|divide_clock:count[13]~q\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111111110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \volmap|divide_clock:count[12]~q\,
+	datab => \volmap|divide_clock:count[15]~q\,
+	datac => \volmap|divide_clock:count[14]~q\,
+	datad => \volmap|divide_clock:count[13]~q\,
+	combout => \volmap|LessThan0~7_combout\);
+
+-- Location: LCCOMB_X65_Y63_N8
+\volmap|LessThan0~3\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \volmap|LessThan0~3_combout\ = (\volmap|divide_clock:count[3]~q\) # ((\volmap|divide_clock:count[0]~q\) # ((\volmap|divide_clock:count[1]~q\) # (\volmap|divide_clock:count[2]~q\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111111110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \volmap|divide_clock:count[3]~q\,
+	datab => \volmap|divide_clock:count[0]~q\,
+	datac => \volmap|divide_clock:count[1]~q\,
+	datad => \volmap|divide_clock:count[2]~q\,
+	combout => \volmap|LessThan0~3_combout\);
+
+-- Location: LCCOMB_X65_Y63_N24
+\volmap|LessThan0~4\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \volmap|LessThan0~4_combout\ = (\volmap|divide_clock:count[5]~q\) # ((\volmap|divide_clock:count[7]~q\) # ((\volmap|divide_clock:count[6]~q\) # (\volmap|divide_clock:count[4]~q\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111111110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \volmap|divide_clock:count[5]~q\,
+	datab => \volmap|divide_clock:count[7]~q\,
+	datac => \volmap|divide_clock:count[6]~q\,
+	datad => \volmap|divide_clock:count[4]~q\,
+	combout => \volmap|LessThan0~4_combout\);
+
+-- Location: LCCOMB_X65_Y63_N2
+\volmap|LessThan0~5\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \volmap|LessThan0~5_combout\ = (\volmap|divide_clock:count[8]~q\ & ((\volmap|LessThan0~3_combout\) # (\volmap|LessThan0~4_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100110011000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \volmap|divide_clock:count[8]~q\,
+	datac => \volmap|LessThan0~3_combout\,
+	datad => \volmap|LessThan0~4_combout\,
+	combout => \volmap|LessThan0~5_combout\);
+
+-- Location: LCCOMB_X65_Y63_N16
+\volmap|LessThan0~6\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \volmap|LessThan0~6_combout\ = (\volmap|divide_clock:count[11]~q\ & ((\volmap|divide_clock:count[10]~q\) # ((\volmap|divide_clock:count[9]~q\) # (\volmap|LessThan0~5_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111000011100000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \volmap|divide_clock:count[10]~q\,
 	datab => \volmap|divide_clock:count[9]~q\,
-	datac => \volmap|divide_clock:count[7]~q\,
-	datad => \volmap|divide_clock:count[8]~q\,
-	combout => \volmap|LessThan0~4_combout\);
-
--- Location: LCCOMB_X4_Y19_N0
-\volmap|LessThan0~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \volmap|LessThan0~1_combout\ = (\volmap|divide_clock:count[1]~q\) # ((\volmap|divide_clock:count[0]~q\) # ((\volmap|divide_clock:count[3]~q\) # (\volmap|divide_clock:count[2]~q\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111111111110",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \volmap|divide_clock:count[1]~q\,
-	datab => \volmap|divide_clock:count[0]~q\,
-	datac => \volmap|divide_clock:count[3]~q\,
-	datad => \volmap|divide_clock:count[2]~q\,
-	combout => \volmap|LessThan0~1_combout\);
-
--- Location: LCCOMB_X4_Y19_N20
-\volmap|LessThan0~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \volmap|LessThan0~0_combout\ = (\volmap|divide_clock:count[9]~q\ & (\volmap|divide_clock:count[11]~q\ & (\volmap|divide_clock:count[8]~q\ & \volmap|divide_clock:count[6]~q\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \volmap|divide_clock:count[9]~q\,
-	datab => \volmap|divide_clock:count[11]~q\,
-	datac => \volmap|divide_clock:count[8]~q\,
-	datad => \volmap|divide_clock:count[6]~q\,
-	combout => \volmap|LessThan0~0_combout\);
-
--- Location: LCCOMB_X4_Y19_N18
-\volmap|LessThan0~2\ : cycloneive_lcell_comb
--- Equation(s):
--- \volmap|LessThan0~2_combout\ = (\volmap|LessThan0~0_combout\ & ((\volmap|divide_clock:count[4]~q\) # ((\volmap|LessThan0~1_combout\) # (\volmap|divide_clock:count[5]~q\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \volmap|divide_clock:count[4]~q\,
-	datab => \volmap|LessThan0~1_combout\,
-	datac => \volmap|divide_clock:count[5]~q\,
-	datad => \volmap|LessThan0~0_combout\,
-	combout => \volmap|LessThan0~2_combout\);
-
--- Location: LCCOMB_X4_Y19_N2
-\volmap|LessThan0~3\ : cycloneive_lcell_comb
--- Equation(s):
--- \volmap|LessThan0~3_combout\ = (\volmap|divide_clock:count[12]~q\) # ((\volmap|divide_clock:count[13]~q\) # (\volmap|LessThan0~2_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111111101110",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \volmap|divide_clock:count[12]~q\,
-	datab => \volmap|divide_clock:count[13]~q\,
-	datad => \volmap|LessThan0~2_combout\,
-	combout => \volmap|LessThan0~3_combout\);
-
--- Location: LCCOMB_X4_Y19_N6
-\volmap|LessThan0~5\ : cycloneive_lcell_comb
--- Equation(s):
--- \volmap|LessThan0~5_combout\ = (\volmap|divide_clock:count[14]~q\ & ((\volmap|LessThan0~3_combout\) # ((\volmap|LessThan0~4_combout\ & \volmap|divide_clock:count[11]~q\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100110010000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \volmap|LessThan0~4_combout\,
-	datab => \volmap|divide_clock:count[14]~q\,
 	datac => \volmap|divide_clock:count[11]~q\,
-	datad => \volmap|LessThan0~3_combout\,
-	combout => \volmap|LessThan0~5_combout\);
+	datad => \volmap|LessThan0~5_combout\,
+	combout => \volmap|LessThan0~6_combout\);
 
--- Location: LCCOMB_X4_Y19_N24
-\volmap|LessThan0~6\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X65_Y63_N10
+\volmap|LessThan0~8\ : cycloneive_lcell_comb
 -- Equation(s):
--- \volmap|LessThan0~6_combout\ = (\volmap|divide_clock:count[17]~q\) # ((\volmap|divide_clock:count[15]~q\) # ((\volmap|divide_clock:count[16]~q\) # (\volmap|LessThan0~5_combout\)))
+-- \volmap|LessThan0~8_combout\ = (\volmap|divide_clock:count[17]~q\) # ((\volmap|divide_clock:count[16]~q\ & ((\volmap|LessThan0~7_combout\) # (\volmap|LessThan0~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111111111110",
+	lut_mask => "1110111011101010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \volmap|divide_clock:count[17]~q\,
-	datab => \volmap|divide_clock:count[15]~q\,
-	datac => \volmap|divide_clock:count[16]~q\,
-	datad => \volmap|LessThan0~5_combout\,
-	combout => \volmap|LessThan0~6_combout\);
-
--- Location: LCCOMB_X4_Y19_N28
-\volmap|LessThan0~7\ : cycloneive_lcell_comb
--- Equation(s):
--- \volmap|LessThan0~7_combout\ = (\volmap|divide_clock:count[18]~q\ & (\volmap|divide_clock:count[19]~q\ & (\volmap|divide_clock:count[22]~q\ & \volmap|LessThan0~6_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \volmap|divide_clock:count[18]~q\,
-	datab => \volmap|divide_clock:count[19]~q\,
-	datac => \volmap|divide_clock:count[22]~q\,
+	datab => \volmap|divide_clock:count[16]~q\,
+	datac => \volmap|LessThan0~7_combout\,
 	datad => \volmap|LessThan0~6_combout\,
-	combout => \volmap|LessThan0~7_combout\);
+	combout => \volmap|LessThan0~8_combout\);
 
--- Location: LCCOMB_X4_Y19_N30
-\volmap|LessThan0~11\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X65_Y63_N30
+\volmap|LessThan0~10\ : cycloneive_lcell_comb
 -- Equation(s):
--- \volmap|LessThan0~11_combout\ = (!\volmap|divide_clock:count[31]~q\ & ((\volmap|LessThan0~8_combout\) # ((\volmap|LessThan0~10_combout\) # (\volmap|LessThan0~7_combout\))))
+-- \volmap|LessThan0~10_combout\ = (!\volmap|divide_clock:count[31]~q\ & ((\volmap|LessThan0~2_combout\) # ((\volmap|LessThan0~9_combout\ & \volmap|LessThan0~8_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101010101010100",
+	lut_mask => "0011001000110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \volmap|divide_clock:count[31]~q\,
-	datab => \volmap|LessThan0~8_combout\,
-	datac => \volmap|LessThan0~10_combout\,
-	datad => \volmap|LessThan0~7_combout\,
-	combout => \volmap|LessThan0~11_combout\);
+	dataa => \volmap|LessThan0~9_combout\,
+	datab => \volmap|divide_clock:count[31]~q\,
+	datac => \volmap|LessThan0~2_combout\,
+	datad => \volmap|LessThan0~8_combout\,
+	combout => \volmap|LessThan0~10_combout\);
 
--- Location: LCCOMB_X4_Y19_N22
+-- Location: LCCOMB_X65_Y63_N20
 \volmap|div_clk~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \volmap|div_clk~0_combout\ = \volmap|LessThan0~11_combout\ $ (\volmap|div_clk~q\)
+-- \volmap|div_clk~0_combout\ = \volmap|LessThan0~10_combout\ $ (\volmap|div_clk~q\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101010110101010",
+	lut_mask => "0000111111110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \volmap|LessThan0~11_combout\,
+	datac => \volmap|LessThan0~10_combout\,
 	datad => \volmap|div_clk~q\,
 	combout => \volmap|div_clk~0_combout\);
 
--- Location: LCCOMB_X4_Y19_N12
+-- Location: LCCOMB_X65_Y63_N12
 \volmap|div_clk~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|div_clk~feeder_combout\ = \volmap|div_clk~0_combout\
@@ -4478,7 +4336,7 @@ PORT MAP (
 	datad => \volmap|div_clk~0_combout\,
 	combout => \volmap|div_clk~feeder_combout\);
 
--- Location: FF_X4_Y19_N13
+-- Location: FF_X65_Y63_N13
 \volmap|div_clk\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4492,7 +4350,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \volmap|div_clk~q\);
 
--- Location: CLKCTRL_G2
+-- Location: CLKCTRL_G13
 \volmap|div_clk~clkctrl\ : cycloneive_clkctrl
 -- pragma translate_off
 GENERIC MAP (
@@ -4527,23 +4385,23 @@ PORT MAP (
 	i => ww_vol_up,
 	o => \vol_up~input_o\);
 
--- Location: LCCOMB_X52_Y71_N12
+-- Location: LCCOMB_X62_Y62_N24
 \volmap|Mux4~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|Mux4~0_combout\ = (\vol_down~input_o\ & (!\vol_up~input_o\ & \volmap|current\(0))) # (!\vol_down~input_o\ & (\vol_up~input_o\ & !\volmap|current\(0)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000101001010000",
+	lut_mask => "0010001001000100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vol_down~input_o\,
-	datac => \vol_up~input_o\,
+	datab => \vol_up~input_o\,
 	datad => \volmap|current\(0),
 	combout => \volmap|Mux4~0_combout\);
 
--- Location: LCCOMB_X52_Y71_N28
+-- Location: LCCOMB_X62_Y62_N16
 \volmap|Mux4~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|Mux4~1_combout\ = (\volmap|current\(0) & ((\volmap|current\(2)) # (\volmap|current\(1) $ (\volmap|Mux4~0_combout\)))) # (!\volmap|current\(0) & ((\volmap|Mux4~0_combout\ & (\volmap|current\(2))) # (!\volmap|Mux4~0_combout\ & 
@@ -4561,7 +4419,7 @@ PORT MAP (
 	datad => \volmap|Mux4~0_combout\,
 	combout => \volmap|Mux4~1_combout\);
 
--- Location: FF_X52_Y71_N29
+-- Location: FF_X62_Y62_N17
 \volmap|current[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4575,24 +4433,24 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \volmap|current\(1));
 
--- Location: LCCOMB_X52_Y71_N26
+-- Location: LCCOMB_X62_Y62_N2
 \volmap|Mux5~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|Mux5~0_combout\ = \volmap|current\(2) $ (((\vol_down~input_o\) # ((\volmap|current\(1)) # (!\vol_up~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0001000011101111",
+	lut_mask => "0000111101001011",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vol_down~input_o\,
-	datab => \volmap|current\(1),
-	datac => \vol_up~input_o\,
-	datad => \volmap|current\(2),
+	datab => \vol_up~input_o\,
+	datac => \volmap|current\(2),
+	datad => \volmap|current\(1),
 	combout => \volmap|Mux5~0_combout\);
 
--- Location: LCCOMB_X52_Y71_N14
+-- Location: LCCOMB_X62_Y62_N8
 \volmap|Mux5~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|Mux5~1_combout\ = (\volmap|Mux5~0_combout\ & (\vol_down~input_o\ $ (\vol_up~input_o\ $ (\volmap|current\(0)))))
@@ -4609,7 +4467,7 @@ PORT MAP (
 	datad => \volmap|Mux5~0_combout\,
 	combout => \volmap|Mux5~1_combout\);
 
--- Location: FF_X52_Y71_N15
+-- Location: FF_X62_Y62_N9
 \volmap|current[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4623,40 +4481,40 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \volmap|current\(0));
 
--- Location: LCCOMB_X52_Y71_N18
+-- Location: LCCOMB_X62_Y62_N4
 \volmap|Mux3~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|Mux3~0_combout\ = (\vol_down~input_o\ & ((\volmap|current\(2)) # (!\vol_up~input_o\))) # (!\vol_down~input_o\ & (!\vol_up~input_o\ & \volmap|current\(2)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010111100001010",
+	lut_mask => "1011001010110010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vol_down~input_o\,
-	datac => \vol_up~input_o\,
-	datad => \volmap|current\(2),
+	datab => \vol_up~input_o\,
+	datac => \volmap|current\(2),
 	combout => \volmap|Mux3~0_combout\);
 
--- Location: LCCOMB_X52_Y71_N22
+-- Location: LCCOMB_X62_Y62_N14
 \volmap|Mux3~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \volmap|Mux3~1_combout\ = (\volmap|Mux3~0_combout\ & ((\volmap|current\(0) & (\volmap|current\(1) & !\volmap|current\(2))) # (!\volmap|current\(0) & (!\volmap|current\(1) & \volmap|current\(2)))))
+-- \volmap|Mux3~1_combout\ = (\volmap|Mux3~0_combout\ & ((\volmap|current\(0) & (!\volmap|current\(2) & \volmap|current\(1))) # (!\volmap|current\(0) & (\volmap|current\(2) & !\volmap|current\(1)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0001100000000000",
+	lut_mask => "0000100001000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \volmap|current\(0),
-	datab => \volmap|current\(1),
+	datab => \volmap|Mux3~0_combout\,
 	datac => \volmap|current\(2),
-	datad => \volmap|Mux3~0_combout\,
+	datad => \volmap|current\(1),
 	combout => \volmap|Mux3~1_combout\);
 
--- Location: FF_X52_Y71_N23
+-- Location: FF_X62_Y62_N15
 \volmap|current[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4670,37 +4528,23 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \volmap|current\(2));
 
--- Location: LCCOMB_X52_Y71_N24
-\volmap|z[2]~feeder\ : cycloneive_lcell_comb
--- Equation(s):
--- \volmap|z[2]~feeder_combout\ = \volmap|current\(2)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datad => \volmap|current\(2),
-	combout => \volmap|z[2]~feeder_combout\);
-
--- Location: LCCOMB_X52_Y71_N20
+-- Location: LCCOMB_X62_Y62_N20
 \volmap|z[2]~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|z[2]~0_combout\ = ((!\volmap|current\(0) & !\volmap|current\(1))) # (!\volmap|current\(2))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101010101011111",
+	lut_mask => "0011001100111111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \volmap|current\(2),
+	datab => \volmap|current\(2),
 	datac => \volmap|current\(0),
 	datad => \volmap|current\(1),
 	combout => \volmap|z[2]~0_combout\);
 
--- Location: FF_X52_Y71_N25
+-- Location: FF_X62_Y62_N5
 \volmap|z[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -4709,114 +4553,17 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \volmap|div_clk~clkctrl_outclk\,
-	d => \volmap|z[2]~feeder_combout\,
+	asdata => \volmap|current\(2),
+	sload => VCC,
 	ena => \volmap|z[2]~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \volmap|z\(2));
 
--- Location: LCCOMB_X61_Y71_N2
-\vgamap|videoGen|pixelDraw~48\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~48_combout\ = (!\vgamap|videoSync|pixel_row\(8) & (\vgamap|videoSync|pixel_row\(6) & \vgamap|videoSync|pixel_row\(7)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vgamap|videoSync|pixel_row\(8),
-	datac => \vgamap|videoSync|pixel_row\(6),
-	datad => \vgamap|videoSync|pixel_row\(7),
-	combout => \vgamap|videoGen|pixelDraw~48_combout\);
-
--- Location: LCCOMB_X63_Y71_N26
+-- Location: LCCOMB_X59_Y63_N8
 \vgamap|videoGen|LessThan37~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|LessThan37~0_combout\ = (\vgamap|videoSync|pixel_row\(3) & ((\vgamap|videoSync|pixel_row\(0)) # ((\vgamap|videoSync|pixel_row\(1)) # (\vgamap|videoSync|pixel_row\(2)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_row\(0),
-	datab => \vgamap|videoSync|pixel_row\(1),
-	datac => \vgamap|videoSync|pixel_row\(2),
-	datad => \vgamap|videoSync|pixel_row\(3),
-	combout => \vgamap|videoGen|LessThan37~0_combout\);
-
--- Location: LCCOMB_X63_Y71_N8
-\vgamap|videoGen|pixelDraw~47\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~47_combout\ = (\vgamap|videoSync|pixel_row\(4) & (((!\vgamap|videoSync|pixel_row\(3))) # (!\vgamap|videoSync|pixel_row\(2)))) # (!\vgamap|videoSync|pixel_row\(4) & (((\vgamap|videoGen|LessThan37~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111010011111100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_row\(2),
-	datab => \vgamap|videoSync|pixel_row\(4),
-	datac => \vgamap|videoGen|LessThan37~0_combout\,
-	datad => \vgamap|videoSync|pixel_row\(3),
-	combout => \vgamap|videoGen|pixelDraw~47_combout\);
-
--- Location: LCCOMB_X57_Y71_N22
-\vgamap|videoGen|pixelDraw~50\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~50_combout\ = (!\vgamap|videoSync|pixel_column\(8) & (!\vgamap|videoSync|pixel_column\(7) & \vgamap|videoSync|pixel_column\(9)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0001000000010000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(8),
-	datab => \vgamap|videoSync|pixel_column\(7),
-	datac => \vgamap|videoSync|pixel_column\(9),
-	combout => \vgamap|videoGen|pixelDraw~50_combout\);
-
--- Location: LCCOMB_X58_Y71_N28
-\vgamap|videoGen|LessThan5~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|LessThan5~1_combout\ = (!\vgamap|videoSync|pixel_column\(5) & !\vgamap|videoSync|pixel_column\(4))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000110011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vgamap|videoSync|pixel_column\(5),
-	datad => \vgamap|videoSync|pixel_column\(4),
-	combout => \vgamap|videoGen|LessThan5~1_combout\);
-
--- Location: LCCOMB_X57_Y71_N24
-\vgamap|videoGen|pixelDraw~49\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~49_combout\ = (\vgamap|videoSync|pixel_column\(6) & (((\vgamap|videoSync|pixel_column\(1) & \vgamap|videoGen|LessThan5~0_combout\)) # (!\vgamap|videoGen|LessThan5~1_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1011000000110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(1),
-	datab => \vgamap|videoGen|LessThan5~1_combout\,
-	datac => \vgamap|videoSync|pixel_column\(6),
-	datad => \vgamap|videoGen|LessThan5~0_combout\,
-	combout => \vgamap|videoGen|pixelDraw~49_combout\);
-
--- Location: LCCOMB_X58_Y71_N12
-\vgamap|videoGen|pixelDraw~102\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~102_combout\ = (\vgamap|videoSync|pixel_column\(5) & ((\vgamap|videoSync|pixel_column\(4)) # ((\vgamap|videoSync|pixel_column\(3)) # (\vgamap|videoGen|LessThan44~0_combout\))))
+-- \vgamap|videoGen|LessThan37~0_combout\ = (\vgamap|videoSync|pixel_row\(3) & ((\vgamap|videoSync|pixel_row\(2)) # ((\vgamap|videoSync|pixel_row\(0)) # (\vgamap|videoSync|pixel_row\(1)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4824,129 +4571,210 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(5),
+	dataa => \vgamap|videoSync|pixel_row\(3),
+	datab => \vgamap|videoSync|pixel_row\(2),
+	datac => \vgamap|videoSync|pixel_row\(0),
+	datad => \vgamap|videoSync|pixel_row\(1),
+	combout => \vgamap|videoGen|LessThan37~0_combout\);
+
+-- Location: LCCOMB_X59_Y63_N26
+\vgamap|videoGen|pixelDraw~47\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~47_combout\ = (\vgamap|videoSync|pixel_row\(4) & (((!\vgamap|videoSync|pixel_row\(3))) # (!\vgamap|videoSync|pixel_row\(2)))) # (!\vgamap|videoSync|pixel_row\(4) & (((\vgamap|videoGen|LessThan37~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101110011111100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_row\(2),
+	datab => \vgamap|videoGen|LessThan37~0_combout\,
+	datac => \vgamap|videoSync|pixel_row\(4),
+	datad => \vgamap|videoSync|pixel_row\(3),
+	combout => \vgamap|videoGen|pixelDraw~47_combout\);
+
+-- Location: LCCOMB_X59_Y63_N12
+\vgamap|videoGen|pixelDraw~48\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~48_combout\ = (\vgamap|videoSync|pixel_row\(6) & (\vgamap|videoSync|pixel_row\(7) & !\vgamap|videoSync|pixel_row\(8)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000010100000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_row\(6),
+	datac => \vgamap|videoSync|pixel_row\(7),
+	datad => \vgamap|videoSync|pixel_row\(8),
+	combout => \vgamap|videoGen|pixelDraw~48_combout\);
+
+-- Location: LCCOMB_X57_Y62_N30
+\vgamap|videoGen|pixelDraw~50\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~50_combout\ = (\vgamap|videoSync|pixel_column\(9) & (!\vgamap|videoSync|pixel_column\(8) & !\vgamap|videoSync|pixel_column\(7)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000100010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(9),
+	datab => \vgamap|videoSync|pixel_column\(8),
+	datad => \vgamap|videoSync|pixel_column\(7),
+	combout => \vgamap|videoGen|pixelDraw~50_combout\);
+
+-- Location: LCCOMB_X55_Y62_N2
+\vgamap|videoGen|pixelDraw~102\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~102_combout\ = (\vgamap|videoSync|pixel_column\(5) & ((\vgamap|videoSync|pixel_column\(3)) # ((\vgamap|videoSync|pixel_column\(4)) # (\vgamap|videoGen|LessThan44~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(3),
 	datab => \vgamap|videoSync|pixel_column\(4),
-	datac => \vgamap|videoSync|pixel_column\(3),
-	datad => \vgamap|videoGen|LessThan44~0_combout\,
+	datac => \vgamap|videoGen|LessThan44~0_combout\,
+	datad => \vgamap|videoSync|pixel_column\(5),
 	combout => \vgamap|videoGen|pixelDraw~102_combout\);
 
--- Location: LCCOMB_X55_Y71_N28
+-- Location: LCCOMB_X55_Y62_N22
+\vgamap|videoGen|LessThan5~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|LessThan5~1_combout\ = (!\vgamap|videoSync|pixel_column\(5) & !\vgamap|videoSync|pixel_column\(4))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000001111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \vgamap|videoSync|pixel_column\(5),
+	datad => \vgamap|videoSync|pixel_column\(4),
+	combout => \vgamap|videoGen|LessThan5~1_combout\);
+
+-- Location: LCCOMB_X57_Y62_N28
+\vgamap|videoGen|pixelDraw~49\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~49_combout\ = (\vgamap|videoSync|pixel_column\(6) & (((\vgamap|videoSync|pixel_column\(1) & \vgamap|videoGen|LessThan5~0_combout\)) # (!\vgamap|videoGen|LessThan5~1_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100010001000100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoGen|LessThan5~1_combout\,
+	datab => \vgamap|videoSync|pixel_column\(6),
+	datac => \vgamap|videoSync|pixel_column\(1),
+	datad => \vgamap|videoGen|LessThan5~0_combout\,
+	combout => \vgamap|videoGen|pixelDraw~49_combout\);
+
+-- Location: LCCOMB_X57_Y62_N18
 \vgamap|videoGen|pixelDraw~51\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoGen|pixelDraw~51_combout\ = ((\vgamap|videoGen|pixelDraw~102_combout\) # (!\vgamap|videoGen|pixelDraw~49_combout\)) # (!\vgamap|videoGen|pixelDraw~50_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111101011111",
+	lut_mask => "1111010111111111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vgamap|videoGen|pixelDraw~50_combout\,
-	datac => \vgamap|videoGen|pixelDraw~49_combout\,
-	datad => \vgamap|videoGen|pixelDraw~102_combout\,
+	datac => \vgamap|videoGen|pixelDraw~102_combout\,
+	datad => \vgamap|videoGen|pixelDraw~49_combout\,
 	combout => \vgamap|videoGen|pixelDraw~51_combout\);
 
--- Location: LCCOMB_X55_Y71_N26
+-- Location: LCCOMB_X60_Y62_N4
 \vgamap|videoGen|pixelDraw~52\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|pixelDraw~52_combout\ = (\vgamap|videoGen|pixelDraw~48_combout\ & (!\vgamap|videoSync|pixel_row\(5) & (\vgamap|videoGen|pixelDraw~47_combout\ & !\vgamap|videoGen|pixelDraw~51_combout\)))
+-- \vgamap|videoGen|pixelDraw~52_combout\ = (\vgamap|videoGen|pixelDraw~47_combout\ & (\vgamap|videoGen|pixelDraw~48_combout\ & (!\vgamap|videoSync|pixel_row\(5) & !\vgamap|videoGen|pixelDraw~51_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000000100000",
+	lut_mask => "0000000000001000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoGen|pixelDraw~48_combout\,
-	datab => \vgamap|videoSync|pixel_row\(5),
-	datac => \vgamap|videoGen|pixelDraw~47_combout\,
+	dataa => \vgamap|videoGen|pixelDraw~47_combout\,
+	datab => \vgamap|videoGen|pixelDraw~48_combout\,
+	datac => \vgamap|videoSync|pixel_row\(5),
 	datad => \vgamap|videoGen|pixelDraw~51_combout\,
 	combout => \vgamap|videoGen|pixelDraw~52_combout\);
 
--- Location: LCCOMB_X58_Y71_N26
+-- Location: LCCOMB_X55_Y62_N12
+\vgamap|videoGen|LessThan12~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|LessThan12~0_combout\ = (!\vgamap|videoSync|pixel_column\(2) & ((!\vgamap|videoSync|pixel_column\(0)) # (!\vgamap|videoSync|pixel_column\(1))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000001011111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(1),
+	datac => \vgamap|videoSync|pixel_column\(0),
+	datad => \vgamap|videoSync|pixel_column\(2),
+	combout => \vgamap|videoGen|LessThan12~0_combout\);
+
+-- Location: LCCOMB_X57_Y62_N12
 \vgamap|videoGen|pixelDraw~85\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoGen|pixelDraw~85_combout\ = ((\vgamap|videoSync|pixel_column\(6)) # ((\vgamap|videoSync|pixel_column\(3) & \vgamap|videoSync|pixel_column\(4)))) # (!\vgamap|videoSync|pixel_column\(5))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111110001111",
+	lut_mask => "1111110111011101",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(3),
-	datab => \vgamap|videoSync|pixel_column\(4),
-	datac => \vgamap|videoSync|pixel_column\(5),
-	datad => \vgamap|videoSync|pixel_column\(6),
+	dataa => \vgamap|videoSync|pixel_column\(5),
+	datab => \vgamap|videoSync|pixel_column\(6),
+	datac => \vgamap|videoSync|pixel_column\(3),
+	datad => \vgamap|videoSync|pixel_column\(4),
 	combout => \vgamap|videoGen|pixelDraw~85_combout\);
 
--- Location: LCCOMB_X58_Y71_N8
-\vgamap|videoGen|LessThan12~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|LessThan12~0_combout\ = (!\vgamap|videoSync|pixel_column\(2) & ((!\vgamap|videoSync|pixel_column\(1)) # (!\vgamap|videoSync|pixel_column\(0))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000001100110011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vgamap|videoSync|pixel_column\(2),
-	datac => \vgamap|videoSync|pixel_column\(0),
-	datad => \vgamap|videoSync|pixel_column\(1),
-	combout => \vgamap|videoGen|LessThan12~0_combout\);
-
--- Location: LCCOMB_X58_Y71_N0
+-- Location: LCCOMB_X58_Y62_N18
 \vgamap|videoGen|pixelDraw~86\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|pixelDraw~86_combout\ = (\vgamap|videoGen|pixelDraw~85_combout\) # (((\vgamap|videoSync|pixel_column\(4) & !\vgamap|videoGen|LessThan12~0_combout\)) # (!\vgamap|videoGen|pixelDraw~12_combout\))
+-- \vgamap|videoGen|pixelDraw~86_combout\ = ((\vgamap|videoGen|pixelDraw~85_combout\) # ((\vgamap|videoSync|pixel_column\(4) & !\vgamap|videoGen|LessThan12~0_combout\))) # (!\vgamap|videoGen|pixelDraw~12_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010111011111111",
+	lut_mask => "1111111100111011",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoGen|pixelDraw~85_combout\,
-	datab => \vgamap|videoSync|pixel_column\(4),
+	dataa => \vgamap|videoSync|pixel_column\(4),
+	datab => \vgamap|videoGen|pixelDraw~12_combout\,
 	datac => \vgamap|videoGen|LessThan12~0_combout\,
-	datad => \vgamap|videoGen|pixelDraw~12_combout\,
+	datad => \vgamap|videoGen|pixelDraw~85_combout\,
 	combout => \vgamap|videoGen|pixelDraw~86_combout\);
 
--- Location: LCCOMB_X58_Y71_N10
+-- Location: LCCOMB_X58_Y62_N28
 \vgamap|videoGen|pixelDraw~87\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoGen|pixelDraw~87_combout\ = (\vgamap|videoSync|pixel_row\(8) & (!\vgamap|videoSync|pixel_row\(7) & !\vgamap|videoGen|pixelDraw~86_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000000001010",
+	lut_mask => "0000000000001100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|pixel_row\(8),
+	datab => \vgamap|videoSync|pixel_row\(8),
 	datac => \vgamap|videoSync|pixel_row\(7),
 	datad => \vgamap|videoGen|pixelDraw~86_combout\,
 	combout => \vgamap|videoGen|pixelDraw~87_combout\);
 
--- Location: LCCOMB_X55_Y71_N8
-\vgamap|videoGen|pixelDraw~88\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~88_combout\ = (\vgamap|videoGen|pixelDraw~48_combout\ & (\vgamap|videoSync|pixel_row\(5) & (!\vgamap|videoGen|pixelDraw~86_combout\ & \vgamap|videoGen|LessThan35~1_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000100000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoGen|pixelDraw~48_combout\,
-	datab => \vgamap|videoSync|pixel_row\(5),
-	datac => \vgamap|videoGen|pixelDraw~86_combout\,
-	datad => \vgamap|videoGen|LessThan35~1_combout\,
-	combout => \vgamap|videoGen|pixelDraw~88_combout\);
-
--- Location: LCCOMB_X63_Y71_N12
+-- Location: LCCOMB_X59_Y63_N24
 \vgamap|videoGen|pixelDraw~89\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoGen|pixelDraw~89_combout\ = (\vgamap|videoSync|pixel_row\(6) & ((\vgamap|videoSync|pixel_row\(2)) # (\vgamap|videoSync|pixel_row\(1)))) # (!\vgamap|videoSync|pixel_row\(6) & (\vgamap|videoSync|pixel_row\(2) & \vgamap|videoSync|pixel_row\(1)))
@@ -4962,77 +4790,94 @@ PORT MAP (
 	datad => \vgamap|videoSync|pixel_row\(1),
 	combout => \vgamap|videoGen|pixelDraw~89_combout\);
 
--- Location: LCCOMB_X63_Y71_N6
+-- Location: LCCOMB_X59_Y63_N10
 \vgamap|videoGen|pixelDraw~90\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|pixelDraw~90_combout\ = (\vgamap|videoSync|pixel_row\(3) & (((\vgamap|videoSync|pixel_row\(5)) # (\vgamap|videoGen|pixelDraw~89_combout\)))) # (!\vgamap|videoSync|pixel_row\(3) & (\vgamap|videoSync|pixel_row\(0) & 
--- (\vgamap|videoSync|pixel_row\(5) & \vgamap|videoGen|pixelDraw~89_combout\)))
+-- \vgamap|videoGen|pixelDraw~90_combout\ = (\vgamap|videoSync|pixel_row\(3) & ((\vgamap|videoSync|pixel_row\(5)) # ((\vgamap|videoGen|pixelDraw~89_combout\)))) # (!\vgamap|videoSync|pixel_row\(3) & (\vgamap|videoSync|pixel_row\(5) & 
+-- (\vgamap|videoSync|pixel_row\(0) & \vgamap|videoGen|pixelDraw~89_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1110110011000000",
+	lut_mask => "1110101010001000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|pixel_row\(0),
-	datab => \vgamap|videoSync|pixel_row\(3),
-	datac => \vgamap|videoSync|pixel_row\(5),
+	dataa => \vgamap|videoSync|pixel_row\(3),
+	datab => \vgamap|videoSync|pixel_row\(5),
+	datac => \vgamap|videoSync|pixel_row\(0),
 	datad => \vgamap|videoGen|pixelDraw~89_combout\,
 	combout => \vgamap|videoGen|pixelDraw~90_combout\);
 
--- Location: LCCOMB_X63_Y71_N20
+-- Location: LCCOMB_X59_Y63_N4
 \vgamap|videoGen|pixelDraw~91\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|pixelDraw~91_combout\ = (\vgamap|videoSync|pixel_row\(6) & (!\vgamap|videoSync|pixel_row\(4) & (!\vgamap|videoSync|pixel_row\(5) & !\vgamap|videoGen|pixelDraw~90_combout\))) # (!\vgamap|videoSync|pixel_row\(6) & 
--- (\vgamap|videoSync|pixel_row\(4) & (\vgamap|videoSync|pixel_row\(5) & \vgamap|videoGen|pixelDraw~90_combout\)))
+-- \vgamap|videoGen|pixelDraw~91_combout\ = (\vgamap|videoSync|pixel_row\(5) & (\vgamap|videoSync|pixel_row\(4) & (!\vgamap|videoSync|pixel_row\(6) & \vgamap|videoGen|pixelDraw~90_combout\))) # (!\vgamap|videoSync|pixel_row\(5) & 
+-- (!\vgamap|videoSync|pixel_row\(4) & (\vgamap|videoSync|pixel_row\(6) & !\vgamap|videoGen|pixelDraw~90_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0100000000000010",
+	lut_mask => "0000100000010000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|pixel_row\(6),
+	dataa => \vgamap|videoSync|pixel_row\(5),
 	datab => \vgamap|videoSync|pixel_row\(4),
-	datac => \vgamap|videoSync|pixel_row\(5),
+	datac => \vgamap|videoSync|pixel_row\(6),
 	datad => \vgamap|videoGen|pixelDraw~90_combout\,
 	combout => \vgamap|videoGen|pixelDraw~91_combout\);
 
--- Location: LCCOMB_X63_Y71_N14
-\vgamap|videoGen|colorAddress~22\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X58_Y62_N2
+\vgamap|videoGen|pixelDraw~88\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|colorAddress~22_combout\ = (!\vgamap|videoSync|pixel_row\(4) & (\vgamap|videoSync|pixel_row\(5) & ((!\vgamap|videoSync|pixel_row\(3)) # (!\vgamap|videoSync|pixel_row\(2)))))
+-- \vgamap|videoGen|pixelDraw~88_combout\ = (\vgamap|videoGen|pixelDraw~48_combout\ & (!\vgamap|videoGen|pixelDraw~86_combout\ & (\vgamap|videoSync|pixel_row\(5) & \vgamap|videoGen|LessThan35~1_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0001000000110000",
+	lut_mask => "0010000000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|pixel_row\(2),
-	datab => \vgamap|videoSync|pixel_row\(4),
+	dataa => \vgamap|videoGen|pixelDraw~48_combout\,
+	datab => \vgamap|videoGen|pixelDraw~86_combout\,
 	datac => \vgamap|videoSync|pixel_row\(5),
-	datad => \vgamap|videoSync|pixel_row\(3),
+	datad => \vgamap|videoGen|LessThan35~1_combout\,
+	combout => \vgamap|videoGen|pixelDraw~88_combout\);
+
+-- Location: LCCOMB_X59_Y63_N6
+\vgamap|videoGen|colorAddress~22\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|colorAddress~22_combout\ = (!\vgamap|videoSync|pixel_row\(4) & (\vgamap|videoSync|pixel_row\(5) & ((!\vgamap|videoSync|pixel_row\(2)) # (!\vgamap|videoSync|pixel_row\(3)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001001100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_row\(3),
+	datab => \vgamap|videoSync|pixel_row\(4),
+	datac => \vgamap|videoSync|pixel_row\(2),
+	datad => \vgamap|videoSync|pixel_row\(5),
 	combout => \vgamap|videoGen|colorAddress~22_combout\);
 
--- Location: LCCOMB_X63_Y71_N4
+-- Location: LCCOMB_X58_Y62_N22
 \vgamap|videoGen|colorAddress~23\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoGen|colorAddress~23_combout\ = (!\vgamap|videoSync|pixel_row\(5) & ((\vgamap|videoGen|LessThan36~0_combout\) # ((\vgamap|videoSync|pixel_row\(4) & \vgamap|videoGen|LessThan37~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101010101000000",
+	lut_mask => "0011001000100010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|pixel_row\(5),
-	datab => \vgamap|videoSync|pixel_row\(4),
-	datac => \vgamap|videoGen|LessThan37~0_combout\,
-	datad => \vgamap|videoGen|LessThan36~0_combout\,
+	dataa => \vgamap|videoGen|LessThan36~0_combout\,
+	datab => \vgamap|videoSync|pixel_row\(5),
+	datac => \vgamap|videoSync|pixel_row\(4),
+	datad => \vgamap|videoGen|LessThan37~0_combout\,
 	combout => \vgamap|videoGen|colorAddress~23_combout\);
 
--- Location: LCCOMB_X63_Y71_N18
+-- Location: LCCOMB_X58_Y62_N24
 \vgamap|videoGen|colorAddress~24\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoGen|colorAddress~24_combout\ = (!\vgamap|videoSync|pixel_row\(6) & (\vgamap|videoGen|pixelDraw~87_combout\ & ((\vgamap|videoGen|colorAddress~22_combout\) # (\vgamap|videoGen|colorAddress~23_combout\))))
@@ -5049,24 +4894,24 @@ PORT MAP (
 	datad => \vgamap|videoGen|pixelDraw~87_combout\,
 	combout => \vgamap|videoGen|colorAddress~24_combout\);
 
--- Location: LCCOMB_X55_Y71_N2
+-- Location: LCCOMB_X60_Y62_N0
 \vgamap|videoGen|colorAddress~25\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoGen|colorAddress~25_combout\ = (\vgamap|videoGen|pixelDraw~88_combout\) # ((\vgamap|videoGen|colorAddress~24_combout\) # ((\vgamap|videoGen|pixelDraw~87_combout\ & \vgamap|videoGen|pixelDraw~91_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111111101100",
+	lut_mask => "1111111111111000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vgamap|videoGen|pixelDraw~87_combout\,
-	datab => \vgamap|videoGen|pixelDraw~88_combout\,
-	datac => \vgamap|videoGen|pixelDraw~91_combout\,
+	datab => \vgamap|videoGen|pixelDraw~91_combout\,
+	datac => \vgamap|videoGen|pixelDraw~88_combout\,
 	datad => \vgamap|videoGen|colorAddress~24_combout\,
 	combout => \vgamap|videoGen|colorAddress~25_combout\);
 
--- Location: LCCOMB_X55_Y71_N16
+-- Location: LCCOMB_X60_Y62_N2
 \vgamap|videoGen|colorAddress~26\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoGen|colorAddress~26_combout\ = (!\vgamap|videoGen|pixelDraw~52_combout\ & \vgamap|videoGen|colorAddress~25_combout\)
@@ -5081,584 +4926,125 @@ PORT MAP (
 	datad => \vgamap|videoGen|colorAddress~25_combout\,
 	combout => \vgamap|videoGen|colorAddress~26_combout\);
 
--- Location: LCCOMB_X55_Y71_N6
+-- Location: LCCOMB_X61_Y62_N26
 \vgamap|videoGen|colorAddress~47\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoGen|colorAddress~47_combout\ = (\vgamap|videoGen|colorAddress~3_combout\ & (\vgamap|videoGen|colorAddress~2_combout\ & ((\vgamap|videoGen|colorAddress~26_combout\)))) # (!\vgamap|videoGen|colorAddress~3_combout\ & (((\volmap|z\(2)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1011100000110000",
+	lut_mask => "1101100001010000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoGen|colorAddress~2_combout\,
-	datab => \vgamap|videoGen|colorAddress~3_combout\,
+	dataa => \vgamap|videoGen|colorAddress~3_combout\,
+	datab => \vgamap|videoGen|colorAddress~2_combout\,
 	datac => \volmap|z\(2),
 	datad => \vgamap|videoGen|colorAddress~26_combout\,
 	combout => \vgamap|videoGen|colorAddress~47_combout\);
 
--- Location: LCCOMB_X62_Y71_N26
-\vgamap|videoGen|LessThan33~4\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X56_Y62_N14
+\vgamap|videoGen|LessThan22~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|LessThan33~4_combout\ = (\vgamap|videoSync|pixel_row\(4) & (\vgamap|videoSync|pixel_row\(2) & ((\vgamap|videoSync|pixel_row\(1)) # (\vgamap|videoSync|pixel_row\(0)))))
+-- \vgamap|videoGen|LessThan22~1_combout\ = (!\vgamap|videoSync|pixel_column\(6) & !\vgamap|videoSync|pixel_column\(5))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100000010000000",
+	lut_mask => "0000000001010101",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|pixel_row\(1),
-	datab => \vgamap|videoSync|pixel_row\(4),
-	datac => \vgamap|videoSync|pixel_row\(2),
-	datad => \vgamap|videoSync|pixel_row\(0),
-	combout => \vgamap|videoGen|LessThan33~4_combout\);
+	dataa => \vgamap|videoSync|pixel_column\(6),
+	datad => \vgamap|videoSync|pixel_column\(5),
+	combout => \vgamap|videoGen|LessThan22~1_combout\);
 
--- Location: LCCOMB_X62_Y71_N30
-\vgamap|videoGen|LessThan33~5\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X58_Y63_N14
+\vgamap|videoGen|LessThan34~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|LessThan33~5_combout\ = (\vgamap|videoSync|pixel_row\(8)) # ((\vgamap|videoSync|pixel_row\(7)) # ((\vgamap|videoGen|LessThan33~4_combout\) # (!\vgamap|videoGen|LessThan33~2_combout\)))
+-- \vgamap|videoGen|LessThan34~0_combout\ = (!\vgamap|videoSync|pixel_row\(3) & !\vgamap|videoSync|pixel_row\(4))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111111101111",
+	lut_mask => "0000000000001111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|pixel_row\(8),
-	datab => \vgamap|videoSync|pixel_row\(7),
-	datac => \vgamap|videoGen|LessThan33~2_combout\,
-	datad => \vgamap|videoGen|LessThan33~4_combout\,
-	combout => \vgamap|videoGen|LessThan33~5_combout\);
+	datac => \vgamap|videoSync|pixel_row\(3),
+	datad => \vgamap|videoSync|pixel_row\(4),
+	combout => \vgamap|videoGen|LessThan34~0_combout\);
 
--- Location: LCCOMB_X62_Y71_N28
-\vgamap|videoGen|LessThan34~1\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X59_Y63_N14
+\vgamap|videoGen|LessThan48~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|LessThan34~1_combout\ = (((!\vgamap|videoSync|pixel_row\(2) & \vgamap|videoGen|LessThan34~0_combout\)) # (!\vgamap|videoSync|pixel_row\(5))) # (!\vgamap|videoSync|pixel_row\(6))
+-- \vgamap|videoGen|LessThan48~0_combout\ = ((\vgamap|videoSync|pixel_row\(2) & ((\vgamap|videoSync|pixel_row\(1)) # (\vgamap|videoSync|pixel_row\(0))))) # (!\vgamap|videoGen|LessThan34~0_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0111001111111111",
+	lut_mask => "1010100011111111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vgamap|videoSync|pixel_row\(2),
-	datab => \vgamap|videoSync|pixel_row\(6),
-	datac => \vgamap|videoGen|LessThan34~0_combout\,
-	datad => \vgamap|videoSync|pixel_row\(5),
-	combout => \vgamap|videoGen|LessThan34~1_combout\);
+	datab => \vgamap|videoSync|pixel_row\(1),
+	datac => \vgamap|videoSync|pixel_row\(0),
+	datad => \vgamap|videoGen|LessThan34~0_combout\,
+	combout => \vgamap|videoGen|LessThan48~0_combout\);
 
--- Location: LCCOMB_X54_Y71_N8
-\vgamap|videoGen|pixelDraw~99\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X58_Y62_N8
+\vgamap|videoGen|LessThan22~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|pixelDraw~99_combout\ = (!\vgamap|videoSync|pixel_row\(8) & (!\vgamap|videoSync|pixel_row\(7) & (\vgamap|videoGen|LessThan33~5_combout\ & \vgamap|videoGen|LessThan34~1_combout\)))
+-- \vgamap|videoGen|LessThan22~2_combout\ = (!\vgamap|videoSync|pixel_column\(6) & (((!\vgamap|videoSync|pixel_column\(4) & !\vgamap|videoSync|pixel_column\(3))) # (!\vgamap|videoSync|pixel_column\(5))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0001000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_row\(8),
-	datab => \vgamap|videoSync|pixel_row\(7),
-	datac => \vgamap|videoGen|LessThan33~5_combout\,
-	datad => \vgamap|videoGen|LessThan34~1_combout\,
-	combout => \vgamap|videoGen|pixelDraw~99_combout\);
-
--- Location: LCCOMB_X53_Y71_N8
-\vgamap|videoGen|LessThan9~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|LessThan9~0_combout\ = (\vgamap|videoSync|pixel_column\(6) & ((\vgamap|videoSync|pixel_column\(2)) # ((\vgamap|videoSync|pixel_column\(3)) # (\vgamap|videoSync|pixel_column\(4)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010101010101000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(6),
-	datab => \vgamap|videoSync|pixel_column\(2),
-	datac => \vgamap|videoSync|pixel_column\(3),
-	datad => \vgamap|videoSync|pixel_column\(4),
-	combout => \vgamap|videoGen|LessThan9~0_combout\);
-
--- Location: LCCOMB_X53_Y71_N30
-\vgamap|videoGen|LessThan9~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|LessThan9~1_combout\ = (\vgamap|videoSync|pixel_column\(7)) # ((\vgamap|videoSync|pixel_column\(6) & ((\vgamap|videoSync|pixel_column\(1)) # (\vgamap|videoSync|pixel_column\(5)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1110111011101100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(6),
-	datab => \vgamap|videoSync|pixel_column\(7),
-	datac => \vgamap|videoSync|pixel_column\(1),
-	datad => \vgamap|videoSync|pixel_column\(5),
-	combout => \vgamap|videoGen|LessThan9~1_combout\);
-
--- Location: LCCOMB_X59_Y71_N6
-\vgamap|videoGen|pixelDraw~53\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~53_combout\ = (!\vgamap|videoSync|pixel_column\(4) & (((!\vgamap|videoSync|pixel_column\(2)) # (!\vgamap|videoSync|pixel_column\(1))) # (!\vgamap|videoSync|pixel_column\(3))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000001111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(3),
-	datab => \vgamap|videoSync|pixel_column\(1),
-	datac => \vgamap|videoSync|pixel_column\(2),
-	datad => \vgamap|videoSync|pixel_column\(4),
-	combout => \vgamap|videoGen|pixelDraw~53_combout\);
-
--- Location: LCCOMB_X54_Y71_N24
-\vgamap|videoGen|pixelDraw~54\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~54_combout\ = (\vgamap|videoGen|LessThan9~0_combout\ & (((\vgamap|videoGen|pixelDraw~53_combout\) # (!\vgamap|videoSync|pixel_column\(5))))) # (!\vgamap|videoGen|LessThan9~0_combout\ & (\vgamap|videoGen|LessThan9~1_combout\ & 
--- ((\vgamap|videoGen|pixelDraw~53_combout\) # (!\vgamap|videoSync|pixel_column\(5)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1110111000001110",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoGen|LessThan9~0_combout\,
-	datab => \vgamap|videoGen|LessThan9~1_combout\,
-	datac => \vgamap|videoSync|pixel_column\(5),
-	datad => \vgamap|videoGen|pixelDraw~53_combout\,
-	combout => \vgamap|videoGen|pixelDraw~54_combout\);
-
--- Location: LCCOMB_X54_Y71_N26
-\vgamap|videoGen|pixelDraw~55\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~55_combout\ = (\vgamap|videoGen|pixelDraw~12_combout\ & (\vgamap|videoGen|pixelDraw~99_combout\ & \vgamap|videoGen|pixelDraw~54_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoGen|pixelDraw~12_combout\,
-	datac => \vgamap|videoGen|pixelDraw~99_combout\,
-	datad => \vgamap|videoGen|pixelDraw~54_combout\,
-	combout => \vgamap|videoGen|pixelDraw~55_combout\);
-
--- Location: LCCOMB_X58_Y71_N2
-\vgamap|videoGen|pixelDraw~35\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~35_combout\ = (\vgamap|videoSync|pixel_column\(3) & (\vgamap|videoSync|pixel_column\(4) & (\vgamap|videoSync|pixel_column\(2) & \vgamap|videoSync|pixel_column\(1))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(3),
-	datab => \vgamap|videoSync|pixel_column\(4),
-	datac => \vgamap|videoSync|pixel_column\(2),
-	datad => \vgamap|videoSync|pixel_column\(1),
-	combout => \vgamap|videoGen|pixelDraw~35_combout\);
-
--- Location: LCCOMB_X54_Y71_N30
-\vgamap|videoGen|pixelDraw~100\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~100_combout\ = (\vgamap|videoSync|pixel_column\(6) & (!\vgamap|videoSync|pixel_column\(7) & ((\vgamap|videoGen|pixelDraw~35_combout\) # (\vgamap|videoSync|pixel_column\(5)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0010001000100000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(6),
-	datab => \vgamap|videoSync|pixel_column\(7),
-	datac => \vgamap|videoGen|pixelDraw~35_combout\,
-	datad => \vgamap|videoSync|pixel_column\(5),
-	combout => \vgamap|videoGen|pixelDraw~100_combout\);
-
--- Location: LCCOMB_X59_Y71_N20
-\vgamap|videoGen|pixelDraw~32\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~32_combout\ = ((!\vgamap|videoSync|pixel_column\(1) & !\vgamap|videoSync|pixel_column\(2))) # (!\vgamap|videoSync|pixel_column\(3))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000001111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vgamap|videoSync|pixel_column\(1),
-	datac => \vgamap|videoSync|pixel_column\(2),
-	datad => \vgamap|videoSync|pixel_column\(3),
-	combout => \vgamap|videoGen|pixelDraw~32_combout\);
-
--- Location: LCCOMB_X59_Y71_N26
-\vgamap|videoGen|pixelDraw~33\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~33_combout\ = (\vgamap|videoSync|pixel_column\(7) & (!\vgamap|videoSync|pixel_column\(6) & (\vgamap|videoGen|LessThan5~1_combout\ & \vgamap|videoGen|pixelDraw~32_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0010000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(7),
-	datab => \vgamap|videoSync|pixel_column\(6),
-	datac => \vgamap|videoGen|LessThan5~1_combout\,
-	datad => \vgamap|videoGen|pixelDraw~32_combout\,
-	combout => \vgamap|videoGen|pixelDraw~33_combout\);
-
--- Location: LCCOMB_X62_Y71_N20
-\vgamap|videoGen|LessThan33~3\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|LessThan33~3_combout\ = (!\vgamap|videoSync|pixel_row\(8) & !\vgamap|videoSync|pixel_row\(7))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000001010101",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_row\(8),
-	datad => \vgamap|videoSync|pixel_row\(7),
-	combout => \vgamap|videoGen|LessThan33~3_combout\);
-
--- Location: LCCOMB_X62_Y71_N6
-\vgamap|videoGen|pixelDraw~31\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~31_combout\ = (\vgamap|videoGen|LessThan33~3_combout\ & (!\vgamap|videoSync|pixel_column\(9) & (\vgamap|videoGen|LessThan33~5_combout\ & \vgamap|videoGen|LessThan34~1_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0010000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoGen|LessThan33~3_combout\,
-	datab => \vgamap|videoSync|pixel_column\(9),
-	datac => \vgamap|videoGen|LessThan33~5_combout\,
-	datad => \vgamap|videoGen|LessThan34~1_combout\,
-	combout => \vgamap|videoGen|pixelDraw~31_combout\);
-
--- Location: LCCOMB_X54_Y71_N10
-\vgamap|videoGen|pixelDraw~36\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~36_combout\ = (\vgamap|videoSync|pixel_column\(8) & (\vgamap|videoGen|pixelDraw~31_combout\ & ((\vgamap|videoGen|pixelDraw~100_combout\) # (\vgamap|videoGen|pixelDraw~33_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100100000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoGen|pixelDraw~100_combout\,
-	datab => \vgamap|videoSync|pixel_column\(8),
-	datac => \vgamap|videoGen|pixelDraw~33_combout\,
-	datad => \vgamap|videoGen|pixelDraw~31_combout\,
-	combout => \vgamap|videoGen|pixelDraw~36_combout\);
-
--- Location: LCCOMB_X53_Y71_N14
-\vgamap|videoGen|pixelDraw~29\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~29_combout\ = (!\vgamap|videoSync|pixel_column\(5) & (!\vgamap|videoSync|pixel_column\(2) & (!\vgamap|videoSync|pixel_column\(3) & !\vgamap|videoSync|pixel_column\(4))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(5),
-	datab => \vgamap|videoSync|pixel_column\(2),
-	datac => \vgamap|videoSync|pixel_column\(3),
-	datad => \vgamap|videoSync|pixel_column\(4),
-	combout => \vgamap|videoGen|pixelDraw~29_combout\);
-
--- Location: LCCOMB_X57_Y71_N8
-\vgamap|videoGen|pixelDraw~28\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~28_combout\ = (\vgamap|videoSync|pixel_column\(9) & (!\vgamap|videoSync|pixel_column\(6) & (!\vgamap|videoSync|pixel_column\(7) & !\vgamap|videoSync|pixel_column\(8))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(9),
-	datab => \vgamap|videoSync|pixel_column\(6),
-	datac => \vgamap|videoSync|pixel_column\(7),
-	datad => \vgamap|videoSync|pixel_column\(8),
-	combout => \vgamap|videoGen|pixelDraw~28_combout\);
-
--- Location: LCCOMB_X53_Y71_N26
-\vgamap|videoGen|pixelDraw~26\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~26_combout\ = (\vgamap|videoSync|pixel_column\(8) & ((\vgamap|videoSync|pixel_column\(5)) # ((\vgamap|videoSync|pixel_column\(3) & \vgamap|videoSync|pixel_column\(4)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010100010001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(8),
-	datab => \vgamap|videoSync|pixel_column\(5),
-	datac => \vgamap|videoSync|pixel_column\(3),
-	datad => \vgamap|videoSync|pixel_column\(4),
-	combout => \vgamap|videoGen|pixelDraw~26_combout\);
-
--- Location: LCCOMB_X53_Y71_N28
-\vgamap|videoGen|pixelDraw~27\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~27_combout\ = (\vgamap|videoGen|pixelDraw~26_combout\ & (\vgamap|videoSync|pixel_column\(7) & (!\vgamap|videoSync|pixel_column\(9) & \vgamap|videoSync|pixel_column\(6))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000100000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoGen|pixelDraw~26_combout\,
-	datab => \vgamap|videoSync|pixel_column\(7),
-	datac => \vgamap|videoSync|pixel_column\(9),
-	datad => \vgamap|videoSync|pixel_column\(6),
-	combout => \vgamap|videoGen|pixelDraw~27_combout\);
-
--- Location: LCCOMB_X54_Y71_N16
-\vgamap|videoGen|pixelDraw~30\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~30_combout\ = (\vgamap|videoGen|pixelDraw~99_combout\ & ((\vgamap|videoGen|pixelDraw~27_combout\) # ((\vgamap|videoGen|pixelDraw~29_combout\ & \vgamap|videoGen|pixelDraw~28_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111000010000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoGen|pixelDraw~29_combout\,
-	datab => \vgamap|videoGen|pixelDraw~28_combout\,
-	datac => \vgamap|videoGen|pixelDraw~99_combout\,
-	datad => \vgamap|videoGen|pixelDraw~27_combout\,
-	combout => \vgamap|videoGen|pixelDraw~30_combout\);
-
--- Location: LCCOMB_X59_Y71_N4
-\vgamap|videoGen|pixelDraw~37\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~37_combout\ = ((!\vgamap|videoSync|pixel_column\(3) & \vgamap|videoGen|LessThan12~0_combout\)) # (!\vgamap|videoSync|pixel_column\(4))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111011100110011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(3),
-	datab => \vgamap|videoSync|pixel_column\(4),
-	datad => \vgamap|videoGen|LessThan12~0_combout\,
-	combout => \vgamap|videoGen|pixelDraw~37_combout\);
-
--- Location: LCCOMB_X58_Y71_N6
-\vgamap|videoGen|LessThan22~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|LessThan22~0_combout\ = (!\vgamap|videoSync|pixel_column\(3) & !\vgamap|videoSync|pixel_column\(4))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000001010101",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(3),
-	datad => \vgamap|videoSync|pixel_column\(4),
-	combout => \vgamap|videoGen|LessThan22~0_combout\);
-
--- Location: LCCOMB_X59_Y71_N10
-\vgamap|videoGen|pixelDraw~38\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~38_combout\ = ((\vgamap|videoSync|pixel_column\(2) & (\vgamap|videoSync|pixel_column\(1) & \vgamap|videoSync|pixel_column\(0)))) # (!\vgamap|videoGen|LessThan22~0_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000111100001111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(2),
-	datab => \vgamap|videoSync|pixel_column\(1),
-	datac => \vgamap|videoGen|LessThan22~0_combout\,
-	datad => \vgamap|videoSync|pixel_column\(0),
-	combout => \vgamap|videoGen|pixelDraw~38_combout\);
-
--- Location: LCCOMB_X59_Y71_N24
-\vgamap|videoGen|pixelDraw~39\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~39_combout\ = (\vgamap|videoSync|pixel_column\(6) & (!\vgamap|videoSync|pixel_column\(5) & (\vgamap|videoGen|pixelDraw~37_combout\))) # (!\vgamap|videoSync|pixel_column\(6) & (\vgamap|videoSync|pixel_column\(5) & 
--- ((\vgamap|videoGen|pixelDraw~38_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0110010000100000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(6),
-	datab => \vgamap|videoSync|pixel_column\(5),
-	datac => \vgamap|videoGen|pixelDraw~37_combout\,
-	datad => \vgamap|videoGen|pixelDraw~38_combout\,
-	combout => \vgamap|videoGen|pixelDraw~39_combout\);
-
--- Location: LCCOMB_X59_Y71_N14
-\vgamap|videoGen|pixelDraw~40\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~40_combout\ = (!\vgamap|videoSync|pixel_column\(7) & (\vgamap|videoSync|pixel_column\(8) & (\vgamap|videoGen|pixelDraw~31_combout\ & \vgamap|videoGen|pixelDraw~39_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0100000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(7),
-	datab => \vgamap|videoSync|pixel_column\(8),
-	datac => \vgamap|videoGen|pixelDraw~31_combout\,
-	datad => \vgamap|videoGen|pixelDraw~39_combout\,
-	combout => \vgamap|videoGen|pixelDraw~40_combout\);
-
--- Location: LCCOMB_X59_Y71_N8
-\vgamap|videoGen|pixelDraw~43\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~43_combout\ = (((!\vgamap|videoSync|pixel_column\(1)) # (!\vgamap|videoSync|pixel_column\(2))) # (!\vgamap|videoSync|pixel_column\(0))) # (!\vgamap|videoSync|pixel_column\(3))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111111111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(3),
-	datab => \vgamap|videoSync|pixel_column\(0),
-	datac => \vgamap|videoSync|pixel_column\(2),
-	datad => \vgamap|videoSync|pixel_column\(1),
-	combout => \vgamap|videoGen|pixelDraw~43_combout\);
-
--- Location: LCCOMB_X59_Y71_N2
-\vgamap|videoGen|pixelDraw~44\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~44_combout\ = (\vgamap|videoGen|LessThan12~0_combout\ & (\vgamap|videoGen|pixelDraw~43_combout\ & (\vgamap|videoGen|LessThan5~1_combout\))) # (!\vgamap|videoGen|LessThan12~0_combout\ & ((\vgamap|videoGen|pixelDraw~14_combout\) # 
--- ((\vgamap|videoGen|pixelDraw~43_combout\ & \vgamap|videoGen|LessThan5~1_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1101010111000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoGen|LessThan12~0_combout\,
-	datab => \vgamap|videoGen|pixelDraw~43_combout\,
-	datac => \vgamap|videoGen|LessThan5~1_combout\,
-	datad => \vgamap|videoGen|pixelDraw~14_combout\,
-	combout => \vgamap|videoGen|pixelDraw~44_combout\);
-
--- Location: LCCOMB_X57_Y71_N18
-\vgamap|videoGen|pixelDraw~41\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~41_combout\ = (\vgamap|videoSync|pixel_column\(4) & (\vgamap|videoSync|pixel_column\(7) & (\vgamap|videoSync|pixel_column\(5) & \vgamap|videoSync|pixel_column\(6))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000000000000",
+	lut_mask => "0000000000110111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vgamap|videoSync|pixel_column\(4),
-	datab => \vgamap|videoSync|pixel_column\(7),
-	datac => \vgamap|videoSync|pixel_column\(5),
+	datab => \vgamap|videoSync|pixel_column\(5),
+	datac => \vgamap|videoSync|pixel_column\(3),
 	datad => \vgamap|videoSync|pixel_column\(6),
-	combout => \vgamap|videoGen|pixelDraw~41_combout\);
+	combout => \vgamap|videoGen|LessThan22~2_combout\);
 
--- Location: LCCOMB_X58_Y71_N30
-\vgamap|videoGen|LessThan24~0\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X58_Y62_N14
+\vgamap|videoGen|LessThan22~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|LessThan24~0_combout\ = (!\vgamap|videoSync|pixel_column\(7) & (\vgamap|videoGen|LessThan22~1_combout\ & ((!\vgamap|videoGen|LessThan5~0_combout\) # (!\vgamap|videoSync|pixel_column\(4)))))
+-- \vgamap|videoGen|LessThan22~3_combout\ = (\vgamap|videoGen|LessThan22~2_combout\) # ((!\vgamap|videoSync|pixel_column\(4) & (!\vgamap|videoSync|pixel_column\(6) & !\vgamap|videoGen|LessThan44~0_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0001010100000000",
+	lut_mask => "1111000011110001",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(7),
-	datab => \vgamap|videoSync|pixel_column\(4),
-	datac => \vgamap|videoGen|LessThan5~0_combout\,
-	datad => \vgamap|videoGen|LessThan22~1_combout\,
-	combout => \vgamap|videoGen|LessThan24~0_combout\);
+	dataa => \vgamap|videoSync|pixel_column\(4),
+	datab => \vgamap|videoSync|pixel_column\(6),
+	datac => \vgamap|videoGen|LessThan22~2_combout\,
+	datad => \vgamap|videoGen|LessThan44~0_combout\,
+	combout => \vgamap|videoGen|LessThan22~3_combout\);
 
--- Location: LCCOMB_X54_Y71_N0
-\vgamap|videoGen|pixelDraw~42\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X63_Y62_N18
+\vgamap|videoGen|pixelDraw~92\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|pixelDraw~42_combout\ = (\vgamap|videoGen|pixelDraw~31_combout\ & ((\vgamap|videoSync|pixel_column\(8) & ((\vgamap|videoGen|LessThan24~0_combout\))) # (!\vgamap|videoSync|pixel_column\(8) & (\vgamap|videoGen|pixelDraw~41_combout\))))
+-- \vgamap|videoGen|pixelDraw~92_combout\ = (\vgamap|videoGen|LessThan22~3_combout\ & ((\vgamap|videoSync|pixel_row\(6)) # ((\vgamap|videoSync|pixel_row\(5) & \vgamap|videoGen|LessThan48~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1110010000000000",
+	lut_mask => "1110110000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(8),
-	datab => \vgamap|videoGen|pixelDraw~41_combout\,
-	datac => \vgamap|videoGen|LessThan24~0_combout\,
-	datad => \vgamap|videoGen|pixelDraw~31_combout\,
-	combout => \vgamap|videoGen|pixelDraw~42_combout\);
+	dataa => \vgamap|videoSync|pixel_row\(5),
+	datab => \vgamap|videoSync|pixel_row\(6),
+	datac => \vgamap|videoGen|LessThan48~0_combout\,
+	datad => \vgamap|videoGen|LessThan22~3_combout\,
+	combout => \vgamap|videoGen|pixelDraw~92_combout\);
 
--- Location: LCCOMB_X54_Y71_N6
-\vgamap|videoGen|colorAddress~5\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X63_Y62_N16
+\vgamap|videoGen|pixelDraw~93\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|colorAddress~5_combout\ = (!\vgamap|videoGen|pixelDraw~42_combout\ & ((\vgamap|videoGen|pixelDraw~44_combout\) # ((!\vgamap|videoGen|pixelDraw~99_combout\) # (!\vgamap|videoGen|pixelDraw~28_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000010111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoGen|pixelDraw~44_combout\,
-	datab => \vgamap|videoGen|pixelDraw~28_combout\,
-	datac => \vgamap|videoGen|pixelDraw~99_combout\,
-	datad => \vgamap|videoGen|pixelDraw~42_combout\,
-	combout => \vgamap|videoGen|colorAddress~5_combout\);
-
--- Location: LCCOMB_X54_Y71_N4
-\vgamap|videoGen|colorAddress~6\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|colorAddress~6_combout\ = (!\vgamap|videoGen|pixelDraw~36_combout\ & (!\vgamap|videoGen|pixelDraw~30_combout\ & (!\vgamap|videoGen|pixelDraw~40_combout\ & \vgamap|videoGen|colorAddress~5_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoGen|pixelDraw~36_combout\,
-	datab => \vgamap|videoGen|pixelDraw~30_combout\,
-	datac => \vgamap|videoGen|pixelDraw~40_combout\,
-	datad => \vgamap|videoGen|colorAddress~5_combout\,
-	combout => \vgamap|videoGen|colorAddress~6_combout\);
-
--- Location: LCCOMB_X59_Y71_N18
-\vgamap|videoGen|pixelDraw~101\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~101_combout\ = (!\vgamap|videoSync|pixel_column\(7) & (\vgamap|videoGen|LessThan44~0_combout\ & (\vgamap|videoSync|pixel_column\(6) & \vgamap|videoGen|pixelDraw~14_combout\)))
+-- \vgamap|videoGen|pixelDraw~93_combout\ = (!\vgamap|videoGen|LessThan22~1_combout\ & (\vgamap|videoGen|pixelDraw~12_combout\ & (\vgamap|videoGen|pixelDraw~13_combout\ & \vgamap|videoGen|pixelDraw~92_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -5666,62 +5052,13 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(7),
-	datab => \vgamap|videoGen|LessThan44~0_combout\,
-	datac => \vgamap|videoSync|pixel_column\(6),
-	datad => \vgamap|videoGen|pixelDraw~14_combout\,
-	combout => \vgamap|videoGen|pixelDraw~101_combout\);
+	dataa => \vgamap|videoGen|LessThan22~1_combout\,
+	datab => \vgamap|videoGen|pixelDraw~12_combout\,
+	datac => \vgamap|videoGen|pixelDraw~13_combout\,
+	datad => \vgamap|videoGen|pixelDraw~92_combout\,
+	combout => \vgamap|videoGen|pixelDraw~93_combout\);
 
--- Location: LCCOMB_X59_Y71_N12
-\vgamap|videoGen|pixelDraw~45\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~45_combout\ = (\vgamap|videoSync|pixel_column\(7) & \vgamap|videoGen|LessThan22~3_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010101000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(7),
-	datad => \vgamap|videoGen|LessThan22~3_combout\,
-	combout => \vgamap|videoGen|pixelDraw~45_combout\);
-
--- Location: LCCOMB_X54_Y71_N18
-\vgamap|videoGen|pixelDraw~46\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~46_combout\ = (!\vgamap|videoSync|pixel_column\(8) & (\vgamap|videoGen|pixelDraw~31_combout\ & ((\vgamap|videoGen|pixelDraw~101_combout\) # (\vgamap|videoGen|pixelDraw~45_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0100010001000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(8),
-	datab => \vgamap|videoGen|pixelDraw~31_combout\,
-	datac => \vgamap|videoGen|pixelDraw~101_combout\,
-	datad => \vgamap|videoGen|pixelDraw~45_combout\,
-	combout => \vgamap|videoGen|pixelDraw~46_combout\);
-
--- Location: LCCOMB_X54_Y71_N12
-\vgamap|videoGen|colorAddress~7\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|colorAddress~7_combout\ = (!\vgamap|videoGen|pixelDraw~55_combout\ & (!\vgamap|videoGen|pixelDraw~52_combout\ & (\vgamap|videoGen|colorAddress~6_combout\ & !\vgamap|videoGen|pixelDraw~46_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000010000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoGen|pixelDraw~55_combout\,
-	datab => \vgamap|videoGen|pixelDraw~52_combout\,
-	datac => \vgamap|videoGen|colorAddress~6_combout\,
-	datad => \vgamap|videoGen|pixelDraw~46_combout\,
-	combout => \vgamap|videoGen|colorAddress~7_combout\);
-
--- Location: LCCOMB_X60_Y71_N20
+-- Location: LCCOMB_X58_Y62_N6
 \vgamap|videoGen|colorAddress~4\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoGen|colorAddress~4_combout\ = (\vgamap|videoGen|colorAddress~2_combout\ & \vgamap|videoGen|colorAddress~3_combout\)
@@ -5747,78 +5084,110 @@ PORT MAP (
 	i => ww_keys(16),
 	o => \keys[16]~input_o\);
 
--- Location: LCCOMB_X62_Y71_N8
-\vgamap|videoGen|pixelDraw~56\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~56_combout\ = (!\vgamap|videoSync|pixel_row\(8) & (((!\vgamap|videoSync|pixel_row\(5) & !\vgamap|videoSync|pixel_row\(6))) # (!\vgamap|videoSync|pixel_row\(7))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000011111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_row\(5),
-	datab => \vgamap|videoSync|pixel_row\(6),
-	datac => \vgamap|videoSync|pixel_row\(7),
-	datad => \vgamap|videoSync|pixel_row\(8),
-	combout => \vgamap|videoGen|pixelDraw~56_combout\);
-
--- Location: LCCOMB_X62_Y71_N4
-\vgamap|videoGen|pixelDraw~57\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~57_combout\ = (\vgamap|videoGen|pixelDraw~56_combout\ & (((\vgamap|videoGen|LessThan33~4_combout\) # (!\vgamap|videoGen|LessThan33~3_combout\)) # (!\vgamap|videoGen|LessThan33~2_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100110001001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoGen|LessThan33~2_combout\,
-	datab => \vgamap|videoGen|pixelDraw~56_combout\,
-	datac => \vgamap|videoGen|LessThan33~3_combout\,
-	datad => \vgamap|videoGen|LessThan33~4_combout\,
-	combout => \vgamap|videoGen|pixelDraw~57_combout\);
-
--- Location: LCCOMB_X58_Y71_N16
+-- Location: LCCOMB_X55_Y62_N30
 \vgamap|videoGen|LessThan16~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|LessThan16~0_combout\ = (!\vgamap|videoSync|pixel_column\(3) & (((!\vgamap|videoSync|pixel_column\(1)) # (!\vgamap|videoSync|pixel_column\(0))) # (!\vgamap|videoSync|pixel_column\(2))))
+-- \vgamap|videoGen|LessThan16~0_combout\ = (!\vgamap|videoSync|pixel_column\(3) & (((!\vgamap|videoSync|pixel_column\(2)) # (!\vgamap|videoSync|pixel_column\(0))) # (!\vgamap|videoSync|pixel_column\(1))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0001010101010101",
+	lut_mask => "0000011100001111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(3),
-	datab => \vgamap|videoSync|pixel_column\(2),
-	datac => \vgamap|videoSync|pixel_column\(0),
-	datad => \vgamap|videoSync|pixel_column\(1),
+	dataa => \vgamap|videoSync|pixel_column\(1),
+	datab => \vgamap|videoSync|pixel_column\(0),
+	datac => \vgamap|videoSync|pixel_column\(3),
+	datad => \vgamap|videoSync|pixel_column\(2),
 	combout => \vgamap|videoGen|LessThan16~0_combout\);
 
--- Location: LCCOMB_X61_Y71_N8
+-- Location: LCCOMB_X56_Y62_N16
 \vgamap|videoGen|pixelDraw~58\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoGen|pixelDraw~58_combout\ = ((!\vgamap|videoSync|pixel_column\(5) & ((\vgamap|videoGen|LessThan16~0_combout\) # (!\vgamap|videoSync|pixel_column\(4))))) # (!\vgamap|videoSync|pixel_column\(6))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011001111110111",
+	lut_mask => "0111011100110111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(4),
+	dataa => \vgamap|videoSync|pixel_column\(5),
 	datab => \vgamap|videoSync|pixel_column\(6),
-	datac => \vgamap|videoGen|LessThan16~0_combout\,
-	datad => \vgamap|videoSync|pixel_column\(5),
+	datac => \vgamap|videoSync|pixel_column\(4),
+	datad => \vgamap|videoGen|LessThan16~0_combout\,
 	combout => \vgamap|videoGen|pixelDraw~58_combout\);
 
--- Location: LCCOMB_X61_Y71_N30
+-- Location: LCCOMB_X58_Y63_N26
+\vgamap|videoGen|LessThan33~3\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|LessThan33~3_combout\ = (!\vgamap|videoSync|pixel_row\(8) & !\vgamap|videoSync|pixel_row\(7))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000001010101",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_row\(8),
+	datad => \vgamap|videoSync|pixel_row\(7),
+	combout => \vgamap|videoGen|LessThan33~3_combout\);
+
+-- Location: LCCOMB_X58_Y63_N24
+\vgamap|videoGen|LessThan33~4\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|LessThan33~4_combout\ = (\vgamap|videoSync|pixel_row\(2) & (\vgamap|videoSync|pixel_row\(4) & ((\vgamap|videoSync|pixel_row\(1)) # (\vgamap|videoSync|pixel_row\(0)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010100000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_row\(2),
+	datab => \vgamap|videoSync|pixel_row\(1),
+	datac => \vgamap|videoSync|pixel_row\(0),
+	datad => \vgamap|videoSync|pixel_row\(4),
+	combout => \vgamap|videoGen|LessThan33~4_combout\);
+
+-- Location: LCCOMB_X58_Y63_N8
+\vgamap|videoGen|pixelDraw~56\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~56_combout\ = (!\vgamap|videoSync|pixel_row\(8) & (((!\vgamap|videoSync|pixel_row\(5) & !\vgamap|videoSync|pixel_row\(6))) # (!\vgamap|videoSync|pixel_row\(7))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000100001111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_row\(5),
+	datab => \vgamap|videoSync|pixel_row\(6),
+	datac => \vgamap|videoSync|pixel_row\(8),
+	datad => \vgamap|videoSync|pixel_row\(7),
+	combout => \vgamap|videoGen|pixelDraw~56_combout\);
+
+-- Location: LCCOMB_X58_Y63_N10
+\vgamap|videoGen|pixelDraw~57\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~57_combout\ = (\vgamap|videoGen|pixelDraw~56_combout\ & (((\vgamap|videoGen|LessThan33~4_combout\) # (!\vgamap|videoGen|LessThan33~2_combout\)) # (!\vgamap|videoGen|LessThan33~3_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1101000011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoGen|LessThan33~3_combout\,
+	datab => \vgamap|videoGen|LessThan33~4_combout\,
+	datac => \vgamap|videoGen|pixelDraw~56_combout\,
+	datad => \vgamap|videoGen|LessThan33~2_combout\,
+	combout => \vgamap|videoGen|pixelDraw~57_combout\);
+
+-- Location: LCCOMB_X61_Y62_N22
 \vgamap|videoGen|pixelDraw~59\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|pixelDraw~59_combout\ = (\vgamap|videoGen|pixelDraw~57_combout\ & (\vgamap|videoGen|pixelDraw~12_combout\ & (\vgamap|videoGen|pixelDraw~58_combout\ & !\vgamap|videoGen|LessThan22~1_combout\)))
+-- \vgamap|videoGen|pixelDraw~59_combout\ = (\vgamap|videoGen|pixelDraw~12_combout\ & (\vgamap|videoGen|pixelDraw~58_combout\ & (\vgamap|videoGen|pixelDraw~57_combout\ & !\vgamap|videoGen|LessThan22~1_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -5826,105 +5195,11 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoGen|pixelDraw~57_combout\,
-	datab => \vgamap|videoGen|pixelDraw~12_combout\,
-	datac => \vgamap|videoGen|pixelDraw~58_combout\,
+	dataa => \vgamap|videoGen|pixelDraw~12_combout\,
+	datab => \vgamap|videoGen|pixelDraw~58_combout\,
+	datac => \vgamap|videoGen|pixelDraw~57_combout\,
 	datad => \vgamap|videoGen|LessThan22~1_combout\,
 	combout => \vgamap|videoGen|pixelDraw~59_combout\);
-
--- Location: IOIBUF_X115_Y6_N15
-\keys[14]~input\ : cycloneive_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_keys(14),
-	o => \keys[14]~input_o\);
-
--- Location: LCCOMB_X61_Y71_N12
-\vgamap|videoGen|pixelDraw~62\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~62_combout\ = (\vgamap|videoSync|pixel_column\(5)) # ((\vgamap|videoSync|pixel_column\(4) & ((\vgamap|videoSync|pixel_column\(3)) # (\vgamap|videoSync|pixel_column\(2)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111110101000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(4),
-	datab => \vgamap|videoSync|pixel_column\(3),
-	datac => \vgamap|videoSync|pixel_column\(2),
-	datad => \vgamap|videoSync|pixel_column\(5),
-	combout => \vgamap|videoGen|pixelDraw~62_combout\);
-
--- Location: LCCOMB_X61_Y71_N26
-\vgamap|videoGen|pixelDraw~61\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~61_combout\ = ((!\vgamap|videoSync|pixel_column\(2) & ((!\vgamap|videoSync|pixel_column\(0)) # (!\vgamap|videoSync|pixel_column\(1))))) # (!\vgamap|videoSync|pixel_column\(3))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000011111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(1),
-	datab => \vgamap|videoSync|pixel_column\(0),
-	datac => \vgamap|videoSync|pixel_column\(2),
-	datad => \vgamap|videoSync|pixel_column\(3),
-	combout => \vgamap|videoGen|pixelDraw~61_combout\);
-
--- Location: LCCOMB_X61_Y71_N22
-\vgamap|videoGen|pixelDraw~63\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~63_combout\ = (\vgamap|videoSync|pixel_column\(6) & (((\vgamap|videoGen|pixelDraw~61_combout\ & \vgamap|videoGen|LessThan5~1_combout\)))) # (!\vgamap|videoSync|pixel_column\(6) & (\vgamap|videoGen|pixelDraw~62_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1110001000100010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoGen|pixelDraw~62_combout\,
-	datab => \vgamap|videoSync|pixel_column\(6),
-	datac => \vgamap|videoGen|pixelDraw~61_combout\,
-	datad => \vgamap|videoGen|LessThan5~1_combout\,
-	combout => \vgamap|videoGen|pixelDraw~63_combout\);
-
--- Location: LCCOMB_X61_Y71_N20
-\vgamap|videoGen|pixelDraw~60\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~60_combout\ = (!\vgamap|videoSync|pixel_column\(9) & \vgamap|videoGen|pixelDraw~57_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011001100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vgamap|videoSync|pixel_column\(9),
-	datad => \vgamap|videoGen|pixelDraw~57_combout\,
-	combout => \vgamap|videoGen|pixelDraw~60_combout\);
-
--- Location: LCCOMB_X61_Y71_N0
-\vgamap|videoGen|pixelDraw~64\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~64_combout\ = (!\vgamap|videoSync|pixel_column\(8) & (\vgamap|videoSync|pixel_column\(7) & (\vgamap|videoGen|pixelDraw~63_combout\ & \vgamap|videoGen|pixelDraw~60_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0100000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(8),
-	datab => \vgamap|videoSync|pixel_column\(7),
-	datac => \vgamap|videoGen|pixelDraw~63_combout\,
-	datad => \vgamap|videoGen|pixelDraw~60_combout\,
-	combout => \vgamap|videoGen|pixelDraw~64_combout\);
 
 -- Location: IOIBUF_X115_Y9_N22
 \keys[12]~input\ : cycloneive_io_ibuf
@@ -5937,25 +5212,152 @@ PORT MAP (
 	i => ww_keys(12),
 	o => \keys[12]~input_o\);
 
--- Location: LCCOMB_X61_Y71_N10
-\vgamap|videoGen|pixelDraw~65\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X58_Y63_N12
+\vgamap|videoGen|pixelDraw~60\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|pixelDraw~65_combout\ = (\vgamap|videoSync|pixel_column\(6) & (((!\vgamap|videoSync|pixel_column\(7) & \vgamap|videoSync|pixel_column\(5))))) # (!\vgamap|videoSync|pixel_column\(6) & (!\vgamap|videoSync|pixel_column\(4) & 
--- (\vgamap|videoSync|pixel_column\(7) & !\vgamap|videoSync|pixel_column\(5))))
+-- \vgamap|videoGen|pixelDraw~60_combout\ = (!\vgamap|videoSync|pixel_column\(9) & \vgamap|videoGen|pixelDraw~57_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000110000010000",
+	lut_mask => "0000111100000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(4),
-	datab => \vgamap|videoSync|pixel_column\(6),
-	datac => \vgamap|videoSync|pixel_column\(7),
-	datad => \vgamap|videoSync|pixel_column\(5),
+	datac => \vgamap|videoSync|pixel_column\(9),
+	datad => \vgamap|videoGen|pixelDraw~57_combout\,
+	combout => \vgamap|videoGen|pixelDraw~60_combout\);
+
+-- Location: LCCOMB_X54_Y62_N2
+\vgamap|videoGen|pixelDraw~61\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~61_combout\ = ((!\vgamap|videoSync|pixel_column\(2) & ((!\vgamap|videoSync|pixel_column\(1)) # (!\vgamap|videoSync|pixel_column\(0))))) # (!\vgamap|videoSync|pixel_column\(3))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011001101111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(0),
+	datab => \vgamap|videoSync|pixel_column\(3),
+	datac => \vgamap|videoSync|pixel_column\(1),
+	datad => \vgamap|videoSync|pixel_column\(2),
+	combout => \vgamap|videoGen|pixelDraw~61_combout\);
+
+-- Location: LCCOMB_X54_Y62_N4
+\vgamap|videoGen|pixelDraw~62\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~62_combout\ = (\vgamap|videoSync|pixel_column\(5)) # ((\vgamap|videoSync|pixel_column\(4) & ((\vgamap|videoSync|pixel_column\(3)) # (\vgamap|videoSync|pixel_column\(2)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111110011111000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(3),
+	datab => \vgamap|videoSync|pixel_column\(4),
+	datac => \vgamap|videoSync|pixel_column\(5),
+	datad => \vgamap|videoSync|pixel_column\(2),
+	combout => \vgamap|videoGen|pixelDraw~62_combout\);
+
+-- Location: LCCOMB_X54_Y62_N22
+\vgamap|videoGen|pixelDraw~63\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~63_combout\ = (\vgamap|videoSync|pixel_column\(6) & (\vgamap|videoGen|pixelDraw~61_combout\ & ((\vgamap|videoGen|LessThan5~1_combout\)))) # (!\vgamap|videoSync|pixel_column\(6) & (((\vgamap|videoGen|pixelDraw~62_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1101100001010000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(6),
+	datab => \vgamap|videoGen|pixelDraw~61_combout\,
+	datac => \vgamap|videoGen|pixelDraw~62_combout\,
+	datad => \vgamap|videoGen|LessThan5~1_combout\,
+	combout => \vgamap|videoGen|pixelDraw~63_combout\);
+
+-- Location: LCCOMB_X61_Y62_N24
+\vgamap|videoGen|pixelDraw~64\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~64_combout\ = (\vgamap|videoSync|pixel_column\(7) & (!\vgamap|videoSync|pixel_column\(8) & (\vgamap|videoGen|pixelDraw~60_combout\ & \vgamap|videoGen|pixelDraw~63_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(7),
+	datab => \vgamap|videoSync|pixel_column\(8),
+	datac => \vgamap|videoGen|pixelDraw~60_combout\,
+	datad => \vgamap|videoGen|pixelDraw~63_combout\,
+	combout => \vgamap|videoGen|pixelDraw~64_combout\);
+
+-- Location: IOIBUF_X115_Y6_N15
+\keys[14]~input\ : cycloneive_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_keys(14),
+	o => \keys[14]~input_o\);
+
+-- Location: LCCOMB_X56_Y62_N12
+\vgamap|videoGen|pixelDraw~65\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~65_combout\ = (\vgamap|videoSync|pixel_column\(6) & (((\vgamap|videoSync|pixel_column\(5) & !\vgamap|videoSync|pixel_column\(7))))) # (!\vgamap|videoSync|pixel_column\(6) & (!\vgamap|videoSync|pixel_column\(4) & 
+-- (!\vgamap|videoSync|pixel_column\(5) & \vgamap|videoSync|pixel_column\(7))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000110100000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(6),
+	datab => \vgamap|videoSync|pixel_column\(4),
+	datac => \vgamap|videoSync|pixel_column\(5),
+	datad => \vgamap|videoSync|pixel_column\(7),
 	combout => \vgamap|videoGen|pixelDraw~65_combout\);
 
--- Location: LCCOMB_X61_Y71_N28
+-- Location: LCCOMB_X56_Y62_N24
+\vgamap|videoGen|pixelDraw~32\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~32_combout\ = ((!\vgamap|videoSync|pixel_column\(2) & !\vgamap|videoSync|pixel_column\(1))) # (!\vgamap|videoSync|pixel_column\(3))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000001111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vgamap|videoSync|pixel_column\(2),
+	datac => \vgamap|videoSync|pixel_column\(1),
+	datad => \vgamap|videoSync|pixel_column\(3),
+	combout => \vgamap|videoGen|pixelDraw~32_combout\);
+
+-- Location: LCCOMB_X56_Y62_N30
+\vgamap|videoGen|pixelDraw~66\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~66_combout\ = (!\vgamap|videoGen|LessThan44~0_combout\ & (!\vgamap|videoSync|pixel_column\(3) & (\vgamap|videoGen|LessThan22~1_combout\ & \vgamap|videoSync|pixel_column\(7))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoGen|LessThan44~0_combout\,
+	datab => \vgamap|videoSync|pixel_column\(3),
+	datac => \vgamap|videoGen|LessThan22~1_combout\,
+	datad => \vgamap|videoSync|pixel_column\(7),
+	combout => \vgamap|videoGen|pixelDraw~66_combout\);
+
+-- Location: LCCOMB_X56_Y62_N20
 \vgamap|videoGen|pixelDraw~34\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoGen|pixelDraw~34_combout\ = (\vgamap|videoSync|pixel_column\(6) & !\vgamap|videoSync|pixel_column\(7))
@@ -5970,10 +5372,708 @@ PORT MAP (
 	datad => \vgamap|videoSync|pixel_column\(7),
 	combout => \vgamap|videoGen|pixelDraw~34_combout\);
 
--- Location: LCCOMB_X61_Y71_N24
-\vgamap|videoGen|pixelDraw~66\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X56_Y62_N0
+\vgamap|videoGen|pixelDraw~67\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|pixelDraw~66_combout\ = (!\vgamap|videoSync|pixel_column\(3) & (\vgamap|videoSync|pixel_column\(7) & (!\vgamap|videoGen|LessThan44~0_combout\ & \vgamap|videoGen|LessThan22~1_combout\)))
+-- \vgamap|videoGen|pixelDraw~67_combout\ = (\vgamap|videoGen|pixelDraw~66_combout\) # ((\vgamap|videoSync|pixel_column\(4) & (!\vgamap|videoGen|pixelDraw~32_combout\ & \vgamap|videoGen|pixelDraw~34_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111001011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(4),
+	datab => \vgamap|videoGen|pixelDraw~32_combout\,
+	datac => \vgamap|videoGen|pixelDraw~66_combout\,
+	datad => \vgamap|videoGen|pixelDraw~34_combout\,
+	combout => \vgamap|videoGen|pixelDraw~67_combout\);
+
+-- Location: LCCOMB_X56_Y62_N6
+\vgamap|videoGen|pixelDraw~68\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~68_combout\ = (!\vgamap|videoSync|pixel_column\(8) & (\vgamap|videoGen|pixelDraw~60_combout\ & ((\vgamap|videoGen|pixelDraw~65_combout\) # (\vgamap|videoGen|pixelDraw~67_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101000001000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(8),
+	datab => \vgamap|videoGen|pixelDraw~65_combout\,
+	datac => \vgamap|videoGen|pixelDraw~60_combout\,
+	datad => \vgamap|videoGen|pixelDraw~67_combout\,
+	combout => \vgamap|videoGen|pixelDraw~68_combout\);
+
+-- Location: LCCOMB_X61_Y62_N2
+\vgamap|videoGen|colorAddress~8\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|colorAddress~8_combout\ = (\vgamap|videoGen|pixelDraw~68_combout\ & (((!\keys[14]~input_o\)))) # (!\vgamap|videoGen|pixelDraw~68_combout\ & (!\keys[12]~input_o\ & (\vgamap|videoGen|pixelDraw~64_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000111101000100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \keys[12]~input_o\,
+	datab => \vgamap|videoGen|pixelDraw~64_combout\,
+	datac => \keys[14]~input_o\,
+	datad => \vgamap|videoGen|pixelDraw~68_combout\,
+	combout => \vgamap|videoGen|colorAddress~8_combout\);
+
+-- Location: LCCOMB_X61_Y62_N4
+\vgamap|videoGen|colorAddress~9\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|colorAddress~9_combout\ = (\vgamap|videoGen|pixelDraw~59_combout\ & (!\keys[16]~input_o\)) # (!\vgamap|videoGen|pixelDraw~59_combout\ & ((\vgamap|videoGen|colorAddress~8_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011111100110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \keys[16]~input_o\,
+	datac => \vgamap|videoGen|pixelDraw~59_combout\,
+	datad => \vgamap|videoGen|colorAddress~8_combout\,
+	combout => \vgamap|videoGen|colorAddress~9_combout\);
+
+-- Location: LCCOMB_X58_Y63_N0
+\vgamap|videoGen|LessThan34~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|LessThan34~1_combout\ = (((!\vgamap|videoSync|pixel_row\(2) & \vgamap|videoGen|LessThan34~0_combout\)) # (!\vgamap|videoSync|pixel_row\(6))) # (!\vgamap|videoSync|pixel_row\(5))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111111100111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_row\(2),
+	datab => \vgamap|videoSync|pixel_row\(5),
+	datac => \vgamap|videoSync|pixel_row\(6),
+	datad => \vgamap|videoGen|LessThan34~0_combout\,
+	combout => \vgamap|videoGen|LessThan34~1_combout\);
+
+-- Location: LCCOMB_X58_Y63_N6
+\vgamap|videoGen|LessThan33~5\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|LessThan33~5_combout\ = (\vgamap|videoSync|pixel_row\(8)) # (((\vgamap|videoSync|pixel_row\(7)) # (\vgamap|videoGen|LessThan33~4_combout\)) # (!\vgamap|videoGen|LessThan33~2_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111111011",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_row\(8),
+	datab => \vgamap|videoGen|LessThan33~2_combout\,
+	datac => \vgamap|videoSync|pixel_row\(7),
+	datad => \vgamap|videoGen|LessThan33~4_combout\,
+	combout => \vgamap|videoGen|LessThan33~5_combout\);
+
+-- Location: LCCOMB_X58_Y63_N18
+\vgamap|videoGen|pixelDraw~31\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~31_combout\ = (!\vgamap|videoSync|pixel_column\(9) & (\vgamap|videoGen|LessThan33~3_combout\ & (\vgamap|videoGen|LessThan34~1_combout\ & \vgamap|videoGen|LessThan33~5_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0100000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(9),
+	datab => \vgamap|videoGen|LessThan33~3_combout\,
+	datac => \vgamap|videoGen|LessThan34~1_combout\,
+	datad => \vgamap|videoGen|LessThan33~5_combout\,
+	combout => \vgamap|videoGen|pixelDraw~31_combout\);
+
+-- Location: LCCOMB_X58_Y62_N4
+\vgamap|videoGen|pixelDraw~45\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~45_combout\ = (\vgamap|videoSync|pixel_column\(7) & \vgamap|videoGen|LessThan22~3_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010000010100000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(7),
+	datac => \vgamap|videoGen|LessThan22~3_combout\,
+	combout => \vgamap|videoGen|pixelDraw~45_combout\);
+
+-- Location: LCCOMB_X54_Y62_N18
+\vgamap|videoGen|pixelDraw~101\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~101_combout\ = (\vgamap|videoSync|pixel_column\(6) & (\vgamap|videoGen|LessThan44~0_combout\ & (!\vgamap|videoSync|pixel_column\(7) & \vgamap|videoGen|pixelDraw~14_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000100000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(6),
+	datab => \vgamap|videoGen|LessThan44~0_combout\,
+	datac => \vgamap|videoSync|pixel_column\(7),
+	datad => \vgamap|videoGen|pixelDraw~14_combout\,
+	combout => \vgamap|videoGen|pixelDraw~101_combout\);
+
+-- Location: LCCOMB_X59_Y62_N22
+\vgamap|videoGen|pixelDraw~46\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~46_combout\ = (\vgamap|videoGen|pixelDraw~31_combout\ & (!\vgamap|videoSync|pixel_column\(8) & ((\vgamap|videoGen|pixelDraw~45_combout\) # (\vgamap|videoGen|pixelDraw~101_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010001000100000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoGen|pixelDraw~31_combout\,
+	datab => \vgamap|videoSync|pixel_column\(8),
+	datac => \vgamap|videoGen|pixelDraw~45_combout\,
+	datad => \vgamap|videoGen|pixelDraw~101_combout\,
+	combout => \vgamap|videoGen|pixelDraw~46_combout\);
+
+-- Location: LCCOMB_X58_Y63_N30
+\vgamap|videoGen|pixelDraw~99\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~99_combout\ = (\vgamap|videoGen|LessThan34~1_combout\ & (!\vgamap|videoSync|pixel_row\(7) & (!\vgamap|videoSync|pixel_row\(8) & \vgamap|videoGen|LessThan33~5_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000001000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoGen|LessThan34~1_combout\,
+	datab => \vgamap|videoSync|pixel_row\(7),
+	datac => \vgamap|videoSync|pixel_row\(8),
+	datad => \vgamap|videoGen|LessThan33~5_combout\,
+	combout => \vgamap|videoGen|pixelDraw~99_combout\);
+
+-- Location: LCCOMB_X54_Y62_N6
+\vgamap|videoGen|LessThan9~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|LessThan9~0_combout\ = (\vgamap|videoSync|pixel_column\(6) & ((\vgamap|videoSync|pixel_column\(3)) # ((\vgamap|videoSync|pixel_column\(4)) # (\vgamap|videoSync|pixel_column\(2)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111000011100000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(3),
+	datab => \vgamap|videoSync|pixel_column\(4),
+	datac => \vgamap|videoSync|pixel_column\(6),
+	datad => \vgamap|videoSync|pixel_column\(2),
+	combout => \vgamap|videoGen|LessThan9~0_combout\);
+
+-- Location: LCCOMB_X62_Y62_N22
+\vgamap|videoGen|pixelDraw~53\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~53_combout\ = (!\vgamap|videoSync|pixel_column\(4) & (((!\vgamap|videoSync|pixel_column\(3)) # (!\vgamap|videoSync|pixel_column\(2))) # (!\vgamap|videoSync|pixel_column\(1))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000011100001111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(1),
+	datab => \vgamap|videoSync|pixel_column\(2),
+	datac => \vgamap|videoSync|pixel_column\(4),
+	datad => \vgamap|videoSync|pixel_column\(3),
+	combout => \vgamap|videoGen|pixelDraw~53_combout\);
+
+-- Location: LCCOMB_X54_Y62_N16
+\vgamap|videoGen|LessThan9~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|LessThan9~1_combout\ = (\vgamap|videoSync|pixel_column\(7)) # ((\vgamap|videoSync|pixel_column\(6) & ((\vgamap|videoSync|pixel_column\(1)) # (\vgamap|videoSync|pixel_column\(5)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111110101000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(6),
+	datab => \vgamap|videoSync|pixel_column\(1),
+	datac => \vgamap|videoSync|pixel_column\(5),
+	datad => \vgamap|videoSync|pixel_column\(7),
+	combout => \vgamap|videoGen|LessThan9~1_combout\);
+
+-- Location: LCCOMB_X59_Y62_N0
+\vgamap|videoGen|pixelDraw~54\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~54_combout\ = (\vgamap|videoGen|LessThan9~0_combout\ & ((\vgamap|videoGen|pixelDraw~53_combout\) # ((!\vgamap|videoSync|pixel_column\(5))))) # (!\vgamap|videoGen|LessThan9~0_combout\ & (\vgamap|videoGen|LessThan9~1_combout\ & 
+-- ((\vgamap|videoGen|pixelDraw~53_combout\) # (!\vgamap|videoSync|pixel_column\(5)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100111110001010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoGen|LessThan9~0_combout\,
+	datab => \vgamap|videoGen|pixelDraw~53_combout\,
+	datac => \vgamap|videoSync|pixel_column\(5),
+	datad => \vgamap|videoGen|LessThan9~1_combout\,
+	combout => \vgamap|videoGen|pixelDraw~54_combout\);
+
+-- Location: LCCOMB_X59_Y62_N2
+\vgamap|videoGen|pixelDraw~55\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~55_combout\ = (\vgamap|videoGen|pixelDraw~99_combout\ & (\vgamap|videoGen|pixelDraw~12_combout\ & \vgamap|videoGen|pixelDraw~54_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vgamap|videoGen|pixelDraw~99_combout\,
+	datac => \vgamap|videoGen|pixelDraw~12_combout\,
+	datad => \vgamap|videoGen|pixelDraw~54_combout\,
+	combout => \vgamap|videoGen|pixelDraw~55_combout\);
+
+-- Location: LCCOMB_X55_Y62_N10
+\vgamap|videoGen|pixelDraw~35\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~35_combout\ = (\vgamap|videoSync|pixel_column\(3) & (\vgamap|videoSync|pixel_column\(2) & (\vgamap|videoSync|pixel_column\(1) & \vgamap|videoSync|pixel_column\(4))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(3),
+	datab => \vgamap|videoSync|pixel_column\(2),
+	datac => \vgamap|videoSync|pixel_column\(1),
+	datad => \vgamap|videoSync|pixel_column\(4),
+	combout => \vgamap|videoGen|pixelDraw~35_combout\);
+
+-- Location: LCCOMB_X59_Y62_N6
+\vgamap|videoGen|pixelDraw~100\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~100_combout\ = (!\vgamap|videoSync|pixel_column\(7) & (\vgamap|videoSync|pixel_column\(6) & ((\vgamap|videoGen|pixelDraw~35_combout\) # (\vgamap|videoSync|pixel_column\(5)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000111000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoGen|pixelDraw~35_combout\,
+	datab => \vgamap|videoSync|pixel_column\(5),
+	datac => \vgamap|videoSync|pixel_column\(7),
+	datad => \vgamap|videoSync|pixel_column\(6),
+	combout => \vgamap|videoGen|pixelDraw~100_combout\);
+
+-- Location: LCCOMB_X56_Y62_N10
+\vgamap|videoGen|pixelDraw~33\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~33_combout\ = (\vgamap|videoSync|pixel_column\(7) & (\vgamap|videoGen|pixelDraw~32_combout\ & (!\vgamap|videoSync|pixel_column\(6) & \vgamap|videoGen|LessThan5~1_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000100000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(7),
+	datab => \vgamap|videoGen|pixelDraw~32_combout\,
+	datac => \vgamap|videoSync|pixel_column\(6),
+	datad => \vgamap|videoGen|LessThan5~1_combout\,
+	combout => \vgamap|videoGen|pixelDraw~33_combout\);
+
+-- Location: LCCOMB_X59_Y62_N30
+\vgamap|videoGen|pixelDraw~36\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~36_combout\ = (\vgamap|videoSync|pixel_column\(8) & (\vgamap|videoGen|pixelDraw~31_combout\ & ((\vgamap|videoGen|pixelDraw~100_combout\) # (\vgamap|videoGen|pixelDraw~33_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100000010000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoGen|pixelDraw~100_combout\,
+	datab => \vgamap|videoSync|pixel_column\(8),
+	datac => \vgamap|videoGen|pixelDraw~31_combout\,
+	datad => \vgamap|videoGen|pixelDraw~33_combout\,
+	combout => \vgamap|videoGen|pixelDraw~36_combout\);
+
+-- Location: LCCOMB_X57_Y62_N16
+\vgamap|videoGen|pixelDraw~28\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~28_combout\ = (\vgamap|videoSync|pixel_column\(9) & (!\vgamap|videoSync|pixel_column\(8) & (!\vgamap|videoSync|pixel_column\(7) & !\vgamap|videoSync|pixel_column\(6))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(9),
+	datab => \vgamap|videoSync|pixel_column\(8),
+	datac => \vgamap|videoSync|pixel_column\(7),
+	datad => \vgamap|videoSync|pixel_column\(6),
+	combout => \vgamap|videoGen|pixelDraw~28_combout\);
+
+-- Location: LCCOMB_X56_Y62_N28
+\vgamap|videoGen|pixelDraw~26\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~26_combout\ = (\vgamap|videoSync|pixel_column\(8) & ((\vgamap|videoSync|pixel_column\(5)) # ((\vgamap|videoSync|pixel_column\(4) & \vgamap|videoSync|pixel_column\(3)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1110000010100000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(5),
+	datab => \vgamap|videoSync|pixel_column\(4),
+	datac => \vgamap|videoSync|pixel_column\(8),
+	datad => \vgamap|videoSync|pixel_column\(3),
+	combout => \vgamap|videoGen|pixelDraw~26_combout\);
+
+-- Location: LCCOMB_X56_Y62_N26
+\vgamap|videoGen|pixelDraw~27\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~27_combout\ = (!\vgamap|videoSync|pixel_column\(9) & (\vgamap|videoSync|pixel_column\(6) & (\vgamap|videoSync|pixel_column\(7) & \vgamap|videoGen|pixelDraw~26_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0100000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(9),
+	datab => \vgamap|videoSync|pixel_column\(6),
+	datac => \vgamap|videoSync|pixel_column\(7),
+	datad => \vgamap|videoGen|pixelDraw~26_combout\,
+	combout => \vgamap|videoGen|pixelDraw~27_combout\);
+
+-- Location: LCCOMB_X54_Y62_N14
+\vgamap|videoGen|pixelDraw~29\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~29_combout\ = (!\vgamap|videoSync|pixel_column\(3) & (!\vgamap|videoSync|pixel_column\(4) & (!\vgamap|videoSync|pixel_column\(5) & !\vgamap|videoSync|pixel_column\(2))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(3),
+	datab => \vgamap|videoSync|pixel_column\(4),
+	datac => \vgamap|videoSync|pixel_column\(5),
+	datad => \vgamap|videoSync|pixel_column\(2),
+	combout => \vgamap|videoGen|pixelDraw~29_combout\);
+
+-- Location: LCCOMB_X59_Y62_N24
+\vgamap|videoGen|pixelDraw~30\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~30_combout\ = (\vgamap|videoGen|pixelDraw~99_combout\ & ((\vgamap|videoGen|pixelDraw~27_combout\) # ((\vgamap|videoGen|pixelDraw~28_combout\ & \vgamap|videoGen|pixelDraw~29_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100100011000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoGen|pixelDraw~28_combout\,
+	datab => \vgamap|videoGen|pixelDraw~99_combout\,
+	datac => \vgamap|videoGen|pixelDraw~27_combout\,
+	datad => \vgamap|videoGen|pixelDraw~29_combout\,
+	combout => \vgamap|videoGen|pixelDraw~30_combout\);
+
+-- Location: LCCOMB_X54_Y62_N12
+\vgamap|videoGen|pixelDraw~37\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~37_combout\ = ((\vgamap|videoGen|LessThan12~0_combout\ & !\vgamap|videoSync|pixel_column\(3))) # (!\vgamap|videoSync|pixel_column\(4))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011001111110011",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vgamap|videoSync|pixel_column\(4),
+	datac => \vgamap|videoGen|LessThan12~0_combout\,
+	datad => \vgamap|videoSync|pixel_column\(3),
+	combout => \vgamap|videoGen|pixelDraw~37_combout\);
+
+-- Location: LCCOMB_X55_Y62_N6
+\vgamap|videoGen|LessThan22~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|LessThan22~0_combout\ = (!\vgamap|videoSync|pixel_column\(3) & !\vgamap|videoSync|pixel_column\(4))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000001111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \vgamap|videoSync|pixel_column\(3),
+	datad => \vgamap|videoSync|pixel_column\(4),
+	combout => \vgamap|videoGen|LessThan22~0_combout\);
+
+-- Location: LCCOMB_X55_Y62_N8
+\vgamap|videoGen|pixelDraw~38\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~38_combout\ = ((\vgamap|videoSync|pixel_column\(1) & (\vgamap|videoSync|pixel_column\(2) & \vgamap|videoSync|pixel_column\(0)))) # (!\vgamap|videoGen|LessThan22~0_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000000011111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(1),
+	datab => \vgamap|videoSync|pixel_column\(2),
+	datac => \vgamap|videoSync|pixel_column\(0),
+	datad => \vgamap|videoGen|LessThan22~0_combout\,
+	combout => \vgamap|videoGen|pixelDraw~38_combout\);
+
+-- Location: LCCOMB_X59_Y62_N4
+\vgamap|videoGen|pixelDraw~39\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~39_combout\ = (\vgamap|videoSync|pixel_column\(5) & (((\vgamap|videoGen|pixelDraw~38_combout\ & !\vgamap|videoSync|pixel_column\(6))))) # (!\vgamap|videoSync|pixel_column\(5) & (\vgamap|videoGen|pixelDraw~37_combout\ & 
+-- ((\vgamap|videoSync|pixel_column\(6)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010001011000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoGen|pixelDraw~37_combout\,
+	datab => \vgamap|videoSync|pixel_column\(5),
+	datac => \vgamap|videoGen|pixelDraw~38_combout\,
+	datad => \vgamap|videoSync|pixel_column\(6),
+	combout => \vgamap|videoGen|pixelDraw~39_combout\);
+
+-- Location: LCCOMB_X59_Y62_N26
+\vgamap|videoGen|pixelDraw~40\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~40_combout\ = (!\vgamap|videoSync|pixel_column\(7) & (\vgamap|videoGen|pixelDraw~39_combout\ & (\vgamap|videoGen|pixelDraw~31_combout\ & \vgamap|videoSync|pixel_column\(8))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0100000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(7),
+	datab => \vgamap|videoGen|pixelDraw~39_combout\,
+	datac => \vgamap|videoGen|pixelDraw~31_combout\,
+	datad => \vgamap|videoSync|pixel_column\(8),
+	combout => \vgamap|videoGen|pixelDraw~40_combout\);
+
+-- Location: LCCOMB_X54_Y62_N10
+\vgamap|videoGen|pixelDraw~43\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~43_combout\ = (((!\vgamap|videoSync|pixel_column\(2)) # (!\vgamap|videoSync|pixel_column\(1))) # (!\vgamap|videoSync|pixel_column\(3))) # (!\vgamap|videoSync|pixel_column\(0))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111111111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(0),
+	datab => \vgamap|videoSync|pixel_column\(3),
+	datac => \vgamap|videoSync|pixel_column\(1),
+	datad => \vgamap|videoSync|pixel_column\(2),
+	combout => \vgamap|videoGen|pixelDraw~43_combout\);
+
+-- Location: LCCOMB_X54_Y62_N20
+\vgamap|videoGen|pixelDraw~44\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~44_combout\ = (\vgamap|videoGen|pixelDraw~43_combout\ & ((\vgamap|videoGen|LessThan5~1_combout\) # ((\vgamap|videoGen|pixelDraw~14_combout\ & !\vgamap|videoGen|LessThan12~0_combout\)))) # (!\vgamap|videoGen|pixelDraw~43_combout\ 
+-- & (\vgamap|videoGen|pixelDraw~14_combout\ & (!\vgamap|videoGen|LessThan12~0_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010111000001100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoGen|pixelDraw~43_combout\,
+	datab => \vgamap|videoGen|pixelDraw~14_combout\,
+	datac => \vgamap|videoGen|LessThan12~0_combout\,
+	datad => \vgamap|videoGen|LessThan5~1_combout\,
+	combout => \vgamap|videoGen|pixelDraw~44_combout\);
+
+-- Location: LCCOMB_X56_Y62_N18
+\vgamap|videoGen|pixelDraw~41\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~41_combout\ = (\vgamap|videoSync|pixel_column\(5) & (\vgamap|videoSync|pixel_column\(6) & (\vgamap|videoSync|pixel_column\(7) & \vgamap|videoSync|pixel_column\(4))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(5),
+	datab => \vgamap|videoSync|pixel_column\(6),
+	datac => \vgamap|videoSync|pixel_column\(7),
+	datad => \vgamap|videoSync|pixel_column\(4),
+	combout => \vgamap|videoGen|pixelDraw~41_combout\);
+
+-- Location: LCCOMB_X56_Y62_N4
+\vgamap|videoGen|LessThan24~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|LessThan24~0_combout\ = (\vgamap|videoGen|LessThan22~1_combout\ & (!\vgamap|videoSync|pixel_column\(7) & ((!\vgamap|videoGen|LessThan5~0_combout\) # (!\vgamap|videoSync|pixel_column\(4)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000010000001100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(4),
+	datab => \vgamap|videoGen|LessThan22~1_combout\,
+	datac => \vgamap|videoSync|pixel_column\(7),
+	datad => \vgamap|videoGen|LessThan5~0_combout\,
+	combout => \vgamap|videoGen|LessThan24~0_combout\);
+
+-- Location: LCCOMB_X59_Y62_N12
+\vgamap|videoGen|pixelDraw~42\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~42_combout\ = (\vgamap|videoGen|pixelDraw~31_combout\ & ((\vgamap|videoSync|pixel_column\(8) & ((\vgamap|videoGen|LessThan24~0_combout\))) # (!\vgamap|videoSync|pixel_column\(8) & (\vgamap|videoGen|pixelDraw~41_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100000010100000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoGen|pixelDraw~41_combout\,
+	datab => \vgamap|videoGen|LessThan24~0_combout\,
+	datac => \vgamap|videoGen|pixelDraw~31_combout\,
+	datad => \vgamap|videoSync|pixel_column\(8),
+	combout => \vgamap|videoGen|pixelDraw~42_combout\);
+
+-- Location: LCCOMB_X59_Y62_N10
+\vgamap|videoGen|colorAddress~5\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|colorAddress~5_combout\ = (!\vgamap|videoGen|pixelDraw~42_combout\ & (((\vgamap|videoGen|pixelDraw~44_combout\) # (!\vgamap|videoGen|pixelDraw~99_combout\)) # (!\vgamap|videoGen|pixelDraw~28_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000011110111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoGen|pixelDraw~28_combout\,
+	datab => \vgamap|videoGen|pixelDraw~99_combout\,
+	datac => \vgamap|videoGen|pixelDraw~44_combout\,
+	datad => \vgamap|videoGen|pixelDraw~42_combout\,
+	combout => \vgamap|videoGen|colorAddress~5_combout\);
+
+-- Location: LCCOMB_X59_Y62_N8
+\vgamap|videoGen|colorAddress~6\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|colorAddress~6_combout\ = (!\vgamap|videoGen|pixelDraw~36_combout\ & (!\vgamap|videoGen|pixelDraw~30_combout\ & (!\vgamap|videoGen|pixelDraw~40_combout\ & \vgamap|videoGen|colorAddress~5_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoGen|pixelDraw~36_combout\,
+	datab => \vgamap|videoGen|pixelDraw~30_combout\,
+	datac => \vgamap|videoGen|pixelDraw~40_combout\,
+	datad => \vgamap|videoGen|colorAddress~5_combout\,
+	combout => \vgamap|videoGen|colorAddress~6_combout\);
+
+-- Location: LCCOMB_X59_Y62_N20
+\vgamap|videoGen|colorAddress~7\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|colorAddress~7_combout\ = (!\vgamap|videoGen|pixelDraw~46_combout\ & (!\vgamap|videoGen|pixelDraw~55_combout\ & (\vgamap|videoGen|colorAddress~6_combout\ & !\vgamap|videoGen|pixelDraw~52_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000010000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoGen|pixelDraw~46_combout\,
+	datab => \vgamap|videoGen|pixelDraw~55_combout\,
+	datac => \vgamap|videoGen|colorAddress~6_combout\,
+	datad => \vgamap|videoGen|pixelDraw~52_combout\,
+	combout => \vgamap|videoGen|colorAddress~7_combout\);
+
+-- Location: IOIBUF_X115_Y10_N1
+\keys[5]~input\ : cycloneive_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_keys(5),
+	o => \keys[5]~input_o\);
+
+-- Location: LCCOMB_X54_Y62_N30
+\vgamap|videoGen|pixelDraw~74\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~74_combout\ = (\vgamap|videoGen|LessThan9~0_combout\ & (((\vgamap|videoGen|LessThan10~0_combout\)) # (!\vgamap|videoSync|pixel_column\(5)))) # (!\vgamap|videoGen|LessThan9~0_combout\ & (\vgamap|videoGen|LessThan9~1_combout\ & 
+-- ((\vgamap|videoGen|LessThan10~0_combout\) # (!\vgamap|videoSync|pixel_column\(5)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111001110100010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoGen|LessThan9~0_combout\,
+	datab => \vgamap|videoSync|pixel_column\(5),
+	datac => \vgamap|videoGen|LessThan10~0_combout\,
+	datad => \vgamap|videoGen|LessThan9~1_combout\,
+	combout => \vgamap|videoGen|pixelDraw~74_combout\);
+
+-- Location: IOIBUF_X115_Y4_N22
+\keys[7]~input\ : cycloneive_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_keys(7),
+	o => \keys[7]~input_o\);
+
+-- Location: LCCOMB_X57_Y62_N20
+\vgamap|videoGen|pixelDraw~69\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~69_combout\ = (!\vgamap|videoSync|pixel_column\(9) & (\vgamap|videoSync|pixel_column\(8) & \vgamap|videoGen|pixelDraw~57_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(9),
+	datac => \vgamap|videoSync|pixel_column\(8),
+	datad => \vgamap|videoGen|pixelDraw~57_combout\,
+	combout => \vgamap|videoGen|pixelDraw~69_combout\);
+
+-- Location: LCCOMB_X61_Y62_N8
+\vgamap|videoGen|colorAddress~17\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|colorAddress~17_combout\ = (!\vgamap|videoSync|pixel_column\(7) & (\vgamap|videoGen|pixelDraw~74_combout\ & (!\keys[7]~input_o\ & \vgamap|videoGen|pixelDraw~69_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -5981,78 +6081,96 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(3),
+	dataa => \vgamap|videoSync|pixel_column\(7),
+	datab => \vgamap|videoGen|pixelDraw~74_combout\,
+	datac => \keys[7]~input_o\,
+	datad => \vgamap|videoGen|pixelDraw~69_combout\,
+	combout => \vgamap|videoGen|colorAddress~17_combout\);
+
+-- Location: LCCOMB_X62_Y62_N12
+\vgamap|videoGen|pixelDraw~76\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~76_combout\ = (\vgamap|videoSync|pixel_column\(2) & (\vgamap|videoSync|pixel_column\(4) & (\vgamap|videoSync|pixel_column\(3) & \vgamap|videoSync|pixel_column\(5))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(2),
+	datab => \vgamap|videoSync|pixel_column\(4),
+	datac => \vgamap|videoSync|pixel_column\(3),
+	datad => \vgamap|videoSync|pixel_column\(5),
+	combout => \vgamap|videoGen|pixelDraw~76_combout\);
+
+-- Location: LCCOMB_X62_Y62_N10
+\vgamap|videoGen|pixelDraw~75\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~75_combout\ = (((!\vgamap|videoSync|pixel_column\(3) & \vgamap|videoGen|LessThan12~0_combout\)) # (!\vgamap|videoSync|pixel_column\(4))) # (!\vgamap|videoSync|pixel_column\(5))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111111101110111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(5),
+	datab => \vgamap|videoSync|pixel_column\(4),
+	datac => \vgamap|videoSync|pixel_column\(3),
+	datad => \vgamap|videoGen|LessThan12~0_combout\,
+	combout => \vgamap|videoGen|pixelDraw~75_combout\);
+
+-- Location: LCCOMB_X62_Y62_N30
+\vgamap|videoGen|pixelDraw~77\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~77_combout\ = (\vgamap|videoSync|pixel_column\(7) & (!\vgamap|videoSync|pixel_column\(6) & ((\vgamap|videoGen|pixelDraw~75_combout\)))) # (!\vgamap|videoSync|pixel_column\(7) & (\vgamap|videoSync|pixel_column\(6) & 
+-- (\vgamap|videoGen|pixelDraw~76_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0110001001000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(7),
+	datab => \vgamap|videoSync|pixel_column\(6),
+	datac => \vgamap|videoGen|pixelDraw~76_combout\,
+	datad => \vgamap|videoGen|pixelDraw~75_combout\,
+	combout => \vgamap|videoGen|pixelDraw~77_combout\);
+
+-- Location: LCCOMB_X62_Y62_N18
+\vgamap|videoGen|colorAddress~18\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|colorAddress~18_combout\ = (\vgamap|videoGen|pixelDraw~77_combout\ & (\vgamap|videoGen|pixelDraw~69_combout\ & ((\vgamap|videoSync|pixel_column\(7)) # (!\vgamap|videoGen|pixelDraw~74_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000101000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoGen|pixelDraw~77_combout\,
 	datab => \vgamap|videoSync|pixel_column\(7),
-	datac => \vgamap|videoGen|LessThan44~0_combout\,
-	datad => \vgamap|videoGen|LessThan22~1_combout\,
-	combout => \vgamap|videoGen|pixelDraw~66_combout\);
+	datac => \vgamap|videoGen|pixelDraw~74_combout\,
+	datad => \vgamap|videoGen|pixelDraw~69_combout\,
+	combout => \vgamap|videoGen|colorAddress~18_combout\);
 
--- Location: LCCOMB_X61_Y71_N6
-\vgamap|videoGen|pixelDraw~67\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X61_Y62_N10
+\vgamap|videoGen|colorAddress~19\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|pixelDraw~67_combout\ = (\vgamap|videoGen|pixelDraw~66_combout\) # ((\vgamap|videoSync|pixel_column\(4) & (\vgamap|videoGen|pixelDraw~34_combout\ & !\vgamap|videoGen|pixelDraw~32_combout\)))
+-- \vgamap|videoGen|colorAddress~19_combout\ = (\vgamap|videoGen|colorAddress~17_combout\) # ((!\keys[5]~input_o\ & \vgamap|videoGen|colorAddress~18_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111100001000",
+	lut_mask => "1111001111110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(4),
-	datab => \vgamap|videoGen|pixelDraw~34_combout\,
-	datac => \vgamap|videoGen|pixelDraw~32_combout\,
-	datad => \vgamap|videoGen|pixelDraw~66_combout\,
-	combout => \vgamap|videoGen|pixelDraw~67_combout\);
-
--- Location: LCCOMB_X61_Y71_N16
-\vgamap|videoGen|pixelDraw~68\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~68_combout\ = (\vgamap|videoGen|pixelDraw~60_combout\ & (!\vgamap|videoSync|pixel_column\(8) & ((\vgamap|videoGen|pixelDraw~65_combout\) # (\vgamap|videoGen|pixelDraw~67_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000110000001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoGen|pixelDraw~65_combout\,
-	datab => \vgamap|videoGen|pixelDraw~60_combout\,
-	datac => \vgamap|videoSync|pixel_column\(8),
-	datad => \vgamap|videoGen|pixelDraw~67_combout\,
-	combout => \vgamap|videoGen|pixelDraw~68_combout\);
-
--- Location: LCCOMB_X61_Y71_N18
-\vgamap|videoGen|colorAddress~8\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|colorAddress~8_combout\ = (\vgamap|videoGen|pixelDraw~68_combout\ & (!\keys[14]~input_o\)) # (!\vgamap|videoGen|pixelDraw~68_combout\ & (((\vgamap|videoGen|pixelDraw~64_combout\ & !\keys[12]~input_o\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101010100001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \keys[14]~input_o\,
-	datab => \vgamap|videoGen|pixelDraw~64_combout\,
-	datac => \keys[12]~input_o\,
-	datad => \vgamap|videoGen|pixelDraw~68_combout\,
-	combout => \vgamap|videoGen|colorAddress~8_combout\);
-
--- Location: LCCOMB_X61_Y71_N4
-\vgamap|videoGen|colorAddress~9\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|colorAddress~9_combout\ = (\vgamap|videoGen|pixelDraw~59_combout\ & (!\keys[16]~input_o\)) # (!\vgamap|videoGen|pixelDraw~59_combout\ & ((\vgamap|videoGen|colorAddress~8_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101111101010000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \keys[16]~input_o\,
-	datac => \vgamap|videoGen|pixelDraw~59_combout\,
-	datad => \vgamap|videoGen|colorAddress~8_combout\,
-	combout => \vgamap|videoGen|colorAddress~9_combout\);
+	datab => \keys[5]~input_o\,
+	datac => \vgamap|videoGen|colorAddress~17_combout\,
+	datad => \vgamap|videoGen|colorAddress~18_combout\,
+	combout => \vgamap|videoGen|colorAddress~19_combout\);
 
 -- Location: IOIBUF_X115_Y4_N15
 \keys[9]~input\ : cycloneive_io_ibuf
@@ -6076,44 +6194,28 @@ PORT MAP (
 	i => ww_keys(11),
 	o => \keys[11]~input_o\);
 
--- Location: LCCOMB_X59_Y71_N16
+-- Location: LCCOMB_X54_Y62_N24
 \vgamap|videoGen|pixelDraw~70\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|pixelDraw~70_combout\ = (\vgamap|videoSync|pixel_column\(5) & (((\vgamap|videoGen|pixelDraw~43_combout\) # (!\vgamap|videoSync|pixel_column\(4))))) # (!\vgamap|videoSync|pixel_column\(5) & ((\vgamap|videoSync|pixel_column\(3)) # 
--- ((\vgamap|videoGen|pixelDraw~43_combout\ & \vgamap|videoSync|pixel_column\(4)))))
+-- \vgamap|videoGen|pixelDraw~70_combout\ = (\vgamap|videoSync|pixel_column\(4) & ((\vgamap|videoGen|pixelDraw~43_combout\) # ((\vgamap|videoSync|pixel_column\(3) & !\vgamap|videoSync|pixel_column\(5))))) # (!\vgamap|videoSync|pixel_column\(4) & 
+-- ((\vgamap|videoSync|pixel_column\(3)) # ((\vgamap|videoSync|pixel_column\(5)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111001011101110",
+	lut_mask => "1111111000111010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vgamap|videoSync|pixel_column\(3),
-	datab => \vgamap|videoSync|pixel_column\(5),
-	datac => \vgamap|videoGen|pixelDraw~43_combout\,
-	datad => \vgamap|videoSync|pixel_column\(4),
+	datab => \vgamap|videoSync|pixel_column\(4),
+	datac => \vgamap|videoSync|pixel_column\(5),
+	datad => \vgamap|videoGen|pixelDraw~43_combout\,
 	combout => \vgamap|videoGen|pixelDraw~70_combout\);
 
--- Location: LCCOMB_X57_Y71_N16
-\vgamap|videoGen|pixelDraw~69\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~69_combout\ = (!\vgamap|videoSync|pixel_column\(9) & (\vgamap|videoSync|pixel_column\(8) & \vgamap|videoGen|pixelDraw~57_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(9),
-	datac => \vgamap|videoSync|pixel_column\(8),
-	datad => \vgamap|videoGen|pixelDraw~57_combout\,
-	combout => \vgamap|videoGen|pixelDraw~69_combout\);
-
--- Location: LCCOMB_X56_Y71_N26
+-- Location: LCCOMB_X57_Y62_N4
 \vgamap|videoGen|pixelDraw~71\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|pixelDraw~71_combout\ = (!\vgamap|videoSync|pixel_column\(6) & (!\vgamap|videoSync|pixel_column\(7) & (\vgamap|videoGen|pixelDraw~70_combout\ & \vgamap|videoGen|pixelDraw~69_combout\)))
+-- \vgamap|videoGen|pixelDraw~71_combout\ = (!\vgamap|videoSync|pixel_column\(7) & (!\vgamap|videoSync|pixel_column\(6) & (\vgamap|videoGen|pixelDraw~70_combout\ & \vgamap|videoGen|pixelDraw~69_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -6121,13 +6223,13 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(6),
-	datab => \vgamap|videoSync|pixel_column\(7),
+	dataa => \vgamap|videoSync|pixel_column\(7),
+	datab => \vgamap|videoSync|pixel_column\(6),
 	datac => \vgamap|videoGen|pixelDraw~70_combout\,
 	datad => \vgamap|videoGen|pixelDraw~69_combout\,
 	combout => \vgamap|videoGen|pixelDraw~71_combout\);
 
--- Location: LCCOMB_X58_Y71_N22
+-- Location: LCCOMB_X55_Y62_N20
 \vgamap|videoGen|LessThan6~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoGen|LessThan6~0_combout\ = (\vgamap|videoGen|LessThan22~0_combout\ & (((!\vgamap|videoSync|pixel_column\(1) & !\vgamap|videoSync|pixel_column\(0))) # (!\vgamap|videoSync|pixel_column\(2))))
@@ -6144,25 +6246,25 @@ PORT MAP (
 	datad => \vgamap|videoGen|LessThan22~0_combout\,
 	combout => \vgamap|videoGen|LessThan6~0_combout\);
 
--- Location: LCCOMB_X57_Y71_N26
+-- Location: LCCOMB_X57_Y62_N22
 \vgamap|videoGen|pixelDraw~72\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|pixelDraw~72_combout\ = (\vgamap|videoSync|pixel_column\(8) & (((!\vgamap|videoSync|pixel_column\(7) & \vgamap|videoGen|LessThan6~0_combout\)))) # (!\vgamap|videoSync|pixel_column\(8) & (\vgamap|videoGen|pixelDraw~49_combout\ & 
--- (\vgamap|videoSync|pixel_column\(7))))
+-- \vgamap|videoGen|pixelDraw~72_combout\ = (\vgamap|videoSync|pixel_column\(7) & (!\vgamap|videoSync|pixel_column\(8) & ((\vgamap|videoGen|pixelDraw~49_combout\)))) # (!\vgamap|videoSync|pixel_column\(7) & (\vgamap|videoSync|pixel_column\(8) & 
+-- (\vgamap|videoGen|LessThan6~0_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0100101001000000",
+	lut_mask => "0110001001000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(8),
-	datab => \vgamap|videoGen|pixelDraw~49_combout\,
-	datac => \vgamap|videoSync|pixel_column\(7),
-	datad => \vgamap|videoGen|LessThan6~0_combout\,
+	dataa => \vgamap|videoSync|pixel_column\(7),
+	datab => \vgamap|videoSync|pixel_column\(8),
+	datac => \vgamap|videoGen|LessThan6~0_combout\,
+	datad => \vgamap|videoGen|pixelDraw~49_combout\,
 	combout => \vgamap|videoGen|pixelDraw~72_combout\);
 
--- Location: LCCOMB_X57_Y71_N4
+-- Location: LCCOMB_X57_Y62_N24
 \vgamap|videoGen|pixelDraw~73\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoGen|pixelDraw~73_combout\ = (\vgamap|videoGen|pixelDraw~72_combout\ & (\vgamap|videoGen|pixelDraw~60_combout\ & ((\vgamap|videoGen|LessThan22~1_combout\) # (!\vgamap|videoSync|pixel_column\(8)))))
@@ -6179,7 +6281,7 @@ PORT MAP (
 	datad => \vgamap|videoGen|pixelDraw~60_combout\,
 	combout => \vgamap|videoGen|pixelDraw~73_combout\);
 
--- Location: LCCOMB_X56_Y71_N24
+-- Location: LCCOMB_X61_Y62_N14
 \vgamap|videoGen|colorAddress~10\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoGen|colorAddress~10_combout\ = (\vgamap|videoGen|pixelDraw~73_combout\ & (((!\keys[11]~input_o\)))) # (!\vgamap|videoGen|pixelDraw~73_combout\ & (!\keys[9]~input_o\ & ((\vgamap|videoGen|pixelDraw~71_combout\))))
@@ -6196,10 +6298,42 @@ PORT MAP (
 	datad => \vgamap|videoGen|pixelDraw~73_combout\,
 	combout => \vgamap|videoGen|colorAddress~10_combout\);
 
--- Location: LCCOMB_X56_Y71_N10
+-- Location: LCCOMB_X61_Y62_N28
 \vgamap|videoGen|colorAddress~11\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|colorAddress~11_combout\ = (!\vgamap|videoGen|pixelDraw~59_combout\ & (!\vgamap|videoGen|pixelDraw~64_combout\ & (!\vgamap|videoGen|pixelDraw~68_combout\ & \vgamap|videoGen|colorAddress~10_combout\)))
+-- \vgamap|videoGen|colorAddress~11_combout\ = (!\vgamap|videoGen|pixelDraw~59_combout\ & (!\vgamap|videoGen|pixelDraw~64_combout\ & (\vgamap|videoGen|colorAddress~10_combout\ & !\vgamap|videoGen|pixelDraw~68_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000010000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoGen|pixelDraw~59_combout\,
+	datab => \vgamap|videoGen|pixelDraw~64_combout\,
+	datac => \vgamap|videoGen|colorAddress~10_combout\,
+	datad => \vgamap|videoGen|pixelDraw~68_combout\,
+	combout => \vgamap|videoGen|colorAddress~11_combout\);
+
+-- Location: LCCOMB_X61_Y62_N6
+\vgamap|videoGen|colorAddress~12\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|colorAddress~12_combout\ = (!\vgamap|videoGen|pixelDraw~59_combout\ & !\vgamap|videoGen|pixelDraw~64_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000001111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \vgamap|videoGen|pixelDraw~59_combout\,
+	datad => \vgamap|videoGen|pixelDraw~64_combout\,
+	combout => \vgamap|videoGen|colorAddress~12_combout\);
+
+-- Location: LCCOMB_X60_Y62_N6
+\vgamap|videoGen|colorAddress~13\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|colorAddress~13_combout\ = (!\vgamap|videoGen|pixelDraw~73_combout\ & (!\vgamap|videoGen|pixelDraw~71_combout\ & (!\vgamap|videoGen|pixelDraw~68_combout\ & \vgamap|videoGen|colorAddress~12_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -6207,62 +6341,28 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoGen|pixelDraw~59_combout\,
-	datab => \vgamap|videoGen|pixelDraw~64_combout\,
+	dataa => \vgamap|videoGen|pixelDraw~73_combout\,
+	datab => \vgamap|videoGen|pixelDraw~71_combout\,
 	datac => \vgamap|videoGen|pixelDraw~68_combout\,
-	datad => \vgamap|videoGen|colorAddress~10_combout\,
-	combout => \vgamap|videoGen|colorAddress~11_combout\);
+	datad => \vgamap|videoGen|colorAddress~12_combout\,
+	combout => \vgamap|videoGen|colorAddress~13_combout\);
 
--- Location: LCCOMB_X57_Y71_N6
-\vgamap|videoGen|pixelDraw~82\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X61_Y62_N12
+\vgamap|videoGen|colorAddress~14\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|pixelDraw~82_combout\ = (\vgamap|videoSync|pixel_column\(4) & ((\vgamap|videoSync|pixel_column\(3)) # ((\vgamap|videoSync|pixel_column\(2) & \vgamap|videoSync|pixel_column\(1)))))
+-- \vgamap|videoGen|colorAddress~14_combout\ = ((!\vgamap|videoGen|pixelDraw~77_combout\ & ((\vgamap|videoSync|pixel_column\(7)) # (!\vgamap|videoGen|pixelDraw~74_combout\)))) # (!\vgamap|videoGen|pixelDraw~69_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100110010000000",
+	lut_mask => "0000101111111111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(2),
-	datab => \vgamap|videoSync|pixel_column\(4),
-	datac => \vgamap|videoSync|pixel_column\(1),
-	datad => \vgamap|videoSync|pixel_column\(3),
-	combout => \vgamap|videoGen|pixelDraw~82_combout\);
-
--- Location: LCCOMB_X57_Y71_N28
-\vgamap|videoGen|pixelDraw~83\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~83_combout\ = (\vgamap|videoSync|pixel_column\(6) & (((\vgamap|videoGen|LessThan14~0_combout\) # (!\vgamap|videoSync|pixel_column\(5))))) # (!\vgamap|videoSync|pixel_column\(6) & (\vgamap|videoGen|pixelDraw~82_combout\ & 
--- (\vgamap|videoSync|pixel_column\(5))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1110110000101100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoGen|pixelDraw~82_combout\,
-	datab => \vgamap|videoSync|pixel_column\(6),
-	datac => \vgamap|videoSync|pixel_column\(5),
-	datad => \vgamap|videoGen|LessThan14~0_combout\,
-	combout => \vgamap|videoGen|pixelDraw~83_combout\);
-
--- Location: LCCOMB_X56_Y71_N30
-\vgamap|videoGen|pixelDraw~84\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~84_combout\ = (\vgamap|videoSync|pixel_column\(7) & (\vgamap|videoGen|pixelDraw~69_combout\ & \vgamap|videoGen|pixelDraw~83_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vgamap|videoSync|pixel_column\(7),
-	datac => \vgamap|videoGen|pixelDraw~69_combout\,
-	datad => \vgamap|videoGen|pixelDraw~83_combout\,
-	combout => \vgamap|videoGen|pixelDraw~84_combout\);
+	dataa => \vgamap|videoSync|pixel_column\(7),
+	datab => \vgamap|videoGen|pixelDraw~74_combout\,
+	datac => \vgamap|videoGen|pixelDraw~77_combout\,
+	datad => \vgamap|videoGen|pixelDraw~69_combout\,
+	combout => \vgamap|videoGen|colorAddress~14_combout\);
 
 -- Location: IOIBUF_X115_Y11_N8
 \keys[4]~input\ : cycloneive_io_ibuf
@@ -6275,17 +6375,6 @@ PORT MAP (
 	i => ww_keys(4),
 	o => \keys[4]~input_o\);
 
--- Location: IOIBUF_X115_Y14_N1
-\keys[0]~input\ : cycloneive_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_keys(0),
-	o => \keys[0]~input_o\);
-
 -- Location: IOIBUF_X115_Y13_N8
 \keys[2]~input\ : cycloneive_io_ibuf
 -- pragma translate_off
@@ -6297,24 +6386,18 @@ PORT MAP (
 	i => ww_keys(2),
 	o => \keys[2]~input_o\);
 
--- Location: LCCOMB_X57_Y71_N12
-\vgamap|videoGen|pixelDraw~80\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~80_combout\ = (\vgamap|videoSync|pixel_column\(5) & (\vgamap|videoSync|pixel_column\(6) & ((\vgamap|videoGen|LessThan44~0_combout\) # (!\vgamap|videoGen|LessThan22~0_combout\))))
-
+-- Location: IOIBUF_X115_Y14_N1
+\keys[0]~input\ : cycloneive_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100000001000000",
-	sum_lutc_input => "datac")
+	bus_hold => "false",
+	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoGen|LessThan22~0_combout\,
-	datab => \vgamap|videoSync|pixel_column\(5),
-	datac => \vgamap|videoSync|pixel_column\(6),
-	datad => \vgamap|videoGen|LessThan44~0_combout\,
-	combout => \vgamap|videoGen|pixelDraw~80_combout\);
+	i => ww_keys(0),
+	o => \keys[0]~input_o\);
 
--- Location: LCCOMB_X57_Y71_N30
+-- Location: LCCOMB_X57_Y62_N26
 \vgamap|videoGen|pixelDraw~103\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoGen|pixelDraw~103_combout\ = (!\vgamap|videoSync|pixel_column\(6) & (((!\vgamap|videoSync|pixel_column\(4) & \vgamap|videoGen|pixelDraw~32_combout\)) # (!\vgamap|videoSync|pixel_column\(5))))
@@ -6331,351 +6414,228 @@ PORT MAP (
 	datad => \vgamap|videoGen|pixelDraw~32_combout\,
 	combout => \vgamap|videoGen|pixelDraw~103_combout\);
 
--- Location: LCCOMB_X57_Y71_N14
-\vgamap|videoGen|pixelDraw~81\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X57_Y62_N2
+\vgamap|videoGen|pixelDraw~80\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|pixelDraw~81_combout\ = (\vgamap|videoGen|pixelDraw~80_combout\) # ((\vgamap|videoGen|pixelDraw~103_combout\) # ((!\vgamap|videoGen|pixelDraw~57_combout\) # (!\vgamap|videoGen|pixelDraw~50_combout\)))
+-- \vgamap|videoGen|pixelDraw~80_combout\ = (\vgamap|videoSync|pixel_column\(6) & (\vgamap|videoSync|pixel_column\(5) & ((\vgamap|videoGen|LessThan44~0_combout\) # (!\vgamap|videoGen|LessThan22~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1110111111111111",
+	lut_mask => "1000000011000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoGen|pixelDraw~80_combout\,
-	datab => \vgamap|videoGen|pixelDraw~103_combout\,
-	datac => \vgamap|videoGen|pixelDraw~50_combout\,
-	datad => \vgamap|videoGen|pixelDraw~57_combout\,
+	dataa => \vgamap|videoGen|LessThan44~0_combout\,
+	datab => \vgamap|videoSync|pixel_column\(6),
+	datac => \vgamap|videoSync|pixel_column\(5),
+	datad => \vgamap|videoGen|LessThan22~0_combout\,
+	combout => \vgamap|videoGen|pixelDraw~80_combout\);
+
+-- Location: LCCOMB_X57_Y62_N8
+\vgamap|videoGen|pixelDraw~81\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~81_combout\ = (((\vgamap|videoGen|pixelDraw~103_combout\) # (\vgamap|videoGen|pixelDraw~80_combout\)) # (!\vgamap|videoGen|pixelDraw~57_combout\)) # (!\vgamap|videoGen|pixelDraw~50_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111110111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoGen|pixelDraw~50_combout\,
+	datab => \vgamap|videoGen|pixelDraw~57_combout\,
+	datac => \vgamap|videoGen|pixelDraw~103_combout\,
+	datad => \vgamap|videoGen|pixelDraw~80_combout\,
 	combout => \vgamap|videoGen|pixelDraw~81_combout\);
 
--- Location: LCCOMB_X57_Y71_N2
+-- Location: LCCOMB_X57_Y62_N10
 \vgamap|videoGen|pixelDraw~78\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoGen|pixelDraw~78_combout\ = (\vgamap|videoGen|pixelDraw~28_combout\ & (((!\vgamap|videoSync|pixel_column\(4) & \vgamap|videoGen|LessThan16~0_combout\)) # (!\vgamap|videoSync|pixel_column\(5))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0010101000001010",
+	lut_mask => "0111000000110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoGen|pixelDraw~28_combout\,
-	datab => \vgamap|videoSync|pixel_column\(4),
-	datac => \vgamap|videoSync|pixel_column\(5),
+	dataa => \vgamap|videoSync|pixel_column\(4),
+	datab => \vgamap|videoSync|pixel_column\(5),
+	datac => \vgamap|videoGen|pixelDraw~28_combout\,
 	datad => \vgamap|videoGen|LessThan16~0_combout\,
 	combout => \vgamap|videoGen|pixelDraw~78_combout\);
 
--- Location: LCCOMB_X57_Y71_N0
+-- Location: LCCOMB_X57_Y62_N0
 \vgamap|videoGen|pixelDraw~79\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|pixelDraw~79_combout\ = (\vgamap|videoGen|pixelDraw~57_combout\ & ((\vgamap|videoGen|pixelDraw~78_combout\) # ((\vgamap|videoGen|pixelDraw~41_combout\ & \vgamap|videoGen|pixelDraw~69_combout\)))) # (!\vgamap|videoGen|pixelDraw~57_combout\ 
--- & (((\vgamap|videoGen|pixelDraw~41_combout\ & \vgamap|videoGen|pixelDraw~69_combout\))))
+-- \vgamap|videoGen|pixelDraw~79_combout\ = (\vgamap|videoGen|pixelDraw~78_combout\ & ((\vgamap|videoGen|pixelDraw~57_combout\) # ((\vgamap|videoGen|pixelDraw~41_combout\ & \vgamap|videoGen|pixelDraw~69_combout\)))) # (!\vgamap|videoGen|pixelDraw~78_combout\ 
+-- & (\vgamap|videoGen|pixelDraw~41_combout\ & ((\vgamap|videoGen|pixelDraw~69_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111100010001000",
+	lut_mask => "1110110010100000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoGen|pixelDraw~57_combout\,
-	datab => \vgamap|videoGen|pixelDraw~78_combout\,
-	datac => \vgamap|videoGen|pixelDraw~41_combout\,
+	dataa => \vgamap|videoGen|pixelDraw~78_combout\,
+	datab => \vgamap|videoGen|pixelDraw~41_combout\,
+	datac => \vgamap|videoGen|pixelDraw~57_combout\,
 	datad => \vgamap|videoGen|pixelDraw~69_combout\,
 	combout => \vgamap|videoGen|pixelDraw~79_combout\);
 
--- Location: LCCOMB_X57_Y71_N20
+-- Location: LCCOMB_X57_Y62_N14
 \vgamap|videoGen|colorAddress~15\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|colorAddress~15_combout\ = (\vgamap|videoGen|pixelDraw~79_combout\ & (((!\keys[2]~input_o\)))) # (!\vgamap|videoGen|pixelDraw~79_combout\ & (!\keys[0]~input_o\ & ((!\vgamap|videoGen|pixelDraw~81_combout\))))
+-- \vgamap|videoGen|colorAddress~15_combout\ = (\vgamap|videoGen|pixelDraw~79_combout\ & (!\keys[2]~input_o\)) # (!\vgamap|videoGen|pixelDraw~79_combout\ & (((!\keys[0]~input_o\ & !\vgamap|videoGen|pixelDraw~81_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011001100000101",
+	lut_mask => "0101010100000011",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \keys[0]~input_o\,
-	datab => \keys[2]~input_o\,
+	dataa => \keys[2]~input_o\,
+	datab => \keys[0]~input_o\,
 	datac => \vgamap|videoGen|pixelDraw~81_combout\,
 	datad => \vgamap|videoGen|pixelDraw~79_combout\,
 	combout => \vgamap|videoGen|colorAddress~15_combout\);
 
--- Location: LCCOMB_X59_Y71_N30
-\vgamap|videoGen|pixelDraw~75\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X55_Y62_N18
+\vgamap|videoGen|pixelDraw~82\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|pixelDraw~75_combout\ = (((!\vgamap|videoSync|pixel_column\(3) & \vgamap|videoGen|LessThan12~0_combout\)) # (!\vgamap|videoSync|pixel_column\(5))) # (!\vgamap|videoSync|pixel_column\(4))
+-- \vgamap|videoGen|pixelDraw~82_combout\ = (\vgamap|videoSync|pixel_column\(4) & ((\vgamap|videoSync|pixel_column\(3)) # ((\vgamap|videoSync|pixel_column\(1) & \vgamap|videoSync|pixel_column\(2)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0111111100111111",
+	lut_mask => "1111100000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(3),
-	datab => \vgamap|videoSync|pixel_column\(4),
-	datac => \vgamap|videoSync|pixel_column\(5),
-	datad => \vgamap|videoGen|LessThan12~0_combout\,
-	combout => \vgamap|videoGen|pixelDraw~75_combout\);
-
--- Location: LCCOMB_X59_Y71_N28
-\vgamap|videoGen|pixelDraw~76\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~76_combout\ = (\vgamap|videoSync|pixel_column\(3) & (\vgamap|videoSync|pixel_column\(5) & (\vgamap|videoSync|pixel_column\(2) & \vgamap|videoSync|pixel_column\(4))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(3),
-	datab => \vgamap|videoSync|pixel_column\(5),
-	datac => \vgamap|videoSync|pixel_column\(2),
+	dataa => \vgamap|videoSync|pixel_column\(1),
+	datab => \vgamap|videoSync|pixel_column\(2),
+	datac => \vgamap|videoSync|pixel_column\(3),
 	datad => \vgamap|videoSync|pixel_column\(4),
-	combout => \vgamap|videoGen|pixelDraw~76_combout\);
+	combout => \vgamap|videoGen|pixelDraw~82_combout\);
 
--- Location: LCCOMB_X59_Y71_N22
-\vgamap|videoGen|pixelDraw~77\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X55_Y62_N14
+\vgamap|videoGen|pixelDraw~83\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|pixelDraw~77_combout\ = (\vgamap|videoSync|pixel_column\(7) & (!\vgamap|videoSync|pixel_column\(6) & (\vgamap|videoGen|pixelDraw~75_combout\))) # (!\vgamap|videoSync|pixel_column\(7) & (\vgamap|videoSync|pixel_column\(6) & 
--- ((\vgamap|videoGen|pixelDraw~76_combout\))))
+-- \vgamap|videoGen|pixelDraw~83_combout\ = (\vgamap|videoSync|pixel_column\(5) & ((\vgamap|videoSync|pixel_column\(6) & ((\vgamap|videoGen|LessThan14~0_combout\))) # (!\vgamap|videoSync|pixel_column\(6) & (\vgamap|videoGen|pixelDraw~82_combout\)))) # 
+-- (!\vgamap|videoSync|pixel_column\(5) & (((\vgamap|videoSync|pixel_column\(6)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0110010000100000",
+	lut_mask => "1111100001011000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoSync|pixel_column\(5),
+	datab => \vgamap|videoGen|pixelDraw~82_combout\,
+	datac => \vgamap|videoSync|pixel_column\(6),
+	datad => \vgamap|videoGen|LessThan14~0_combout\,
+	combout => \vgamap|videoGen|pixelDraw~83_combout\);
+
+-- Location: LCCOMB_X55_Y62_N16
+\vgamap|videoGen|pixelDraw~84\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|pixelDraw~84_combout\ = (\vgamap|videoSync|pixel_column\(7) & (\vgamap|videoGen|pixelDraw~83_combout\ & \vgamap|videoGen|pixelDraw~69_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010000000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vgamap|videoSync|pixel_column\(7),
-	datab => \vgamap|videoSync|pixel_column\(6),
-	datac => \vgamap|videoGen|pixelDraw~75_combout\,
-	datad => \vgamap|videoGen|pixelDraw~76_combout\,
-	combout => \vgamap|videoGen|pixelDraw~77_combout\);
-
--- Location: LCCOMB_X53_Y71_N20
-\vgamap|videoGen|pixelDraw~74\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|pixelDraw~74_combout\ = (\vgamap|videoGen|LessThan9~1_combout\ & (((\vgamap|videoGen|LessThan10~0_combout\)) # (!\vgamap|videoSync|pixel_column\(5)))) # (!\vgamap|videoGen|LessThan9~1_combout\ & (\vgamap|videoGen|LessThan9~0_combout\ & 
--- ((\vgamap|videoGen|LessThan10~0_combout\) # (!\vgamap|videoSync|pixel_column\(5)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111101000110010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoGen|LessThan9~1_combout\,
-	datab => \vgamap|videoSync|pixel_column\(5),
-	datac => \vgamap|videoGen|LessThan9~0_combout\,
-	datad => \vgamap|videoGen|LessThan10~0_combout\,
-	combout => \vgamap|videoGen|pixelDraw~74_combout\);
-
--- Location: LCCOMB_X56_Y71_N20
-\vgamap|videoGen|colorAddress~14\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|colorAddress~14_combout\ = ((!\vgamap|videoGen|pixelDraw~77_combout\ & ((\vgamap|videoSync|pixel_column\(7)) # (!\vgamap|videoGen|pixelDraw~74_combout\)))) # (!\vgamap|videoGen|pixelDraw~69_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0010001111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoSync|pixel_column\(7),
-	datab => \vgamap|videoGen|pixelDraw~77_combout\,
-	datac => \vgamap|videoGen|pixelDraw~74_combout\,
+	datac => \vgamap|videoGen|pixelDraw~83_combout\,
 	datad => \vgamap|videoGen|pixelDraw~69_combout\,
-	combout => \vgamap|videoGen|colorAddress~14_combout\);
+	combout => \vgamap|videoGen|pixelDraw~84_combout\);
 
--- Location: LCCOMB_X56_Y71_N8
+-- Location: LCCOMB_X61_Y62_N18
 \vgamap|videoGen|colorAddress~16\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoGen|colorAddress~16_combout\ = (\vgamap|videoGen|colorAddress~14_combout\ & ((\vgamap|videoGen|pixelDraw~84_combout\ & (!\keys[4]~input_o\)) # (!\vgamap|videoGen|pixelDraw~84_combout\ & ((\vgamap|videoGen|colorAddress~15_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0111001000000000",
+	lut_mask => "0010001010100000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoGen|pixelDraw~84_combout\,
+	dataa => \vgamap|videoGen|colorAddress~14_combout\,
 	datab => \keys[4]~input_o\,
 	datac => \vgamap|videoGen|colorAddress~15_combout\,
-	datad => \vgamap|videoGen|colorAddress~14_combout\,
+	datad => \vgamap|videoGen|pixelDraw~84_combout\,
 	combout => \vgamap|videoGen|colorAddress~16_combout\);
 
--- Location: IOIBUF_X115_Y10_N1
-\keys[5]~input\ : cycloneive_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_keys(5),
-	o => \keys[5]~input_o\);
-
--- Location: LCCOMB_X56_Y71_N4
-\vgamap|videoGen|colorAddress~18\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|colorAddress~18_combout\ = (\vgamap|videoGen|pixelDraw~77_combout\ & (\vgamap|videoGen|pixelDraw~69_combout\ & ((\vgamap|videoSync|pixel_column\(7)) # (!\vgamap|videoGen|pixelDraw~74_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000010001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoGen|pixelDraw~77_combout\,
-	datab => \vgamap|videoGen|pixelDraw~69_combout\,
-	datac => \vgamap|videoSync|pixel_column\(7),
-	datad => \vgamap|videoGen|pixelDraw~74_combout\,
-	combout => \vgamap|videoGen|colorAddress~18_combout\);
-
--- Location: IOIBUF_X115_Y4_N22
-\keys[7]~input\ : cycloneive_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_keys(7),
-	o => \keys[7]~input_o\);
-
--- Location: LCCOMB_X56_Y71_N18
-\vgamap|videoGen|colorAddress~17\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|colorAddress~17_combout\ = (!\keys[7]~input_o\ & (!\vgamap|videoSync|pixel_column\(7) & (\vgamap|videoGen|pixelDraw~74_combout\ & \vgamap|videoGen|pixelDraw~69_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0001000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \keys[7]~input_o\,
-	datab => \vgamap|videoSync|pixel_column\(7),
-	datac => \vgamap|videoGen|pixelDraw~74_combout\,
-	datad => \vgamap|videoGen|pixelDraw~69_combout\,
-	combout => \vgamap|videoGen|colorAddress~17_combout\);
-
--- Location: LCCOMB_X56_Y71_N22
-\vgamap|videoGen|colorAddress~19\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|colorAddress~19_combout\ = (\vgamap|videoGen|colorAddress~17_combout\) # ((!\keys[5]~input_o\ & \vgamap|videoGen|colorAddress~18_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111101010000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \keys[5]~input_o\,
-	datac => \vgamap|videoGen|colorAddress~18_combout\,
-	datad => \vgamap|videoGen|colorAddress~17_combout\,
-	combout => \vgamap|videoGen|colorAddress~19_combout\);
-
--- Location: LCCOMB_X56_Y71_N0
-\vgamap|videoGen|colorAddress~12\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|colorAddress~12_combout\ = (!\vgamap|videoGen|pixelDraw~64_combout\ & !\vgamap|videoGen|pixelDraw~59_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000001111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datac => \vgamap|videoGen|pixelDraw~64_combout\,
-	datad => \vgamap|videoGen|pixelDraw~59_combout\,
-	combout => \vgamap|videoGen|colorAddress~12_combout\);
-
--- Location: LCCOMB_X56_Y71_N6
-\vgamap|videoGen|colorAddress~13\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|colorAddress~13_combout\ = (!\vgamap|videoGen|pixelDraw~73_combout\ & (!\vgamap|videoGen|pixelDraw~68_combout\ & (!\vgamap|videoGen|pixelDraw~71_combout\ & \vgamap|videoGen|colorAddress~12_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoGen|pixelDraw~73_combout\,
-	datab => \vgamap|videoGen|pixelDraw~68_combout\,
-	datac => \vgamap|videoGen|pixelDraw~71_combout\,
-	datad => \vgamap|videoGen|colorAddress~12_combout\,
-	combout => \vgamap|videoGen|colorAddress~13_combout\);
-
--- Location: LCCOMB_X56_Y71_N12
+-- Location: LCCOMB_X61_Y62_N20
 \vgamap|videoGen|colorAddress~20\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|colorAddress~20_combout\ = (\vgamap|videoGen|colorAddress~11_combout\) # ((\vgamap|videoGen|colorAddress~13_combout\ & ((\vgamap|videoGen|colorAddress~16_combout\) # (\vgamap|videoGen|colorAddress~19_combout\))))
+-- \vgamap|videoGen|colorAddress~20_combout\ = (\vgamap|videoGen|colorAddress~11_combout\) # ((\vgamap|videoGen|colorAddress~13_combout\ & ((\vgamap|videoGen|colorAddress~19_combout\) # (\vgamap|videoGen|colorAddress~16_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111010101010",
+	lut_mask => "1111110011101100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoGen|colorAddress~11_combout\,
-	datab => \vgamap|videoGen|colorAddress~16_combout\,
-	datac => \vgamap|videoGen|colorAddress~19_combout\,
-	datad => \vgamap|videoGen|colorAddress~13_combout\,
+	dataa => \vgamap|videoGen|colorAddress~19_combout\,
+	datab => \vgamap|videoGen|colorAddress~11_combout\,
+	datac => \vgamap|videoGen|colorAddress~13_combout\,
+	datad => \vgamap|videoGen|colorAddress~16_combout\,
 	combout => \vgamap|videoGen|colorAddress~20_combout\);
 
--- Location: LCCOMB_X56_Y71_N14
+-- Location: LCCOMB_X61_Y62_N30
 \vgamap|videoGen|colorAddress~21\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|colorAddress~21_combout\ = (\vgamap|videoGen|colorAddress~7_combout\ & (\vgamap|videoGen|colorAddress~4_combout\ & ((\vgamap|videoGen|colorAddress~9_combout\) # (\vgamap|videoGen|colorAddress~20_combout\))))
+-- \vgamap|videoGen|colorAddress~21_combout\ = (\vgamap|videoGen|colorAddress~4_combout\ & (\vgamap|videoGen|colorAddress~7_combout\ & ((\vgamap|videoGen|colorAddress~9_combout\) # (\vgamap|videoGen|colorAddress~20_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1000100010000000",
+	lut_mask => "1010000010000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoGen|colorAddress~7_combout\,
-	datab => \vgamap|videoGen|colorAddress~4_combout\,
-	datac => \vgamap|videoGen|colorAddress~9_combout\,
+	dataa => \vgamap|videoGen|colorAddress~4_combout\,
+	datab => \vgamap|videoGen|colorAddress~9_combout\,
+	datac => \vgamap|videoGen|colorAddress~7_combout\,
 	datad => \vgamap|videoGen|colorAddress~20_combout\,
 	combout => \vgamap|videoGen|colorAddress~21_combout\);
 
--- Location: LCCOMB_X60_Y71_N22
+-- Location: LCCOMB_X54_Y62_N0
 \vgamap|videoGen|pixelDraw~96\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|pixelDraw~96_combout\ = (\vgamap|videoSync|pixel_column\(4) & ((\vgamap|videoSync|pixel_column\(3)) # ((\vgamap|videoSync|pixel_column\(2)) # (\vgamap|videoSync|pixel_column\(1)))))
+-- \vgamap|videoGen|pixelDraw~96_combout\ = (\vgamap|videoSync|pixel_column\(4) & ((\vgamap|videoSync|pixel_column\(3)) # ((\vgamap|videoSync|pixel_column\(1)) # (\vgamap|videoSync|pixel_column\(2)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111000011100000",
+	lut_mask => "1100110011001000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vgamap|videoSync|pixel_column\(3),
-	datab => \vgamap|videoSync|pixel_column\(2),
-	datac => \vgamap|videoSync|pixel_column\(4),
-	datad => \vgamap|videoSync|pixel_column\(1),
+	datab => \vgamap|videoSync|pixel_column\(4),
+	datac => \vgamap|videoSync|pixel_column\(1),
+	datad => \vgamap|videoSync|pixel_column\(2),
 	combout => \vgamap|videoGen|pixelDraw~96_combout\);
 
--- Location: LCCOMB_X59_Y71_N0
+-- Location: LCCOMB_X55_Y62_N0
 \vgamap|videoGen|pixelDraw~97\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|pixelDraw~97_combout\ = (\vgamap|videoSync|pixel_column\(5) & (\vgamap|videoGen|LessThan6~0_combout\)) # (!\vgamap|videoSync|pixel_column\(5) & ((\vgamap|videoGen|pixelDraw~96_combout\)))
+-- \vgamap|videoGen|pixelDraw~97_combout\ = (\vgamap|videoSync|pixel_column\(5) & ((\vgamap|videoGen|LessThan6~0_combout\))) # (!\vgamap|videoSync|pixel_column\(5) & (\vgamap|videoGen|pixelDraw~96_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111001111000000",
+	lut_mask => "1100110010101010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \vgamap|videoSync|pixel_column\(5),
-	datac => \vgamap|videoGen|LessThan6~0_combout\,
-	datad => \vgamap|videoGen|pixelDraw~96_combout\,
+	dataa => \vgamap|videoGen|pixelDraw~96_combout\,
+	datab => \vgamap|videoGen|LessThan6~0_combout\,
+	datad => \vgamap|videoSync|pixel_column\(5),
 	combout => \vgamap|videoGen|pixelDraw~97_combout\);
 
--- Location: LCCOMB_X59_Y70_N30
+-- Location: LCCOMB_X56_Y62_N8
 \vgamap|videoGen|pixelDraw~94\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoGen|pixelDraw~94_combout\ = (\vgamap|videoSync|pixel_column\(4) & \vgamap|videoSync|pixel_column\(5))
@@ -6690,45 +6650,45 @@ PORT MAP (
 	datad => \vgamap|videoSync|pixel_column\(5),
 	combout => \vgamap|videoGen|pixelDraw~94_combout\);
 
--- Location: LCCOMB_X59_Y70_N20
+-- Location: LCCOMB_X56_Y62_N2
 \vgamap|videoGen|pixelDraw~95\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|pixelDraw~95_combout\ = (\vgamap|videoGen|LessThan12~0_combout\ & ((\vgamap|videoGen|pixelDraw~15_combout\) # ((!\vgamap|videoSync|pixel_column\(6) & \vgamap|videoGen|pixelDraw~94_combout\)))) # (!\vgamap|videoGen|LessThan12~0_combout\ & 
--- (!\vgamap|videoSync|pixel_column\(6) & (\vgamap|videoGen|pixelDraw~94_combout\)))
+-- \vgamap|videoGen|pixelDraw~95_combout\ = (\vgamap|videoSync|pixel_column\(6) & (((\vgamap|videoGen|pixelDraw~15_combout\ & \vgamap|videoGen|LessThan12~0_combout\)))) # (!\vgamap|videoSync|pixel_column\(6) & ((\vgamap|videoGen|pixelDraw~94_combout\) # 
+-- ((\vgamap|videoGen|pixelDraw~15_combout\ & \vgamap|videoGen|LessThan12~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1011101000110000",
+	lut_mask => "1111010001000100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoGen|LessThan12~0_combout\,
-	datab => \vgamap|videoSync|pixel_column\(6),
-	datac => \vgamap|videoGen|pixelDraw~94_combout\,
-	datad => \vgamap|videoGen|pixelDraw~15_combout\,
+	dataa => \vgamap|videoSync|pixel_column\(6),
+	datab => \vgamap|videoGen|pixelDraw~94_combout\,
+	datac => \vgamap|videoGen|pixelDraw~15_combout\,
+	datad => \vgamap|videoGen|LessThan12~0_combout\,
 	combout => \vgamap|videoGen|pixelDraw~95_combout\);
 
--- Location: LCCOMB_X55_Y71_N18
+-- Location: LCCOMB_X60_Y62_N24
 \vgamap|videoGen|colorAddress~29\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|colorAddress~29_combout\ = ((\vgamap|videoGen|pixelDraw~51_combout\ & ((!\vgamap|videoGen|pixelDraw~95_combout\) # (!\vgamap|videoGen|pixelDraw~50_combout\)))) # (!\vgamap|videoGen|pixelDraw~98_combout\)
+-- \vgamap|videoGen|colorAddress~29_combout\ = ((\vgamap|videoGen|pixelDraw~51_combout\ & ((!\vgamap|videoGen|pixelDraw~50_combout\) # (!\vgamap|videoGen|pixelDraw~95_combout\)))) # (!\vgamap|videoGen|pixelDraw~98_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0100111111001111",
+	lut_mask => "0111111100001111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoGen|pixelDraw~50_combout\,
-	datab => \vgamap|videoGen|pixelDraw~51_combout\,
+	dataa => \vgamap|videoGen|pixelDraw~95_combout\,
+	datab => \vgamap|videoGen|pixelDraw~50_combout\,
 	datac => \vgamap|videoGen|pixelDraw~98_combout\,
-	datad => \vgamap|videoGen|pixelDraw~95_combout\,
+	datad => \vgamap|videoGen|pixelDraw~51_combout\,
 	combout => \vgamap|videoGen|colorAddress~29_combout\);
 
--- Location: LCCOMB_X55_Y71_N0
+-- Location: LCCOMB_X60_Y62_N26
 \vgamap|videoGen|colorAddress~30\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|colorAddress~30_combout\ = (\vgamap|videoGen|colorAddress~29_combout\ & (((!\vgamap|videoGen|pixelDraw~98_combout\) # (!\vgamap|videoGen|pixelDraw~28_combout\)) # (!\vgamap|videoGen|pixelDraw~97_combout\)))
+-- \vgamap|videoGen|colorAddress~30_combout\ = (\vgamap|videoGen|colorAddress~29_combout\ & (((!\vgamap|videoGen|pixelDraw~97_combout\) # (!\vgamap|videoGen|pixelDraw~28_combout\)) # (!\vgamap|videoGen|pixelDraw~98_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -6736,28 +6696,28 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoGen|pixelDraw~97_combout\,
+	dataa => \vgamap|videoGen|pixelDraw~98_combout\,
 	datab => \vgamap|videoGen|pixelDraw~28_combout\,
-	datac => \vgamap|videoGen|pixelDraw~98_combout\,
+	datac => \vgamap|videoGen|pixelDraw~97_combout\,
 	datad => \vgamap|videoGen|colorAddress~29_combout\,
 	combout => \vgamap|videoGen|colorAddress~30_combout\);
 
--- Location: LCCOMB_X52_Y71_N4
+-- Location: LCCOMB_X62_Y62_N26
 \volmap|Mux1~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \volmap|Mux1~0_combout\ = (!\volmap|current\(2) & \volmap|current\(1))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011001100000000",
+	lut_mask => "0011000000110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	datab => \volmap|current\(2),
-	datad => \volmap|current\(1),
+	datac => \volmap|current\(1),
 	combout => \volmap|Mux1~0_combout\);
 
--- Location: FF_X52_Y71_N5
+-- Location: FF_X62_Y62_N27
 \volmap|z[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -6772,7 +6732,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \volmap|z\(1));
 
--- Location: LCCOMB_X52_Y71_N16
+-- Location: LCCOMB_X62_Y62_N0
 \vgamap|videoGen|colorAddress~28\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoGen|colorAddress~28_combout\ = (\volmap|z\(1)) # (\volmap|z\(2))
@@ -6787,22 +6747,22 @@ PORT MAP (
 	datad => \volmap|z\(2),
 	combout => \vgamap|videoGen|colorAddress~28_combout\);
 
--- Location: LCCOMB_X52_Y71_N2
+-- Location: LCCOMB_X62_Y62_N28
 \volmap|Mux2~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \volmap|Mux2~0_combout\ = (\volmap|current\(0) & !\volmap|current\(2))
+-- \volmap|Mux2~0_combout\ = (!\volmap|current\(2) & \volmap|current\(0))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000011110000",
+	lut_mask => "0011001100000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => \volmap|current\(0),
-	datad => \volmap|current\(2),
+	datab => \volmap|current\(2),
+	datad => \volmap|current\(0),
 	combout => \volmap|Mux2~0_combout\);
 
--- Location: FF_X52_Y71_N3
+-- Location: FF_X62_Y62_N29
 \volmap|z[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -6817,7 +6777,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \volmap|z\(0));
 
--- Location: LCCOMB_X52_Y71_N30
+-- Location: LCCOMB_X62_Y62_N6
 \vgamap|videoGen|colorAddress~27\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoGen|colorAddress~27_combout\ = (\volmap|z\(0) & ((\vgamap|videoGen|pixelDraw~20_combout\) # ((\vgamap|videoGen|pixelDraw~25_combout\ & \volmap|z\(1)))))
@@ -6834,7 +6794,7 @@ PORT MAP (
 	datad => \volmap|z\(0),
 	combout => \vgamap|videoGen|colorAddress~27_combout\);
 
--- Location: LCCOMB_X56_Y71_N16
+-- Location: LCCOMB_X61_Y62_N0
 \vgamap|videoGen|colorAddress~31\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoGen|colorAddress~31_combout\ = ((\vgamap|videoGen|colorAddress~27_combout\) # ((!\vgamap|videoGen|colorAddress~2_combout\ & \vgamap|videoGen|colorAddress~28_combout\))) # (!\vgamap|videoGen|colorAddress~30_combout\)
@@ -6851,10 +6811,10 @@ PORT MAP (
 	datad => \vgamap|videoGen|colorAddress~27_combout\,
 	combout => \vgamap|videoGen|colorAddress~31_combout\);
 
--- Location: LCCOMB_X56_Y71_N28
+-- Location: LCCOMB_X61_Y62_N16
 \vgamap|videoGen|colorAddress~32\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|colorAddress~32_combout\ = (\vgamap|videoGen|pixelDraw~93_combout\) # ((\vgamap|videoGen|colorAddress~47_combout\) # ((\vgamap|videoGen|colorAddress~21_combout\) # (\vgamap|videoGen|colorAddress~31_combout\)))
+-- \vgamap|videoGen|colorAddress~32_combout\ = (\vgamap|videoGen|colorAddress~47_combout\) # ((\vgamap|videoGen|pixelDraw~93_combout\) # ((\vgamap|videoGen|colorAddress~21_combout\) # (\vgamap|videoGen|colorAddress~31_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -6862,13 +6822,13 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoGen|pixelDraw~93_combout\,
-	datab => \vgamap|videoGen|colorAddress~47_combout\,
+	dataa => \vgamap|videoGen|colorAddress~47_combout\,
+	datab => \vgamap|videoGen|pixelDraw~93_combout\,
 	datac => \vgamap|videoGen|colorAddress~21_combout\,
 	datad => \vgamap|videoGen|colorAddress~31_combout\,
 	combout => \vgamap|videoGen|colorAddress~32_combout\);
 
--- Location: FF_X56_Y71_N29
+-- Location: FF_X61_Y62_N17
 \vgamap|videoGen|colorAddress[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -6882,17 +6842,6 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \vgamap|videoGen|colorAddress\(0));
 
--- Location: IOIBUF_X115_Y13_N1
-\keys[15]~input\ : cycloneive_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_keys(15),
-	o => \keys[15]~input_o\);
-
 -- Location: IOIBUF_X115_Y10_N8
 \keys[13]~input\ : cycloneive_io_ibuf
 -- pragma translate_off
@@ -6904,243 +6853,49 @@ PORT MAP (
 	i => ww_keys(13),
 	o => \keys[13]~input_o\);
 
--- Location: LCCOMB_X55_Y71_N4
+-- Location: IOIBUF_X115_Y13_N1
+\keys[15]~input\ : cycloneive_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_keys(15),
+	o => \keys[15]~input_o\);
+
+-- Location: LCCOMB_X60_Y62_N10
 \vgamap|videoGen|colorAddress~42\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|colorAddress~42_combout\ = (\vgamap|videoGen|pixelDraw~55_combout\ & (!\keys[15]~input_o\)) # (!\vgamap|videoGen|pixelDraw~55_combout\ & (((!\keys[13]~input_o\ & \vgamap|videoGen|pixelDraw~46_combout\))))
+-- \vgamap|videoGen|colorAddress~42_combout\ = (\vgamap|videoGen|pixelDraw~55_combout\ & (((!\keys[15]~input_o\)))) # (!\vgamap|videoGen|pixelDraw~55_combout\ & (!\keys[13]~input_o\ & ((\vgamap|videoGen|pixelDraw~46_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101001101010000",
+	lut_mask => "0001101100001010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \keys[15]~input_o\,
+	dataa => \vgamap|videoGen|pixelDraw~55_combout\,
 	datab => \keys[13]~input_o\,
-	datac => \vgamap|videoGen|pixelDraw~55_combout\,
+	datac => \keys[15]~input_o\,
 	datad => \vgamap|videoGen|pixelDraw~46_combout\,
 	combout => \vgamap|videoGen|colorAddress~42_combout\);
 
--- Location: LCCOMB_X55_Y71_N22
+-- Location: LCCOMB_X60_Y62_N16
 \vgamap|videoGen|colorAddress~43\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|colorAddress~43_combout\ = (!\vgamap|videoGen|pixelDraw~52_combout\ & (\vgamap|videoGen|colorAddress~42_combout\ & !\vgamap|videoGen|colorAddress~25_combout\))
+-- \vgamap|videoGen|colorAddress~43_combout\ = (\vgamap|videoGen|colorAddress~42_combout\ & (!\vgamap|videoGen|pixelDraw~52_combout\ & !\vgamap|videoGen|colorAddress~25_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000001010000",
+	lut_mask => "0000000000100010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoGen|pixelDraw~52_combout\,
-	datac => \vgamap|videoGen|colorAddress~42_combout\,
+	dataa => \vgamap|videoGen|colorAddress~42_combout\,
+	datab => \vgamap|videoGen|pixelDraw~52_combout\,
 	datad => \vgamap|videoGen|colorAddress~25_combout\,
 	combout => \vgamap|videoGen|colorAddress~43_combout\);
-
--- Location: IOIBUF_X115_Y18_N8
-\keys[3]~input\ : cycloneive_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_keys(3),
-	o => \keys[3]~input_o\);
-
--- Location: LCCOMB_X54_Y71_N22
-\vgamap|videoGen|colorAddress~38\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|colorAddress~38_combout\ = (!\vgamap|videoGen|pixelDraw~42_combout\ & (!\vgamap|videoGen|pixelDraw~40_combout\ & !\vgamap|videoGen|pixelDraw~36_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vgamap|videoGen|pixelDraw~42_combout\,
-	datac => \vgamap|videoGen|pixelDraw~40_combout\,
-	datad => \vgamap|videoGen|pixelDraw~36_combout\,
-	combout => \vgamap|videoGen|colorAddress~38_combout\);
-
--- Location: IOIBUF_X115_Y15_N8
-\keys[1]~input\ : cycloneive_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_keys(1),
-	o => \keys[1]~input_o\);
-
--- Location: LCCOMB_X54_Y71_N20
-\vgamap|videoGen|colorAddress~39\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|colorAddress~39_combout\ = (!\keys[1]~input_o\ & (\vgamap|videoGen|pixelDraw~28_combout\ & (\vgamap|videoGen|pixelDraw~99_combout\ & !\vgamap|videoGen|pixelDraw~44_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000001000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \keys[1]~input_o\,
-	datab => \vgamap|videoGen|pixelDraw~28_combout\,
-	datac => \vgamap|videoGen|pixelDraw~99_combout\,
-	datad => \vgamap|videoGen|pixelDraw~44_combout\,
-	combout => \vgamap|videoGen|colorAddress~39_combout\);
-
--- Location: LCCOMB_X54_Y71_N14
-\vgamap|videoGen|colorAddress~40\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|colorAddress~40_combout\ = (\vgamap|videoGen|colorAddress~38_combout\ & ((\vgamap|videoGen|pixelDraw~30_combout\ & (!\keys[3]~input_o\)) # (!\vgamap|videoGen|pixelDraw~30_combout\ & ((\vgamap|videoGen|colorAddress~39_combout\)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111000001000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \keys[3]~input_o\,
-	datab => \vgamap|videoGen|pixelDraw~30_combout\,
-	datac => \vgamap|videoGen|colorAddress~38_combout\,
-	datad => \vgamap|videoGen|colorAddress~39_combout\,
-	combout => \vgamap|videoGen|colorAddress~40_combout\);
-
--- Location: IOIBUF_X115_Y5_N15
-\keys[10]~input\ : cycloneive_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_keys(10),
-	o => \keys[10]~input_o\);
-
--- Location: IOIBUF_X115_Y15_N1
-\keys[6]~input\ : cycloneive_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_keys(6),
-	o => \keys[6]~input_o\);
-
--- Location: IOIBUF_X115_Y16_N8
-\keys[8]~input\ : cycloneive_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_keys(8),
-	o => \keys[8]~input_o\);
-
--- Location: LCCOMB_X54_Y71_N2
-\vgamap|videoGen|colorAddress~34\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|colorAddress~34_combout\ = (\vgamap|videoGen|pixelDraw~40_combout\ & (((!\keys[8]~input_o\)))) # (!\vgamap|videoGen|pixelDraw~40_combout\ & (!\keys[6]~input_o\ & ((\vgamap|videoGen|pixelDraw~36_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011010100110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \keys[6]~input_o\,
-	datab => \keys[8]~input_o\,
-	datac => \vgamap|videoGen|pixelDraw~40_combout\,
-	datad => \vgamap|videoGen|pixelDraw~36_combout\,
-	combout => \vgamap|videoGen|colorAddress~34_combout\);
-
--- Location: LCCOMB_X54_Y71_N28
-\vgamap|videoGen|colorAddress~35\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|colorAddress~35_combout\ = (\vgamap|videoGen|pixelDraw~42_combout\ & (!\keys[10]~input_o\)) # (!\vgamap|videoGen|pixelDraw~42_combout\ & ((\vgamap|videoGen|colorAddress~34_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111011101000100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \keys[10]~input_o\,
-	datab => \vgamap|videoGen|pixelDraw~42_combout\,
-	datad => \vgamap|videoGen|colorAddress~34_combout\,
-	combout => \vgamap|videoGen|colorAddress~35_combout\);
-
--- Location: LCCOMB_X55_Y71_N14
-\vgamap|videoGen|colorAddress~33\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|colorAddress~33_combout\ = (!\vgamap|videoGen|pixelDraw~52_combout\ & (!\vgamap|videoGen|pixelDraw~46_combout\ & (!\vgamap|videoGen|pixelDraw~55_combout\ & !\vgamap|videoGen|colorAddress~25_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoGen|pixelDraw~52_combout\,
-	datab => \vgamap|videoGen|pixelDraw~46_combout\,
-	datac => \vgamap|videoGen|pixelDraw~55_combout\,
-	datad => \vgamap|videoGen|colorAddress~25_combout\,
-	combout => \vgamap|videoGen|colorAddress~33_combout\);
-
--- Location: LCCOMB_X56_Y71_N2
-\vgamap|videoGen|colorAddress~36\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|colorAddress~36_combout\ = (!\vgamap|videoGen|pixelDraw~79_combout\ & (!\vgamap|videoGen|pixelDraw~84_combout\ & \vgamap|videoGen|pixelDraw~81_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000001100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vgamap|videoGen|pixelDraw~79_combout\,
-	datac => \vgamap|videoGen|pixelDraw~84_combout\,
-	datad => \vgamap|videoGen|pixelDraw~81_combout\,
-	combout => \vgamap|videoGen|colorAddress~36_combout\);
-
--- Location: LCCOMB_X55_Y71_N24
-\vgamap|videoGen|colorAddress~37\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|colorAddress~37_combout\ = (\vgamap|videoGen|colorAddress~36_combout\ & (\vgamap|videoGen|colorAddress~6_combout\ & (\vgamap|videoGen|colorAddress~14_combout\ & \vgamap|videoGen|colorAddress~13_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoGen|colorAddress~36_combout\,
-	datab => \vgamap|videoGen|colorAddress~6_combout\,
-	datac => \vgamap|videoGen|colorAddress~14_combout\,
-	datad => \vgamap|videoGen|colorAddress~13_combout\,
-	combout => \vgamap|videoGen|colorAddress~37_combout\);
-
--- Location: LCCOMB_X55_Y71_N30
-\vgamap|videoGen|colorAddress~41\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoGen|colorAddress~41_combout\ = (\vgamap|videoGen|colorAddress~33_combout\ & ((\vgamap|videoGen|colorAddress~40_combout\) # ((\vgamap|videoGen|colorAddress~35_combout\) # (\vgamap|videoGen|colorAddress~37_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111000011100000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vgamap|videoGen|colorAddress~40_combout\,
-	datab => \vgamap|videoGen|colorAddress~35_combout\,
-	datac => \vgamap|videoGen|colorAddress~33_combout\,
-	datad => \vgamap|videoGen|colorAddress~37_combout\,
-	combout => \vgamap|videoGen|colorAddress~41_combout\);
 
 -- Location: IOIBUF_X115_Y17_N1
 \mute_sel~input\ : cycloneive_io_ibuf
@@ -7153,41 +6908,246 @@ PORT MAP (
 	i => ww_mute_sel,
 	o => \mute_sel~input_o\);
 
--- Location: LCCOMB_X55_Y71_N20
+-- Location: LCCOMB_X60_Y62_N30
 \vgamap|videoGen|colorAddress~44\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoGen|colorAddress~44_combout\ = (!\vgamap|videoGen|pixelDraw~93_combout\ & (\vgamap|videoGen|colorAddress~4_combout\ & ((\mute_sel~input_o\) # (!\vgamap|videoGen|pixelDraw~52_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000110100000000",
+	lut_mask => "0000101100000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoGen|pixelDraw~52_combout\,
-	datab => \mute_sel~input_o\,
+	dataa => \mute_sel~input_o\,
+	datab => \vgamap|videoGen|pixelDraw~52_combout\,
 	datac => \vgamap|videoGen|pixelDraw~93_combout\,
 	datad => \vgamap|videoGen|colorAddress~4_combout\,
 	combout => \vgamap|videoGen|colorAddress~44_combout\);
 
--- Location: LCCOMB_X55_Y71_N12
+-- Location: IOIBUF_X115_Y18_N8
+\keys[3]~input\ : cycloneive_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_keys(3),
+	o => \keys[3]~input_o\);
+
+-- Location: IOIBUF_X115_Y15_N8
+\keys[1]~input\ : cycloneive_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_keys(1),
+	o => \keys[1]~input_o\);
+
+-- Location: LCCOMB_X59_Y62_N14
+\vgamap|videoGen|colorAddress~39\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|colorAddress~39_combout\ = (\vgamap|videoGen|pixelDraw~28_combout\ & (\vgamap|videoGen|pixelDraw~99_combout\ & (!\vgamap|videoGen|pixelDraw~44_combout\ & !\keys[1]~input_o\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000001000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoGen|pixelDraw~28_combout\,
+	datab => \vgamap|videoGen|pixelDraw~99_combout\,
+	datac => \vgamap|videoGen|pixelDraw~44_combout\,
+	datad => \keys[1]~input_o\,
+	combout => \vgamap|videoGen|colorAddress~39_combout\);
+
+-- Location: LCCOMB_X59_Y62_N28
+\vgamap|videoGen|colorAddress~38\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|colorAddress~38_combout\ = (!\vgamap|videoGen|pixelDraw~36_combout\ & (!\vgamap|videoGen|pixelDraw~40_combout\ & !\vgamap|videoGen|pixelDraw~42_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000101",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoGen|pixelDraw~36_combout\,
+	datac => \vgamap|videoGen|pixelDraw~40_combout\,
+	datad => \vgamap|videoGen|pixelDraw~42_combout\,
+	combout => \vgamap|videoGen|colorAddress~38_combout\);
+
+-- Location: LCCOMB_X59_Y62_N16
+\vgamap|videoGen|colorAddress~40\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|colorAddress~40_combout\ = (\vgamap|videoGen|colorAddress~38_combout\ & ((\vgamap|videoGen|pixelDraw~30_combout\ & (!\keys[3]~input_o\)) # (!\vgamap|videoGen|pixelDraw~30_combout\ & ((\vgamap|videoGen|colorAddress~39_combout\)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111010000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \keys[3]~input_o\,
+	datab => \vgamap|videoGen|pixelDraw~30_combout\,
+	datac => \vgamap|videoGen|colorAddress~39_combout\,
+	datad => \vgamap|videoGen|colorAddress~38_combout\,
+	combout => \vgamap|videoGen|colorAddress~40_combout\);
+
+-- Location: LCCOMB_X60_Y62_N8
+\vgamap|videoGen|colorAddress~33\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|colorAddress~33_combout\ = (!\vgamap|videoGen|pixelDraw~55_combout\ & (!\vgamap|videoGen|pixelDraw~46_combout\ & (!\vgamap|videoGen|pixelDraw~52_combout\ & !\vgamap|videoGen|colorAddress~25_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoGen|pixelDraw~55_combout\,
+	datab => \vgamap|videoGen|pixelDraw~46_combout\,
+	datac => \vgamap|videoGen|pixelDraw~52_combout\,
+	datad => \vgamap|videoGen|colorAddress~25_combout\,
+	combout => \vgamap|videoGen|colorAddress~33_combout\);
+
+-- Location: IOIBUF_X115_Y5_N15
+\keys[10]~input\ : cycloneive_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_keys(10),
+	o => \keys[10]~input_o\);
+
+-- Location: IOIBUF_X115_Y16_N8
+\keys[8]~input\ : cycloneive_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_keys(8),
+	o => \keys[8]~input_o\);
+
+-- Location: IOIBUF_X115_Y15_N1
+\keys[6]~input\ : cycloneive_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_keys(6),
+	o => \keys[6]~input_o\);
+
+-- Location: LCCOMB_X59_Y62_N18
+\vgamap|videoGen|colorAddress~34\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|colorAddress~34_combout\ = (\vgamap|videoGen|pixelDraw~40_combout\ & (!\keys[8]~input_o\)) # (!\vgamap|videoGen|pixelDraw~40_combout\ & (((!\keys[6]~input_o\ & \vgamap|videoGen|pixelDraw~36_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101001101010000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \keys[8]~input_o\,
+	datab => \keys[6]~input_o\,
+	datac => \vgamap|videoGen|pixelDraw~40_combout\,
+	datad => \vgamap|videoGen|pixelDraw~36_combout\,
+	combout => \vgamap|videoGen|colorAddress~34_combout\);
+
+-- Location: LCCOMB_X60_Y62_N14
+\vgamap|videoGen|colorAddress~35\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|colorAddress~35_combout\ = (\vgamap|videoGen|pixelDraw~42_combout\ & (!\keys[10]~input_o\)) # (!\vgamap|videoGen|pixelDraw~42_combout\ & ((\vgamap|videoGen|colorAddress~34_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111011100100010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoGen|pixelDraw~42_combout\,
+	datab => \keys[10]~input_o\,
+	datad => \vgamap|videoGen|colorAddress~34_combout\,
+	combout => \vgamap|videoGen|colorAddress~35_combout\);
+
+-- Location: LCCOMB_X60_Y62_N20
+\vgamap|videoGen|colorAddress~36\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|colorAddress~36_combout\ = (!\vgamap|videoGen|pixelDraw~79_combout\ & (\vgamap|videoGen|pixelDraw~81_combout\ & !\vgamap|videoGen|pixelDraw~84_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000001010000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoGen|pixelDraw~79_combout\,
+	datac => \vgamap|videoGen|pixelDraw~81_combout\,
+	datad => \vgamap|videoGen|pixelDraw~84_combout\,
+	combout => \vgamap|videoGen|colorAddress~36_combout\);
+
+-- Location: LCCOMB_X60_Y62_N18
+\vgamap|videoGen|colorAddress~37\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|colorAddress~37_combout\ = (\vgamap|videoGen|colorAddress~6_combout\ & (\vgamap|videoGen|colorAddress~14_combout\ & (\vgamap|videoGen|colorAddress~13_combout\ & \vgamap|videoGen|colorAddress~36_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoGen|colorAddress~6_combout\,
+	datab => \vgamap|videoGen|colorAddress~14_combout\,
+	datac => \vgamap|videoGen|colorAddress~13_combout\,
+	datad => \vgamap|videoGen|colorAddress~36_combout\,
+	combout => \vgamap|videoGen|colorAddress~37_combout\);
+
+-- Location: LCCOMB_X60_Y62_N12
+\vgamap|videoGen|colorAddress~41\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoGen|colorAddress~41_combout\ = (\vgamap|videoGen|colorAddress~33_combout\ & ((\vgamap|videoGen|colorAddress~40_combout\) # ((\vgamap|videoGen|colorAddress~35_combout\) # (\vgamap|videoGen|colorAddress~37_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100110011001000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vgamap|videoGen|colorAddress~40_combout\,
+	datab => \vgamap|videoGen|colorAddress~33_combout\,
+	datac => \vgamap|videoGen|colorAddress~35_combout\,
+	datad => \vgamap|videoGen|colorAddress~37_combout\,
+	combout => \vgamap|videoGen|colorAddress~41_combout\);
+
+-- Location: LCCOMB_X60_Y62_N28
 \vgamap|videoGen|colorAddress~45\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoGen|colorAddress~45_combout\ = (\vgamap|videoGen|colorAddress~30_combout\ & ((\vgamap|videoGen|colorAddress~43_combout\) # ((\vgamap|videoGen|colorAddress~41_combout\) # (!\vgamap|videoGen|colorAddress~44_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100100011001100",
+	lut_mask => "1010101010001010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoGen|colorAddress~43_combout\,
-	datab => \vgamap|videoGen|colorAddress~30_combout\,
-	datac => \vgamap|videoGen|colorAddress~41_combout\,
-	datad => \vgamap|videoGen|colorAddress~44_combout\,
+	dataa => \vgamap|videoGen|colorAddress~30_combout\,
+	datab => \vgamap|videoGen|colorAddress~43_combout\,
+	datac => \vgamap|videoGen|colorAddress~44_combout\,
+	datad => \vgamap|videoGen|colorAddress~41_combout\,
 	combout => \vgamap|videoGen|colorAddress~45_combout\);
 
--- Location: FF_X55_Y71_N13
+-- Location: FF_X60_Y62_N29
 \vgamap|videoGen|colorAddress[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7201,24 +7161,24 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \vgamap|videoGen|colorAddress\(1));
 
--- Location: LCCOMB_X55_Y71_N10
+-- Location: LCCOMB_X60_Y62_N22
 \vgamap|videoGen|colorAddress~46\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoGen|colorAddress~46_combout\ = (\vgamap|videoGen|colorAddress~7_combout\) # (((\vgamap|videoGen|colorAddress~26_combout\) # (!\vgamap|videoGen|colorAddress~44_combout\)) # (!\vgamap|videoGen|colorAddress~30_combout\))
+-- \vgamap|videoGen|colorAddress~46_combout\ = ((\vgamap|videoGen|colorAddress~26_combout\) # ((\vgamap|videoGen|colorAddress~7_combout\) # (!\vgamap|videoGen|colorAddress~44_combout\))) # (!\vgamap|videoGen|colorAddress~30_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111101111111111",
+	lut_mask => "1111111111011111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoGen|colorAddress~7_combout\,
-	datab => \vgamap|videoGen|colorAddress~30_combout\,
-	datac => \vgamap|videoGen|colorAddress~26_combout\,
-	datad => \vgamap|videoGen|colorAddress~44_combout\,
+	dataa => \vgamap|videoGen|colorAddress~30_combout\,
+	datab => \vgamap|videoGen|colorAddress~26_combout\,
+	datac => \vgamap|videoGen|colorAddress~44_combout\,
+	datad => \vgamap|videoGen|colorAddress~7_combout\,
 	combout => \vgamap|videoGen|colorAddress~46_combout\);
 
--- Location: FF_X55_Y71_N11
+-- Location: FF_X60_Y62_N23
 \vgamap|videoGen|colorAddress[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7232,7 +7192,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \vgamap|videoGen|colorAddress\(2));
 
--- Location: M9K_X51_Y71_N0
+-- Location: M9K_X64_Y62_N0
 \vgamap|videoGen|colors|altsyncram_component|auto_generated|ram_block1a0\ : cycloneive_ram_block
 -- pragma translate_off
 GENERIC MAP (
@@ -7268,7 +7228,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	portadataout => \vgamap|videoGen|colors|altsyncram_component|auto_generated|ram_block1a0_PORTADATAOUT_bus\);
 
--- Location: LCCOMB_X60_Y72_N12
+-- Location: LCCOMB_X55_Y63_N30
 \vgamap|videoSync|process_1~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoSync|process_1~1_combout\ = (((\vgamap|videoSync|h_count\(8)) # (\vgamap|videoSync|process_1~0_combout\)) # (!\vgamap|videoSync|h_count\(7))) # (!\vgamap|videoSync|h_count\(9))
@@ -7285,27 +7245,27 @@ PORT MAP (
 	datad => \vgamap|videoSync|process_1~0_combout\,
 	combout => \vgamap|videoSync|process_1~1_combout\);
 
--- Location: LCCOMB_X59_Y72_N28
+-- Location: LCCOMB_X55_Y63_N12
 \vgamap|videoSync|process_1~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoSync|process_1~2_combout\ = (\vgamap|videoSync|h_count\(5) & ((\vgamap|videoSync|h_count\(2)) # ((\vgamap|videoSync|h_count\(1)) # (\vgamap|videoSync|h_count\(0)))))
+-- \vgamap|videoSync|process_1~2_combout\ = (\vgamap|videoSync|h_count\(5) & ((\vgamap|videoSync|h_count\(1)) # ((\vgamap|videoSync|h_count\(0)) # (\vgamap|videoSync|h_count\(2)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111000000000",
+	lut_mask => "1111000011100000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|h_count\(2),
-	datab => \vgamap|videoSync|h_count\(1),
-	datac => \vgamap|videoSync|h_count\(0),
-	datad => \vgamap|videoSync|h_count\(5),
+	dataa => \vgamap|videoSync|h_count\(1),
+	datab => \vgamap|videoSync|h_count\(0),
+	datac => \vgamap|videoSync|h_count\(5),
+	datad => \vgamap|videoSync|h_count\(2),
 	combout => \vgamap|videoSync|process_1~2_combout\);
 
--- Location: LCCOMB_X60_Y72_N18
+-- Location: LCCOMB_X55_Y63_N4
 \vgamap|videoSync|process_1~4\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoSync|process_1~4_combout\ = (\vgamap|videoSync|process_1~1_combout\) # ((\vgamap|videoSync|process_1~3_combout\ & (\vgamap|videoSync|process_1~2_combout\ & \vgamap|videoSync|h_count\(6))))
+-- \vgamap|videoSync|process_1~4_combout\ = (\vgamap|videoSync|process_1~1_combout\) # ((\vgamap|videoSync|h_count\(6) & (\vgamap|videoSync|process_1~3_combout\ & \vgamap|videoSync|process_1~2_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -7314,12 +7274,12 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \vgamap|videoSync|process_1~1_combout\,
-	datab => \vgamap|videoSync|process_1~3_combout\,
-	datac => \vgamap|videoSync|process_1~2_combout\,
-	datad => \vgamap|videoSync|h_count\(6),
+	datab => \vgamap|videoSync|h_count\(6),
+	datac => \vgamap|videoSync|process_1~3_combout\,
+	datad => \vgamap|videoSync|process_1~2_combout\,
 	combout => \vgamap|videoSync|process_1~4_combout\);
 
--- Location: FF_X60_Y72_N19
+-- Location: FF_X55_Y63_N5
 \vgamap|videoSync|horiz_sync\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7333,7 +7293,21 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \vgamap|videoSync|horiz_sync~q\);
 
--- Location: FF_X60_Y72_N25
+-- Location: LCCOMB_X43_Y63_N28
+\vgamap|videoSync|horiz_sync_out~feeder\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \vgamap|videoSync|horiz_sync_out~feeder_combout\ = \vgamap|videoSync|horiz_sync~q\
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datad => \vgamap|videoSync|horiz_sync~q\,
+	combout => \vgamap|videoSync|horiz_sync_out~feeder_combout\);
+
+-- Location: FF_X43_Y63_N29
 \vgamap|videoSync|horiz_sync_out\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7342,33 +7316,32 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \vgamap|videoSync|pixel_clock_int~clkctrl_outclk\,
-	asdata => \vgamap|videoSync|horiz_sync~q\,
-	sload => VCC,
+	d => \vgamap|videoSync|horiz_sync_out~feeder_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \vgamap|videoSync|horiz_sync_out~q\);
 
--- Location: LCCOMB_X62_Y72_N18
+-- Location: LCCOMB_X57_Y63_N14
 \vgamap|videoSync|process_1~5\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoSync|process_1~5_combout\ = ((\vgamap|videoSync|v_count\(2) & (\vgamap|videoSync|v_count\(1))) # (!\vgamap|videoSync|v_count\(2) & ((!\vgamap|videoSync|v_count\(0)) # (!\vgamap|videoSync|v_count\(1))))) # (!\vgamap|videoSync|v_count\(3))
+-- \vgamap|videoSync|process_1~5_combout\ = ((\vgamap|videoSync|v_count\(1) & ((\vgamap|videoSync|v_count\(2)) # (!\vgamap|videoSync|v_count\(0)))) # (!\vgamap|videoSync|v_count\(1) & (!\vgamap|videoSync|v_count\(2)))) # (!\vgamap|videoSync|v_count\(3))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1101011111110111",
+	lut_mask => "1101011111011111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vgamap|videoSync|v_count\(3),
-	datab => \vgamap|videoSync|v_count\(2),
-	datac => \vgamap|videoSync|v_count\(1),
+	datab => \vgamap|videoSync|v_count\(1),
+	datac => \vgamap|videoSync|v_count\(2),
 	datad => \vgamap|videoSync|v_count\(0),
 	combout => \vgamap|videoSync|process_1~5_combout\);
 
--- Location: LCCOMB_X62_Y72_N28
+-- Location: LCCOMB_X57_Y63_N24
 \vgamap|videoSync|process_1~6\ : cycloneive_lcell_comb
 -- Equation(s):
--- \vgamap|videoSync|process_1~6_combout\ = (\vgamap|videoSync|v_count\(4)) # (((\vgamap|videoSync|v_count\(9)) # (\vgamap|videoSync|process_1~5_combout\)) # (!\vgamap|videoSync|LessThan6~0_combout\))
+-- \vgamap|videoSync|process_1~6_combout\ = (\vgamap|videoSync|v_count\(9)) # (((\vgamap|videoSync|process_1~5_combout\) # (\vgamap|videoSync|v_count\(4))) # (!\vgamap|videoSync|LessThan6~0_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -7376,13 +7349,13 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vgamap|videoSync|v_count\(4),
+	dataa => \vgamap|videoSync|v_count\(9),
 	datab => \vgamap|videoSync|LessThan6~0_combout\,
-	datac => \vgamap|videoSync|v_count\(9),
-	datad => \vgamap|videoSync|process_1~5_combout\,
+	datac => \vgamap|videoSync|process_1~5_combout\,
+	datad => \vgamap|videoSync|v_count\(4),
 	combout => \vgamap|videoSync|process_1~6_combout\);
 
--- Location: FF_X62_Y72_N29
+-- Location: FF_X57_Y63_N25
 \vgamap|videoSync|vert_sync\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7396,21 +7369,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \vgamap|videoSync|vert_sync~q\);
 
--- Location: LCCOMB_X62_Y72_N4
-\vgamap|videoSync|vert_sync_out~feeder\ : cycloneive_lcell_comb
--- Equation(s):
--- \vgamap|videoSync|vert_sync_out~feeder_combout\ = \vgamap|videoSync|vert_sync~q\
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datad => \vgamap|videoSync|vert_sync~q\,
-	combout => \vgamap|videoSync|vert_sync_out~feeder_combout\);
-
--- Location: FF_X62_Y72_N5
+-- Location: FF_X56_Y63_N7
 \vgamap|videoSync|vert_sync_out\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7419,12 +7378,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \vgamap|videoSync|pixel_clock_int~clkctrl_outclk\,
-	d => \vgamap|videoSync|vert_sync_out~feeder_combout\,
+	asdata => \vgamap|videoSync|vert_sync~q\,
+	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \vgamap|videoSync|vert_sync_out~q\);
 
--- Location: FF_X62_Y72_N27
+-- Location: FF_X57_Y63_N29
 \vgamap|videoSync|video_on_v\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7439,21 +7399,21 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \vgamap|videoSync|video_on_v~q\);
 
--- Location: LCCOMB_X58_Y72_N8
+-- Location: LCCOMB_X57_Y63_N18
 \vgamap|videoSync|video_on_h~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoSync|video_on_h~feeder_combout\ = \vgamap|videoSync|LessThan5~0_combout\
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111000011110000",
+	lut_mask => "1111111100000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => \vgamap|videoSync|LessThan5~0_combout\,
+	datad => \vgamap|videoSync|LessThan5~0_combout\,
 	combout => \vgamap|videoSync|video_on_h~feeder_combout\);
 
--- Location: FF_X58_Y72_N9
+-- Location: FF_X57_Y63_N19
 \vgamap|videoSync|video_on_h\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7467,7 +7427,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \vgamap|videoSync|video_on_h~q\);
 
--- Location: LCCOMB_X62_Y72_N26
+-- Location: LCCOMB_X57_Y63_N28
 \vgamap|videoSync|video_on\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \vgamap|videoSync|video_on~combout\ = (\vgamap|videoSync|video_on_v~q\ & \vgamap|videoSync|video_on_h~q\)
@@ -7504,7 +7464,7 @@ PORT MAP (
 	i => ww_oct_sel,
 	o => \oct_sel~input_o\);
 
--- Location: IOIBUF_X0_Y14_N1
+-- Location: IOIBUF_X5_Y0_N8
 \synth_sel~input\ : cycloneive_io_ibuf
 -- pragma translate_off
 GENERIC MAP (

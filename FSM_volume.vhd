@@ -21,7 +21,7 @@ divide_clock: PROCESS (clk, div_clk) IS
 VARIABLE count: integer := 0;
 BEGIN
 	IF (rising_edge(clk)) THEN
-		IF (count > 5000000) THEN
+		IF (count > 4000000) THEN
 			count := 0;
 			div_clk <= NOT div_clk;
 		ELSE
