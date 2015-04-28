@@ -16,7 +16,21 @@ ENTITY JSInth IS
 		----main outputs
 		--VGA
 		vga_red, vga_green, vga_blue: out std_logic_vector(9 downto 0);
-		horiz_sync, vert_sync, vga_blank, vga_clk: out std_logic
+		horiz_sync, vert_sync, vga_blank, vga_clk: out std_logic;
+		
+		-- I2C bus
+    
+		I2C_SDAT : inout std_logic; -- I2C Data
+		I2C_SCLK : out std_logic;   -- I2C Clock
+    
+		-- Audio CODEC
+		
+		AUD_ADCLRCK : inout std_logic;                      -- ADC LR Clock
+		AUD_ADCDAT : in std_logic;                          -- ADC Data
+		AUD_DACLRCK : inout std_logic;                      -- DAC LR Clock
+		AUD_DACDAT : out std_logic;                         -- DAC Data
+		AUD_BCLK : inout std_logic;                         -- Bit-Stream Clock
+		AUD_XCK : out std_logic                            -- Chip Clock 
 	);
 END ENTITY JSInth;
 
@@ -44,9 +58,69 @@ COMPONENT FSM_volume IS
 	);
 END COMPONENT FSM_volume;
 
+component de2_wm8731_audio is
+   port (
+    clk : in std_logic;                 --    Audio CODEC Chip Clock AUD_XCK
+    reset_n : in std_logic;
+    test_mode : in std_logic;           --    Audio CODEC controller test mode
+    audio_request : out std_logic;      --    Audio controller request new data
+    data : in std_logic_vector(15 downto 0);
+  
+    -- Audio interface signals
+    AUD_ADCLRCK  : out std_logic;       --    Audio CODEC ADC LR Clock
+    AUD_ADCDAT   : in  std_logic;       --    Audio CODEC ADC Data
+    AUD_DACLRCK  : out std_logic;       --    Audio CODEC DAC LR Clock
+    AUD_DACDAT   : out std_logic;       --    Audio CODEC DAC Data
+    AUD_BCLK     : inout std_logic      --    Audio CODEC Bit-Stream Clock
+  );
+ end component de2_wm8731_audio;
+ 
+component de2_i2c_av_config is
+  port (
+    iCLK : in std_logic;
+    iRST_N : in std_logic;
+    I2C_SCLK : out std_logic;
+    I2C_SDAT : inout std_logic
+  );
+end component de2_i2c_av_config;
+
 SIGNAL current_volume: std_logic_vector (2 downto 0);
+SIGNAL audio_clock: unsigned (1 downto 0) := "00";
+SIGNAL audio_request: std_logic;
 
 BEGIN
+
+PROCESS (clk) IS
+BEGIN
+	IF (rising_edge(clk)) THEN
+		audio_clock <= audio_clock + "1";
+	END IF;
+END PROCESS;
+
+AUD_XCK <= audio_clock(1);
+
+ i2c : de2_i2c_av_config port map (
+    iCLK     => clk,
+    iRST_n   => '1',
+    I2C_SCLK => I2C_SCLK,
+    I2C_SDAT => I2C_SDAT
+  );
+
+  V1: de2_wm8731_audio port map (
+    clk => audio_clock(1),
+    reset_n => '1',
+    test_mode => '1',                   -- Output a sine wave
+    audio_request => audio_request,
+    data => "0000000000000000",
+  
+    -- Audio interface signals
+    AUD_ADCLRCK  => AUD_ADCLRCK,
+    AUD_ADCDAT   => AUD_ADCDAT,
+    AUD_DACLRCK  => AUD_DACLRCK,
+    AUD_DACDAT   => AUD_DACDAT,
+    AUD_BCLK     => AUD_BCLK
+  );
+ 
 --map volume FSM
 volmap: FSM_volume port map(vol_up, vol_down, clk, current_volume);
 --map VGA monitor

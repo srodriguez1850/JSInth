@@ -60,8 +60,6 @@ set_location_assignment PIN_Y2 -to clk
 set_location_assignment PIN_G13 -to horiz_sync
 set_location_assignment PIN_F11 -to vga_blank
 set_location_assignment PIN_C13 -to vert_sync
-set_location_assignment PIN_H13 -to vga_blue[9]
-set_location_assignment PIN_J13 -to vga_blue[8]
 set_location_assignment PIN_D12 -to vga_blue[7]
 set_location_assignment PIN_D11 -to vga_blue[6]
 set_location_assignment PIN_C12 -to vga_blue[5]
@@ -71,8 +69,6 @@ set_location_assignment PIN_C11 -to vga_blue[2]
 set_location_assignment PIN_A10 -to vga_blue[1]
 set_location_assignment PIN_B10 -to vga_blue[0]
 set_location_assignment PIN_A12 -to vga_clk
-set_location_assignment PIN_C10 -to vga_green[9]
-set_location_assignment PIN_B7 -to vga_green[8]
 set_location_assignment PIN_C9 -to vga_green[7]
 set_location_assignment PIN_F10 -to vga_green[6]
 set_location_assignment PIN_B8 -to vga_green[5]
@@ -81,8 +77,6 @@ set_location_assignment PIN_H12 -to vga_green[3]
 set_location_assignment PIN_F8 -to vga_green[2]
 set_location_assignment PIN_G11 -to vga_green[1]
 set_location_assignment PIN_G8 -to vga_green[0]
-set_location_assignment PIN_A7 -to vga_red[9]
-set_location_assignment PIN_F14 -to vga_red[8]
 set_location_assignment PIN_H10 -to vga_red[7]
 set_location_assignment PIN_H8 -to vga_red[6]
 set_location_assignment PIN_J12 -to vga_red[5]
@@ -109,13 +103,23 @@ set_location_assignment PIN_AD27 -to keys[2]
 set_location_assignment PIN_AC27 -to keys[1]
 set_location_assignment PIN_AC28 -to keys[0]
 set_location_assignment PIN_AB28 -to mute_sel
-set_location_assignment PIN_R24 -to vol_up
-set_location_assignment PIN_N21 -to vol_down
-set_global_assignment -name VHDL_FILE FIFO.vhd
+set_location_assignment PIN_N21 -to vol_up
+set_location_assignment PIN_R24 -to vol_down
+set_global_assignment -name VHDL_FILE de2_wm8731_audio.vhd
+set_global_assignment -name VERILOG_FILE de2_i2c_controller.v
+set_global_assignment -name VERILOG_FILE de2_i2c_av_config.v
 set_global_assignment -name VHDL_FILE VGA_top_level.vhd
 set_global_assignment -name VHDL_FILE vga_sync.vhd
 set_global_assignment -name VHDL_FILE pixelGenerator.vhd
 set_global_assignment -name VHDL_FILE colorROM.vhd
 set_global_assignment -name VHDL_FILE JSInth.vhd
 set_global_assignment -name VHDL_FILE FSM_volume.vhd
+set_location_assignment PIN_D2 -to AUD_ADCDAT
+set_location_assignment PIN_C2 -to AUD_ADCLRCK
+set_location_assignment PIN_F2 -to AUD_BCLK
+set_location_assignment PIN_D1 -to AUD_DACDAT
+set_location_assignment PIN_E3 -to AUD_DACLRCK
+set_location_assignment PIN_E1 -to AUD_XCK
+set_location_assignment PIN_B7 -to I2C_SCLK
+set_location_assignment PIN_A8 -to I2C_SDAT
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
