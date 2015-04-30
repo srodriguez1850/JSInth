@@ -1,22 +1,28 @@
+--
+-- VGA_top_level.vhd
+-- Usage: contains the sync and renderer
+--
+
 library IEEE;
 
 use IEEE.std_logic_1164.all;
 
 entity VGA_top_level is
 	port(
+			--Master inputs
 			CLOCK_50 										: in std_logic;
 			RESET_N											: in std_logic;
 	
 			--VGA 
-			VGA_RED, VGA_GREEN, VGA_BLUE 					: out std_logic_vector(9 downto 0); 
+			VGA_RED, VGA_GREEN, VGA_BLUE 						: out std_logic_vector(9 downto 0); 
 			HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK		: out std_logic;
 			
-			--synth inputs
-			keys_vga: in std_logic_vector(16 downto 0);
-			vol_vga: in std_logic_vector(2 downto 0);
-			oct_sel_vga: in std_logic;
-			synth_sel_vga: in std_logic;
-			mute_sel_vga: in std_logic
+			--Synth inputs
+			keys_vga			: in std_logic_vector(16 downto 0);
+			vol_vga			: in std_logic_vector(2 downto 0);
+			oct_sel_vga		: in std_logic;
+			synth_sel_vga	: in std_logic;
+			mute_sel_vga	: in std_logic
 		);
 end entity VGA_top_level;
 
@@ -25,15 +31,15 @@ architecture structural of VGA_top_level is
 component pixelGenerator is
 	port(
 			clk, ROM_clk, rst_n, video_on, eof 				: in std_logic;
-			pixel_row, pixel_column						    : in std_logic_vector(9 downto 0);
-			red_out, green_out, blue_out					: out std_logic_vector(9 downto 0);
+			pixel_row, pixel_column						    	: in std_logic_vector(9 downto 0);
+			red_out, green_out, blue_out						: out std_logic_vector(9 downto 0);
 			
-			--synth inputs
-			keys_vga: in std_logic_vector(16 downto 0);
-			vol_vga: in std_logic_vector(2 downto 0);
-			oct_sel_vga: in std_logic;
-			synth_sel_vga: in std_logic;
-			mute_sel_vga: in std_logic
+			--Synth inputs
+			keys_vga			: in std_logic_vector(16 downto 0);
+			vol_vga			: in std_logic_vector(2 downto 0);
+			oct_sel_vga		: in std_logic;
+			synth_sel_vga	: in std_logic;
+			mute_sel_vga	: in std_logic
 		);
 end component pixelGenerator;
 
@@ -51,7 +57,7 @@ signal pixel_row_int 										: std_logic_vector(9 downto 0);
 signal pixel_column_int 									: std_logic_vector(9 downto 0);
 signal video_on_int											: std_logic;
 signal VGA_clk_int											: std_logic;
-signal eof													: std_logic;
+signal eof														: std_logic;
 
 begin
 

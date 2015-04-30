@@ -1,13 +1,9 @@
---
--- Video Sync Signals for Video Montor Interface
--- Usage: generates video sync signals for VGA; RGB and Sync outputs tie directly to monitor conector pins
---
-
 library IEEE;
 use  IEEE.STD_LOGIC_1164.all;
 use  IEEE.STD_LOGIC_ARITH.all;
 use  IEEE.STD_LOGIC_UNSIGNED.all;
-
+-- Module Generates Video Sync Signals for Video Montor Interface
+-- RGB and Sync outputs tie directly to monitor conector pins
 ENTITY VGA_SYNC IS
 	port(
 			clock_50Mhz										: in std_logic;

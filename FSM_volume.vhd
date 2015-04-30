@@ -1,3 +1,8 @@
+--
+-- FSM_volume.vhd
+-- Usage: cycles through the volume using a finite state machine
+--
+
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.all;
 USE IEEE.std_logic_arith.all;

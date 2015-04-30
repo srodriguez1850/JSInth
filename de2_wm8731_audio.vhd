@@ -1,123 +1,123 @@
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.all;
+USE IEEE.numeric_std.all;
 
-entity de2_wm8731_audio is
-port (
-    clk : in std_logic;       --  Audio CODEC Chip Clock AUD_XCK (18.43 MHz)
-    reset_n : in std_logic;
-    test_mode : in std_logic;       --    Audio CODEC controller test mode
-    audio_request : out std_logic;  --    Audio controller request new data
-    data : in unsigned(15 downto 0);
+ENTITY de2_wm8731_audio IS
+PORT(
+    clk 				: in std_logic;       --  Audio CODEC Chip Clock AUD_XCK (18.43 MHz)
+    reset_n 		: in std_logic;
+    test_mode 		: in std_logic;       --    Audio CODEC controller test mode
+    audio_request : out std_logic;  	 --    Audio controller request new data
+    data 			: in unsigned(15 downto 0);
   
     -- Audio interface signals
     AUD_ADCLRCK  : out  std_logic;   --    Audio CODEC ADC LR Clock
     AUD_ADCDAT   : in   std_logic;   --    Audio CODEC ADC Data
     AUD_DACLRCK  : out  std_logic;   --    Audio CODEC DAC LR Clock
     AUD_DACDAT   : out  std_logic;   --    Audio CODEC DAC Data
-    AUD_BCLK     : inout std_logic  --    Audio CODEC Bit-Stream Clock
+    AUD_BCLK     : inout std_logic   --    Audio CODEC Bit-Stream Clock
   );
-end  de2_wm8731_audio;
+END ENTITY de2_wm8731_audio;
 
-architecture rtl of de2_wm8731_audio is     
+ARCHITECTURE rtl OF de2_wm8731_audio IS
 
-    signal lrck : std_logic;
-    signal bclk : std_logic;
-    signal xck  : std_logic;
+    SIGNAL lrck : std_logic;
+    SIGNAL bclk : std_logic;
+    SIGNAL xck  : std_logic;
     
-    signal lrck_divider : unsigned(7 downto 0); 
-    signal bclk_divider : unsigned(3 downto 0);
+    SIGNAL lrck_divider : unsigned(7 downto 0); 
+    SIGNAL bclk_divider : unsigned(3 downto 0);
     
-    signal set_bclk : std_logic;
-    signal set_lrck : std_logic;
-    signal clr_bclk : std_logic;
-    signal lrck_lat : std_logic;
+    SIGNAL set_bclk : std_logic;
+    SIGNAL set_lrck : std_logic;
+    SIGNAL clr_bclk : std_logic;
+    SIGNAL lrck_lat : std_logic;
     
-    signal shift_out : unsigned(15 downto 0);
+    SIGNAL shift_out : unsigned(15 downto 0);
 
-    signal sin_out     : unsigned(15 downto 0);
-    signal sin_counter : unsigned(5 downto 0);    
+    SIGNAL sin_out     : unsigned(15 downto 0);
+    SIGNAL sin_counter : unsigned(5 downto 0);    
 
-begin
+BEGIN
   
     -- LRCK divider 
     -- Audio chip main clock is 18.432MHz / Sample rate 48KHz
     -- Divider is 18.432 MHz / 48KHz = 192 (X"C0")
     -- Left justify mode set by I2C controller
     
-  process (clk)
-  begin
-    if rising_edge(clk) then
-      if reset_n = '0' then 
+  DIVIDE_LRCK: PROCESS (clk) IS
+  BEGIN
+    IF rising_edge(clk) THEN
+      IF reset_n = '0' THEN
         lrck_divider <= (others => '0');
-      elsif lrck_divider = X"BF"  then        -- "C0" minus 1
+      ELSIF lrck_divider = X"BF" THEN        -- "C0" minus 1
         lrck_divider <= X"00";
-      else 
+      ELSE 
         lrck_divider <= lrck_divider + 1;
-      end if;
-    end if;   
-  end process;
+      END IF;
+    END IF;   
+  END PROCESS DIVIDE_LRCK;
 
-  process (clk)
-  begin
-    if rising_edge(clk) then      
-      if reset_n = '0' then 
+  DIVIDE_BCLK: PROCESS (clk) IS
+  BEGIN
+    IF rising_edge(clk) THEN
+      IF reset_n = '0' THEN
         bclk_divider <= (others => '0');
-      elsif bclk_divider = X"B" or set_lrck = '1'  then  
+      ELSIF bclk_divider = X"B" or set_lrck = '1' THEN  
         bclk_divider <= X"0";
-      else 
+      ELSE
         bclk_divider <= bclk_divider + 1;
-      end if;
-    end if;
-  end process;
+      END IF;
+    END IF;
+  END PROCESS DIVIDE_BCLK;
 
-  set_lrck <= '1' when lrck_divider = X"BF" else '0';
+  set_lrck <= '1' WHEN lrck_divider = X"BF" ELSE '0';
     
-  process (clk)
-  begin
-    if rising_edge(clk) then
-      if reset_n = '0' then
+  SET_LRCK: PROCESS (clk) IS
+  BEGIN
+    IF rising_edge(clk) THEN
+      IF reset_n = '0' THEN
         lrck <= '0';
-      elsif set_lrck = '1' then 
+      ELSIF set_lrck = '1' THEN
         lrck <= not lrck;
-      end if;
-    end if;
-  end process;
+      END IF;
+    END IF;
+  END PROCESS SET_LRCK;
     
   -- BCLK divider
-  set_bclk <= '1' when bclk_divider(3 downto 0) = "0101" else '0';
-  clr_bclk <= '1' when bclk_divider(3 downto 0) = "1011" else '0';
+  set_bclk <= '1' WHEN bclk_divider(3 downto 0) = "0101" ELSE '0';
+  clr_bclk <= '1' WHEN bclk_divider(3 downto 0) = "1011" ELSE '0';
   
-  process (clk)
-  begin
-    if rising_edge(clk) then
-      if reset_n = '0' then
+  SET_BCLK: PROCESS (clk) IS
+  BEGIN
+    IF rising_edge(clk) THEN
+      IF reset_n = '0' THEN
         bclk <= '0';
-      elsif set_lrck = '1' or clr_bclk = '1' then
+      ELSIF set_lrck = '1' or clr_bclk = '1' THEN
         bclk <= '0';
-      elsif set_bclk = '1' then 
+      ELSIF set_bclk = '1' THEN
         bclk <= '1';
-      end if;
-    end if;
-  end process;
+      END IF;
+    END IF;
+  END PROCESS SET_BCLK;
 
   -- Audio data shift output
-  process (clk)
-  begin
-    if rising_edge(clk) then
-      if reset_n = '0' then
+  SHIFT_OUTPUT: PROCESS (clk) IS
+  BEGIN
+    IF rising_edge(clk) THEN
+      IF reset_n = '0' THEN
         shift_out <= (others => '0');
-      elsif set_lrck = '1' then
-        if test_mode = '1' then 
+      ELSIF set_lrck = '1' THEN
+        IF test_mode = '1' THEN
           shift_out <= sin_out;
-        else 
+        ELSE
           shift_out <= data;
-        end if;
-      elsif clr_bclk = '1' then 
+        END IF;
+      ELSIF clr_bclk = '1' THEN
         shift_out <= shift_out (14 downto 0) & '0';
-      end if;
-    end if;   
-  end process;
+      END IF;
+    END IF;   
+  END PROCESS SHIFT_OUTPUT;
 
     -- Audio outputs
     
@@ -128,38 +128,38 @@ begin
 
     -- Self test with Sin wave
     
-    process(clk)      
-    begin
-      if rising_edge(clk) then
-        if reset_n = '0' then 
+    OUTPUT_SELECT: PROCESS (clk) IS
+    BEGIN
+      IF rising_edge(clk) THEN
+        IF reset_n = '0' THEN
             sin_counter <= (others => '0');
-        elsif lrck_lat = '1' and lrck = '0'  then  
-          if sin_counter = "101111" then 
+        ELSIF lrck_lat = '1' and lrck = '0' THEN 
+          IF sin_counter = "101111" THEN
             sin_counter <= "000000";
-          else  
+          ELSE  
             sin_counter <= sin_counter + 1;
-          end if;
-        end if;
-      end if;
-    end process;
+          END IF;
+        END IF;
+      END IF;
+    END PROCESS OUTPUT_SELECT;
 
-    process(clk)
-    begin
-      if rising_edge(clk) then
+    LRCK_SHIFT: PROCESS (clk) IS
+    BEGIN
+      IF rising_edge(clk) THEN
         lrck_lat <= lrck;
-      end if;
-    end process;
+      END IF;
+    END PROCESS LRCK_SHIFT;
 
-    process (clk) 
-    begin
-      if rising_edge(clk) then
-        if lrck_lat = '1' and lrck = '0' then
+    REQ_AUDIO: PROCESS (clk) IS
+    BEGIN
+      IF rising_edge(clk) THEN
+        IF lrck_lat = '1' and lrck = '0' THEN
           audio_request <= '1';
-        else 
+        ELSE
           audio_request <= '0';
-        end if;
-      end if;
-    end process;
+        END IF;
+      END IF;
+    END PROCESS REQ_AUDIO;
 
   with sin_counter select sin_out <=
     X"0000" when "000000",
@@ -212,6 +212,6 @@ begin
     X"ef4b" when "101111",
     X"0000" when others;      
 
-end architecture;
+END ARCHITECTURE rtl;
 
 

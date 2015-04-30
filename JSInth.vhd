@@ -1,22 +1,29 @@
+--
+-- JSInth.vhd
+-- top-level entity
+--
+
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.all;
 USE IEEE.std_logic_arith.all;
 
 ENTITY JSInth IS
 	PORT(
-		--main inputs
-		reset: in std_logic; --not applicable
-		clk: in std_logic;
-		keys: in std_logic_vector(16 downto 0);
-		vol_up: in std_logic;
-		vol_down: in std_logic;
-		oct_sel: in std_logic;
+		--Inputs
+		
+		reset		: in std_logic; --N/A
+		clk		: in std_logic;
+		keys		: in std_logic_vector(16 downto 0);
+		vol_up	: in std_logic;
+		vol_down	: in std_logic;
+		oct_sel	: in std_logic;
 		synth_sel: in std_logic;
-		mute_sel: in std_logic;
-		----main outputs
+		mute_sel	: in std_logic;
+		
 		--VGA
-		vga_red, vga_green, vga_blue: out std_logic_vector(9 downto 0);
-		horiz_sync, vert_sync, vga_blank, vga_clk: out std_logic;
+		
+		vga_red, vga_green, vga_blue					: out std_logic_vector(9 downto 0);
+		horiz_sync, vert_sync, vga_blank, vga_clk	: out std_logic;
 		
 		-- I2C bus
     
@@ -26,11 +33,11 @@ ENTITY JSInth IS
 		-- Audio CODEC
 		
 		AUD_ADCLRCK : inout std_logic;                      -- ADC LR Clock
-		AUD_ADCDAT : in std_logic;                          -- ADC Data
+		AUD_ADCDAT 	: in std_logic;                         -- ADC Data
 		AUD_DACLRCK : inout std_logic;                      -- DAC LR Clock
-		AUD_DACDAT : out std_logic;                         -- DAC Data
-		AUD_BCLK : inout std_logic;                         -- Bit-Stream Clock
-		AUD_XCK : out std_logic                            -- Chip Clock 
+		AUD_DACDAT 	: out std_logic;                        -- DAC Data
+		AUD_BCLK 	: inout std_logic;                      -- Bit-Stream Clock
+		AUD_XCK 		: out std_logic                         -- Chip Clock 
 	);
 END ENTITY JSInth;
 

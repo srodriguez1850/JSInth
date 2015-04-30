@@ -1,9 +1,8 @@
 /*
-
-A/V Configuration Module through I2C
-Usage: configures the WM8731 audio CODEC through I2C
-
-*/
+ * I2C bus control for initializing the audio and video chips on the DE2 board
+ *
+ * Adapted by Stephen A. Edwards, Columbia University, sedwards@cs.columbia.edu
+ */
 
 module de2_i2c_av_config( iCLK, iRST_N, I2C_SCLK, I2C_SDAT );
 
