@@ -4,6 +4,8 @@ clk => de2_i2c_av_config:i2c.iCLK
 clk => audio_clock[0].CLK
 clk => audio_clock[1].CLK
 clk => FSM_volume:volmap.clk
+clk => FSM_octave:octmap.clk
+clk => FSM_octave:synmap.clk
 clk => VGA_top_level:vgamap.CLOCK_50
 keys[0] => VGA_top_level:vgamap.keys_vga[0]
 keys[1] => VGA_top_level:vgamap.keys_vga[1]
@@ -24,8 +26,8 @@ keys[15] => VGA_top_level:vgamap.keys_vga[15]
 keys[16] => VGA_top_level:vgamap.keys_vga[16]
 vol_up => FSM_volume:volmap.up
 vol_down => FSM_volume:volmap.down
-oct_sel => VGA_top_level:vgamap.oct_sel_vga
-synth_sel => VGA_top_level:vgamap.synth_sel_vga
+oct_sel => FSM_octave:octmap.button
+synth_sel => FSM_octave:synmap.button
 mute_sel => VGA_top_level:vgamap.mute_sel_vga
 vga_red[0] << VGA_top_level:vgamap.VGA_RED[0]
 vga_red[1] << VGA_top_level:vgamap.VGA_RED[1]
@@ -332,42 +334,40 @@ up => FSM_cycle.IN0
 up => FSM_cycle.IN0
 down => FSM_cycle.IN1
 down => FSM_cycle.IN1
-clk => div_clk.CLK
-clk => \divide_clock:count[0].CLK
-clk => \divide_clock:count[1].CLK
-clk => \divide_clock:count[2].CLK
-clk => \divide_clock:count[3].CLK
-clk => \divide_clock:count[4].CLK
-clk => \divide_clock:count[5].CLK
-clk => \divide_clock:count[6].CLK
-clk => \divide_clock:count[7].CLK
-clk => \divide_clock:count[8].CLK
-clk => \divide_clock:count[9].CLK
-clk => \divide_clock:count[10].CLK
-clk => \divide_clock:count[11].CLK
-clk => \divide_clock:count[12].CLK
-clk => \divide_clock:count[13].CLK
-clk => \divide_clock:count[14].CLK
-clk => \divide_clock:count[15].CLK
-clk => \divide_clock:count[16].CLK
-clk => \divide_clock:count[17].CLK
-clk => \divide_clock:count[18].CLK
-clk => \divide_clock:count[19].CLK
-clk => \divide_clock:count[20].CLK
-clk => \divide_clock:count[21].CLK
-clk => \divide_clock:count[22].CLK
-clk => \divide_clock:count[23].CLK
-clk => \divide_clock:count[24].CLK
-clk => \divide_clock:count[25].CLK
-clk => \divide_clock:count[26].CLK
-clk => \divide_clock:count[27].CLK
-clk => \divide_clock:count[28].CLK
-clk => \divide_clock:count[29].CLK
-clk => \divide_clock:count[30].CLK
-clk => \divide_clock:count[31].CLK
+clk => current[0].CLK
+clk => current[1].CLK
+clk => current[2].CLK
+clk => z[0]~reg0.CLK
+clk => z[1]~reg0.CLK
+clk => z[2]~reg0.CLK
+clk => \FSM_cycle:pressed.CLK
 z[0] <= z[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 z[1] <= z[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 z[2] <= z[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|JSInth|FSM_octave:octmap
+button => FSM_cycle.IN1
+button => FSM_cycle.IN1
+clk => current[0].CLK
+clk => current[1].CLK
+clk => z[0]~reg0.CLK
+clk => z[1]~reg0.CLK
+clk => \FSM_cycle:pressed.CLK
+z[0] <= z[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+z[1] <= z[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|JSInth|FSM_octave:synmap
+button => FSM_cycle.IN1
+button => FSM_cycle.IN1
+clk => current[0].CLK
+clk => current[1].CLK
+clk => z[0]~reg0.CLK
+clk => z[1]~reg0.CLK
+clk => \FSM_cycle:pressed.CLK
+z[0] <= z[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+z[1] <= z[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |JSInth|VGA_top_level:vgamap
@@ -428,8 +428,10 @@ keys_vga[16] => pixelGenerator:videoGen.keys_vga[16]
 vol_vga[0] => pixelGenerator:videoGen.vol_vga[0]
 vol_vga[1] => pixelGenerator:videoGen.vol_vga[1]
 vol_vga[2] => pixelGenerator:videoGen.vol_vga[2]
-oct_sel_vga => pixelGenerator:videoGen.oct_sel_vga
-synth_sel_vga => pixelGenerator:videoGen.synth_sel_vga
+oct_sel_vga[0] => pixelGenerator:videoGen.oct_sel_vga[0]
+oct_sel_vga[1] => pixelGenerator:videoGen.oct_sel_vga[1]
+synth_sel_vga[0] => pixelGenerator:videoGen.synth_sel_vga[0]
+synth_sel_vga[1] => pixelGenerator:videoGen.synth_sel_vga[1]
 mute_sel_vga => pixelGenerator:videoGen.mute_sel_vga
 
 
@@ -1163,8 +1165,18 @@ vol_vga[2] => LessThan53.IN4
 vol_vga[2] => LessThan57.IN4
 vol_vga[2] => LessThan61.IN4
 vol_vga[2] => LessThan66.IN4
-oct_sel_vga => ~NO_FANOUT~
-synth_sel_vga => ~NO_FANOUT~
+oct_sel_vga[0] => Equal0.IN1
+oct_sel_vga[0] => Equal1.IN0
+oct_sel_vga[0] => Equal2.IN1
+oct_sel_vga[1] => Equal0.IN0
+oct_sel_vga[1] => Equal1.IN1
+oct_sel_vga[1] => Equal2.IN0
+synth_sel_vga[0] => Equal3.IN1
+synth_sel_vga[0] => Equal4.IN0
+synth_sel_vga[0] => Equal5.IN1
+synth_sel_vga[1] => Equal3.IN0
+synth_sel_vga[1] => Equal4.IN1
+synth_sel_vga[1] => Equal5.IN0
 mute_sel_vga => colorAddress.DATAB
 mute_sel_vga => colorAddress.DATAB
 

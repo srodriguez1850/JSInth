@@ -20,8 +20,8 @@ entity VGA_top_level is
 			--Synth inputs
 			keys_vga			: in std_logic_vector(16 downto 0);
 			vol_vga			: in std_logic_vector(2 downto 0);
-			oct_sel_vga		: in std_logic;
-			synth_sel_vga	: in std_logic;
+			oct_sel_vga		: in std_logic_vector(1 downto 0);
+			synth_sel_vga	: in std_logic_vector(1 downto 0);
 			mute_sel_vga	: in std_logic
 		);
 end entity VGA_top_level;
@@ -37,8 +37,8 @@ component pixelGenerator is
 			--Synth inputs
 			keys_vga			: in std_logic_vector(16 downto 0);
 			vol_vga			: in std_logic_vector(2 downto 0);
-			oct_sel_vga		: in std_logic;
-			synth_sel_vga	: in std_logic;
+			oct_sel_vga		: in std_logic_vector(1 downto 0);
+			synth_sel_vga	: in std_logic_vector(1 downto 0);
 			mute_sel_vga	: in std_logic
 		);
 end component pixelGenerator;

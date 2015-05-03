@@ -73,7 +73,7 @@ BEGIN
 
   set_lrck <= '1' WHEN lrck_divider = X"BF" ELSE '0';
     
-  SET_LRCK: PROCESS (clk) IS
+  CYCLE_LRCK: PROCESS (clk) IS
   BEGIN
     IF rising_edge(clk) THEN
       IF reset_n = '0' THEN
@@ -82,13 +82,13 @@ BEGIN
         lrck <= not lrck;
       END IF;
     END IF;
-  END PROCESS SET_LRCK;
+  END PROCESS CYCLE_LRCK;
     
   -- BCLK divider
   set_bclk <= '1' WHEN bclk_divider(3 downto 0) = "0101" ELSE '0';
   clr_bclk <= '1' WHEN bclk_divider(3 downto 0) = "1011" ELSE '0';
   
-  SET_BCLK: PROCESS (clk) IS
+  CYCLE_BCLK: PROCESS (clk) IS
   BEGIN
     IF rising_edge(clk) THEN
       IF reset_n = '0' THEN
@@ -99,7 +99,7 @@ BEGIN
         bclk <= '1';
       END IF;
     END IF;
-  END PROCESS SET_BCLK;
+  END PROCESS CYCLE_BCLK;
 
   -- Audio data shift output
   SHIFT_OUTPUT: PROCESS (clk) IS

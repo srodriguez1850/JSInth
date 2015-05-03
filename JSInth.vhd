@@ -51,8 +51,8 @@ COMPONENT VGA_top_level IS
 		--main inputs
 		keys_vga: in std_logic_vector(16 downto 0);
 		vol_vga: in std_logic_vector(2 downto 0);
-		oct_sel_vga: in std_logic;
-		synth_sel_vga: in std_logic;
+		oct_sel_vga: in std_logic_vector(1 downto 0);
+		synth_sel_vga: in std_logic_vector(1 downto 0);
 		mute_sel_vga: in std_logic
 	);
 END COMPONENT VGA_top_level;
@@ -64,6 +64,14 @@ COMPONENT FSM_volume IS
 		z: out std_logic_vector(2 downto 0)
 	);
 END COMPONENT FSM_volume;
+
+COMPONENT FSM_octave IS
+	PORT(
+		button: in std_logic;
+		clk: in std_logic;
+		z: out std_logic_vector(1 downto 0)
+	);
+END COMPONENT FSM_octave;
 
 component de2_wm8731_audio is
    port (
@@ -92,6 +100,8 @@ component de2_i2c_av_config is
 end component de2_i2c_av_config;
 
 SIGNAL current_volume: std_logic_vector (2 downto 0);
+SIGNAL current_octave: std_logic_vector (1 downto 0);
+SIGNAL current_synth: std_logic_vector(1 downto 0);
 SIGNAL audio_clock: unsigned (1 downto 0) := "00";
 SIGNAL audio_request: std_logic;
 
@@ -128,9 +138,11 @@ AUD_XCK <= audio_clock(1);
     AUD_BCLK     => AUD_BCLK
   );
  
---map volume FSM
+--map FSMs
 volmap: FSM_volume port map(vol_up, vol_down, clk, current_volume);
+octmap: FSM_octave port map(oct_sel, clk, current_octave);
+synmap: FSM_octave port map(synth_sel, clk, current_synth);
 --map VGA monitor
-vgamap: VGA_top_level port map(clk, reset, vga_red, vga_green, vga_blue, horiz_sync, vert_sync, vga_blank, vga_clk, keys, current_volume, oct_sel, synth_sel, mute_sel);
+vgamap: VGA_top_level port map(clk, reset, vga_red, vga_green, vga_blue, horiz_sync, vert_sync, vga_blank, vga_clk, keys, current_volume, current_octave, current_synth, mute_sel);
 
 END ARCHITECTURE main;

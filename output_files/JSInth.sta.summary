@@ -3,48 +3,40 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -5.907
-TNS   : -163.648
-
-Type  : Slow 1200mV 85C Model Setup 'de2_i2c_av_config:i2c|mI2C_CTRL_CLK'
-Slack : -3.015
-TNS   : -84.518
+Slack : -5.845
+TNS   : -75.975
 
 Type  : Slow 1200mV 85C Model Setup 'VGA_top_level:vgamap|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : -2.742
-TNS   : -86.671
+Slack : -2.563
+TNS   : -81.878
+
+Type  : Slow 1200mV 85C Model Setup 'de2_i2c_av_config:i2c|mI2C_CTRL_CLK'
+Slack : -2.505
+TNS   : -79.974
 
 Type  : Slow 1200mV 85C Model Setup 'audio_clock[1]'
-Slack : -2.132
-TNS   : -51.657
-
-Type  : Slow 1200mV 85C Model Setup 'FSM_volume:volmap|div_clk'
-Slack : -1.417
-TNS   : -6.583
+Slack : -2.148
+TNS   : -57.117
 
 Type  : Slow 1200mV 85C Model Hold 'de2_i2c_av_config:i2c|mI2C_CTRL_CLK'
-Slack : 0.299
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'VGA_top_level:vgamap|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : 0.362
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.381
+Slack : 0.363
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'audio_clock[1]'
-Slack : 0.386
+Slack : 0.387
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'FSM_volume:volmap|div_clk'
-Slack : 0.405
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.397
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'VGA_top_level:vgamap|VGA_SYNC:videoSync|pixel_clock_int'
+Slack : 0.403
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -74.960
+TNS   : -54.400
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'de2_i2c_av_config:i2c|mI2C_CTRL_CLK'
 Slack : -2.693
@@ -56,55 +48,43 @@ TNS   : -60.518
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'audio_clock[1]'
 Slack : -1.285
-TNS   : -44.975
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FSM_volume:volmap|div_clk'
-Slack : -1.285
-TNS   : -7.710
+TNS   : -47.545
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -5.213
-TNS   : -145.585
-
-Type  : Slow 1200mV 0C Model Setup 'de2_i2c_av_config:i2c|mI2C_CTRL_CLK'
-Slack : -2.648
-TNS   : -72.974
+Slack : -5.225
+TNS   : -66.589
 
 Type  : Slow 1200mV 0C Model Setup 'VGA_top_level:vgamap|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : -2.425
-TNS   : -74.954
+Slack : -2.252
+TNS   : -70.732
+
+Type  : Slow 1200mV 0C Model Setup 'de2_i2c_av_config:i2c|mI2C_CTRL_CLK'
+Slack : -2.191
+TNS   : -68.922
 
 Type  : Slow 1200mV 0C Model Setup 'audio_clock[1]'
-Slack : -1.861
-TNS   : -43.313
-
-Type  : Slow 1200mV 0C Model Setup 'FSM_volume:volmap|div_clk'
-Slack : -1.211
-TNS   : -5.432
-
-Type  : Slow 1200mV 0C Model Hold 'de2_i2c_av_config:i2c|mI2C_CTRL_CLK'
-Slack : 0.310
-TNS   : 0.000
+Slack : -1.869
+TNS   : -48.131
 
 Type  : Slow 1200mV 0C Model Hold 'audio_clock[1]'
-Slack : 0.337
+Slack : 0.338
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'de2_i2c_av_config:i2c|mI2C_CTRL_CLK'
+Slack : 0.341
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'VGA_top_level:vgamap|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : 0.339
+Slack : 0.355
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.349
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'FSM_volume:volmap|div_clk'
-Slack : 0.354
+Slack : 0.355
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -74.960
+TNS   : -54.400
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'de2_i2c_av_config:i2c|mI2C_CTRL_CLK'
 Slack : -2.649
@@ -116,55 +96,43 @@ TNS   : -60.474
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'audio_clock[1]'
 Slack : -1.285
-TNS   : -44.975
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FSM_volume:volmap|div_clk'
-Slack : -1.285
-TNS   : -7.710
+TNS   : -47.545
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -2.407
-TNS   : -52.609
-
-Type  : Fast 1200mV 0C Model Setup 'de2_i2c_av_config:i2c|mI2C_CTRL_CLK'
-Slack : -1.036
-TNS   : -20.151
+Slack : -2.375
+TNS   : -18.371
 
 Type  : Fast 1200mV 0C Model Setup 'VGA_top_level:vgamap|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : -0.811
-TNS   : -20.034
+Slack : -0.732
+TNS   : -17.928
+
+Type  : Fast 1200mV 0C Model Setup 'de2_i2c_av_config:i2c|mI2C_CTRL_CLK'
+Slack : -0.679
+TNS   : -17.202
 
 Type  : Fast 1200mV 0C Model Setup 'audio_clock[1]'
-Slack : -0.545
-TNS   : -9.291
-
-Type  : Fast 1200mV 0C Model Setup 'FSM_volume:volmap|div_clk'
-Slack : -0.162
-TNS   : -0.418
+Slack : -0.572
+TNS   : -10.187
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.032
+Slack : 0.011
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'de2_i2c_av_config:i2c|mI2C_CTRL_CLK'
-Slack : 0.111
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'VGA_top_level:vgamap|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : 0.164
+Slack : 0.153
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'audio_clock[1]'
-Slack : 0.173
+Slack : 0.174
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'FSM_volume:volmap|div_clk'
-Slack : 0.182
+Type  : Fast 1200mV 0C Model Hold 'VGA_top_level:vgamap|VGA_SYNC:videoSync|pixel_clock_int'
+Slack : 0.183
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -62.539
+TNS   : -45.559
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'VGA_top_level:vgamap|VGA_SYNC:videoSync|pixel_clock_int'
 Slack : -1.000
@@ -176,10 +144,6 @@ TNS   : -41.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'audio_clock[1]'
 Slack : -1.000
-TNS   : -35.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FSM_volume:volmap|div_clk'
-Slack : -1.000
-TNS   : -6.000
+TNS   : -37.000
 
 ------------------------------------------------------------

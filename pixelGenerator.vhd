@@ -10,15 +10,15 @@ use IEEE.numeric_std.all;
 
 entity pixelGenerator is
 	port(
-			clk, ROM_clk, rst_n, video_on, eof 				: in std_logic;
-			pixel_row, pixel_column						    : in std_logic_vector(9 downto 0);
+			clk, ROM_clk, rst_n, video_on, eof 			: in std_logic;
+			pixel_row, pixel_column						   : in std_logic_vector(9 downto 0);
 			red_out, green_out, blue_out					: out std_logic_vector(9 downto 0);
 			--synth inputs
-			keys_vga: in std_logic_vector(16 downto 0);
-			vol_vga: in std_logic_vector(2 downto 0);
-			oct_sel_vga: in std_logic;
-			synth_sel_vga: in std_logic;
-			mute_sel_vga: in std_logic
+			keys_vga			: in std_logic_vector(16 downto 0);
+			vol_vga			: in std_logic_vector(2 downto 0);
+			oct_sel_vga		: in std_logic_vector(1 downto 0);
+			synth_sel_vga	: in std_logic_vector(1 downto 0);
+			mute_sel_vga	: in std_logic
 		);
 end entity pixelGenerator;
 
@@ -200,13 +200,25 @@ begin
 			----draw octave blocks
 			--high block
 			if (31 < pixel_column_int AND pixel_column_int < 51 AND 250 < pixel_row_int AND pixel_row_int < 270) then
-				colorAddress <= color_cyan;
+				if (oct_sel_vga = "00") then
+					colorAddress <= color_red;
+				else
+					colorAddress <= color_cyan;
+				end if;
 			--mid block
 			elsif (31 < pixel_column_int AND pixel_column_int < 51 AND 280 < pixel_row_int AND pixel_row_int < 300) then
-				colorAddress <= color_cyan;
+				if (oct_sel_vga = "01") then
+					colorAddress <= color_red;
+				else
+					colorAddress <= color_cyan;
+				end if;
 			--low block
 			elsif (31 < pixel_column_int AND pixel_column_int < 51 AND 310 < pixel_row_int AND pixel_row_int < 330) then
-				colorAddress <= color_cyan;
+				if (oct_sel_vga = "10") then
+					colorAddress <= color_red;
+				else
+					colorAddress <= color_cyan;
+				end if;
 			end if;
 			
 			----draw mute block
@@ -253,11 +265,23 @@ begin
 			
 			----draw synth blocks
 			if (589 < pixel_column_int AND pixel_column_int < 609 AND 410 < pixel_row_int AND pixel_row_int < 430) then
-				colorAddress <= color_cyan;
+				if (synth_sel_vga = "00") then
+					colorAddress <= color_red;
+				else
+					colorAddress <= color_cyan;
+				end if;
 			elsif (559 < pixel_column_int AND pixel_column_int < 579 AND 410 < pixel_row_int AND pixel_row_int < 430) then
-				colorAddress <= color_cyan;
+				if (synth_sel_vga = "01") then
+					colorAddress <= color_red;
+				else
+					colorAddress <= color_cyan;
+				end if;
 			elsif (529 < pixel_column_int AND pixel_column_int < 549 AND 410 < pixel_row_int AND pixel_row_int < 430) then
-				colorAddress <= color_cyan;
+				if (synth_sel_vga = "10") then
+					colorAddress <= color_red;
+				else
+					colorAddress <= color_cyan;
+				end if;
 			end if;
 			
 		end if;

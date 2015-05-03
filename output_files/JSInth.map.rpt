@@ -1,5 +1,5 @@
 Analysis & Synthesis report for JSInth
-Tue Apr 28 17:50:11 2015
+Sun May 03 14:30:06 2015
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -18,20 +18,21 @@ Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
  10. Registers Removed During Synthesis
  11. Removed Registers Triggering Further Register Optimizations
  12. General Register Statistics
- 13. Registers Packed Into Inferred Megafunctions
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Source assignments for VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_b481:auto_generated
- 16. Source assignments for de2_i2c_av_config:i2c|altsyncram:Ram0_rtl_0|altsyncram_hl81:auto_generated
- 17. Parameter Settings for User Entity Instance: de2_i2c_av_config:i2c
- 18. Parameter Settings for User Entity Instance: VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component
- 19. Parameter Settings for Inferred Entity Instance: de2_i2c_av_config:i2c|altsyncram:Ram0_rtl_0
- 20. altsyncram Parameter Settings by Entity Instance
- 21. Port Connectivity Checks: "de2_wm8731_audio:V1"
- 22. Port Connectivity Checks: "de2_i2c_av_config:i2c|de2_i2c_controller:u0"
- 23. Port Connectivity Checks: "de2_i2c_av_config:i2c"
- 24. Post-Synthesis Netlist Statistics for Top Partition
- 25. Elapsed Time Per Partition
- 26. Analysis & Synthesis Messages
+ 13. Inverted Register Statistics
+ 14. Registers Packed Into Inferred Megafunctions
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_b481:auto_generated
+ 17. Source assignments for de2_i2c_av_config:i2c|altsyncram:Ram0_rtl_0|altsyncram_hl81:auto_generated
+ 18. Parameter Settings for User Entity Instance: de2_i2c_av_config:i2c
+ 19. Parameter Settings for User Entity Instance: VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component
+ 20. Parameter Settings for Inferred Entity Instance: de2_i2c_av_config:i2c|altsyncram:Ram0_rtl_0
+ 21. altsyncram Parameter Settings by Entity Instance
+ 22. Port Connectivity Checks: "de2_wm8731_audio:V1"
+ 23. Port Connectivity Checks: "de2_i2c_av_config:i2c|de2_i2c_controller:u0"
+ 24. Port Connectivity Checks: "de2_i2c_av_config:i2c"
+ 25. Post-Synthesis Netlist Statistics for Top Partition
+ 26. Elapsed Time Per Partition
+ 27. Analysis & Synthesis Messages
 
 
 
@@ -58,15 +59,15 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 28 17:50:11 2015      ;
+; Analysis & Synthesis Status        ; Successful - Sun May 03 14:30:06 2015      ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; JSInth                                     ;
 ; Top-level Entity Name              ; JSInth                                     ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 464                                        ;
-;     Total combinational functions  ; 424                                        ;
-;     Dedicated logic registers      ; 182                                        ;
-; Total registers                    ; 182                                        ;
+; Total logic elements               ; 528                                        ;
+;     Total combinational functions  ; 486                                        ;
+;     Dedicated logic registers      ; 162                                        ;
+; Total registers                    ; 162                                        ;
 ; Total pins                         ; 66                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 1,264                                      ;
@@ -193,6 +194,7 @@ agreement for further details.
 ; colorROM.vhd                                      ; yes             ; User Wizard-Generated File                            ; C:/Users/Sebastian/Documents/GitHub/JSInth/colorROM.vhd                                      ;         ;
 ; JSInth.vhd                                        ; yes             ; User VHDL File                                        ; C:/Users/Sebastian/Documents/GitHub/JSInth/JSInth.vhd                                        ;         ;
 ; FSM_volume.vhd                                    ; yes             ; User VHDL File                                        ; C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_volume.vhd                                    ;         ;
+; FSM_octave.vhd                                    ; yes             ; User VHDL File                                        ; C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_octave.vhd                                    ;         ;
 ; altsyncram.tdf                                    ; yes             ; Megafunction                                          ; c:/altera/14.1/quartus/libraries/megafunctions/altsyncram.tdf                                ;         ;
 ; stratix_ram_block.inc                             ; yes             ; Megafunction                                          ; c:/altera/14.1/quartus/libraries/megafunctions/stratix_ram_block.inc                         ;         ;
 ; lpm_mux.inc                                       ; yes             ; Megafunction                                          ; c:/altera/14.1/quartus/libraries/megafunctions/lpm_mux.inc                                   ;         ;
@@ -214,20 +216,20 @@ agreement for further details.
 +---------------------------------------------+---------------------------------------------------------+
 ; Resource                                    ; Usage                                                   ;
 +---------------------------------------------+---------------------------------------------------------+
-; Estimated Total logic elements              ; 464                                                     ;
+; Estimated Total logic elements              ; 528                                                     ;
 ;                                             ;                                                         ;
-; Total combinational functions               ; 424                                                     ;
+; Total combinational functions               ; 486                                                     ;
 ; Logic element usage by number of LUT inputs ;                                                         ;
-;     -- 4 input functions                    ; 244                                                     ;
-;     -- 3 input functions                    ; 59                                                      ;
-;     -- <=2 input functions                  ; 121                                                     ;
+;     -- 4 input functions                    ; 310                                                     ;
+;     -- 3 input functions                    ; 67                                                      ;
+;     -- <=2 input functions                  ; 109                                                     ;
 ;                                             ;                                                         ;
 ; Logic elements by mode                      ;                                                         ;
-;     -- normal mode                          ; 344                                                     ;
-;     -- arithmetic mode                      ; 80                                                      ;
+;     -- normal mode                          ; 432                                                     ;
+;     -- arithmetic mode                      ; 54                                                      ;
 ;                                             ;                                                         ;
-; Total registers                             ; 182                                                     ;
-;     -- Dedicated logic registers            ; 182                                                     ;
+; Total registers                             ; 162                                                     ;
+;     -- Dedicated logic registers            ; 162                                                     ;
 ;     -- I/O registers                        ; 0                                                       ;
 ;                                             ;                                                         ;
 ; I/O pins                                    ; 66                                                      ;
@@ -237,8 +239,8 @@ agreement for further details.
 ;                                             ;                                                         ;
 ; Maximum fan-out node                        ; VGA_top_level:vgamap|VGA_SYNC:videoSync|pixel_clock_int ;
 ; Maximum fan-out                             ; 77                                                      ;
-; Total fan-out                               ; 2234                                                    ;
-; Average fan-out                             ; 2.84                                                    ;
+; Total fan-out                               ; 2437                                                    ;
+; Average fan-out                             ; 2.94                                                    ;
 +---------------------------------------------+---------------------------------------------------------+
 
 
@@ -247,19 +249,21 @@ agreement for further details.
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                 ; Library Name ;
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |JSInth                                         ; 424 (2)           ; 182 (2)      ; 1264        ; 0            ; 0       ; 0         ; 66   ; 0            ; |JSInth                                                                                                                             ; work         ;
-;    |FSM_volume:volmap|                          ; 53 (53)           ; 39 (39)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|FSM_volume:volmap                                                                                                           ; work         ;
-;    |VGA_top_level:vgamap|                       ; 233 (0)           ; 49 (0)       ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|VGA_top_level:vgamap                                                                                                        ; work         ;
+; |JSInth                                         ; 486 (2)           ; 162 (2)      ; 1264        ; 0            ; 0       ; 0         ; 66   ; 0            ; |JSInth                                                                                                                             ; work         ;
+;    |FSM_octave:octmap|                          ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|FSM_octave:octmap                                                                                                           ; work         ;
+;    |FSM_octave:synmap|                          ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|FSM_octave:synmap                                                                                                           ; work         ;
+;    |FSM_volume:volmap|                          ; 16 (16)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|FSM_volume:volmap                                                                                                           ; work         ;
+;    |VGA_top_level:vgamap|                       ; 247 (0)           ; 49 (0)       ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|VGA_top_level:vgamap                                                                                                        ; work         ;
 ;       |VGA_SYNC:videoSync|                      ; 59 (59)           ; 46 (46)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|VGA_top_level:vgamap|VGA_SYNC:videoSync                                                                                     ; work         ;
-;       |pixelGenerator:videoGen|                 ; 174 (174)         ; 3 (3)        ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|VGA_top_level:vgamap|pixelGenerator:videoGen                                                                                ; work         ;
+;       |pixelGenerator:videoGen|                 ; 188 (188)         ; 3 (3)        ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|VGA_top_level:vgamap|pixelGenerator:videoGen                                                                                ; work         ;
 ;          |colorROM:colors|                      ; 0 (0)             ; 0 (0)        ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors                                                                ; work         ;
 ;             |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component                                ; work         ;
 ;                |altsyncram_b481:auto_generated| ; 0 (0)             ; 0 (0)        ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_b481:auto_generated ; work         ;
-;    |de2_i2c_av_config:i2c|                      ; 87 (39)           ; 57 (28)      ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|de2_i2c_av_config:i2c                                                                                                       ; work         ;
+;    |de2_i2c_av_config:i2c|                      ; 88 (39)           ; 57 (28)      ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|de2_i2c_av_config:i2c                                                                                                       ; work         ;
 ;       |altsyncram:Ram0_rtl_0|                   ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|de2_i2c_av_config:i2c|altsyncram:Ram0_rtl_0                                                                                 ; work         ;
 ;          |altsyncram_hl81:auto_generated|       ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|de2_i2c_av_config:i2c|altsyncram:Ram0_rtl_0|altsyncram_hl81:auto_generated                                                  ; work         ;
-;       |de2_i2c_controller:u0|                   ; 48 (48)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|de2_i2c_av_config:i2c|de2_i2c_controller:u0                                                                                 ; work         ;
-;    |de2_wm8731_audio:V1|                        ; 49 (49)           ; 35 (35)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|de2_wm8731_audio:V1                                                                                                         ; work         ;
+;       |de2_i2c_controller:u0|                   ; 49 (49)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|de2_i2c_av_config:i2c|de2_i2c_controller:u0                                                                                 ; work         ;
+;    |de2_wm8731_audio:V1|                        ; 123 (123)         ; 37 (37)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|de2_wm8731_audio:V1                                                                                                         ; work         ;
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -291,7 +295,6 @@ Encoding Type:  One-Hot
 +-------------------------------------------------------------+----------------------------------------------------------------+
 ; Register name                                               ; Reason for Removal                                             ;
 +-------------------------------------------------------------+----------------------------------------------------------------+
-; de2_wm8731_audio:V1|sin_counter[0,1]                        ; Stuck at GND due to stuck port data_in                         ;
 ; de2_i2c_av_config:i2c|mI2C_DATA[16,17,19,23]                ; Stuck at GND due to stuck port data_in                         ;
 ; de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[16,17,19,23] ; Stuck at GND due to stuck port data_in                         ;
 ; de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[20,21]       ; Merged with de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[18] ;
@@ -301,7 +304,7 @@ Encoding Type:  One-Hot
 ; VGA_top_level:vgamap|VGA_SYNC:videoSync|pixel_row[9]        ; Stuck at GND due to stuck port data_in                         ;
 ; de2_i2c_av_config:i2c|mSetup_ST~9                           ; Lost fanout                                                    ;
 ; de2_i2c_av_config:i2c|mSetup_ST~10                          ; Lost fanout                                                    ;
-; Total Number of Removed Registers = 19                      ;                                                                ;
+; Total Number of Removed Registers = 17                      ;                                                                ;
 +-------------------------------------------------------------+----------------------------------------------------------------+
 
 
@@ -326,14 +329,26 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 182   ;
-; Number of registers using Synchronous Clear  ; 54    ;
+; Total registers                              ; 162   ;
+; Number of registers using Synchronous Clear  ; 22    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 71    ;
+; Number of registers using Clock Enable       ; 84    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; FSM_octave:synmap|current[0]           ; 4       ;
+; FSM_octave:octmap|current[0]           ; 4       ;
+; FSM_volume:volmap|current[1]           ; 8       ;
+; Total number of inverted registers = 3 ;         ;
++----------------------------------------+---------+
 
 
 +----------------------------------------------------------------------------------+
@@ -350,8 +365,10 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
-; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |JSInth|de2_wm8731_audio:V1|shift_out[15]                         ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |JSInth|de2_wm8731_audio:V1|shift_out[14]                         ;
 ; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |JSInth|VGA_top_level:vgamap|VGA_SYNC:videoSync|v_count[5]        ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |JSInth|FSM_octave:octmap|z[0]                                    ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |JSInth|FSM_octave:synmap|z[0]                                    ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |JSInth|de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD_COUNTER[0] ;
 ; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |JSInth|FSM_volume:volmap|z[2]                                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
@@ -589,25 +606,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 66                          ;
-; cycloneiii_ff         ; 182                         ;
-;     ENA               ; 65                          ;
+; cycloneiii_ff         ; 162                         ;
+;     ENA               ; 78                          ;
 ;     ENA SCLR          ; 6                           ;
-;     SCLR              ; 48                          ;
-;     plain             ; 63                          ;
+;     SCLR              ; 16                          ;
+;     plain             ; 62                          ;
 ; cycloneiii_io_obuf    ; 4                           ;
-; cycloneiii_lcell_comb ; 424                         ;
-;     arith             ; 80                          ;
-;         2 data inputs ; 79                          ;
+; cycloneiii_lcell_comb ; 486                         ;
+;     arith             ; 54                          ;
+;         2 data inputs ; 53                          ;
 ;         3 data inputs ; 1                           ;
-;     normal            ; 344                         ;
-;         1 data inputs ; 9                           ;
-;         2 data inputs ; 33                          ;
-;         3 data inputs ; 58                          ;
-;         4 data inputs ; 244                         ;
+;     normal            ; 432                         ;
+;         1 data inputs ; 11                          ;
+;         2 data inputs ; 45                          ;
+;         3 data inputs ; 66                          ;
+;         4 data inputs ; 310                         ;
 ; cycloneiii_ram_block  ; 46                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 9.00                        ;
-; Average LUT depth     ; 4.06                        ;
+; Average LUT depth     ; 4.10                        ;
 +-----------------------+-----------------------------+
 
 
@@ -616,7 +633,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -626,7 +643,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
-    Info: Processing started: Tue Apr 28 17:49:51 2015
+    Info: Processing started: Sun May 03 14:29:44 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off JSInth -c JSInth
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file de2_wm8731_audio.vhd
@@ -636,9 +653,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file de2_i2c
     Info (12023): Found entity 1: de2_i2c_controller
 Info (12021): Found 1 design units, including 1 entities, in source file de2_i2c_av_config.v
     Info (12023): Found entity 1: de2_i2c_av_config
-Info (12021): Found 2 design units, including 1 entities, in source file fifo.vhd
-    Info (12022): Found design unit 1: FIFO-behavioral
-    Info (12023): Found entity 1: FIFO
 Info (12021): Found 2 design units, including 1 entities, in source file vga_top_level.vhd
     Info (12022): Found design unit 1: VGA_top_level-structural
     Info (12023): Found entity 1: VGA_top_level
@@ -657,19 +671,21 @@ Info (12021): Found 2 design units, including 1 entities, in source file jsinth.
 Info (12021): Found 2 design units, including 1 entities, in source file fsm_volume.vhd
     Info (12022): Found design unit 1: FSM_volume-states
     Info (12023): Found entity 1: FSM_volume
+Info (12021): Found 2 design units, including 1 entities, in source file fsm_octave.vhd
+    Info (12022): Found design unit 1: FSM_octave-states
+    Info (12023): Found entity 1: FSM_octave
 Info (12127): Elaborating entity "JSInth" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at JSInth.vhd(89): object "audio_request" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at JSInth.vhd(106): object "audio_request" assigned a value but never read
 Info (12128): Elaborating entity "de2_i2c_av_config" for hierarchy "de2_i2c_av_config:i2c"
-Warning (10230): Verilog HDL assignment warning at de2_i2c_av_config.v(61): truncated value with size 32 to match size of target (16)
-Warning (10230): Verilog HDL assignment warning at de2_i2c_av_config.v(115): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at de2_i2c_av_config.v(62): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at de2_i2c_av_config.v(116): truncated value with size 32 to match size of target (6)
 Info (12128): Elaborating entity "de2_i2c_controller" for hierarchy "de2_i2c_av_config:i2c|de2_i2c_controller:u0"
-Warning (10230): Verilog HDL assignment warning at de2_i2c_controller.v(78): truncated value with size 32 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at de2_i2c_controller.v(77): truncated value with size 32 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at de2_i2c_controller.v(95): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at de2_i2c_controller.v(44): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at de2_i2c_controller.v(43): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at de2_i2c_controller.v(61): truncated value with size 32 to match size of target (6)
 Info (12128): Elaborating entity "de2_wm8731_audio" for hierarchy "de2_wm8731_audio:V1"
 Info (12128): Elaborating entity "FSM_volume" for hierarchy "FSM_volume:volmap"
-Warning (10631): VHDL Process Statement warning at FSM_volume.vhd(33): inferring latch(es) for signal or variable "init", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "FSM_cycle:init" at FSM_volume.vhd(36)
+Info (12128): Elaborating entity "FSM_octave" for hierarchy "FSM_octave:octmap"
 Info (12128): Elaborating entity "VGA_top_level" for hierarchy "VGA_top_level:vgamap"
 Info (12128): Elaborating entity "pixelGenerator" for hierarchy "VGA_top_level:vgamap|pixelGenerator:videoGen"
 Info (12128): Elaborating entity "colorROM" for hierarchy "VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors"
@@ -732,21 +748,19 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 4 input pin(s) that do not drive logic
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "reset"
-    Warning (15610): No output dependent on input pin "oct_sel"
-    Warning (15610): No output dependent on input pin "synth_sel"
     Warning (15610): No output dependent on input pin "AUD_ADCDAT"
-Info (21057): Implemented 578 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 642 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 25 input pins
     Info (21059): Implemented 37 output pins
     Info (21060): Implemented 4 bidirectional pins
-    Info (21061): Implemented 466 logic cells
+    Info (21061): Implemented 530 logic cells
     Info (21064): Implemented 46 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 21 warnings
-    Info: Peak virtual memory: 669 megabytes
-    Info: Processing ended: Tue Apr 28 17:50:11 2015
-    Info: Elapsed time: 00:00:20
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 670 megabytes
+    Info: Processing ended: Sun May 03 14:30:06 2015
+    Info: Elapsed time: 00:00:22
     Info: Total CPU time (on all processors): 00:00:44
 
 
