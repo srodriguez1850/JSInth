@@ -1,0 +1,14 @@
+Freq Adder notes
+
+-use and ADSR envelope
+-Tune different harmonics based off ROM
+
+
+ROM Setuup
+Frequency
+0XXX - Low octave
+1XXX - Standard Octave
+2XXX - High octave
+
+X000 will have number of samples in a signal
+the rest will be filled with the number of samples for the lowest frequency for easy addition
