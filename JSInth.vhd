@@ -79,7 +79,7 @@ component de2_wm8731_audio is
     reset_n : in std_logic;
     test_mode : in std_logic;           --    Audio CODEC controller test mode
     audio_request : out std_logic;      --    Audio controller request new data
-    data : in std_logic_vector(15 downto 0);
+	 switch : in std_logic;
   
     -- Audio interface signals
     AUD_ADCLRCK  : out std_logic;       --    Audio CODEC ADC LR Clock
@@ -126,9 +126,9 @@ AUD_XCK <= audio_clock(1);
   V1: de2_wm8731_audio port map (
     clk => audio_clock(1),
     reset_n => '1',
-    test_mode => '1',                   -- Output a sine wave
+    test_mode => '0',                   -- Output a sine wave
     audio_request => audio_request,
-    data => "0000000000000000",
+	 switch => keys(16),
   
     -- Audio interface signals
     AUD_ADCLRCK  => AUD_ADCLRCK,

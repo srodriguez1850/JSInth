@@ -1,5 +1,5 @@
 Analysis & Synthesis report for JSInth
-Sun May 03 14:30:06 2015
+Sun May 03 17:32:17 2015
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -59,15 +59,15 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun May 03 14:30:06 2015      ;
+; Analysis & Synthesis Status        ; Successful - Sun May 03 17:32:17 2015      ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; JSInth                                     ;
 ; Top-level Entity Name              ; JSInth                                     ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 528                                        ;
-;     Total combinational functions  ; 486                                        ;
-;     Dedicated logic registers      ; 162                                        ;
-; Total registers                    ; 162                                        ;
+; Total logic elements               ; 619                                        ;
+;     Total combinational functions  ; 577                                        ;
+;     Dedicated logic registers      ; 163                                        ;
+; Total registers                    ; 163                                        ;
 ; Total pins                         ; 66                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 1,264                                      ;
@@ -211,37 +211,37 @@ agreement for further details.
 +---------------------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                           ;
-+---------------------------------------------+---------------------------------------------------------+
-; Resource                                    ; Usage                                                   ;
-+---------------------------------------------+---------------------------------------------------------+
-; Estimated Total logic elements              ; 528                                                     ;
-;                                             ;                                                         ;
-; Total combinational functions               ; 486                                                     ;
-; Logic element usage by number of LUT inputs ;                                                         ;
-;     -- 4 input functions                    ; 310                                                     ;
-;     -- 3 input functions                    ; 67                                                      ;
-;     -- <=2 input functions                  ; 109                                                     ;
-;                                             ;                                                         ;
-; Logic elements by mode                      ;                                                         ;
-;     -- normal mode                          ; 432                                                     ;
-;     -- arithmetic mode                      ; 54                                                      ;
-;                                             ;                                                         ;
-; Total registers                             ; 162                                                     ;
-;     -- Dedicated logic registers            ; 162                                                     ;
-;     -- I/O registers                        ; 0                                                       ;
-;                                             ;                                                         ;
-; I/O pins                                    ; 66                                                      ;
-; Total memory bits                           ; 1264                                                    ;
-;                                             ;                                                         ;
-; Embedded Multiplier 9-bit elements          ; 0                                                       ;
-;                                             ;                                                         ;
-; Maximum fan-out node                        ; VGA_top_level:vgamap|VGA_SYNC:videoSync|pixel_clock_int ;
-; Maximum fan-out                             ; 77                                                      ;
-; Total fan-out                               ; 2437                                                    ;
-; Average fan-out                             ; 2.94                                                    ;
-+---------------------------------------------+---------------------------------------------------------+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                       ;
++---------------------------------------------+-------------------------------------+
+; Resource                                    ; Usage                               ;
++---------------------------------------------+-------------------------------------+
+; Estimated Total logic elements              ; 619                                 ;
+;                                             ;                                     ;
+; Total combinational functions               ; 577                                 ;
+; Logic element usage by number of LUT inputs ;                                     ;
+;     -- 4 input functions                    ; 388                                 ;
+;     -- 3 input functions                    ; 76                                  ;
+;     -- <=2 input functions                  ; 113                                 ;
+;                                             ;                                     ;
+; Logic elements by mode                      ;                                     ;
+;     -- normal mode                          ; 522                                 ;
+;     -- arithmetic mode                      ; 55                                  ;
+;                                             ;                                     ;
+; Total registers                             ; 163                                 ;
+;     -- Dedicated logic registers            ; 163                                 ;
+;     -- I/O registers                        ; 0                                   ;
+;                                             ;                                     ;
+; I/O pins                                    ; 66                                  ;
+; Total memory bits                           ; 1264                                ;
+;                                             ;                                     ;
+; Embedded Multiplier 9-bit elements          ; 0                                   ;
+;                                             ;                                     ;
+; Maximum fan-out node                        ; de2_wm8731_audio:V1|data_counter[0] ;
+; Maximum fan-out                             ; 100                                 ;
+; Total fan-out                               ; 2829                                ;
+; Average fan-out                             ; 3.07                                ;
++---------------------------------------------+-------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -249,7 +249,7 @@ agreement for further details.
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                 ; Library Name ;
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |JSInth                                         ; 486 (2)           ; 162 (2)      ; 1264        ; 0            ; 0       ; 0         ; 66   ; 0            ; |JSInth                                                                                                                             ; work         ;
+; |JSInth                                         ; 577 (2)           ; 163 (2)      ; 1264        ; 0            ; 0       ; 0         ; 66   ; 0            ; |JSInth                                                                                                                             ; work         ;
 ;    |FSM_octave:octmap|                          ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|FSM_octave:octmap                                                                                                           ; work         ;
 ;    |FSM_octave:synmap|                          ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|FSM_octave:synmap                                                                                                           ; work         ;
 ;    |FSM_volume:volmap|                          ; 16 (16)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|FSM_volume:volmap                                                                                                           ; work         ;
@@ -263,7 +263,7 @@ agreement for further details.
 ;       |altsyncram:Ram0_rtl_0|                   ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|de2_i2c_av_config:i2c|altsyncram:Ram0_rtl_0                                                                                 ; work         ;
 ;          |altsyncram_hl81:auto_generated|       ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|de2_i2c_av_config:i2c|altsyncram:Ram0_rtl_0|altsyncram_hl81:auto_generated                                                  ; work         ;
 ;       |de2_i2c_controller:u0|                   ; 49 (49)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|de2_i2c_av_config:i2c|de2_i2c_controller:u0                                                                                 ; work         ;
-;    |de2_wm8731_audio:V1|                        ; 123 (123)         ; 37 (37)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|de2_wm8731_audio:V1                                                                                                         ; work         ;
+;    |de2_wm8731_audio:V1|                        ; 214 (214)         ; 38 (38)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|de2_wm8731_audio:V1                                                                                                         ; work         ;
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -295,6 +295,7 @@ Encoding Type:  One-Hot
 +-------------------------------------------------------------+----------------------------------------------------------------+
 ; Register name                                               ; Reason for Removal                                             ;
 +-------------------------------------------------------------+----------------------------------------------------------------+
+; de2_wm8731_audio:V1|sin_counter[0..5]                       ; Lost fanout                                                    ;
 ; de2_i2c_av_config:i2c|mI2C_DATA[16,17,19,23]                ; Stuck at GND due to stuck port data_in                         ;
 ; de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[16,17,19,23] ; Stuck at GND due to stuck port data_in                         ;
 ; de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[20,21]       ; Merged with de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[18] ;
@@ -304,7 +305,7 @@ Encoding Type:  One-Hot
 ; VGA_top_level:vgamap|VGA_SYNC:videoSync|pixel_row[9]        ; Stuck at GND due to stuck port data_in                         ;
 ; de2_i2c_av_config:i2c|mSetup_ST~9                           ; Lost fanout                                                    ;
 ; de2_i2c_av_config:i2c|mSetup_ST~10                          ; Lost fanout                                                    ;
-; Total Number of Removed Registers = 17                      ;                                                                ;
+; Total Number of Removed Registers = 23                      ;                                                                ;
 +-------------------------------------------------------------+----------------------------------------------------------------+
 
 
@@ -329,12 +330,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 162   ;
-; Number of registers using Synchronous Clear  ; 22    ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 163   ;
+; Number of registers using Synchronous Clear  ; 36    ;
+; Number of registers using Synchronous Load   ; 14    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 84    ;
+; Number of registers using Clock Enable       ; 85    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -365,11 +366,11 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
-; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |JSInth|de2_wm8731_audio:V1|shift_out[14]                         ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |JSInth|VGA_top_level:vgamap|VGA_SYNC:videoSync|v_count[5]        ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |JSInth|VGA_top_level:vgamap|VGA_SYNC:videoSync|v_count[0]        ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |JSInth|FSM_octave:octmap|z[0]                                    ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |JSInth|FSM_octave:synmap|z[0]                                    ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |JSInth|de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD_COUNTER[0] ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |JSInth|de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD_COUNTER[3] ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |JSInth|de2_wm8731_audio:V1|shift_out[14]                         ;
 ; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |JSInth|FSM_volume:volmap|z[2]                                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
 
@@ -574,9 +575,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port          ; Type   ; Severity ; Details                                                                             ;
 +---------------+--------+----------+-------------------------------------------------------------------------------------+
 ; reset_n       ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; test_mode     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; test_mode     ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; audio_request ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; data          ; Input  ; Info     ; Stuck at GND                                                                        ;
 +---------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -606,25 +606,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 66                          ;
-; cycloneiii_ff         ; 162                         ;
-;     ENA               ; 78                          ;
+; cycloneiii_ff         ; 163                         ;
+;     ENA               ; 65                          ;
 ;     ENA SCLR          ; 6                           ;
+;     ENA SCLR SLD      ; 14                          ;
 ;     SCLR              ; 16                          ;
 ;     plain             ; 62                          ;
 ; cycloneiii_io_obuf    ; 4                           ;
-; cycloneiii_lcell_comb ; 486                         ;
-;     arith             ; 54                          ;
-;         2 data inputs ; 53                          ;
+; cycloneiii_lcell_comb ; 577                         ;
+;     arith             ; 55                          ;
+;         2 data inputs ; 54                          ;
 ;         3 data inputs ; 1                           ;
-;     normal            ; 432                         ;
+;     normal            ; 522                         ;
 ;         1 data inputs ; 11                          ;
-;         2 data inputs ; 45                          ;
-;         3 data inputs ; 66                          ;
-;         4 data inputs ; 310                         ;
+;         2 data inputs ; 48                          ;
+;         3 data inputs ; 75                          ;
+;         4 data inputs ; 388                         ;
 ; cycloneiii_ram_block  ; 46                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 9.00                        ;
-; Average LUT depth     ; 4.10                        ;
+; Average LUT depth     ; 4.09                        ;
 +-----------------------+-----------------------------+
 
 
@@ -633,7 +634,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -643,7 +644,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
-    Info: Processing started: Sun May 03 14:29:44 2015
+    Info: Processing started: Sun May 03 17:31:54 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off JSInth -c JSInth
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file de2_wm8731_audio.vhd
@@ -745,22 +746,22 @@ Warning (13009): TRI or OPNDRN buffers permanently enabled
     Warning (13010): Node "AUD_DACLRCK~synth"
     Warning (13010): Node "AUD_BCLK~synth"
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (17049): 8 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "reset"
     Warning (15610): No output dependent on input pin "AUD_ADCDAT"
-Info (21057): Implemented 642 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 733 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 25 input pins
     Info (21059): Implemented 37 output pins
     Info (21060): Implemented 4 bidirectional pins
-    Info (21061): Implemented 530 logic cells
+    Info (21061): Implemented 621 logic cells
     Info (21064): Implemented 46 RAM segments
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 670 megabytes
-    Info: Processing ended: Sun May 03 14:30:06 2015
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:44
+    Info: Peak virtual memory: 668 megabytes
+    Info: Processing ended: Sun May 03 17:32:17 2015
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:45
 
 
