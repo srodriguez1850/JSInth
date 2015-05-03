@@ -12,3 +12,4 @@ Frequency
 
 X000 will have number of samples in a signal
 the rest will be filled with the number of samples for the lowest frequency for easy addition
+
