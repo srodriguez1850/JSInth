@@ -12,7 +12,7 @@ END ENTITY FSM_octave;
 
 ARCHITECTURE states of FSM_octave IS
 
-SIGNAL current: std_logic_vector (1 downto 0) := "01";
+SIGNAL current: bit_vector (1 downto 0) := "01";
 
 BEGIN
 

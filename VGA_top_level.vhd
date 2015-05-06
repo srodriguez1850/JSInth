@@ -53,11 +53,11 @@ component VGA_SYNC is
 end component VGA_SYNC;
 
 --Signals for VGA sync
-signal pixel_row_int 										: std_logic_vector(9 downto 0);
-signal pixel_column_int 									: std_logic_vector(9 downto 0);
-signal video_on_int											: std_logic;
-signal VGA_clk_int											: std_logic;
-signal eof														: std_logic;
+signal pixel_row_int 		: std_logic_vector(9 downto 0) := "0000000000";
+signal pixel_column_int 	: std_logic_vector(9 downto 0) := "0000000000";
+signal video_on_int		: std_logic := '0';
+signal VGA_clk_int		: std_logic := '0';
+signal eof			: std_logic := '0';
 
 begin
 

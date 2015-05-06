@@ -18,9 +18,9 @@ ENTITY VGA_SYNC IS
 END ENTITY VGA_SYNC;
 
 ARCHITECTURE behavioral OF VGA_SYNC IS
-	SIGNAL horiz_sync, vert_sync, pixel_clock_int : STD_LOGIC;
-	SIGNAL video_on_int, video_on_v, video_on_h : STD_LOGIC;
-	SIGNAL h_count, v_count :STD_LOGIC_VECTOR(9 DOWNTO 0);
+	SIGNAL horiz_sync, vert_sync, pixel_clock_int : STD_LOGIC := '0';
+	SIGNAL video_on_int, video_on_v, video_on_h : STD_LOGIC := '0';
+	SIGNAL h_count, v_count :STD_LOGIC_VECTOR(9 DOWNTO 0) := "0000000000";
 --
 -- To select a different screen resolution, clock rate, and refresh rate
 -- pick a set of new video timing constant values from table at end of code section

@@ -1,0 +1,84 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.all;
+USE IEEE.numeric_std.all;
+
+ENTITY JSInth_tb IS
+	PORT(
+		--VGA
+		
+		vga_red, vga_green, vga_blue			: out std_logic_vector(9 downto 0);
+		horiz_sync, vert_sync, vga_blank, vga_clk	: out std_logic;
+		
+		-- I2C bus
+    
+		I2C_SDAT : inout std_logic; -- I2C Data
+		I2C_SCLK : out std_logic;   -- I2C Clock
+    
+		-- Audio CODEC
+		
+		AUD_ADCLRCK : inout std_logic;                      -- ADC LR Clock
+		AUD_DACLRCK : inout std_logic;                      -- DAC LR Clock
+		AUD_DACDAT  : out std_logic;                        -- DAC Data
+		AUD_BCLK    : inout std_logic;                      -- Bit-Stream Clock
+		AUD_XCK     : out std_logic                         -- Chip Clock 
+	);
+END ENTITY JSInth_tb;
+
+ARCHITECTURE rtl OF JSInth_tb IS
+COMPONENT JSInth IS
+PORT(
+		--Inputs
+		
+		reset		: in std_logic; --N/A
+		clk		: in std_logic;
+		keys		: in std_logic_vector(16 downto 0);
+		vol_up	: in std_logic;
+		vol_down	: in std_logic;
+		oct_sel	: in std_logic;
+		synth_sel: in std_logic;
+		mute_sel	: in std_logic;
+		
+		--VGA
+		
+		vga_red, vga_green, vga_blue			: out std_logic_vector(9 downto 0);
+		horiz_sync, vert_sync, vga_blank, vga_clk	: out std_logic;
+		
+		-- I2C bus
+    
+		I2C_SDAT : inout std_logic; -- I2C Data
+		I2C_SCLK : out std_logic;   -- I2C Clock
+    
+		-- Audio CODEC
+		
+		AUD_ADCLRCK : inout std_logic;                      -- ADC LR Clock
+		AUD_ADCDAT 	: in std_logic;                         -- ADC Data
+		AUD_DACLRCK : inout std_logic;                      -- DAC LR Clock
+		AUD_DACDAT 	: out std_logic;                        -- DAC Data
+		AUD_BCLK 	: inout std_logic;                      -- Bit-Stream Clock
+		AUD_XCK 		: out std_logic                         -- Chip Clock 
+	);
+END COMPONENT JSInth;
+
+SIGNAL reset_tb: std_logic := '0';
+SIGNAL clk_tb: std_logic := '0';
+SIGNAL keys_tb: std_logic_vector (16 downto 0) := "00000000000000000";
+SIGNAL vol_up_tb: std_logic := '1';
+SIGNAL vol_down_tb: std_logic := '1';
+SIGNAL oct_sel_tb: std_logic := '1';
+SIGNAL synth_sel_tb: std_logic := '1';
+SIGNAL mute_sel_tb: std_logic := '0';
+
+SIGNAL AUD_ADCDAT_tb: std_logic := '0';
+
+BEGIN
+
+CLK_P: PROCESS IS
+BEGIN
+	clk_tb <= NOT clk_tb;
+	WAIT FOR 10 ns;
+END PROCESS;
+
+DUT: JSInth port map (reset_tb, clk_tb, keys_tb, vol_up_tb, vol_down_tb, oct_sel_tb, synth_sel_tb, mute_sel_tb, vga_red, vga_green, vga_blue,
+horiz_sync, vert_sync, vga_blank, vga_clk, I2C_SDAT, I2C_SCLK, AUD_ADCLRCK, AUD_ADCDAT_tb, AUD_DACLRCK, AUD_DACDAT, AUD_BCLK, AUD_XCK);
+
+END ARCHITECTURE rtl;

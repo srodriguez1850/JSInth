@@ -24,7 +24,7 @@ end entity pixelGenerator;
 
 architecture behavioral of pixelGenerator is
 
-constant color_red 	 	 : std_logic_vector(2 downto 0) := "000";
+constant color_red 	 : std_logic_vector(2 downto 0) := "000";
 constant color_green	 : std_logic_vector(2 downto 0) := "001";
 constant color_blue 	 : std_logic_vector(2 downto 0) := "010";
 constant color_yellow 	 : std_logic_vector(2 downto 0) := "011";
@@ -38,7 +38,7 @@ component colorROM is
 	(
 		address		: in std_logic_vector (2 downto 0);
 		clock		: in std_logic  := '1';
-		q			: out std_logic_vector (29 downto 0)
+		q		: out std_logic_vector (29 downto 0)
 	);
 end component colorROM;
 

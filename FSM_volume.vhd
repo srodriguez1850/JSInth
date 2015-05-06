@@ -17,7 +17,7 @@ END ENTITY FSM_volume;
 
 ARCHITECTURE states OF FSM_volume IS
 
-SIGNAL current: std_logic_vector(2 downto 0) := "010";
+SIGNAL current: bit_vector(2 downto 0) := "010";
 
 BEGIN
 
