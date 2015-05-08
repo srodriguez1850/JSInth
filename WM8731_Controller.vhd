@@ -2,13 +2,13 @@ LIBRARY IEEE;
 USE IEEE.std_logic_1164.all;
 USE IEEE.numeric_std.all;
 
-ENTITY de2_wm8731_audio IS
+ENTITY WM8731_CONTROLLER IS
 PORT(
-    clk 		: in std_logic;       --  Audio CODEC Chip Clock AUD_XCK (18.43 MHz)
+    clk 				: in std_logic;       --  Audio CODEC Chip Clock AUD_XCK (18.43 MHz)
     reset_n 		: in std_logic;
     test_mode 		: in std_logic;       --    Audio CODEC controller test mode
     audio_request : out std_logic;  	 --    Audio controller request new data
-    data_in: in unsigned (15 downto 0);
+    data_in			: in unsigned (15 downto 0);
 
     -- Audio interface signals
     AUD_ADCLRCK  : out  std_logic;   --    Audio CODEC ADC LR Clock
@@ -17,9 +17,9 @@ PORT(
     AUD_DACDAT   : out  std_logic;   --    Audio CODEC DAC Data
     AUD_BCLK     : inout std_logic   --    Audio CODEC Bit-Stream Clock
   );
-END ENTITY de2_wm8731_audio;
+END ENTITY WM8731_CONTROLLER;
 
-ARCHITECTURE rtl OF de2_wm8731_audio IS
+ARCHITECTURE rtl OF WM8731_CONTROLLER IS
 
     SIGNAL lrck : std_logic := '0';
     SIGNAL bclk : std_logic := '0';
@@ -111,7 +111,7 @@ BEGIN
         IF test_mode = '1' THEN
           shift_out <= sin_out;
         ELSE
-	  shift_out <= data_in;
+			 shift_out <= data_in;
         END IF;
       ELSIF clr_bclk = '1' THEN
         shift_out <= shift_out (14 downto 0) & '0';
@@ -143,12 +143,12 @@ BEGIN
       END IF;
     END PROCESS OUTPUT_SELECT;
 
-    LRCK_SHIFT: PROCESS (clk) IS
+    LRCK_LATCH: PROCESS (clk) IS
     BEGIN
       IF rising_edge(clk) THEN
         lrck_lat <= lrck;
       END IF;
-    END PROCESS LRCK_SHIFT;
+    END PROCESS LRCK_LATCH;
 
     REQ_AUDIO: PROCESS (clk) IS
     BEGIN

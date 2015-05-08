@@ -105,15 +105,6 @@ set_location_assignment PIN_AC28 -to keys[0]
 set_location_assignment PIN_AB28 -to mute_sel
 set_location_assignment PIN_N21 -to vol_up
 set_location_assignment PIN_R24 -to vol_down
-set_global_assignment -name VHDL_FILE de2_wm8731_audio.vhd
-set_global_assignment -name VERILOG_FILE de2_i2c_controller.v
-set_global_assignment -name VERILOG_FILE de2_i2c_av_config.v
-set_global_assignment -name VHDL_FILE VGA_top_level.vhd
-set_global_assignment -name VHDL_FILE vga_sync.vhd
-set_global_assignment -name VHDL_FILE pixelGenerator.vhd
-set_global_assignment -name VHDL_FILE colorROM.vhd
-set_global_assignment -name VHDL_FILE JSInth.vhd
-set_global_assignment -name VHDL_FILE FSM_volume.vhd
 set_location_assignment PIN_D2 -to AUD_ADCDAT
 set_location_assignment PIN_C2 -to AUD_ADCLRCK
 set_location_assignment PIN_F2 -to AUD_BCLK
@@ -122,7 +113,16 @@ set_location_assignment PIN_E3 -to AUD_DACLRCK
 set_location_assignment PIN_E1 -to AUD_XCK
 set_location_assignment PIN_B7 -to I2C_SCLK
 set_location_assignment PIN_A8 -to I2C_SDAT
-set_global_assignment -name VHDL_FILE FSM_octave.vhd
 set_location_assignment PIN_M21 -to oct_sel
 set_location_assignment PIN_M23 -to synth_sel
+set_global_assignment -name VHDL_FILE WM8731_Controller.vhd
+set_global_assignment -name VERILOG_FILE de2_i2c_controller.v
+set_global_assignment -name VERILOG_FILE de2_i2c_av_config.v
+set_global_assignment -name VHDL_FILE VGA_top_level.vhd
+set_global_assignment -name VHDL_FILE vga_sync.vhd
+set_global_assignment -name VHDL_FILE pixelGenerator.vhd
+set_global_assignment -name VHDL_FILE colorROM.vhd
+set_global_assignment -name VHDL_FILE JSInth.vhd
+set_global_assignment -name VHDL_FILE FSM_volume.vhd
+set_global_assignment -name VHDL_FILE FSM_octave.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
