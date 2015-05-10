@@ -4,10 +4,10 @@ import xlrd
 book = xlrd.open_workbook("Tone_calculator.xlsx")
 print "The number of worksheets is", book.nsheets
 print "Worksheet name(s):", book.sheet_names()
-sh = book.sheet_by_index(3)
+sh = book.sheet_by_index(5)
 print sh.nrows, sh.ncols
 
-f = open('C5.txt', 'w')
+f = open('Chord_test.txt', 'w')
 
 for x in range(1, sh.nrows):
 	#print 'X"', sh.cell_value(rowx=x, colx=6), '" when "', sh.cell_value(rowx=x, colx=7), '",'
