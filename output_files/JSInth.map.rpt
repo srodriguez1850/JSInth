@@ -1,5 +1,5 @@
 Analysis & Synthesis report for JSInth
-Thu May 07 14:30:53 2015
+Sun May 10 12:44:29 2015
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -59,13 +59,13 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 07 14:30:53 2015      ;
+; Analysis & Synthesis Status        ; Successful - Sun May 10 12:44:29 2015      ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; JSInth                                     ;
 ; Top-level Entity Name              ; JSInth                                     ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 579                                        ;
-;     Total combinational functions  ; 537                                        ;
+; Total logic elements               ; 580                                        ;
+;     Total combinational functions  ; 538                                        ;
 ;     Dedicated logic registers      ; 164                                        ;
 ; Total registers                    ; 164                                        ;
 ; Total pins                         ; 66                                         ;
@@ -216,16 +216,16 @@ agreement for further details.
 +---------------------------------------------+---------------------------------------------------------+
 ; Resource                                    ; Usage                                                   ;
 +---------------------------------------------+---------------------------------------------------------+
-; Estimated Total logic elements              ; 579                                                     ;
+; Estimated Total logic elements              ; 580                                                     ;
 ;                                             ;                                                         ;
-; Total combinational functions               ; 537                                                     ;
+; Total combinational functions               ; 538                                                     ;
 ; Logic element usage by number of LUT inputs ;                                                         ;
 ;     -- 4 input functions                    ; 334                                                     ;
 ;     -- 3 input functions                    ; 89                                                      ;
-;     -- <=2 input functions                  ; 114                                                     ;
+;     -- <=2 input functions                  ; 115                                                     ;
 ;                                             ;                                                         ;
 ; Logic elements by mode                      ;                                                         ;
-;     -- normal mode                          ; 482                                                     ;
+;     -- normal mode                          ; 483                                                     ;
 ;     -- arithmetic mode                      ; 55                                                      ;
 ;                                             ;                                                         ;
 ; Total registers                             ; 164                                                     ;
@@ -239,7 +239,7 @@ agreement for further details.
 ;                                             ;                                                         ;
 ; Maximum fan-out node                        ; VGA_top_level:vgamap|VGA_SYNC:videoSync|pixel_clock_int ;
 ; Maximum fan-out                             ; 77                                                      ;
-; Total fan-out                               ; 2646                                                    ;
+; Total fan-out                               ; 2648                                                    ;
 ; Average fan-out                             ; 3.00                                                    ;
 +---------------------------------------------+---------------------------------------------------------+
 
@@ -249,7 +249,7 @@ agreement for further details.
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                 ; Library Name ;
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |JSInth                                         ; 537 (133)         ; 164 (9)      ; 1264        ; 0            ; 0       ; 0         ; 66   ; 0            ; |JSInth                                                                                                                             ; work         ;
+; |JSInth                                         ; 538 (134)         ; 164 (9)      ; 1264        ; 0            ; 0       ; 0         ; 66   ; 0            ; |JSInth                                                                                                                             ; work         ;
 ;    |FSM_octave:octmap|                          ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|FSM_octave:octmap                                                                                                           ; work         ;
 ;    |FSM_octave:synmap|                          ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|FSM_octave:synmap                                                                                                           ; work         ;
 ;    |FSM_volume:volmap|                          ; 16 (16)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|FSM_volume:volmap                                                                                                           ; work         ;
@@ -613,13 +613,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SLD               ; 1                           ;
 ;     plain             ; 62                          ;
 ; cycloneiii_io_obuf    ; 4                           ;
-; cycloneiii_lcell_comb ; 537                         ;
+; cycloneiii_lcell_comb ; 538                         ;
 ;     arith             ; 55                          ;
 ;         2 data inputs ; 54                          ;
 ;         3 data inputs ; 1                           ;
-;     normal            ; 482                         ;
+;     normal            ; 483                         ;
 ;         1 data inputs ; 11                          ;
-;         2 data inputs ; 49                          ;
+;         2 data inputs ; 50                          ;
 ;         3 data inputs ; 88                          ;
 ;         4 data inputs ; 334                         ;
 ; cycloneiii_ram_block  ; 46                          ;
@@ -644,9 +644,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
-    Info: Processing started: Thu May 07 14:30:26 2015
+    Info: Processing started: Sun May 10 12:44:07 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off JSInth -c JSInth
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (12021): Found 2 design units, including 1 entities, in source file sampleadder16.vhd
+    Info (12022): Found design unit 1: SampleAdder16-rtl
+    Info (12023): Found entity 1: SampleAdder16
 Info (12021): Found 2 design units, including 1 entities, in source file wm8731_controller.vhd
     Info (12022): Found design unit 1: WM8731_CONTROLLER-rtl
     Info (12023): Found entity 1: WM8731_CONTROLLER
@@ -751,16 +754,16 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "reset"
     Warning (15610): No output dependent on input pin "AUD_ADCDAT"
-Info (21057): Implemented 693 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 694 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 25 input pins
     Info (21059): Implemented 37 output pins
     Info (21060): Implemented 4 bidirectional pins
-    Info (21061): Implemented 581 logic cells
+    Info (21061): Implemented 582 logic cells
     Info (21064): Implemented 46 RAM segments
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 17 warnings
-    Info: Peak virtual memory: 669 megabytes
-    Info: Processing ended: Thu May 07 14:30:53 2015
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:00:52
+    Info: Peak virtual memory: 670 megabytes
+    Info: Processing ended: Sun May 10 12:44:29 2015
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:48
 
 

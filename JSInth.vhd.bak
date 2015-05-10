@@ -120,7 +120,7 @@ CLK_DIV_DATA: PROCESS (audio_clock) IS
 BEGIN
 	IF rising_edge(audio_clock(1)) THEN
 		IF audio_request = '1' THEN
-			IF data_counter = "1001011" THEN
+			IF data_counter = "1001010" THEN
             			data_counter <= "0000000";
          		ELSE  
             			data_counter <= data_counter + 1;
@@ -236,7 +236,6 @@ with data_counter select data_in <=
 	X"E029" when "1001000",
 	X"EAA5" when "1001001",
 	X"F548" when "1001010",
-	X"0000" when "1001011",
 	X"0000" when others;
 
 END ARCHITECTURE main;

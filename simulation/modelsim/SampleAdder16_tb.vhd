@@ -1,0 +1,76 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.all;
+USE IEEE.numeric_std.all;
+
+ENTITY SampleAdder16_tb IS
+	PORT(
+		z_tb: out unsigned (15 downto 0)
+	);
+END ENTITY SampleAdder16_tb;
+
+ARCHITECTURE rtl OF SampleAdder16_tb IS
+COMPONENT SampleAdder16 IS
+PORT(
+		keys: in std_logic_vector(15 downto 0);
+
+		a: in unsigned(15 downto 0);
+		b: in unsigned(15 downto 0);
+		c: in unsigned(15 downto 0);
+		d: in unsigned(15 downto 0);
+		e: in unsigned(15 downto 0);
+		f: in unsigned(15 downto 0);
+		g: in unsigned(15 downto 0);
+		h: in unsigned(15 downto 0);
+		i: in unsigned(15 downto 0);
+		j: in unsigned(15 downto 0);
+		k: in unsigned(15 downto 0);
+		l: in unsigned(15 downto 0);
+		m: in unsigned(15 downto 0);
+		n: in unsigned(15 downto 0);
+		o: in unsigned(15 downto 0);
+		p: in unsigned(15 downto 0);
+		
+		z: out unsigned(15 downto 0)
+);
+END COMPONENT SampleAdder16;
+
+SIGNAL clk_tb: std_logic := '0';
+SIGNAL keys_tb: std_logic_vector (15 downto 0) := "0000000000000000";
+SIGNAL a_tb, b_tb, c_tb, d_tb, e_tb, f_tb, g_tb, h_tb, i_tb, j_tb, k_tb, l_tb, m_tb, n_tb, o_tb, p_tb: unsigned (15 downto 0) := X"0000";
+
+BEGIN
+
+CLK_P: PROCESS IS
+BEGIN
+	clk_tb <= NOT clk_tb;
+	WAIT FOR 10 ns;
+END PROCESS;
+
+INPUT_P: PROCESS IS
+BEGIN
+	WAIT FOR 5 ns;
+	keys_tb <= "0010000010000000";
+	a_tb <= X"1558";
+	b_tb <= X"113E";
+	WAIT FOR 10 ns;
+	keys_tb <= "0000010010000000";
+	a_tb <= X"DEAD";
+	b_tb <= X"BEEF";
+	WAIT FOR 10 ns;
+	keys_tb <= "0000100000100000";
+	a_tb <= X"3825";
+	b_tb <= X"AF35";
+	WAIT FOR 10 ns;
+	keys_tb <= "0001000000100000";
+	a_tb <= X"9346";
+	b_tb <= X"32D7";
+	WAIT FOR 10 ns;
+	keys_tb <= "0001000000000100";
+	a_tb <= X"8421";
+	b_tb <= X"7DE2";
+	WAIT FOR 10 ns;
+END PROCESS;
+
+DUT: SampleAdder16 port map (keys_tb, a_tb, b_tb, c_tb, d_tb, e_tb, f_tb, g_tb, h_tb, i_tb, j_tb, k_tb, l_tb, m_tb, n_tb, o_tb, p_tb, z_tb);
+
+END ARCHITECTURE rtl;

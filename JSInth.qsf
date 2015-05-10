@@ -115,6 +115,7 @@ set_location_assignment PIN_B7 -to I2C_SCLK
 set_location_assignment PIN_A8 -to I2C_SDAT
 set_location_assignment PIN_M21 -to oct_sel
 set_location_assignment PIN_M23 -to synth_sel
+set_global_assignment -name VHDL_FILE SampleAdder16.vhd
 set_global_assignment -name VHDL_FILE WM8731_Controller.vhd
 set_global_assignment -name VERILOG_FILE de2_i2c_controller.v
 set_global_assignment -name VERILOG_FILE de2_i2c_av_config.v
