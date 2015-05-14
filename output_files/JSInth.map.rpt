@@ -1,5 +1,5 @@
 Analysis & Synthesis report for JSInth
-Sun May 10 16:14:54 2015
+Tue May 12 16:32:46 2015
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -10,7 +10,29 @@ Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. State Machine - |JSInth|de2_i2c_av_config:i2c|mSetup_ST
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Registers Packed Into Inferred Megafunctions
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_b481:auto_generated
+ 17. Source assignments for de2_i2c_av_config:i2c|altsyncram:Ram0_rtl_0|altsyncram_hl81:auto_generated
+ 18. Parameter Settings for User Entity Instance: de2_i2c_av_config:i2c
+ 19. Parameter Settings for User Entity Instance: VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component
+ 20. Parameter Settings for Inferred Entity Instance: de2_i2c_av_config:i2c|altsyncram:Ram0_rtl_0
+ 21. altsyncram Parameter Settings by Entity Instance
+ 22. Port Connectivity Checks: "WM8731_CONTROLLER:audiomap"
+ 23. Port Connectivity Checks: "de2_i2c_av_config:i2c|de2_i2c_controller:u0"
+ 24. Port Connectivity Checks: "de2_i2c_av_config:i2c"
+ 25. Post-Synthesis Netlist Statistics for Top Partition
+ 26. Elapsed Time Per Partition
+ 27. Analysis & Synthesis Messages
 
 
 
@@ -37,20 +59,20 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Sun May 10 16:14:54 2015          ;
+; Analysis & Synthesis Status        ; Successful - Tue May 12 16:32:46 2015      ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; JSInth                                     ;
 ; Top-level Entity Name              ; JSInth                                     ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; N/A until Partition Merge                  ;
-;     Total combinational functions  ; N/A until Partition Merge                  ;
-;     Dedicated logic registers      ; N/A until Partition Merge                  ;
-; Total registers                    ; N/A until Partition Merge                  ;
-; Total pins                         ; N/A until Partition Merge                  ;
-; Total virtual pins                 ; N/A until Partition Merge                  ;
-; Total memory bits                  ; N/A until Partition Merge                  ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                  ;
-; Total PLLs                         ; N/A until Partition Merge                  ;
+; Total logic elements               ; 582                                        ;
+;     Total combinational functions  ; 540                                        ;
+;     Dedicated logic registers      ; 164                                        ;
+; Total registers                    ; 164                                        ;
+; Total pins                         ; 66                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 1,264                                      ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
 +------------------------------------+--------------------------------------------+
 
 
@@ -150,12 +172,471 @@ agreement for further details.
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ; < 0.1%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                               ;
++---------------------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                  ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                 ; Library ;
++---------------------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------------+---------+
+; WM8731_Controller.vhd                             ; yes             ; User VHDL File                                        ; C:/Users/Sebastian/Documents/GitHub/JSInth/WM8731_Controller.vhd                             ;         ;
+; de2_i2c_controller.v                              ; yes             ; User Verilog HDL File                                 ; C:/Users/Sebastian/Documents/GitHub/JSInth/de2_i2c_controller.v                              ;         ;
+; de2_i2c_av_config.v                               ; yes             ; User Verilog HDL File                                 ; C:/Users/Sebastian/Documents/GitHub/JSInth/de2_i2c_av_config.v                               ;         ;
+; VGA_top_level.vhd                                 ; yes             ; User VHDL File                                        ; C:/Users/Sebastian/Documents/GitHub/JSInth/VGA_top_level.vhd                                 ;         ;
+; vga_sync.vhd                                      ; yes             ; User VHDL File                                        ; C:/Users/Sebastian/Documents/GitHub/JSInth/vga_sync.vhd                                      ;         ;
+; pixelGenerator.vhd                                ; yes             ; User VHDL File                                        ; C:/Users/Sebastian/Documents/GitHub/JSInth/pixelGenerator.vhd                                ;         ;
+; colorROM.vhd                                      ; yes             ; User Wizard-Generated File                            ; C:/Users/Sebastian/Documents/GitHub/JSInth/colorROM.vhd                                      ;         ;
+; JSInth.vhd                                        ; yes             ; User VHDL File                                        ; C:/Users/Sebastian/Documents/GitHub/JSInth/JSInth.vhd                                        ;         ;
+; FSM_volume.vhd                                    ; yes             ; User VHDL File                                        ; C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_volume.vhd                                    ;         ;
+; FSM_octave.vhd                                    ; yes             ; User VHDL File                                        ; C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_octave.vhd                                    ;         ;
+; altsyncram.tdf                                    ; yes             ; Megafunction                                          ; c:/altera/14.1/quartus/libraries/megafunctions/altsyncram.tdf                                ;         ;
+; stratix_ram_block.inc                             ; yes             ; Megafunction                                          ; c:/altera/14.1/quartus/libraries/megafunctions/stratix_ram_block.inc                         ;         ;
+; lpm_mux.inc                                       ; yes             ; Megafunction                                          ; c:/altera/14.1/quartus/libraries/megafunctions/lpm_mux.inc                                   ;         ;
+; lpm_decode.inc                                    ; yes             ; Megafunction                                          ; c:/altera/14.1/quartus/libraries/megafunctions/lpm_decode.inc                                ;         ;
+; aglobal141.inc                                    ; yes             ; Megafunction                                          ; c:/altera/14.1/quartus/libraries/megafunctions/aglobal141.inc                                ;         ;
+; a_rdenreg.inc                                     ; yes             ; Megafunction                                          ; c:/altera/14.1/quartus/libraries/megafunctions/a_rdenreg.inc                                 ;         ;
+; altrom.inc                                        ; yes             ; Megafunction                                          ; c:/altera/14.1/quartus/libraries/megafunctions/altrom.inc                                    ;         ;
+; altram.inc                                        ; yes             ; Megafunction                                          ; c:/altera/14.1/quartus/libraries/megafunctions/altram.inc                                    ;         ;
+; altdpram.inc                                      ; yes             ; Megafunction                                          ; c:/altera/14.1/quartus/libraries/megafunctions/altdpram.inc                                  ;         ;
+; db/altsyncram_b481.tdf                            ; yes             ; Auto-Generated Megafunction                           ; C:/Users/Sebastian/Documents/GitHub/JSInth/db/altsyncram_b481.tdf                            ;         ;
+; colorrom.mif                                      ; yes             ; Auto-Found Memory Initialization File                 ; C:/Users/Sebastian/Documents/GitHub/JSInth/colorrom.mif                                      ;         ;
+; db/altsyncram_hl81.tdf                            ; yes             ; Auto-Generated Megafunction                           ; C:/Users/Sebastian/Documents/GitHub/JSInth/db/altsyncram_hl81.tdf                            ;         ;
+; db/jsinth.rom0_de2_i2c_av_config_dd5cf7bb.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/Sebastian/Documents/GitHub/JSInth/db/jsinth.rom0_de2_i2c_av_config_dd5cf7bb.hdl.mif ;         ;
++---------------------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                           ;
++---------------------------------------------+---------------------------------------------------------+
+; Resource                                    ; Usage                                                   ;
++---------------------------------------------+---------------------------------------------------------+
+; Estimated Total logic elements              ; 582                                                     ;
+;                                             ;                                                         ;
+; Total combinational functions               ; 540                                                     ;
+; Logic element usage by number of LUT inputs ;                                                         ;
+;     -- 4 input functions                    ; 335                                                     ;
+;     -- 3 input functions                    ; 93                                                      ;
+;     -- <=2 input functions                  ; 112                                                     ;
+;                                             ;                                                         ;
+; Logic elements by mode                      ;                                                         ;
+;     -- normal mode                          ; 485                                                     ;
+;     -- arithmetic mode                      ; 55                                                      ;
+;                                             ;                                                         ;
+; Total registers                             ; 164                                                     ;
+;     -- Dedicated logic registers            ; 164                                                     ;
+;     -- I/O registers                        ; 0                                                       ;
+;                                             ;                                                         ;
+; I/O pins                                    ; 66                                                      ;
+; Total memory bits                           ; 1264                                                    ;
+;                                             ;                                                         ;
+; Embedded Multiplier 9-bit elements          ; 0                                                       ;
+;                                             ;                                                         ;
+; Maximum fan-out node                        ; VGA_top_level:vgamap|VGA_SYNC:videoSync|pixel_clock_int ;
+; Maximum fan-out                             ; 77                                                      ;
+; Total fan-out                               ; 2656                                                    ;
+; Average fan-out                             ; 3.00                                                    ;
++---------------------------------------------+---------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                              ;
++-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                 ; Library Name ;
++-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |JSInth                                         ; 540 (132)         ; 164 (9)      ; 1264        ; 0            ; 0       ; 0         ; 66   ; 0            ; |JSInth                                                                                                                             ; work         ;
+;    |FSM_octave:octmap|                          ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|FSM_octave:octmap                                                                                                           ; work         ;
+;    |FSM_octave:synmap|                          ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|FSM_octave:synmap                                                                                                           ; work         ;
+;    |FSM_volume:volmap|                          ; 16 (16)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|FSM_volume:volmap                                                                                                           ; work         ;
+;    |VGA_top_level:vgamap|                       ; 251 (0)           ; 49 (0)       ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|VGA_top_level:vgamap                                                                                                        ; work         ;
+;       |VGA_SYNC:videoSync|                      ; 59 (59)           ; 46 (46)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|VGA_top_level:vgamap|VGA_SYNC:videoSync                                                                                     ; work         ;
+;       |pixelGenerator:videoGen|                 ; 192 (192)         ; 3 (3)        ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|VGA_top_level:vgamap|pixelGenerator:videoGen                                                                                ; work         ;
+;          |colorROM:colors|                      ; 0 (0)             ; 0 (0)        ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors                                                                ; work         ;
+;             |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component                                ; work         ;
+;                |altsyncram_b481:auto_generated| ; 0 (0)             ; 0 (0)        ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_b481:auto_generated ; work         ;
+;    |WM8731_CONTROLLER:audiomap|                 ; 43 (43)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|WM8731_CONTROLLER:audiomap                                                                                                  ; work         ;
+;    |de2_i2c_av_config:i2c|                      ; 88 (39)           ; 57 (28)      ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|de2_i2c_av_config:i2c                                                                                                       ; work         ;
+;       |altsyncram:Ram0_rtl_0|                   ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|de2_i2c_av_config:i2c|altsyncram:Ram0_rtl_0                                                                                 ; work         ;
+;          |altsyncram_hl81:auto_generated|       ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|de2_i2c_av_config:i2c|altsyncram:Ram0_rtl_0|altsyncram_hl81:auto_generated                                                  ; work         ;
+;       |de2_i2c_controller:u0|                   ; 49 (49)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|de2_i2c_av_config:i2c|de2_i2c_controller:u0                                                                                 ; work         ;
++-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                            ;
++----------------------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+---------------------------------------------------+
+; Name                                                                                                                                   ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                                               ;
++----------------------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+---------------------------------------------------+
+; VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_b481:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 8            ; 30           ; --           ; --           ; 240  ; colorROM.mif                                      ;
+; de2_i2c_av_config:i2c|altsyncram:Ram0_rtl_0|altsyncram_hl81:auto_generated|ALTSYNCRAM                                                  ; AUTO ; ROM  ; 64           ; 16           ; --           ; --           ; 1024 ; db/JSInth.rom0_de2_i2c_av_config_dd5cf7bb.hdl.mif ;
++----------------------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+---------------------------------------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------+
+; State Machine - |JSInth|de2_i2c_av_config:i2c|mSetup_ST           ;
++----------------+----------------+----------------+----------------+
+; Name           ; mSetup_ST.0000 ; mSetup_ST.0010 ; mSetup_ST.0001 ;
++----------------+----------------+----------------+----------------+
+; mSetup_ST.0000 ; 0              ; 0              ; 0              ;
+; mSetup_ST.0001 ; 1              ; 0              ; 1              ;
+; mSetup_ST.0010 ; 1              ; 1              ; 0              ;
++----------------+----------------+----------------+----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                           ;
++-------------------------------------------------------------+----------------------------------------------------------------+
+; Register name                                               ; Reason for Removal                                             ;
++-------------------------------------------------------------+----------------------------------------------------------------+
+; WM8731_CONTROLLER:audiomap|sin_counter[0..5]                ; Lost fanout                                                    ;
+; de2_i2c_av_config:i2c|mI2C_DATA[16,17,19,23]                ; Stuck at GND due to stuck port data_in                         ;
+; de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[16,17,19,23] ; Stuck at GND due to stuck port data_in                         ;
+; de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[20,21]       ; Merged with de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[18] ;
+; de2_i2c_av_config:i2c|mI2C_DATA[20,21]                      ; Merged with de2_i2c_av_config:i2c|mI2C_DATA[18]                ;
+; de2_i2c_av_config:i2c|mI2C_DATA[18]                         ; Merged with de2_i2c_av_config:i2c|mI2C_DATA[22]                ;
+; de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[18]          ; Merged with de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[22] ;
+; VGA_top_level:vgamap|VGA_SYNC:videoSync|pixel_row[9]        ; Stuck at GND due to stuck port data_in                         ;
+; de2_i2c_av_config:i2c|mSetup_ST~9                           ; Lost fanout                                                    ;
+; de2_i2c_av_config:i2c|mSetup_ST~10                          ; Lost fanout                                                    ;
+; Total Number of Removed Registers = 23                      ;                                                                ;
++-------------------------------------------------------------+----------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                          ;
++-------------------------------------+---------------------------+----------------------------------------------------+
+; Register name                       ; Reason for Removal        ; Registers Removed due to This Register             ;
++-------------------------------------+---------------------------+----------------------------------------------------+
+; de2_i2c_av_config:i2c|mI2C_DATA[23] ; Stuck at GND              ; de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[23] ;
+;                                     ; due to stuck port data_in ;                                                    ;
+; de2_i2c_av_config:i2c|mI2C_DATA[19] ; Stuck at GND              ; de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[19] ;
+;                                     ; due to stuck port data_in ;                                                    ;
+; de2_i2c_av_config:i2c|mI2C_DATA[17] ; Stuck at GND              ; de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[17] ;
+;                                     ; due to stuck port data_in ;                                                    ;
+; de2_i2c_av_config:i2c|mI2C_DATA[16] ; Stuck at GND              ; de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[16] ;
+;                                     ; due to stuck port data_in ;                                                    ;
++-------------------------------------+---------------------------+----------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 164   ;
+; Number of registers using Synchronous Clear  ; 22    ;
+; Number of registers using Synchronous Load   ; 15    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 85    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; FSM_octave:synmap|current[0]           ; 4       ;
+; FSM_octave:octmap|current[0]           ; 4       ;
+; FSM_volume:volmap|current[1]           ; 8       ;
+; Total number of inverted registers = 3 ;         ;
++----------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                     ;
++----------------------------------------+----------------------------------+------+
+; Register Name                          ; Megafunction                     ; Type ;
++----------------------------------------+----------------------------------+------+
+; de2_i2c_av_config:i2c|mI2C_DATA[0..15] ; de2_i2c_av_config:i2c|Ram0_rtl_0 ; RAM  ;
++----------------------------------------+----------------------------------+------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |JSInth|WM8731_CONTROLLER:audiomap|shift_out[15]                  ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |JSInth|VGA_top_level:vgamap|VGA_SYNC:videoSync|v_count[4]        ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |JSInth|FSM_octave:octmap|z[0]                                    ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |JSInth|FSM_octave:synmap|z[0]                                    ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |JSInth|de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD_COUNTER[0] ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |JSInth|FSM_volume:volmap|z[2]                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_b481:auto_generated ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                   ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                    ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Source assignments for de2_i2c_av_config:i2c|altsyncram:Ram0_rtl_0|altsyncram_hl81:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------+
+; Assignment                      ; Value              ; From ; To                                  ;
++---------------------------------+--------------------+------+-------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                   ;
++---------------------------------+--------------------+------+-------------------------------------+
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: de2_i2c_av_config:i2c ;
++----------------+----------+----------------------------------------+
+; Parameter Name ; Value    ; Type                                   ;
++----------------+----------+----------------------------------------+
+; CLK_Freq       ; 50000000 ; Signed Integer                         ;
+; I2C_Freq       ; 20000    ; Signed Integer                         ;
+; LUT_SIZE       ; 50       ; Signed Integer                         ;
+; SET_LIN_L      ; 0        ; Signed Integer                         ;
+; SET_LIN_R      ; 1        ; Signed Integer                         ;
+; SET_HEAD_L     ; 2        ; Signed Integer                         ;
+; SET_HEAD_R     ; 3        ; Signed Integer                         ;
+; A_PATH_CTRL    ; 4        ; Signed Integer                         ;
+; D_PATH_CTRL    ; 5        ; Signed Integer                         ;
+; POWER_ON       ; 6        ; Signed Integer                         ;
+; SET_FORMAT     ; 7        ; Signed Integer                         ;
+; SAMPLE_CTRL    ; 8        ; Signed Integer                         ;
+; SET_ACTIVE     ; 9        ; Signed Integer                         ;
+; SET_VIDEO      ; 10       ; Signed Integer                         ;
++----------------+----------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-------------------------------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                                          ;
++------------------------------------+----------------------+-------------------------------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                                       ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                                                    ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                                                  ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                                                  ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                                                ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                                       ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                                                       ;
+; WIDTH_A                            ; 30                   ; Signed Integer                                                                ;
+; WIDTHAD_A                          ; 3                    ; Signed Integer                                                                ;
+; NUMWORDS_A                         ; 8                    ; Signed Integer                                                                ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                                       ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                                       ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                                       ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                                       ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                                       ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                                       ;
+; WIDTH_B                            ; 1                    ; Untyped                                                                       ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                                                       ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                                                       ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                                       ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                                       ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                                       ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                                                       ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                                       ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                                       ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                                       ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                                       ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                                       ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                                       ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                                       ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                                       ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                                                ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                                       ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                                       ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                                                       ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                                       ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                       ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                       ;
+; INIT_FILE                          ; colorROM.mif         ; Untyped                                                                       ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                                       ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                                       ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                                       ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                                       ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                                                       ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                                       ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                                       ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                                       ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                                       ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                                       ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                                                       ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                                                       ;
+; CBXI_PARAMETER                     ; altsyncram_b481      ; Untyped                                                                       ;
++------------------------------------+----------------------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: de2_i2c_av_config:i2c|altsyncram:Ram0_rtl_0            ;
++------------------------------------+---------------------------------------------------+----------------+
+; Parameter Name                     ; Value                                             ; Type           ;
++------------------------------------+---------------------------------------------------+----------------+
+; BYTE_SIZE_BLOCK                    ; 8                                                 ; Untyped        ;
+; AUTO_CARRY_CHAINS                  ; ON                                                ; AUTO_CARRY     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                               ; IGNORE_CARRY   ;
+; AUTO_CASCADE_CHAINS                ; ON                                                ; AUTO_CASCADE   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                               ; IGNORE_CASCADE ;
+; WIDTH_BYTEENA                      ; 1                                                 ; Untyped        ;
+; OPERATION_MODE                     ; ROM                                               ; Untyped        ;
+; WIDTH_A                            ; 16                                                ; Untyped        ;
+; WIDTHAD_A                          ; 6                                                 ; Untyped        ;
+; NUMWORDS_A                         ; 64                                                ; Untyped        ;
+; OUTDATA_REG_A                      ; UNREGISTERED                                      ; Untyped        ;
+; ADDRESS_ACLR_A                     ; NONE                                              ; Untyped        ;
+; OUTDATA_ACLR_A                     ; NONE                                              ; Untyped        ;
+; WRCONTROL_ACLR_A                   ; NONE                                              ; Untyped        ;
+; INDATA_ACLR_A                      ; NONE                                              ; Untyped        ;
+; BYTEENA_ACLR_A                     ; NONE                                              ; Untyped        ;
+; WIDTH_B                            ; 1                                                 ; Untyped        ;
+; WIDTHAD_B                          ; 1                                                 ; Untyped        ;
+; NUMWORDS_B                         ; 1                                                 ; Untyped        ;
+; INDATA_REG_B                       ; CLOCK1                                            ; Untyped        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                            ; Untyped        ;
+; RDCONTROL_REG_B                    ; CLOCK1                                            ; Untyped        ;
+; ADDRESS_REG_B                      ; CLOCK1                                            ; Untyped        ;
+; OUTDATA_REG_B                      ; UNREGISTERED                                      ; Untyped        ;
+; BYTEENA_REG_B                      ; CLOCK1                                            ; Untyped        ;
+; INDATA_ACLR_B                      ; NONE                                              ; Untyped        ;
+; WRCONTROL_ACLR_B                   ; NONE                                              ; Untyped        ;
+; ADDRESS_ACLR_B                     ; NONE                                              ; Untyped        ;
+; OUTDATA_ACLR_B                     ; NONE                                              ; Untyped        ;
+; RDCONTROL_ACLR_B                   ; NONE                                              ; Untyped        ;
+; BYTEENA_ACLR_B                     ; NONE                                              ; Untyped        ;
+; WIDTH_BYTEENA_A                    ; 1                                                 ; Untyped        ;
+; WIDTH_BYTEENA_B                    ; 1                                                 ; Untyped        ;
+; RAM_BLOCK_TYPE                     ; AUTO                                              ; Untyped        ;
+; BYTE_SIZE                          ; 8                                                 ; Untyped        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                         ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                              ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                              ; Untyped        ;
+; INIT_FILE                          ; db/JSInth.rom0_de2_i2c_av_config_dd5cf7bb.hdl.mif ; Untyped        ;
+; INIT_FILE_LAYOUT                   ; PORT_A                                            ; Untyped        ;
+; MAXIMUM_DEPTH                      ; 0                                                 ; Untyped        ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                                            ; Untyped        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                                            ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                            ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                            ; Untyped        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                                   ; Untyped        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                                   ; Untyped        ;
+; ENABLE_ECC                         ; FALSE                                             ; Untyped        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                             ; Untyped        ;
+; WIDTH_ECCSTATUS                    ; 3                                                 ; Untyped        ;
+; DEVICE_FAMILY                      ; Cyclone IV E                                      ; Untyped        ;
+; CBXI_PARAMETER                     ; altsyncram_hl81                                   ; Untyped        ;
++------------------------------------+---------------------------------------------------+----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                                                         ;
++-------------------------------------------+----------------------------------------------------------------------------------------------+
+; Name                                      ; Value                                                                                        ;
++-------------------------------------------+----------------------------------------------------------------------------------------------+
+; Number of entity instances                ; 2                                                                                            ;
+; Entity Instance                           ; VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                                                          ;
+;     -- WIDTH_A                            ; 30                                                                                           ;
+;     -- NUMWORDS_A                         ; 8                                                                                            ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                                 ;
+;     -- WIDTH_B                            ; 1                                                                                            ;
+;     -- NUMWORDS_B                         ; 1                                                                                            ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                                       ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                                 ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                                         ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                                    ;
+; Entity Instance                           ; de2_i2c_av_config:i2c|altsyncram:Ram0_rtl_0                                                  ;
+;     -- OPERATION_MODE                     ; ROM                                                                                          ;
+;     -- WIDTH_A                            ; 16                                                                                           ;
+;     -- NUMWORDS_A                         ; 64                                                                                           ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                                 ;
+;     -- WIDTH_B                            ; 1                                                                                            ;
+;     -- NUMWORDS_B                         ; 1                                                                                            ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                                       ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                                 ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                                         ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                                    ;
++-------------------------------------------+----------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "WM8731_CONTROLLER:audiomap" ;
++-----------+-------+----------+-------------------------+
+; Port      ; Type  ; Severity ; Details                 ;
++-----------+-------+----------+-------------------------+
+; reset_n   ; Input ; Info     ; Stuck at VCC            ;
+; test_mode ; Input ; Info     ; Stuck at GND            ;
++-----------+-------+----------+-------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "de2_i2c_av_config:i2c|de2_i2c_controller:u0"                                                                                                       ;
++------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                                      ;
++------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; W_R        ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; SD_COUNTER ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; SDO        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "de2_i2c_av_config:i2c" ;
++--------+-------+----------+-----------------------+
+; Port   ; Type  ; Severity ; Details               ;
++--------+-------+----------+-----------------------+
+; iRST_N ; Input ; Info     ; Stuck at VCC          ;
++--------+-------+----------+-----------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 66                          ;
+; cycloneiii_ff         ; 164                         ;
+;     ENA               ; 65                          ;
+;     ENA SCLR          ; 6                           ;
+;     ENA SLD           ; 14                          ;
+;     SCLR              ; 16                          ;
+;     SLD               ; 1                           ;
+;     plain             ; 62                          ;
+; cycloneiii_io_obuf    ; 4                           ;
+; cycloneiii_lcell_comb ; 540                         ;
+;     arith             ; 55                          ;
+;         2 data inputs ; 54                          ;
+;         3 data inputs ; 1                           ;
+;     normal            ; 485                         ;
+;         1 data inputs ; 11                          ;
+;         2 data inputs ; 47                          ;
+;         3 data inputs ; 92                          ;
+;         4 data inputs ; 335                         ;
+; cycloneiii_ram_block  ; 46                          ;
+;                       ;                             ;
+; Max LUT depth         ; 10.00                       ;
+; Average LUT depth     ; 4.16                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:04     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -164,7 +645,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
-    Info: Processing started: Sun May 10 16:14:38 2015
+    Info: Processing started: Tue May 12 16:32:24 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off JSInth -c JSInth
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file audiorom.vhd
@@ -201,11 +682,92 @@ Info (12021): Found 2 design units, including 1 entities, in source file fsm_vol
 Info (12021): Found 2 design units, including 1 entities, in source file fsm_octave.vhd
     Info (12022): Found design unit 1: FSM_octave-states
     Info (12023): Found entity 1: FSM_octave
-Error (10405): VHDL error at audioROM.vhd(49): can't determine type of object at or near identifier "to_integer" -- found 0 possible types File: C:/Users/Sebastian/Documents/GitHub/JSInth/audioROM.vhd Line: 49
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 1 error, 0 warnings
-    Error: Peak virtual memory: 637 megabytes
-    Error: Processing ended: Sun May 10 16:14:55 2015
-    Error: Elapsed time: 00:00:17
-    Error: Total CPU time (on all processors): 00:00:41
+Info (12127): Elaborating entity "JSInth" for the top level hierarchy
+Info (12128): Elaborating entity "de2_i2c_av_config" for hierarchy "de2_i2c_av_config:i2c"
+Warning (10230): Verilog HDL assignment warning at de2_i2c_av_config.v(62): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at de2_i2c_av_config.v(116): truncated value with size 32 to match size of target (6)
+Info (12128): Elaborating entity "de2_i2c_controller" for hierarchy "de2_i2c_av_config:i2c|de2_i2c_controller:u0"
+Warning (10230): Verilog HDL assignment warning at de2_i2c_controller.v(44): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at de2_i2c_controller.v(43): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at de2_i2c_controller.v(61): truncated value with size 32 to match size of target (6)
+Info (12128): Elaborating entity "WM8731_CONTROLLER" for hierarchy "WM8731_CONTROLLER:audiomap"
+Info (12128): Elaborating entity "FSM_volume" for hierarchy "FSM_volume:volmap"
+Info (12128): Elaborating entity "FSM_octave" for hierarchy "FSM_octave:octmap"
+Info (12128): Elaborating entity "VGA_top_level" for hierarchy "VGA_top_level:vgamap"
+Info (12128): Elaborating entity "pixelGenerator" for hierarchy "VGA_top_level:vgamap|pixelGenerator:videoGen"
+Info (12128): Elaborating entity "colorROM" for hierarchy "VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component" with the following parameter:
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "colorROM.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone II"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "8"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "widthad_a" = "3"
+    Info (12134): Parameter "width_a" = "30"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_b481.tdf
+    Info (12023): Found entity 1: altsyncram_b481
+Info (12128): Elaborating entity "altsyncram_b481" for hierarchy "VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_b481:auto_generated"
+Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_top_level:vgamap|VGA_SYNC:videoSync"
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "de2_i2c_av_config:i2c|Ram0_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to ROM
+        Info (286033): Parameter WIDTH_A set to 16
+        Info (286033): Parameter WIDTHAD_A set to 6
+        Info (286033): Parameter NUMWORDS_A set to 64
+        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_A set to NONE
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to db/JSInth.rom0_de2_i2c_av_config_dd5cf7bb.hdl.mif
+Info (12130): Elaborated megafunction instantiation "de2_i2c_av_config:i2c|altsyncram:Ram0_rtl_0"
+Info (12133): Instantiated megafunction "de2_i2c_av_config:i2c|altsyncram:Ram0_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "ROM"
+    Info (12134): Parameter "WIDTH_A" = "16"
+    Info (12134): Parameter "WIDTHAD_A" = "6"
+    Info (12134): Parameter "NUMWORDS_A" = "64"
+    Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "INIT_FILE" = "db/JSInth.rom0_de2_i2c_av_config_dd5cf7bb.hdl.mif"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_hl81.tdf
+    Info (12023): Found entity 1: altsyncram_hl81
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13034): The following nodes have both tri-state and non-tri-state drivers
+    Warning (13035): Inserted always-enabled tri-state buffer between "AUD_ADCLRCK" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "AUD_DACLRCK" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "AUD_BCLK" and its non-tri-state driver.
+Warning (13009): TRI or OPNDRN buffers permanently enabled
+    Warning (13010): Node "AUD_ADCLRCK~synth"
+    Warning (13010): Node "AUD_DACLRCK~synth"
+    Warning (13010): Node "AUD_BCLK~synth"
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 8 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "reset"
+    Warning (15610): No output dependent on input pin "AUD_ADCDAT"
+Info (21057): Implemented 696 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 25 input pins
+    Info (21059): Implemented 37 output pins
+    Info (21060): Implemented 4 bidirectional pins
+    Info (21061): Implemented 584 logic cells
+    Info (21064): Implemented 46 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 667 megabytes
+    Info: Processing ended: Tue May 12 16:32:46 2015
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:43
 
 
