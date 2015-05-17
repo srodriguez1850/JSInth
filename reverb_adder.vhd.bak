@@ -1,0 +1,23 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.all;
+USE IEEE.numeric_std.all;
+
+entity reverb_adder is
+	port(
+		IN1,IN2: in std_logic_vector(15 downto 0);
+		SUM    : in std_logic_vector(15 downto 0)
+	);
+
+end entity reverb_adder; 
+
+
+ARCHITECTURE behavioral OF reverb_adder IS
+
+variable int1, int2, int_sum: integer;
+
+int1 := to_integer(IN1);
+int2 := to_integer(IN2);
+int_sum := int1 + int2;
+
+SUM <= to_std_logic_vector(to_signed(int_sum),16);
+end behavioral;

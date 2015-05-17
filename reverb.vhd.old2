@@ -1,0 +1,47 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity reverb_synth is
+	port(
+		source_signal, switch : in std_logic_vector(15 downto 0);
+		clear_bit: in std_logic;
+		output_signal: out std_logic_vector(15 downto 0)
+		);
+
+end entity reverb_synth;
+
+architecture behavioral of reverb_synth is
+
+	component reverb_FIFO is
+		generic(
+			constant DATA_SIZE : positive := 16;
+			constant FIFO_SIZE : positive := 48);
+		port(
+			clk : in std_logic;
+			reset : in std_logic;
+			write_enable : in std_logic;
+			read_enable : in std_logic;
+			data_in : in std_logic_vector (DATA_SIZE - 1 downto 0);
+			data_out : out std_logic_vector (DATA_SIZE - 1 downto 0);
+			empty : out std_logic;
+			full : out std_logic);
+			
+	end component reverb_FIFO;
+	
+	component reverb_adder is
+		port(
+		IN1,IN2: in std_logic_vector(15 downto 0);
+		SUM    : in std_logic_vector(15 downto 0));
+	end component reverb_adder;
+	
+	component AND16 is
+		port(
+		A,B: in std_logic_vector(15 downto 0);
+		C  : in std_logic_vector(15 downto 0));
+	end component AND16;
+	
+	signal fifo_output, and_output: std_logic_vector(15 downto 0);
+	
+	FIFO_0: reverb_FIFO port map();
+end behavioral;

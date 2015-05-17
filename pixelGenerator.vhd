@@ -11,10 +11,10 @@ use IEEE.numeric_std.all;
 entity pixelGenerator is
 	port(
 			clk, ROM_clk, rst_n, video_on, eof 			: in std_logic;
-			pixel_row, pixel_column						   : in std_logic_vector(9 downto 0);
-			red_out, green_out, blue_out					: out std_logic_vector(9 downto 0);
+			pixel_row, pixel_column						: in std_logic_vector(9 downto 0);
+			red_out, green_out, blue_out				: out std_logic_vector(9 downto 0);
 			--synth inputs
-			keys_vga			: in std_logic_vector(16 downto 0);
+			keys_vga		: in std_logic_vector(16 downto 0);
 			vol_vga			: in std_logic_vector(2 downto 0);
 			oct_sel_vga		: in std_logic_vector(1 downto 0);
 			synth_sel_vga	: in std_logic_vector(1 downto 0);

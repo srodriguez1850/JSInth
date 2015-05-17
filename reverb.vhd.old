@@ -1,0 +1,36 @@
+library ieee;
+use std_logic_1164.all;
+use std_logic_arith.all;
+
+entity reverb is
+	port (
+			input_signal : in std_logic_vector (15 downto 0);
+			clear : in std_logic;
+			ouput_signal : out std_logic_vector (15 downto 0);
+			);
+			
+architecture behavioral of reverb is
+
+component reverb_FIFO is
+generic(
+constant DATA_SIZE : positive := 16;
+constant FIFO_SIZE : positive := 48);
+port(
+clk : in std_logic;
+reset : in std_logic;
+write_enable : in std_logic;
+read_enable : in std_logic;
+data_in : in std_logic_vector (DATA_SIZE - 1 downto 0);
+data_out : out std_logic_vector (DATA_SIZE - 1 downto 0);
+empty : out std_logic;
+full : out std_logic
+);
+end reverb_FIFO;
+
+component 
+
+begin
+
+
+
+end behavioral;
