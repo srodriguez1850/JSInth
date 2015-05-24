@@ -18,7 +18,7 @@ entity VGA_top_level is
 			HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK		: out std_logic;
 			
 			--Synth inputs
-			keys_vga		: in std_logic_vector(16 downto 0);
+			keys_vga		: in std_logic_vector(15 downto 0);
 			vol_vga			: in std_logic_vector(2 downto 0);
 			oct_sel_vga		: in std_logic_vector(1 downto 0);
 			synth_sel_vga	: in std_logic_vector(1 downto 0);
@@ -35,7 +35,7 @@ component pixelGenerator is
 			red_out, green_out, blue_out						: out std_logic_vector(9 downto 0);
 			
 			--Synth inputs
-			keys_vga			: in std_logic_vector(16 downto 0);
+			keys_vga			: in std_logic_vector(15 downto 0);
 			vol_vga			: in std_logic_vector(2 downto 0);
 			oct_sel_vga		: in std_logic_vector(1 downto 0);
 			synth_sel_vga	: in std_logic_vector(1 downto 0);

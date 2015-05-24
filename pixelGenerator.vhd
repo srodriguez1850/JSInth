@@ -14,7 +14,7 @@ entity pixelGenerator is
 			pixel_row, pixel_column						: in std_logic_vector(9 downto 0);
 			red_out, green_out, blue_out				: out std_logic_vector(9 downto 0);
 			--synth inputs
-			keys_vga		: in std_logic_vector(16 downto 0);
+			keys_vga		: in std_logic_vector(15 downto 0);
 			vol_vga			: in std_logic_vector(2 downto 0);
 			oct_sel_vga		: in std_logic_vector(1 downto 0);
 			synth_sel_vga	: in std_logic_vector(1 downto 0);
@@ -72,14 +72,14 @@ begin
 		if (rising_edge(clk)) then
 			----draw keys
 			--key 0
-			if (31 < pixel_column_int AND pixel_column_int < 87 AND 20 < pixel_row_int AND pixel_row_int < 160) then
-				if (keys_vga(16) = '1') then
-					colorAddress <= color_magenta;
-				else
-					colorAddress <= color_cyan;
-				end if;
+			--if (31 < pixel_column_int AND pixel_column_int < 87 AND 20 < pixel_row_int AND pixel_row_int < 160) then
+			--	if (keys_vga(16) = '1') then
+			--		colorAddress <= color_magenta;
+			--	else
+			--		colorAddress <= color_cyan;
+			--	end if;
 			--key 1
-			elsif (89 < pixel_column_int AND pixel_column_int < 145 AND 20 < pixel_row_int AND pixel_row_int < 160) then
+			if (89 < pixel_column_int AND pixel_column_int < 145 AND 20 < pixel_row_int AND pixel_row_int < 160) then
 				if (keys_vga(14) = '1') then
 					colorAddress <= color_magenta;
 				else
@@ -265,7 +265,7 @@ begin
 			
 			----draw synth blocks
 			if (589 < pixel_column_int AND pixel_column_int < 609 AND 410 < pixel_row_int AND pixel_row_int < 430) then
-				if (synth_sel_vga = "00") then
+				if (synth_sel_vga = "10") then
 					colorAddress <= color_red;
 				else
 					colorAddress <= color_cyan;
@@ -277,7 +277,7 @@ begin
 					colorAddress <= color_cyan;
 				end if;
 			elsif (529 < pixel_column_int AND pixel_column_int < 549 AND 410 < pixel_row_int AND pixel_row_int < 430) then
-				if (synth_sel_vga = "10") then
+				if (synth_sel_vga = "00") then
 					colorAddress <= color_red;
 				else
 					colorAddress <= color_cyan;
