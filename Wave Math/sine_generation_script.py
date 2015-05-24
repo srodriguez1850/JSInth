@@ -21,7 +21,7 @@ for y in range(0, 40):
 	sh=book.sheet_by_index(y+1)
 	for x in range(1, sh.nrows):
 		f.write("\t")
-		f.write(samples[y])
+		f.write(tone[y])
 		f.write(samples[x-1])
 		f.write(' => X"')
 		f.write(str(sh.cell_value(rowx=x, colx=6)))
