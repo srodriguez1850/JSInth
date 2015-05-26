@@ -1,5 +1,5 @@
 Analysis & Synthesis report for JSInth
-Sun May 24 18:13:36 2015
+Tue May 26 15:01:11 2015
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -24,22 +24,20 @@ Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
  16. Source assignments for VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_b481:auto_generated
  17. Source assignments for de2_i2c_av_config:i2c|altsyncram:Ram0_rtl_0|altsyncram_hl81:auto_generated
  18. Source assignments for audioROM:rommap|altsyncram:Mux7_rtl_0|altsyncram_6701:auto_generated
- 19. Source assignments for audioROM:rommap|altsyncram:Mux199_rtl_0|altsyncram_ba01:auto_generated
- 20. Parameter Settings for User Entity Instance: de2_i2c_av_config:i2c
- 21. Parameter Settings for User Entity Instance: VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component
- 22. Parameter Settings for Inferred Entity Instance: de2_i2c_av_config:i2c|altsyncram:Ram0_rtl_0
- 23. Parameter Settings for Inferred Entity Instance: audioROM:rommap|altsyncram:Mux7_rtl_0
- 24. Parameter Settings for Inferred Entity Instance: audioROM:rommap|altsyncram:Mux199_rtl_0
- 25. Parameter Settings for Inferred Entity Instance: audioROM:rommap|lpm_mult:Mult0
- 26. Parameter Settings for Inferred Entity Instance: audioROM:rommap|SampleAdder16:SAMPLE_ADDER|lpm_divide:Div0
- 27. altsyncram Parameter Settings by Entity Instance
- 28. lpm_mult Parameter Settings by Entity Instance
- 29. Port Connectivity Checks: "WM8731_CONTROLLER:audiomap"
- 30. Port Connectivity Checks: "de2_i2c_av_config:i2c|de2_i2c_controller:u0"
- 31. Port Connectivity Checks: "de2_i2c_av_config:i2c"
- 32. Post-Synthesis Netlist Statistics for Top Partition
- 33. Elapsed Time Per Partition
- 34. Analysis & Synthesis Messages
+ 19. Parameter Settings for User Entity Instance: de2_i2c_av_config:i2c
+ 20. Parameter Settings for User Entity Instance: VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component
+ 21. Parameter Settings for Inferred Entity Instance: de2_i2c_av_config:i2c|altsyncram:Ram0_rtl_0
+ 22. Parameter Settings for Inferred Entity Instance: audioROM:rommap|altsyncram:Mux7_rtl_0
+ 23. Parameter Settings for Inferred Entity Instance: audioROM:rommap|lpm_mult:Mult0
+ 24. Parameter Settings for Inferred Entity Instance: audioROM:rommap|SampleAdder16:SAMPLE_ADDER|lpm_divide:Div0
+ 25. altsyncram Parameter Settings by Entity Instance
+ 26. lpm_mult Parameter Settings by Entity Instance
+ 27. Port Connectivity Checks: "WM8731_CONTROLLER:audiomap"
+ 28. Port Connectivity Checks: "de2_i2c_av_config:i2c|de2_i2c_controller:u0"
+ 29. Port Connectivity Checks: "de2_i2c_av_config:i2c"
+ 30. Post-Synthesis Netlist Statistics for Top Partition
+ 31. Elapsed Time Per Partition
+ 32. Analysis & Synthesis Messages
 
 
 
@@ -66,18 +64,18 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun May 24 18:13:36 2015      ;
+; Analysis & Synthesis Status        ; Successful - Tue May 26 15:01:11 2015      ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; JSInth                                     ;
 ; Top-level Entity Name              ; JSInth                                     ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 2,413                                      ;
-;     Total combinational functions  ; 2,339                                      ;
-;     Dedicated logic registers      ; 223                                        ;
-; Total registers                    ; 223                                        ;
+; Total logic elements               ; 17,153                                     ;
+;     Total combinational functions  ; 17,093                                     ;
+;     Dedicated logic registers      ; 465                                        ;
+; Total registers                    ; 465                                        ;
 ; Total pins                         ; 65                                         ;
 ; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 68,592                                     ;
+; Total memory bits                  ; 3,312                                      ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
 ; Total PLLs                         ; 0                                          ;
 +------------------------------------+--------------------------------------------+
@@ -219,7 +217,6 @@ agreement for further details.
 ; db/altsyncram_hl81.tdf                            ; yes             ; Auto-Generated Megafunction                           ; C:/Users/Sebastian/Documents/GitHub/JSInth/db/altsyncram_hl81.tdf                            ;         ;
 ; db/jsinth.rom0_de2_i2c_av_config_dd5cf7bb.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/Sebastian/Documents/GitHub/JSInth/db/jsinth.rom0_de2_i2c_av_config_dd5cf7bb.hdl.mif ;         ;
 ; db/altsyncram_6701.tdf                            ; yes             ; Auto-Generated Megafunction                           ; C:/Users/Sebastian/Documents/GitHub/JSInth/db/altsyncram_6701.tdf                            ;         ;
-; db/altsyncram_ba01.tdf                            ; yes             ; Auto-Generated Megafunction                           ; C:/Users/Sebastian/Documents/GitHub/JSInth/db/altsyncram_ba01.tdf                            ;         ;
 ; lpm_mult.tdf                                      ; yes             ; Megafunction                                          ; c:/altera/14.1/quartus/libraries/megafunctions/lpm_mult.tdf                                  ;         ;
 ; lpm_add_sub.inc                                   ; yes             ; Megafunction                                          ; c:/altera/14.1/quartus/libraries/megafunctions/lpm_add_sub.inc                               ;         ;
 ; multcore.inc                                      ; yes             ; Megafunction                                          ; c:/altera/14.1/quartus/libraries/megafunctions/multcore.inc                                  ;         ;
@@ -248,37 +245,37 @@ agreement for further details.
 +---------------------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                  ;
-+---------------------------------------------+----------------+
-; Resource                                    ; Usage          ;
-+---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 2,413          ;
-;                                             ;                ;
-; Total combinational functions               ; 2339           ;
-; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 509            ;
-;     -- 3 input functions                    ; 1091           ;
-;     -- <=2 input functions                  ; 739            ;
-;                                             ;                ;
-; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 1400           ;
-;     -- arithmetic mode                      ; 939            ;
-;                                             ;                ;
-; Total registers                             ; 223            ;
-;     -- Dedicated logic registers            ; 223            ;
-;     -- I/O registers                        ; 0              ;
-;                                             ;                ;
-; I/O pins                                    ; 65             ;
-; Total memory bits                           ; 68592          ;
-;                                             ;                ;
-; Embedded Multiplier 9-bit elements          ; 0              ;
-;                                             ;                ;
-; Maximum fan-out node                        ; audio_clock[1] ;
-; Maximum fan-out                             ; 363            ;
-; Total fan-out                               ; 10243          ;
-; Average fan-out                             ; 3.41           ;
-+---------------------------------------------+----------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                   ;
++---------------------------------------------+---------------------------------+
+; Resource                                    ; Usage                           ;
++---------------------------------------------+---------------------------------+
+; Estimated Total logic elements              ; 17,153                          ;
+;                                             ;                                 ;
+; Total combinational functions               ; 17093                           ;
+; Logic element usage by number of LUT inputs ;                                 ;
+;     -- 4 input functions                    ; 14947                           ;
+;     -- 3 input functions                    ; 1635                            ;
+;     -- <=2 input functions                  ; 511                             ;
+;                                             ;                                 ;
+; Logic elements by mode                      ;                                 ;
+;     -- normal mode                          ; 16154                           ;
+;     -- arithmetic mode                      ; 939                             ;
+;                                             ;                                 ;
+; Total registers                             ; 465                             ;
+;     -- Dedicated logic registers            ; 465                             ;
+;     -- I/O registers                        ; 0                               ;
+;                                             ;                                 ;
+; I/O pins                                    ; 65                              ;
+; Total memory bits                           ; 3312                            ;
+;                                             ;                                 ;
+; Embedded Multiplier 9-bit elements          ; 0                               ;
+;                                             ;                                 ;
+; Maximum fan-out node                        ; audioROM:rommap|sample_index~49 ;
+; Maximum fan-out                             ; 6185                            ;
+; Total fan-out                               ; 67715                           ;
+; Average fan-out                             ; 3.82                            ;
++---------------------------------------------+---------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -286,30 +283,28 @@ agreement for further details.
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                            ; Library Name ;
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |JSInth                                         ; 2339 (2)          ; 223 (2)      ; 68592       ; 0            ; 0       ; 0         ; 65   ; 0            ; |JSInth                                                                                                                                        ; work         ;
+; |JSInth                                         ; 17093 (2)         ; 465 (2)      ; 3312        ; 0            ; 0       ; 0         ; 65   ; 0            ; |JSInth                                                                                                                                        ; work         ;
 ;    |FSM_octave:octmap|                          ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|FSM_octave:octmap                                                                                                                      ; work         ;
 ;    |FSM_octave:synmap|                          ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|FSM_octave:synmap                                                                                                                      ; work         ;
-;    |FSM_volume:volmap|                          ; 15 (15)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|FSM_volume:volmap                                                                                                                      ; work         ;
-;    |VGA_top_level:vgamap|                       ; 233 (0)           ; 49 (0)       ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|VGA_top_level:vgamap                                                                                                                   ; work         ;
-;       |VGA_SYNC:videoSync|                      ; 59 (59)           ; 46 (46)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|VGA_top_level:vgamap|VGA_SYNC:videoSync                                                                                                ; work         ;
-;       |pixelGenerator:videoGen|                 ; 174 (174)         ; 3 (3)        ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|VGA_top_level:vgamap|pixelGenerator:videoGen                                                                                           ; work         ;
+;    |FSM_volume:volmap|                          ; 11 (11)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|FSM_volume:volmap                                                                                                                      ; work         ;
+;    |VGA_top_level:vgamap|                       ; 248 (0)           ; 49 (0)       ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|VGA_top_level:vgamap                                                                                                                   ; work         ;
+;       |VGA_SYNC:videoSync|                      ; 60 (60)           ; 46 (46)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|VGA_top_level:vgamap|VGA_SYNC:videoSync                                                                                                ; work         ;
+;       |pixelGenerator:videoGen|                 ; 188 (188)         ; 3 (3)        ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|VGA_top_level:vgamap|pixelGenerator:videoGen                                                                                           ; work         ;
 ;          |colorROM:colors|                      ; 0 (0)             ; 0 (0)        ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors                                                                           ; work         ;
 ;             |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component                                           ; work         ;
 ;                |altsyncram_b481:auto_generated| ; 0 (0)             ; 0 (0)        ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_b481:auto_generated            ; work         ;
 ;    |WM8731_CONTROLLER:audiomap|                 ; 41 (41)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|WM8731_CONTROLLER:audiomap                                                                                                             ; work         ;
-;    |audioROM:rommap|                            ; 1951 (375)        ; 66 (66)      ; 67328       ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|audioROM:rommap                                                                                                                        ; work         ;
+;    |audioROM:rommap|                            ; 16692 (15116)     ; 308 (308)    ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|audioROM:rommap                                                                                                                        ; work         ;
 ;       |SampleAdder16:SAMPLE_ADDER|              ; 1575 (369)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|audioROM:rommap|SampleAdder16:SAMPLE_ADDER                                                                                             ; work         ;
 ;          |lpm_divide:Div0|                      ; 1206 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|audioROM:rommap|SampleAdder16:SAMPLE_ADDER|lpm_divide:Div0                                                                             ; work         ;
 ;             |lpm_divide_92p:auto_generated|     ; 1206 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|audioROM:rommap|SampleAdder16:SAMPLE_ADDER|lpm_divide:Div0|lpm_divide_92p:auto_generated                                               ; work         ;
 ;                |abs_divider_4dg:divider|        ; 1206 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|audioROM:rommap|SampleAdder16:SAMPLE_ADDER|lpm_divide:Div0|lpm_divide_92p:auto_generated|abs_divider_4dg:divider                       ; work         ;
 ;                   |alt_u_div_6af:divider|       ; 1206 (1206)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|audioROM:rommap|SampleAdder16:SAMPLE_ADDER|lpm_divide:Div0|lpm_divide_92p:auto_generated|abs_divider_4dg:divider|alt_u_div_6af:divider ; work         ;
-;       |altsyncram:Mux199_rtl_0|                 ; 0 (0)             ; 0 (0)        ; 65280       ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|audioROM:rommap|altsyncram:Mux199_rtl_0                                                                                                ; work         ;
-;          |altsyncram_ba01:auto_generated|       ; 0 (0)             ; 0 (0)        ; 65280       ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|audioROM:rommap|altsyncram:Mux199_rtl_0|altsyncram_ba01:auto_generated                                                                 ; work         ;
 ;       |altsyncram:Mux7_rtl_0|                   ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|audioROM:rommap|altsyncram:Mux7_rtl_0                                                                                                  ; work         ;
 ;          |altsyncram_6701:auto_generated|       ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|audioROM:rommap|altsyncram:Mux7_rtl_0|altsyncram_6701:auto_generated                                                                   ; work         ;
 ;       |lpm_mult:Mult0|                          ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|audioROM:rommap|lpm_mult:Mult0                                                                                                         ; work         ;
 ;          |multcore:mult_core|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|audioROM:rommap|lpm_mult:Mult0|multcore:mult_core                                                                                      ; work         ;
-;    |de2_i2c_av_config:i2c|                      ; 87 (39)           ; 57 (28)      ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|de2_i2c_av_config:i2c                                                                                                                  ; work         ;
+;    |de2_i2c_av_config:i2c|                      ; 89 (41)           ; 57 (28)      ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|de2_i2c_av_config:i2c                                                                                                                  ; work         ;
 ;       |altsyncram:Ram0_rtl_0|                   ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|de2_i2c_av_config:i2c|altsyncram:Ram0_rtl_0                                                                                            ; work         ;
 ;          |altsyncram_hl81:auto_generated|       ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|de2_i2c_av_config:i2c|altsyncram:Ram0_rtl_0|altsyncram_hl81:auto_generated                                                             ; work         ;
 ;       |de2_i2c_controller:u0|                   ; 48 (48)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|de2_i2c_av_config:i2c|de2_i2c_controller:u0                                                                                            ; work         ;
@@ -317,16 +312,15 @@ agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                             ;
-+----------------------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+---------------------------------------------------+
-; Name                                                                                                                                   ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                                               ;
-+----------------------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+---------------------------------------------------+
-; VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_b481:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 8            ; 30           ; --           ; --           ; 240   ; colorROM.mif                                      ;
-; audioROM:rommap|altsyncram:Mux199_rtl_0|altsyncram_ba01:auto_generated|ALTSYNCRAM                                                      ; AUTO ; ROM  ; 256          ; 255          ; --           ; --           ; 65280 ; JSInth.JSInth1.rtl.mif                            ;
-; audioROM:rommap|altsyncram:Mux7_rtl_0|altsyncram_6701:auto_generated|ALTSYNCRAM                                                        ; AUTO ; ROM  ; 256          ; 8            ; --           ; --           ; 2048  ; JSInth.JSInth0.rtl.mif                            ;
-; de2_i2c_av_config:i2c|altsyncram:Ram0_rtl_0|altsyncram_hl81:auto_generated|ALTSYNCRAM                                                  ; AUTO ; ROM  ; 64           ; 16           ; --           ; --           ; 1024  ; db/JSInth.rom0_de2_i2c_av_config_dd5cf7bb.hdl.mif ;
-+----------------------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+---------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                            ;
++----------------------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+---------------------------------------------------+
+; Name                                                                                                                                   ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                                               ;
++----------------------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+---------------------------------------------------+
+; VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_b481:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 8            ; 30           ; --           ; --           ; 240  ; colorROM.mif                                      ;
+; audioROM:rommap|altsyncram:Mux7_rtl_0|altsyncram_6701:auto_generated|ALTSYNCRAM                                                        ; AUTO ; ROM  ; 256          ; 8            ; --           ; --           ; 2048 ; JSInth.JSInth0.rtl.mif                            ;
+; de2_i2c_av_config:i2c|altsyncram:Ram0_rtl_0|altsyncram_hl81:auto_generated|ALTSYNCRAM                                                  ; AUTO ; ROM  ; 64           ; 16           ; --           ; --           ; 1024 ; db/JSInth.rom0_de2_i2c_av_config_dd5cf7bb.hdl.mif ;
++----------------------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+---------------------------------------------------+
 
 
 Encoding Type:  One-Hot
@@ -354,445 +348,10 @@ Encoding Type:  One-Hot
 ; de2_i2c_av_config:i2c|mI2C_DATA[20,21]                      ; Merged with de2_i2c_av_config:i2c|mI2C_DATA[18]                ;
 ; de2_i2c_av_config:i2c|mI2C_DATA[18]                         ; Merged with de2_i2c_av_config:i2c|mI2C_DATA[22]                ;
 ; de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[18]          ; Merged with de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[22] ;
-; audioROM:rommap|k11[0]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k12[0]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k11[1]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k12[1]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k11[2]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k12[2]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k11[3]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k12[3]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k11[4]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k12[4]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k11[5]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k12[5]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k11[6]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k12[6]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k11[7]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k12[7]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k11[8]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k12[8]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k11[9]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k12[9]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k11[10]                                     ; Lost fanout                                                    ;
-; audioROM:rommap|k12[10]                                     ; Lost fanout                                                    ;
-; audioROM:rommap|k11[11]                                     ; Lost fanout                                                    ;
-; audioROM:rommap|k12[11]                                     ; Lost fanout                                                    ;
-; audioROM:rommap|k11[12]                                     ; Lost fanout                                                    ;
-; audioROM:rommap|k12[12]                                     ; Lost fanout                                                    ;
-; audioROM:rommap|k11[13]                                     ; Lost fanout                                                    ;
-; audioROM:rommap|k12[13]                                     ; Lost fanout                                                    ;
-; audioROM:rommap|k11[14]                                     ; Lost fanout                                                    ;
-; audioROM:rommap|k12[14]                                     ; Lost fanout                                                    ;
-; audioROM:rommap|k11[15]                                     ; Lost fanout                                                    ;
-; audioROM:rommap|k12[15]                                     ; Lost fanout                                                    ;
-; audioROM:rommap|k9[0]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k10[0]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k9[1]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k10[1]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k9[2]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k10[2]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k9[3]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k10[3]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k9[4]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k10[4]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k9[5]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k10[5]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k9[6]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k10[6]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k9[7]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k10[7]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k9[8]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k10[8]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k9[9]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k10[9]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k9[10]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k10[10]                                     ; Lost fanout                                                    ;
-; audioROM:rommap|k9[11]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k10[11]                                     ; Lost fanout                                                    ;
-; audioROM:rommap|k9[12]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k10[12]                                     ; Lost fanout                                                    ;
-; audioROM:rommap|k9[13]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k10[13]                                     ; Lost fanout                                                    ;
-; audioROM:rommap|k9[14]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k10[14]                                     ; Lost fanout                                                    ;
-; audioROM:rommap|k9[15]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k10[15]                                     ; Lost fanout                                                    ;
-; audioROM:rommap|k13[0]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k14[0]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k13[1]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k14[1]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k13[2]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k14[2]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k13[3]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k14[3]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k13[4]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k14[4]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k13[5]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k14[5]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k13[6]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k14[6]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k13[7]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k14[7]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k13[8]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k14[8]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k13[9]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k14[9]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k13[10]                                     ; Lost fanout                                                    ;
-; audioROM:rommap|k14[10]                                     ; Lost fanout                                                    ;
-; audioROM:rommap|k13[11]                                     ; Lost fanout                                                    ;
-; audioROM:rommap|k14[11]                                     ; Lost fanout                                                    ;
-; audioROM:rommap|k13[12]                                     ; Lost fanout                                                    ;
-; audioROM:rommap|k14[12]                                     ; Lost fanout                                                    ;
-; audioROM:rommap|k13[13]                                     ; Lost fanout                                                    ;
-; audioROM:rommap|k14[13]                                     ; Lost fanout                                                    ;
-; audioROM:rommap|k13[14]                                     ; Lost fanout                                                    ;
-; audioROM:rommap|k14[14]                                     ; Lost fanout                                                    ;
-; audioROM:rommap|k13[15]                                     ; Lost fanout                                                    ;
-; audioROM:rommap|k14[15]                                     ; Lost fanout                                                    ;
-; audioROM:rommap|k5[0]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k6[0]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k5[1]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k6[1]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k5[2]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k6[2]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k5[3]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k6[3]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k5[4]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k6[4]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k5[5]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k6[5]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k5[6]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k6[6]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k5[7]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k6[7]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k5[8]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k6[8]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k5[9]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k6[9]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k5[10]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k6[10]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k5[11]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k6[11]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k5[12]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k6[12]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k5[13]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k6[13]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k5[14]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k6[14]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k5[15]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k6[15]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k4[0..15]                                   ; Lost fanout                                                    ;
-; audioROM:rommap|k0[0]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k1[0]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k0[1]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k1[1]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k0[2]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k1[2]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k0[3]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k1[3]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k0[4]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k1[4]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k0[5]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k1[5]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k0[6]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k1[6]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k0[7]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k1[7]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k0[8]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k1[8]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k0[9]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k1[9]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k0[10]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k1[10]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k0[11]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k1[11]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k0[12]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k1[12]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k0[13]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k1[13]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k0[14]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k1[14]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k0[15]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k1[15]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k2[0]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k3[0]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k2[1]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k3[1]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k2[2]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k3[2]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k2[3]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k3[3]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k2[4]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k3[4]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k2[5]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k3[5]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k2[6]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k3[6]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k2[7]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k3[7]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k2[8]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k3[8]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k2[9]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k3[9]                                       ; Lost fanout                                                    ;
-; audioROM:rommap|k2[10]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k3[10]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k2[11]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k3[11]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k2[12]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k3[12]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k2[13]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k3[13]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k2[14]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k3[14]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k2[15]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k3[15]                                      ; Lost fanout                                                    ;
-; audioROM:rommap|k7[0..15]                                   ; Lost fanout                                                    ;
-; audioROM:rommap|k8[0..14]                                   ; Lost fanout                                                    ;
-; audioROM:rommap|k15[0..15]                                  ; Lost fanout                                                    ;
 ; VGA_top_level:vgamap|VGA_SYNC:videoSync|pixel_row[9]        ; Stuck at GND due to stuck port data_in                         ;
-; audioROM:rommap|k12[1]~3                                    ; Merged with audioROM:rommap|k12[0]~1                           ;
-; audioROM:rommap|k12[2]~5                                    ; Merged with audioROM:rommap|k12[0]~1                           ;
-; audioROM:rommap|k12[3]~7                                    ; Merged with audioROM:rommap|k12[0]~1                           ;
-; audioROM:rommap|k12[4]~9                                    ; Merged with audioROM:rommap|k12[0]~1                           ;
-; audioROM:rommap|k12[5]~11                                   ; Merged with audioROM:rommap|k12[0]~1                           ;
-; audioROM:rommap|k12[6]~13                                   ; Merged with audioROM:rommap|k12[0]~1                           ;
-; audioROM:rommap|k12[7]~15                                   ; Merged with audioROM:rommap|k12[0]~1                           ;
-; audioROM:rommap|k12[8]~17                                   ; Merged with audioROM:rommap|k12[0]~1                           ;
-; audioROM:rommap|k12[9]~19                                   ; Merged with audioROM:rommap|k12[0]~1                           ;
-; audioROM:rommap|k12[10]~21                                  ; Merged with audioROM:rommap|k12[0]~1                           ;
-; audioROM:rommap|k12[11]~23                                  ; Merged with audioROM:rommap|k12[0]~1                           ;
-; audioROM:rommap|k12[12]~25                                  ; Merged with audioROM:rommap|k12[0]~1                           ;
-; audioROM:rommap|k12[13]~27                                  ; Merged with audioROM:rommap|k12[0]~1                           ;
-; audioROM:rommap|k12[14]~29                                  ; Merged with audioROM:rommap|k12[0]~1                           ;
-; audioROM:rommap|k12[15]~31                                  ; Merged with audioROM:rommap|k12[0]~1                           ;
-; audioROM:rommap|k11[1]~3                                    ; Merged with audioROM:rommap|k11[0]~1                           ;
-; audioROM:rommap|k11[2]~5                                    ; Merged with audioROM:rommap|k11[0]~1                           ;
-; audioROM:rommap|k11[3]~7                                    ; Merged with audioROM:rommap|k11[0]~1                           ;
-; audioROM:rommap|k11[4]~9                                    ; Merged with audioROM:rommap|k11[0]~1                           ;
-; audioROM:rommap|k11[5]~11                                   ; Merged with audioROM:rommap|k11[0]~1                           ;
-; audioROM:rommap|k11[6]~13                                   ; Merged with audioROM:rommap|k11[0]~1                           ;
-; audioROM:rommap|k11[7]~15                                   ; Merged with audioROM:rommap|k11[0]~1                           ;
-; audioROM:rommap|k11[8]~17                                   ; Merged with audioROM:rommap|k11[0]~1                           ;
-; audioROM:rommap|k11[9]~19                                   ; Merged with audioROM:rommap|k11[0]~1                           ;
-; audioROM:rommap|k11[10]~21                                  ; Merged with audioROM:rommap|k11[0]~1                           ;
-; audioROM:rommap|k11[11]~23                                  ; Merged with audioROM:rommap|k11[0]~1                           ;
-; audioROM:rommap|k11[12]~25                                  ; Merged with audioROM:rommap|k11[0]~1                           ;
-; audioROM:rommap|k11[13]~27                                  ; Merged with audioROM:rommap|k11[0]~1                           ;
-; audioROM:rommap|k11[14]~29                                  ; Merged with audioROM:rommap|k11[0]~1                           ;
-; audioROM:rommap|k11[15]~31                                  ; Merged with audioROM:rommap|k11[0]~1                           ;
-; audioROM:rommap|k10[1]~3                                    ; Merged with audioROM:rommap|k10[0]~1                           ;
-; audioROM:rommap|k10[2]~5                                    ; Merged with audioROM:rommap|k10[0]~1                           ;
-; audioROM:rommap|k10[3]~7                                    ; Merged with audioROM:rommap|k10[0]~1                           ;
-; audioROM:rommap|k10[4]~9                                    ; Merged with audioROM:rommap|k10[0]~1                           ;
-; audioROM:rommap|k10[5]~11                                   ; Merged with audioROM:rommap|k10[0]~1                           ;
-; audioROM:rommap|k10[6]~13                                   ; Merged with audioROM:rommap|k10[0]~1                           ;
-; audioROM:rommap|k10[7]~15                                   ; Merged with audioROM:rommap|k10[0]~1                           ;
-; audioROM:rommap|k10[8]~17                                   ; Merged with audioROM:rommap|k10[0]~1                           ;
-; audioROM:rommap|k10[9]~19                                   ; Merged with audioROM:rommap|k10[0]~1                           ;
-; audioROM:rommap|k10[10]~21                                  ; Merged with audioROM:rommap|k10[0]~1                           ;
-; audioROM:rommap|k10[11]~23                                  ; Merged with audioROM:rommap|k10[0]~1                           ;
-; audioROM:rommap|k10[12]~25                                  ; Merged with audioROM:rommap|k10[0]~1                           ;
-; audioROM:rommap|k10[13]~27                                  ; Merged with audioROM:rommap|k10[0]~1                           ;
-; audioROM:rommap|k10[14]~29                                  ; Merged with audioROM:rommap|k10[0]~1                           ;
-; audioROM:rommap|k10[15]~31                                  ; Merged with audioROM:rommap|k10[0]~1                           ;
-; audioROM:rommap|k9[1]~3                                     ; Merged with audioROM:rommap|k9[0]~1                            ;
-; audioROM:rommap|k9[2]~5                                     ; Merged with audioROM:rommap|k9[0]~1                            ;
-; audioROM:rommap|k9[3]~7                                     ; Merged with audioROM:rommap|k9[0]~1                            ;
-; audioROM:rommap|k9[4]~9                                     ; Merged with audioROM:rommap|k9[0]~1                            ;
-; audioROM:rommap|k9[5]~11                                    ; Merged with audioROM:rommap|k9[0]~1                            ;
-; audioROM:rommap|k9[6]~13                                    ; Merged with audioROM:rommap|k9[0]~1                            ;
-; audioROM:rommap|k9[7]~15                                    ; Merged with audioROM:rommap|k9[0]~1                            ;
-; audioROM:rommap|k9[8]~17                                    ; Merged with audioROM:rommap|k9[0]~1                            ;
-; audioROM:rommap|k9[9]~19                                    ; Merged with audioROM:rommap|k9[0]~1                            ;
-; audioROM:rommap|k9[10]~21                                   ; Merged with audioROM:rommap|k9[0]~1                            ;
-; audioROM:rommap|k9[11]~23                                   ; Merged with audioROM:rommap|k9[0]~1                            ;
-; audioROM:rommap|k9[12]~25                                   ; Merged with audioROM:rommap|k9[0]~1                            ;
-; audioROM:rommap|k9[13]~27                                   ; Merged with audioROM:rommap|k9[0]~1                            ;
-; audioROM:rommap|k9[14]~29                                   ; Merged with audioROM:rommap|k9[0]~1                            ;
-; audioROM:rommap|k9[15]~31                                   ; Merged with audioROM:rommap|k9[0]~1                            ;
-; audioROM:rommap|k14[1]~3                                    ; Merged with audioROM:rommap|k14[0]~1                           ;
-; audioROM:rommap|k14[2]~5                                    ; Merged with audioROM:rommap|k14[0]~1                           ;
-; audioROM:rommap|k14[3]~7                                    ; Merged with audioROM:rommap|k14[0]~1                           ;
-; audioROM:rommap|k14[4]~9                                    ; Merged with audioROM:rommap|k14[0]~1                           ;
-; audioROM:rommap|k14[5]~11                                   ; Merged with audioROM:rommap|k14[0]~1                           ;
-; audioROM:rommap|k14[6]~13                                   ; Merged with audioROM:rommap|k14[0]~1                           ;
-; audioROM:rommap|k14[7]~15                                   ; Merged with audioROM:rommap|k14[0]~1                           ;
-; audioROM:rommap|k14[8]~17                                   ; Merged with audioROM:rommap|k14[0]~1                           ;
-; audioROM:rommap|k14[9]~19                                   ; Merged with audioROM:rommap|k14[0]~1                           ;
-; audioROM:rommap|k14[10]~21                                  ; Merged with audioROM:rommap|k14[0]~1                           ;
-; audioROM:rommap|k14[11]~23                                  ; Merged with audioROM:rommap|k14[0]~1                           ;
-; audioROM:rommap|k14[12]~25                                  ; Merged with audioROM:rommap|k14[0]~1                           ;
-; audioROM:rommap|k14[13]~27                                  ; Merged with audioROM:rommap|k14[0]~1                           ;
-; audioROM:rommap|k14[14]~29                                  ; Merged with audioROM:rommap|k14[0]~1                           ;
-; audioROM:rommap|k14[15]~31                                  ; Merged with audioROM:rommap|k14[0]~1                           ;
-; audioROM:rommap|k13[1]~3                                    ; Merged with audioROM:rommap|k13[0]~1                           ;
-; audioROM:rommap|k13[2]~5                                    ; Merged with audioROM:rommap|k13[0]~1                           ;
-; audioROM:rommap|k13[3]~7                                    ; Merged with audioROM:rommap|k13[0]~1                           ;
-; audioROM:rommap|k13[4]~9                                    ; Merged with audioROM:rommap|k13[0]~1                           ;
-; audioROM:rommap|k13[5]~11                                   ; Merged with audioROM:rommap|k13[0]~1                           ;
-; audioROM:rommap|k13[6]~13                                   ; Merged with audioROM:rommap|k13[0]~1                           ;
-; audioROM:rommap|k13[7]~15                                   ; Merged with audioROM:rommap|k13[0]~1                           ;
-; audioROM:rommap|k13[8]~17                                   ; Merged with audioROM:rommap|k13[0]~1                           ;
-; audioROM:rommap|k13[9]~19                                   ; Merged with audioROM:rommap|k13[0]~1                           ;
-; audioROM:rommap|k13[10]~21                                  ; Merged with audioROM:rommap|k13[0]~1                           ;
-; audioROM:rommap|k13[11]~23                                  ; Merged with audioROM:rommap|k13[0]~1                           ;
-; audioROM:rommap|k13[12]~25                                  ; Merged with audioROM:rommap|k13[0]~1                           ;
-; audioROM:rommap|k13[13]~27                                  ; Merged with audioROM:rommap|k13[0]~1                           ;
-; audioROM:rommap|k13[14]~29                                  ; Merged with audioROM:rommap|k13[0]~1                           ;
-; audioROM:rommap|k13[15]~31                                  ; Merged with audioROM:rommap|k13[0]~1                           ;
-; audioROM:rommap|k15[1]~3                                    ; Merged with audioROM:rommap|k15[0]~1                           ;
-; audioROM:rommap|k15[2]~5                                    ; Merged with audioROM:rommap|k15[0]~1                           ;
-; audioROM:rommap|k15[3]~7                                    ; Merged with audioROM:rommap|k15[0]~1                           ;
-; audioROM:rommap|k15[4]~9                                    ; Merged with audioROM:rommap|k15[0]~1                           ;
-; audioROM:rommap|k15[5]~11                                   ; Merged with audioROM:rommap|k15[0]~1                           ;
-; audioROM:rommap|k15[6]~13                                   ; Merged with audioROM:rommap|k15[0]~1                           ;
-; audioROM:rommap|k15[7]~15                                   ; Merged with audioROM:rommap|k15[0]~1                           ;
-; audioROM:rommap|k15[8]~17                                   ; Merged with audioROM:rommap|k15[0]~1                           ;
-; audioROM:rommap|k15[9]~19                                   ; Merged with audioROM:rommap|k15[0]~1                           ;
-; audioROM:rommap|k15[10]~21                                  ; Merged with audioROM:rommap|k15[0]~1                           ;
-; audioROM:rommap|k15[11]~23                                  ; Merged with audioROM:rommap|k15[0]~1                           ;
-; audioROM:rommap|k15[12]~25                                  ; Merged with audioROM:rommap|k15[0]~1                           ;
-; audioROM:rommap|k15[13]~27                                  ; Merged with audioROM:rommap|k15[0]~1                           ;
-; audioROM:rommap|k15[14]~29                                  ; Merged with audioROM:rommap|k15[0]~1                           ;
-; audioROM:rommap|k15[15]~31                                  ; Merged with audioROM:rommap|k15[0]~1                           ;
-; audioROM:rommap|k6[1]~3                                     ; Merged with audioROM:rommap|k6[0]~1                            ;
-; audioROM:rommap|k6[2]~5                                     ; Merged with audioROM:rommap|k6[0]~1                            ;
-; audioROM:rommap|k6[3]~7                                     ; Merged with audioROM:rommap|k6[0]~1                            ;
-; audioROM:rommap|k6[4]~9                                     ; Merged with audioROM:rommap|k6[0]~1                            ;
-; audioROM:rommap|k6[5]~11                                    ; Merged with audioROM:rommap|k6[0]~1                            ;
-; audioROM:rommap|k6[6]~13                                    ; Merged with audioROM:rommap|k6[0]~1                            ;
-; audioROM:rommap|k6[7]~15                                    ; Merged with audioROM:rommap|k6[0]~1                            ;
-; audioROM:rommap|k6[8]~17                                    ; Merged with audioROM:rommap|k6[0]~1                            ;
-; audioROM:rommap|k6[9]~19                                    ; Merged with audioROM:rommap|k6[0]~1                            ;
-; audioROM:rommap|k6[10]~21                                   ; Merged with audioROM:rommap|k6[0]~1                            ;
-; audioROM:rommap|k6[11]~23                                   ; Merged with audioROM:rommap|k6[0]~1                            ;
-; audioROM:rommap|k6[12]~25                                   ; Merged with audioROM:rommap|k6[0]~1                            ;
-; audioROM:rommap|k6[13]~27                                   ; Merged with audioROM:rommap|k6[0]~1                            ;
-; audioROM:rommap|k6[14]~29                                   ; Merged with audioROM:rommap|k6[0]~1                            ;
-; audioROM:rommap|k6[15]~31                                   ; Merged with audioROM:rommap|k6[0]~1                            ;
-; audioROM:rommap|k5[1]~3                                     ; Merged with audioROM:rommap|k5[0]~1                            ;
-; audioROM:rommap|k5[2]~5                                     ; Merged with audioROM:rommap|k5[0]~1                            ;
-; audioROM:rommap|k5[3]~7                                     ; Merged with audioROM:rommap|k5[0]~1                            ;
-; audioROM:rommap|k5[4]~9                                     ; Merged with audioROM:rommap|k5[0]~1                            ;
-; audioROM:rommap|k5[5]~11                                    ; Merged with audioROM:rommap|k5[0]~1                            ;
-; audioROM:rommap|k5[6]~13                                    ; Merged with audioROM:rommap|k5[0]~1                            ;
-; audioROM:rommap|k5[7]~15                                    ; Merged with audioROM:rommap|k5[0]~1                            ;
-; audioROM:rommap|k5[8]~17                                    ; Merged with audioROM:rommap|k5[0]~1                            ;
-; audioROM:rommap|k5[9]~19                                    ; Merged with audioROM:rommap|k5[0]~1                            ;
-; audioROM:rommap|k5[10]~21                                   ; Merged with audioROM:rommap|k5[0]~1                            ;
-; audioROM:rommap|k5[11]~23                                   ; Merged with audioROM:rommap|k5[0]~1                            ;
-; audioROM:rommap|k5[12]~25                                   ; Merged with audioROM:rommap|k5[0]~1                            ;
-; audioROM:rommap|k5[13]~27                                   ; Merged with audioROM:rommap|k5[0]~1                            ;
-; audioROM:rommap|k5[14]~29                                   ; Merged with audioROM:rommap|k5[0]~1                            ;
-; audioROM:rommap|k5[15]~31                                   ; Merged with audioROM:rommap|k5[0]~1                            ;
-; audioROM:rommap|k4[1]~3                                     ; Merged with audioROM:rommap|k4[0]~1                            ;
-; audioROM:rommap|k4[2]~5                                     ; Merged with audioROM:rommap|k4[0]~1                            ;
-; audioROM:rommap|k4[3]~7                                     ; Merged with audioROM:rommap|k4[0]~1                            ;
-; audioROM:rommap|k4[4]~9                                     ; Merged with audioROM:rommap|k4[0]~1                            ;
-; audioROM:rommap|k4[5]~11                                    ; Merged with audioROM:rommap|k4[0]~1                            ;
-; audioROM:rommap|k4[6]~13                                    ; Merged with audioROM:rommap|k4[0]~1                            ;
-; audioROM:rommap|k4[7]~15                                    ; Merged with audioROM:rommap|k4[0]~1                            ;
-; audioROM:rommap|k4[8]~17                                    ; Merged with audioROM:rommap|k4[0]~1                            ;
-; audioROM:rommap|k4[9]~19                                    ; Merged with audioROM:rommap|k4[0]~1                            ;
-; audioROM:rommap|k4[10]~21                                   ; Merged with audioROM:rommap|k4[0]~1                            ;
-; audioROM:rommap|k4[11]~23                                   ; Merged with audioROM:rommap|k4[0]~1                            ;
-; audioROM:rommap|k4[12]~25                                   ; Merged with audioROM:rommap|k4[0]~1                            ;
-; audioROM:rommap|k4[13]~27                                   ; Merged with audioROM:rommap|k4[0]~1                            ;
-; audioROM:rommap|k4[14]~29                                   ; Merged with audioROM:rommap|k4[0]~1                            ;
-; audioROM:rommap|k4[15]~31                                   ; Merged with audioROM:rommap|k4[0]~1                            ;
-; audioROM:rommap|k1[1]~3                                     ; Merged with audioROM:rommap|k1[0]~1                            ;
-; audioROM:rommap|k1[2]~5                                     ; Merged with audioROM:rommap|k1[0]~1                            ;
-; audioROM:rommap|k1[3]~7                                     ; Merged with audioROM:rommap|k1[0]~1                            ;
-; audioROM:rommap|k1[4]~9                                     ; Merged with audioROM:rommap|k1[0]~1                            ;
-; audioROM:rommap|k1[5]~11                                    ; Merged with audioROM:rommap|k1[0]~1                            ;
-; audioROM:rommap|k1[6]~13                                    ; Merged with audioROM:rommap|k1[0]~1                            ;
-; audioROM:rommap|k1[7]~15                                    ; Merged with audioROM:rommap|k1[0]~1                            ;
-; audioROM:rommap|k1[8]~17                                    ; Merged with audioROM:rommap|k1[0]~1                            ;
-; audioROM:rommap|k1[9]~19                                    ; Merged with audioROM:rommap|k1[0]~1                            ;
-; audioROM:rommap|k1[10]~21                                   ; Merged with audioROM:rommap|k1[0]~1                            ;
-; audioROM:rommap|k1[11]~23                                   ; Merged with audioROM:rommap|k1[0]~1                            ;
-; audioROM:rommap|k1[12]~25                                   ; Merged with audioROM:rommap|k1[0]~1                            ;
-; audioROM:rommap|k1[13]~27                                   ; Merged with audioROM:rommap|k1[0]~1                            ;
-; audioROM:rommap|k1[14]~29                                   ; Merged with audioROM:rommap|k1[0]~1                            ;
-; audioROM:rommap|k1[15]~31                                   ; Merged with audioROM:rommap|k1[0]~1                            ;
-; audioROM:rommap|k0[1]~3                                     ; Merged with audioROM:rommap|k0[0]~1                            ;
-; audioROM:rommap|k0[2]~5                                     ; Merged with audioROM:rommap|k0[0]~1                            ;
-; audioROM:rommap|k0[3]~7                                     ; Merged with audioROM:rommap|k0[0]~1                            ;
-; audioROM:rommap|k0[4]~9                                     ; Merged with audioROM:rommap|k0[0]~1                            ;
-; audioROM:rommap|k0[5]~11                                    ; Merged with audioROM:rommap|k0[0]~1                            ;
-; audioROM:rommap|k0[6]~13                                    ; Merged with audioROM:rommap|k0[0]~1                            ;
-; audioROM:rommap|k0[7]~15                                    ; Merged with audioROM:rommap|k0[0]~1                            ;
-; audioROM:rommap|k0[8]~17                                    ; Merged with audioROM:rommap|k0[0]~1                            ;
-; audioROM:rommap|k0[9]~19                                    ; Merged with audioROM:rommap|k0[0]~1                            ;
-; audioROM:rommap|k0[10]~21                                   ; Merged with audioROM:rommap|k0[0]~1                            ;
-; audioROM:rommap|k0[11]~23                                   ; Merged with audioROM:rommap|k0[0]~1                            ;
-; audioROM:rommap|k0[12]~25                                   ; Merged with audioROM:rommap|k0[0]~1                            ;
-; audioROM:rommap|k0[13]~27                                   ; Merged with audioROM:rommap|k0[0]~1                            ;
-; audioROM:rommap|k0[14]~29                                   ; Merged with audioROM:rommap|k0[0]~1                            ;
-; audioROM:rommap|k0[15]~31                                   ; Merged with audioROM:rommap|k0[0]~1                            ;
-; audioROM:rommap|k3[1]~3                                     ; Merged with audioROM:rommap|k3[0]~1                            ;
-; audioROM:rommap|k3[2]~5                                     ; Merged with audioROM:rommap|k3[0]~1                            ;
-; audioROM:rommap|k3[3]~7                                     ; Merged with audioROM:rommap|k3[0]~1                            ;
-; audioROM:rommap|k3[4]~9                                     ; Merged with audioROM:rommap|k3[0]~1                            ;
-; audioROM:rommap|k3[5]~11                                    ; Merged with audioROM:rommap|k3[0]~1                            ;
-; audioROM:rommap|k3[6]~13                                    ; Merged with audioROM:rommap|k3[0]~1                            ;
-; audioROM:rommap|k3[7]~15                                    ; Merged with audioROM:rommap|k3[0]~1                            ;
-; audioROM:rommap|k3[8]~17                                    ; Merged with audioROM:rommap|k3[0]~1                            ;
-; audioROM:rommap|k3[9]~19                                    ; Merged with audioROM:rommap|k3[0]~1                            ;
-; audioROM:rommap|k3[10]~21                                   ; Merged with audioROM:rommap|k3[0]~1                            ;
-; audioROM:rommap|k3[11]~23                                   ; Merged with audioROM:rommap|k3[0]~1                            ;
-; audioROM:rommap|k3[12]~25                                   ; Merged with audioROM:rommap|k3[0]~1                            ;
-; audioROM:rommap|k3[13]~27                                   ; Merged with audioROM:rommap|k3[0]~1                            ;
-; audioROM:rommap|k3[14]~29                                   ; Merged with audioROM:rommap|k3[0]~1                            ;
-; audioROM:rommap|k3[15]~31                                   ; Merged with audioROM:rommap|k3[0]~1                            ;
-; audioROM:rommap|k2[1]~3                                     ; Merged with audioROM:rommap|k2[0]~1                            ;
-; audioROM:rommap|k2[2]~5                                     ; Merged with audioROM:rommap|k2[0]~1                            ;
-; audioROM:rommap|k2[3]~7                                     ; Merged with audioROM:rommap|k2[0]~1                            ;
-; audioROM:rommap|k2[4]~9                                     ; Merged with audioROM:rommap|k2[0]~1                            ;
-; audioROM:rommap|k2[5]~11                                    ; Merged with audioROM:rommap|k2[0]~1                            ;
-; audioROM:rommap|k2[6]~13                                    ; Merged with audioROM:rommap|k2[0]~1                            ;
-; audioROM:rommap|k2[7]~15                                    ; Merged with audioROM:rommap|k2[0]~1                            ;
-; audioROM:rommap|k2[8]~17                                    ; Merged with audioROM:rommap|k2[0]~1                            ;
-; audioROM:rommap|k2[9]~19                                    ; Merged with audioROM:rommap|k2[0]~1                            ;
-; audioROM:rommap|k2[10]~21                                   ; Merged with audioROM:rommap|k2[0]~1                            ;
-; audioROM:rommap|k2[11]~23                                   ; Merged with audioROM:rommap|k2[0]~1                            ;
-; audioROM:rommap|k2[12]~25                                   ; Merged with audioROM:rommap|k2[0]~1                            ;
-; audioROM:rommap|k2[13]~27                                   ; Merged with audioROM:rommap|k2[0]~1                            ;
-; audioROM:rommap|k2[14]~29                                   ; Merged with audioROM:rommap|k2[0]~1                            ;
-; audioROM:rommap|k2[15]~31                                   ; Merged with audioROM:rommap|k2[0]~1                            ;
-; audioROM:rommap|k7[1]~3                                     ; Merged with audioROM:rommap|k7[0]~1                            ;
-; audioROM:rommap|k7[2]~5                                     ; Merged with audioROM:rommap|k7[0]~1                            ;
-; audioROM:rommap|k7[3]~7                                     ; Merged with audioROM:rommap|k7[0]~1                            ;
-; audioROM:rommap|k7[4]~9                                     ; Merged with audioROM:rommap|k7[0]~1                            ;
-; audioROM:rommap|k7[5]~11                                    ; Merged with audioROM:rommap|k7[0]~1                            ;
-; audioROM:rommap|k7[6]~13                                    ; Merged with audioROM:rommap|k7[0]~1                            ;
-; audioROM:rommap|k7[7]~15                                    ; Merged with audioROM:rommap|k7[0]~1                            ;
-; audioROM:rommap|k7[8]~17                                    ; Merged with audioROM:rommap|k7[0]~1                            ;
-; audioROM:rommap|k7[9]~19                                    ; Merged with audioROM:rommap|k7[0]~1                            ;
-; audioROM:rommap|k7[10]~21                                   ; Merged with audioROM:rommap|k7[0]~1                            ;
-; audioROM:rommap|k7[11]~23                                   ; Merged with audioROM:rommap|k7[0]~1                            ;
-; audioROM:rommap|k7[12]~25                                   ; Merged with audioROM:rommap|k7[0]~1                            ;
-; audioROM:rommap|k7[13]~27                                   ; Merged with audioROM:rommap|k7[0]~1                            ;
-; audioROM:rommap|k7[14]~29                                   ; Merged with audioROM:rommap|k7[0]~1                            ;
-; audioROM:rommap|k7[15]~31                                   ; Merged with audioROM:rommap|k7[0]~1                            ;
-; audioROM:rommap|k8[1]~3                                     ; Merged with audioROM:rommap|k8[0]~1                            ;
-; audioROM:rommap|k8[2]~5                                     ; Merged with audioROM:rommap|k8[0]~1                            ;
-; audioROM:rommap|k8[3]~7                                     ; Merged with audioROM:rommap|k8[0]~1                            ;
-; audioROM:rommap|k8[4]~9                                     ; Merged with audioROM:rommap|k8[0]~1                            ;
-; audioROM:rommap|k8[5]~11                                    ; Merged with audioROM:rommap|k8[0]~1                            ;
-; audioROM:rommap|k8[6]~13                                    ; Merged with audioROM:rommap|k8[0]~1                            ;
-; audioROM:rommap|k8[7]~15                                    ; Merged with audioROM:rommap|k8[0]~1                            ;
-; audioROM:rommap|k8[8]~17                                    ; Merged with audioROM:rommap|k8[0]~1                            ;
-; audioROM:rommap|k8[9]~19                                    ; Merged with audioROM:rommap|k8[0]~1                            ;
-; audioROM:rommap|k8[10]~21                                   ; Merged with audioROM:rommap|k8[0]~1                            ;
-; audioROM:rommap|k8[11]~23                                   ; Merged with audioROM:rommap|k8[0]~1                            ;
-; audioROM:rommap|k8[12]~25                                   ; Merged with audioROM:rommap|k8[0]~1                            ;
-; audioROM:rommap|k8[13]~27                                   ; Merged with audioROM:rommap|k8[0]~1                            ;
-; audioROM:rommap|k8[14]~29                                   ; Merged with audioROM:rommap|k8[0]~1                            ;
 ; de2_i2c_av_config:i2c|mSetup_ST~9                           ; Lost fanout                                                    ;
 ; de2_i2c_av_config:i2c|mSetup_ST~10                          ; Lost fanout                                                    ;
-; Total Number of Removed Registers = 541                     ;                                                                ;
+; Total Number of Removed Registers = 47                      ;                                                                ;
 +-------------------------------------------------------------+----------------------------------------------------------------+
 
 
@@ -817,12 +376,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 223   ;
-; Number of registers using Synchronous Clear  ; 23    ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 465   ;
+; Number of registers using Synchronous Clear  ; 274   ;
+; Number of registers using Synchronous Load   ; 60    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 119   ;
+; Number of registers using Clock Enable       ; 358   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -833,8 +392,8 @@ Encoding Type:  One-Hot
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
 ; FSM_octave:synmap|current[0]           ; 4       ;
+; FSM_volume:volmap|current[1]           ; 5       ;
 ; FSM_octave:octmap|current[0]           ; 4       ;
-; FSM_volume:volmap|current[1]           ; 6       ;
 ; Total number of inverted registers = 3 ;         ;
 +----------------------------------------+---------+
 
@@ -853,261 +412,6 @@ Encoding Type:  One-Hot
 ; audioROM:rommap|\sampling:max_index[5] ; audioROM:rommap|Mux7_rtl_0       ; ROM  ;
 ; audioROM:rommap|\sampling:max_index[6] ; audioROM:rommap|Mux7_rtl_0       ; ROM  ;
 ; audioROM:rommap|\sampling:max_index[7] ; audioROM:rommap|Mux7_rtl_0       ; ROM  ;
-; audioROM:rommap|k11[0]~0               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k12[0]~0               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k11[1]~2               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k12[1]~2               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k11[2]~4               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k12[2]~4               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k11[3]~6               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k12[3]~6               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k11[4]~8               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k12[4]~8               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k11[5]~10              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k12[5]~10              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k11[6]~12              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k12[6]~12              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k11[7]~14              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k12[7]~14              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k11[8]~16              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k12[8]~16              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k11[9]~18              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k12[9]~18              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k11[10]~20             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k12[10]~20             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k11[11]~22             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k12[11]~22             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k11[12]~24             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k12[12]~24             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k11[13]~26             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k12[13]~26             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k11[14]~28             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k12[14]~28             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k11[15]~30             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k12[15]~30             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k9[0]~0                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k10[0]~0               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k9[1]~2                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k10[1]~2               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k9[2]~4                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k10[2]~4               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k9[3]~6                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k10[3]~6               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k9[4]~8                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k10[4]~8               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k9[5]~10               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k10[5]~10              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k9[6]~12               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k10[6]~12              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k9[7]~14               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k10[7]~14              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k9[8]~16               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k10[8]~16              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k9[9]~18               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k10[9]~18              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k9[10]~20              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k10[10]~20             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k9[11]~22              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k10[11]~22             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k9[12]~24              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k10[12]~24             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k9[13]~26              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k10[13]~26             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k9[14]~28              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k10[14]~28             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k9[15]~30              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k10[15]~30             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k13[0]~0               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k14[0]~0               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k13[1]~2               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k14[1]~2               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k13[2]~4               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k14[2]~4               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k13[3]~6               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k14[3]~6               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k13[4]~8               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k14[4]~8               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k13[5]~10              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k14[5]~10              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k13[6]~12              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k14[6]~12              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k13[7]~14              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k14[7]~14              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k13[8]~16              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k14[8]~16              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k13[9]~18              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k14[9]~18              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k13[10]~20             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k14[10]~20             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k13[11]~22             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k14[11]~22             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k13[12]~24             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k14[12]~24             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k13[13]~26             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k14[13]~26             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k13[14]~28             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k14[14]~28             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k13[15]~30             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k14[15]~30             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k5[0]~0                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k6[0]~0                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k5[1]~2                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k6[1]~2                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k5[2]~4                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k6[2]~4                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k5[3]~6                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k6[3]~6                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k5[4]~8                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k6[4]~8                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k5[5]~10               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k6[5]~10               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k5[6]~12               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k6[6]~12               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k5[7]~14               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k6[7]~14               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k5[8]~16               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k6[8]~16               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k5[9]~18               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k6[9]~18               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k5[10]~20              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k6[10]~20              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k5[11]~22              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k6[11]~22              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k5[12]~24              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k6[12]~24              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k5[13]~26              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k6[13]~26              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k5[14]~28              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k6[14]~28              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k5[15]~30              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k6[15]~30              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k4[0]~0                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k4[1]~2                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k4[2]~4                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k4[3]~6                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k4[4]~8                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k4[5]~10               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k4[6]~12               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k4[7]~14               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k4[8]~16               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k4[9]~18               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k4[10]~20              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k4[11]~22              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k4[12]~24              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k4[13]~26              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k4[14]~28              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k4[15]~30              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k0[0]~0                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k1[0]~0                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k0[1]~2                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k1[1]~2                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k0[2]~4                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k1[2]~4                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k0[3]~6                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k1[3]~6                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k0[4]~8                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k1[4]~8                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k0[5]~10               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k1[5]~10               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k0[6]~12               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k1[6]~12               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k0[7]~14               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k1[7]~14               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k0[8]~16               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k1[8]~16               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k0[9]~18               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k1[9]~18               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k0[10]~20              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k1[10]~20              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k0[11]~22              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k1[11]~22              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k0[12]~24              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k1[12]~24              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k0[13]~26              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k1[13]~26              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k0[14]~28              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k1[14]~28              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k0[15]~30              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k1[15]~30              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k2[0]~0                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k3[0]~0                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k2[1]~2                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k3[1]~2                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k2[2]~4                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k3[2]~4                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k2[3]~6                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k3[3]~6                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k2[4]~8                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k3[4]~8                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k2[5]~10               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k3[5]~10               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k2[6]~12               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k3[6]~12               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k2[7]~14               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k3[7]~14               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k2[8]~16               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k3[8]~16               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k2[9]~18               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k3[9]~18               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k2[10]~20              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k3[10]~20              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k2[11]~22              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k3[11]~22              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k2[12]~24              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k3[12]~24              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k2[13]~26              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k3[13]~26              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k2[14]~28              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k3[14]~28              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k2[15]~30              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k3[15]~30              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k7[0]~0                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k7[1]~2                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k7[2]~4                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k7[3]~6                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k7[4]~8                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k7[5]~10               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k7[6]~12               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k7[7]~14               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k7[8]~16               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k7[9]~18               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k7[10]~20              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k7[11]~22              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k7[12]~24              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k7[13]~26              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k7[14]~28              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k7[15]~30              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k8[0]~0                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k8[1]~2                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k8[2]~4                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k8[3]~6                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k8[4]~8                ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k8[5]~10               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k8[6]~12               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k8[7]~14               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k8[8]~16               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k8[9]~18               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k8[10]~20              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k8[11]~22              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k8[12]~24              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k8[13]~26              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k8[14]~28              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k15[0]~0               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k15[1]~2               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k15[2]~4               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k15[3]~6               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k15[4]~8               ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k15[5]~10              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k15[6]~12              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k15[7]~14              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k15[8]~16              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k15[9]~18              ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k15[10]~20             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k15[11]~22             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k15[12]~24             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k15[13]~26             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k15[14]~28             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
-; audioROM:rommap|k15[15]~30             ; audioROM:rommap|Mux199_rtl_0     ; ROM  ;
 +----------------------------------------+----------------------------------+------+
 
 
@@ -1116,13 +420,31 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |JSInth|VGA_top_level:vgamap|VGA_SYNC:videoSync|v_count[3]        ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |JSInth|FSM_octave:synmap|z[1]                                    ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |JSInth|de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD_COUNTER[4] ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |JSInth|WM8731_CONTROLLER:audiomap|shift_out[2]                   ;
-; 4:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |JSInth|audioROM:rommap|\sampling:sample_index[29]                ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |JSInth|VGA_top_level:vgamap|VGA_SYNC:videoSync|v_count[5]        ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |JSInth|FSM_octave:synmap|z[0]                                    ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |JSInth|de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD_COUNTER[5] ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |JSInth|WM8731_CONTROLLER:audiomap|shift_out[14]                  ;
+; 4:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |JSInth|audioROM:rommap|\sampling:sample_index[21]                ;
 ; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |JSInth|FSM_volume:volmap|z[2]                                    ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |JSInth|FSM_octave:octmap|z[1]                                    ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |JSInth|audioROM:rommap|k1[8]                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |JSInth|audioROM:rommap|k0[8]                                     ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k15[11]                                   ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k14[4]                                    ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k13[2]                                    ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k12[14]                                   ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k11[0]                                    ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k10[8]                                    ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k9[7]                                     ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k8[4]                                     ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k7[1]                                     ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k6[11]                                    ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k5[15]                                    ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k4[1]                                     ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k3[9]                                     ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k2[10]                                    ;
+; 7:1                ; 12 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k1[15]                                    ;
+; 7:1                ; 14 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k0[7]                                     ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |JSInth|FSM_octave:octmap|z[0]                                    ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |JSInth|audioROM:rommap|sample_index                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
 
@@ -1152,15 +474,6 @@ Encoding Type:  One-Hot
 +---------------------------------+--------------------+------+-------------------------------+
 ; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                             ;
 +---------------------------------+--------------------+------+-------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------+
-; Source assignments for audioROM:rommap|altsyncram:Mux199_rtl_0|altsyncram_ba01:auto_generated ;
-+---------------------------------+--------------------+------+---------------------------------+
-; Assignment                      ; Value              ; From ; To                              ;
-+---------------------------------+--------------------+------+---------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                               ;
-+---------------------------------+--------------------+------+---------------------------------+
 
 
 +--------------------------------------------------------------------+
@@ -1369,67 +682,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: audioROM:rommap|altsyncram:Mux199_rtl_0 ;
-+------------------------------------+------------------------+----------------------------+
-; Parameter Name                     ; Value                  ; Type                       ;
-+------------------------------------+------------------------+----------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                      ; Untyped                    ;
-; AUTO_CARRY_CHAINS                  ; ON                     ; AUTO_CARRY                 ;
-; IGNORE_CARRY_BUFFERS               ; OFF                    ; IGNORE_CARRY               ;
-; AUTO_CASCADE_CHAINS                ; ON                     ; AUTO_CASCADE               ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                    ; IGNORE_CASCADE             ;
-; WIDTH_BYTEENA                      ; 1                      ; Untyped                    ;
-; OPERATION_MODE                     ; ROM                    ; Untyped                    ;
-; WIDTH_A                            ; 255                    ; Untyped                    ;
-; WIDTHAD_A                          ; 8                      ; Untyped                    ;
-; NUMWORDS_A                         ; 256                    ; Untyped                    ;
-; OUTDATA_REG_A                      ; UNREGISTERED           ; Untyped                    ;
-; ADDRESS_ACLR_A                     ; NONE                   ; Untyped                    ;
-; OUTDATA_ACLR_A                     ; NONE                   ; Untyped                    ;
-; WRCONTROL_ACLR_A                   ; NONE                   ; Untyped                    ;
-; INDATA_ACLR_A                      ; NONE                   ; Untyped                    ;
-; BYTEENA_ACLR_A                     ; NONE                   ; Untyped                    ;
-; WIDTH_B                            ; 1                      ; Untyped                    ;
-; WIDTHAD_B                          ; 1                      ; Untyped                    ;
-; NUMWORDS_B                         ; 1                      ; Untyped                    ;
-; INDATA_REG_B                       ; CLOCK1                 ; Untyped                    ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                 ; Untyped                    ;
-; RDCONTROL_REG_B                    ; CLOCK1                 ; Untyped                    ;
-; ADDRESS_REG_B                      ; CLOCK1                 ; Untyped                    ;
-; OUTDATA_REG_B                      ; UNREGISTERED           ; Untyped                    ;
-; BYTEENA_REG_B                      ; CLOCK1                 ; Untyped                    ;
-; INDATA_ACLR_B                      ; NONE                   ; Untyped                    ;
-; WRCONTROL_ACLR_B                   ; NONE                   ; Untyped                    ;
-; ADDRESS_ACLR_B                     ; NONE                   ; Untyped                    ;
-; OUTDATA_ACLR_B                     ; NONE                   ; Untyped                    ;
-; RDCONTROL_ACLR_B                   ; NONE                   ; Untyped                    ;
-; BYTEENA_ACLR_B                     ; NONE                   ; Untyped                    ;
-; WIDTH_BYTEENA_A                    ; 1                      ; Untyped                    ;
-; WIDTH_BYTEENA_B                    ; 1                      ; Untyped                    ;
-; RAM_BLOCK_TYPE                     ; AUTO                   ; Untyped                    ;
-; BYTE_SIZE                          ; 8                      ; Untyped                    ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE              ; Untyped                    ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ   ; Untyped                    ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ   ; Untyped                    ;
-; INIT_FILE                          ; JSInth.JSInth1.rtl.mif ; Untyped                    ;
-; INIT_FILE_LAYOUT                   ; PORT_A                 ; Untyped                    ;
-; MAXIMUM_DEPTH                      ; 0                      ; Untyped                    ;
-; CLOCK_ENABLE_INPUT_A               ; NORMAL                 ; Untyped                    ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL                 ; Untyped                    ;
-; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                 ; Untyped                    ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                 ; Untyped                    ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN        ; Untyped                    ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN        ; Untyped                    ;
-; ENABLE_ECC                         ; FALSE                  ; Untyped                    ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                  ; Untyped                    ;
-; WIDTH_ECCSTATUS                    ; 3                      ; Untyped                    ;
-; DEVICE_FAMILY                      ; Cyclone IV E           ; Untyped                    ;
-; CBXI_PARAMETER                     ; altsyncram_ba01        ; Untyped                    ;
-+------------------------------------+------------------------+----------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +-------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: audioROM:rommap|lpm_mult:Mult0     ;
 +------------------------------------------------+--------------+---------------------+
@@ -1493,7 +745,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+----------------------------------------------------------------------------------------------+
 ; Name                                      ; Value                                                                                        ;
 +-------------------------------------------+----------------------------------------------------------------------------------------------+
-; Number of entity instances                ; 4                                                                                            ;
+; Number of entity instances                ; 3                                                                                            ;
 ; Entity Instance                           ; VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component ;
 ;     -- OPERATION_MODE                     ; ROM                                                                                          ;
 ;     -- WIDTH_A                            ; 30                                                                                           ;
@@ -1519,17 +771,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Entity Instance                           ; audioROM:rommap|altsyncram:Mux7_rtl_0                                                        ;
 ;     -- OPERATION_MODE                     ; ROM                                                                                          ;
 ;     -- WIDTH_A                            ; 8                                                                                            ;
-;     -- NUMWORDS_A                         ; 256                                                                                          ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                                 ;
-;     -- WIDTH_B                            ; 1                                                                                            ;
-;     -- NUMWORDS_B                         ; 1                                                                                            ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                                                                       ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                                 ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                                         ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                                    ;
-; Entity Instance                           ; audioROM:rommap|altsyncram:Mux199_rtl_0                                                      ;
-;     -- OPERATION_MODE                     ; ROM                                                                                          ;
-;     -- WIDTH_A                            ; 255                                                                                          ;
 ;     -- NUMWORDS_A                         ; 256                                                                                          ;
 ;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                                 ;
 ;     -- WIDTH_B                            ; 1                                                                                            ;
@@ -1597,26 +838,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 65                          ;
-; cycloneiii_ff         ; 223                         ;
-;     ENA               ; 112                         ;
-;     ENA SCLR          ; 7                           ;
+; cycloneiii_ff         ; 465                         ;
+;     ENA               ; 100                         ;
+;     ENA SCLR          ; 198                         ;
+;     ENA SCLR SLD      ; 60                          ;
 ;     SCLR              ; 16                          ;
-;     plain             ; 88                          ;
+;     plain             ; 91                          ;
 ; cycloneiii_io_obuf    ; 4                           ;
-; cycloneiii_lcell_comb ; 2339                        ;
+; cycloneiii_lcell_comb ; 17093                       ;
 ;     arith             ; 939                         ;
 ;         2 data inputs ; 202                         ;
 ;         3 data inputs ; 737                         ;
-;     normal            ; 1400                        ;
+;     normal            ; 16154                       ;
 ;         0 data inputs ; 53                          ;
 ;         1 data inputs ; 14                          ;
-;         2 data inputs ; 470                         ;
-;         3 data inputs ; 354                         ;
-;         4 data inputs ; 509                         ;
-; cycloneiii_ram_block  ; 309                         ;
+;         2 data inputs ; 242                         ;
+;         3 data inputs ; 898                         ;
+;         4 data inputs ; 14947                       ;
+; cycloneiii_ram_block  ; 54                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 125.30                      ;
-; Average LUT depth     ; 87.29                       ;
+; Average LUT depth     ; 25.26                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1625,7 +867,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:13     ;
+; Top            ; 00:06:16     ;
 +----------------+--------------+
 
 
@@ -1635,7 +877,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
-    Info: Processing started: Sun May 24 18:13:04 2015
+    Info: Processing started: Tue May 26 14:54:30 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off JSInth -c JSInth
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file audiorom.vhd
@@ -1709,7 +951,7 @@ Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_top_level:vgamap|
 Info (12128): Elaborating entity "audioROM" for hierarchy "audioROM:rommap"
 Warning (10036): Verilog HDL or VHDL warning at audioROM.vhd(10179): object "octave_int" assigned a value but never read
 Info (12128): Elaborating entity "SampleAdder16" for hierarchy "audioROM:rommap|SampleAdder16:SAMPLE_ADDER"
-Info (19000): Inferred 3 megafunctions from design logic
+Info (19000): Inferred 2 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "de2_i2c_av_config:i2c|Ram0_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to ROM
         Info (286033): Parameter WIDTH_A set to 16
@@ -1729,14 +971,6 @@ Info (19000): Inferred 3 megafunctions from design logic
         Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
         Info (286033): Parameter RAM_BLOCK_TYPE set to AUTO
         Info (286033): Parameter INIT_FILE set to JSInth.JSInth0.rtl.mif
-    Info (276031): Inferred altsyncram megafunction from the following design logic: "audioROM:rommap|Mux199_rtl_0"
-        Info (286033): Parameter OPERATION_MODE set to ROM
-        Info (286033): Parameter WIDTH_A set to 255
-        Info (286033): Parameter WIDTHAD_A set to 8
-        Info (286033): Parameter NUMWORDS_A set to 256
-        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
-        Info (286033): Parameter RAM_BLOCK_TYPE set to AUTO
-        Info (286033): Parameter INIT_FILE set to JSInth.JSInth1.rtl.mif
 Info (278001): Inferred 2 megafunctions from design logic
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "audioROM:rommap|Mult0"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "audioROM:rommap|SampleAdder16:SAMPLE_ADDER|Div0"
@@ -1765,17 +999,6 @@ Info (12133): Instantiated megafunction "audioROM:rommap|altsyncram:Mux7_rtl_0" 
     Info (12134): Parameter "INIT_FILE" = "JSInth.JSInth0.rtl.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_6701.tdf
     Info (12023): Found entity 1: altsyncram_6701
-Info (12130): Elaborated megafunction instantiation "audioROM:rommap|altsyncram:Mux199_rtl_0"
-Info (12133): Instantiated megafunction "audioROM:rommap|altsyncram:Mux199_rtl_0" with the following parameter:
-    Info (12134): Parameter "OPERATION_MODE" = "ROM"
-    Info (12134): Parameter "WIDTH_A" = "255"
-    Info (12134): Parameter "WIDTHAD_A" = "8"
-    Info (12134): Parameter "NUMWORDS_A" = "256"
-    Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
-    Info (12134): Parameter "RAM_BLOCK_TYPE" = "AUTO"
-    Info (12134): Parameter "INIT_FILE" = "JSInth.JSInth1.rtl.mif"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ba01.tdf
-    Info (12023): Found entity 1: altsyncram_ba01
 Info (12130): Elaborated megafunction instantiation "audioROM:rommap|lpm_mult:Mult0"
 Info (12133): Instantiated megafunction "audioROM:rommap|lpm_mult:Mult0" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHA" = "2"
@@ -1819,22 +1042,22 @@ Warning (13009): TRI or OPNDRN buffers permanently enabled
     Warning (13010): Node "AUD_DACLRCK~synth"
     Warning (13010): Node "AUD_BCLK~synth"
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 263 registers lost all their fanouts during netlist optimizations.
+Info (17049): 8 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "reset"
     Warning (15610): No output dependent on input pin "AUD_ADCDAT"
-Info (21057): Implemented 2797 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 17282 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 24 input pins
     Info (21059): Implemented 37 output pins
     Info (21060): Implemented 4 bidirectional pins
-    Info (21061): Implemented 2423 logic cells
-    Info (21064): Implemented 309 RAM segments
+    Info (21061): Implemented 17163 logic cells
+    Info (21064): Implemented 54 RAM segments
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 713 megabytes
-    Info: Processing ended: Sun May 24 18:13:36 2015
-    Info: Elapsed time: 00:00:32
-    Info: Total CPU time (on all processors): 00:00:54
+    Info: Peak virtual memory: 741 megabytes
+    Info: Processing ended: Tue May 26 15:01:11 2015
+    Info: Elapsed time: 00:06:41
+    Info: Total CPU time (on all processors): 00:06:55
 
 

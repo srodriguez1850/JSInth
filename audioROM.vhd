@@ -10179,6 +10179,8 @@ CONSTANT DS6: hex := (
 SIGNAL octave_int: integer;
 SIGNAL key_change: std_logic;
 SIGNAL last_keys: std_logic_vector(15 downto 0);
+SIGNAL octave_change: std_logic;
+SIGNAL last_octave: std_logic_vector(1 downto 0);
 
 FUNCTION highest_one(s : std_logic_vector) RETURN integer IS
 VARIABLE index : integer := 15;
@@ -10202,6 +10204,14 @@ BEGIN
     END IF;
 END PROCESS key_event;
 
+octave_event: PROCESS (clk, octave) IS
+BEGIN
+	IF rising_edge(clk) then
+        last_octave <= octave;
+		  octave_change <= or_reduce(octave xor last_octave);
+    END IF;
+END PROCESS octave_event;
+
 --create index from bit samples
 sampling: PROCESS (clk, keys) IS
 VARIABLE sample_index: integer := 0;
@@ -10215,7 +10225,7 @@ BEGIN
 				sample_index := sample_index + 1;
 			END IF;
 		END IF;
-		IF key_change = '1' THEN
+		IF key_change = '1' OR octave_change = '1' THEN
 			sample_index := 0;
 			max_index := num_samples((to_integer(unsigned(octave)) * 100) + highest_one(keys));
 		END IF;
@@ -10297,6 +10307,168 @@ BEGIN
 			END IF;
 			IF keys(15) = '1' THEN
 				k15 <= C3(sample_index);
+			ELSE
+				k15 <= X"0000";
+			END IF;
+		ELSIF octave = "01" THEN
+			IF keys(0) = '1' THEN
+				k0 <= DS5(sample_index);
+			ELSE
+				k0 <= X"0000";
+			END IF;
+			IF keys(1) = '1' THEN
+				k1 <= D5(sample_index);
+			ELSE
+				k1 <= X"0000";
+			END IF;
+			IF keys(2) = '1' THEN
+				k2 <= CS5(sample_index);
+			ELSE
+				k2 <= X"0000";
+			END IF;
+			IF keys(3) = '1' THEN
+				k3 <= C5(sample_index);
+			ELSE
+				k3 <= X"0000";
+			END IF;
+			IF keys(4) = '1' THEN
+				k4 <= B4(sample_index);
+			ELSE
+				k4 <= X"0000";
+			END IF;
+			IF keys(5) = '1' THEN
+				k5 <= AS4(sample_index);
+			ELSE
+				k5 <= X"0000";
+			END IF;
+			IF keys(6) = '1' THEN
+				k6 <= A4(sample_index);
+			ELSE
+				k6 <= X"0000";
+			END IF;
+			IF keys(7) = '1' THEN
+				k7 <= GS4(sample_index);
+			ELSE
+				k7 <= X"0000";
+			END IF;
+			IF keys(8) = '1' THEN
+				k8 <= G4(sample_index);
+			ELSE
+				k8 <= X"0000";
+			END IF;
+			IF keys(9) = '1' THEN
+				k9 <= FS4(sample_index);
+			ELSE
+				k9 <= X"0000";
+			END IF;
+			IF keys(10) = '1' THEN
+				k10 <= F4(sample_index);
+			ELSE
+				k10 <= X"0000";
+			END IF;
+			IF keys(11) = '1' THEN
+				k11 <= E4(sample_index);
+			ELSE
+				k11 <= X"0000";
+			END IF;
+			IF keys(12) = '1' THEN
+				k12 <= DS4(sample_index);
+			ELSE
+				k12 <= X"0000";
+			END IF;
+			IF keys(13) = '1' THEN
+				k13 <= D4(sample_index);
+			ELSE
+				k13 <= X"0000";
+			END IF;
+			IF keys(14) = '1' THEN
+				k14 <= CS4(sample_index);
+			ELSE
+				k14 <= X"0000";
+			END IF;
+			IF keys(15) = '1' THEN
+				k15 <= C4(sample_index);
+			ELSE
+				k15 <= X"0000";
+			END IF;
+		ELSIF octave = "10" THEN
+			IF keys(0) = '1' THEN
+				k0 <= DS6(sample_index);
+			ELSE
+				k0 <= X"0000";
+			END IF;
+			IF keys(1) = '1' THEN
+				k1 <= D6(sample_index);
+			ELSE
+				k1 <= X"0000";
+			END IF;
+			IF keys(2) = '1' THEN
+				k2 <= CS6(sample_index);
+			ELSE
+				k2 <= X"0000";
+			END IF;
+			IF keys(3) = '1' THEN
+				k3 <= C6(sample_index);
+			ELSE
+				k3 <= X"0000";
+			END IF;
+			IF keys(4) = '1' THEN
+				k4 <= B5(sample_index);
+			ELSE
+				k4 <= X"0000";
+			END IF;
+			IF keys(5) = '1' THEN
+				k5 <= AS5(sample_index);
+			ELSE
+				k5 <= X"0000";
+			END IF;
+			IF keys(6) = '1' THEN
+				k6 <= A5(sample_index);
+			ELSE
+				k6 <= X"0000";
+			END IF;
+			IF keys(7) = '1' THEN
+				k7 <= GS5(sample_index);
+			ELSE
+				k7 <= X"0000";
+			END IF;
+			IF keys(8) = '1' THEN
+				k8 <= G5(sample_index);
+			ELSE
+				k8 <= X"0000";
+			END IF;
+			IF keys(9) = '1' THEN
+				k9 <= FS5(sample_index);
+			ELSE
+				k9 <= X"0000";
+			END IF;
+			IF keys(10) = '1' THEN
+				k10 <= F5(sample_index);
+			ELSE
+				k10 <= X"0000";
+			END IF;
+			IF keys(11) = '1' THEN
+				k11 <= E5(sample_index);
+			ELSE
+				k11 <= X"0000";
+			END IF;
+			IF keys(12) = '1' THEN
+				k12 <= DS5(sample_index);
+			ELSE
+				k12 <= X"0000";
+			END IF;
+			IF keys(13) = '1' THEN
+				k13 <= D5(sample_index);
+			ELSE
+				k13 <= X"0000";
+			END IF;
+			IF keys(14) = '1' THEN
+				k14 <= CS5(sample_index);
+			ELSE
+				k14 <= X"0000";
+			END IF;
+			IF keys(15) = '1' THEN
+				k15 <= C5(sample_index);
 			ELSE
 				k15 <= X"0000";
 			END IF;

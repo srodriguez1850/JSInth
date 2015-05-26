@@ -200,7 +200,7 @@ begin
 			----draw octave blocks
 			--high block
 			if (31 < pixel_column_int AND pixel_column_int < 51 AND 250 < pixel_row_int AND pixel_row_int < 270) then
-				if (oct_sel_vga = "00") then
+				if (oct_sel_vga = "10") then
 					colorAddress <= color_red;
 				else
 					colorAddress <= color_cyan;
@@ -214,7 +214,7 @@ begin
 				end if;
 			--low block
 			elsif (31 < pixel_column_int AND pixel_column_int < 51 AND 310 < pixel_row_int AND pixel_row_int < 330) then
-				if (oct_sel_vga = "10") then
+				if (oct_sel_vga = "00") then
 					colorAddress <= color_red;
 				else
 					colorAddress <= color_cyan;
@@ -265,7 +265,7 @@ begin
 			
 			----draw synth blocks
 			if (589 < pixel_column_int AND pixel_column_int < 609 AND 410 < pixel_row_int AND pixel_row_int < 430) then
-				if (synth_sel_vga = "10") then
+				if (synth_sel_vga = "00") then
 					colorAddress <= color_red;
 				else
 					colorAddress <= color_cyan;
@@ -277,7 +277,7 @@ begin
 					colorAddress <= color_cyan;
 				end if;
 			elsif (529 < pixel_column_int AND pixel_column_int < 549 AND 410 < pixel_row_int AND pixel_row_int < 430) then
-				if (synth_sel_vga = "00") then
+				if (synth_sel_vga = "10") then
 					colorAddress <= color_red;
 				else
 					colorAddress <= color_cyan;
