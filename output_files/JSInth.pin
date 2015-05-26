@@ -358,7 +358,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : C10       :        :                   :      
 vga_blue[2]                  : C11       : output : 2.5 V             :         : 8         : Y              
 vga_blue[5]                  : C12       : output : 2.5 V             :         : 8         : Y              
 vert_sync                    : C13       : output : 2.5 V             :         : 8         : Y              
-vga_blue[8]                  : C14       : output : 2.5 V             :         : 8         : N              
+vga_red[8]                   : C14       : output : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : C15       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C16       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C17       :        :                   :         : 7         :                
@@ -385,8 +385,8 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : D9        :        :                   :      
 vga_red[2]                   : D10       : output : 2.5 V             :         : 8         : Y              
 vga_blue[6]                  : D11       : output : 2.5 V             :         : 8         : Y              
 vga_blue[7]                  : D12       : output : 2.5 V             :         : 8         : Y              
-vga_red[8]                   : D13       : output : 2.5 V             :         : 8         : N              
-vga_red[9]                   : D14       : output : 2.5 V             :         : 8         : N              
+vga_green[9]                 : D13       : output : 2.5 V             :         : 8         : N              
+vga_blue[8]                  : D14       : output : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : D15       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D16       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D17       :        :                   :         : 7         :                
@@ -470,7 +470,7 @@ vga_red[4]                   : G10       : output : 2.5 V             :         
 vga_green[1]                 : G11       : output : 2.5 V             :         : 8         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : G12       :        :                   :         : 8         :                
 horiz_sync                   : G13       : output : 2.5 V             :         : 8         : Y              
-vga_green[8]                 : G14       : output : 2.5 V             :         : 8         : N              
+vga_blue[9]                  : G14       : output : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : G15       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G16       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G17       :        :                   :         : 7         :                
@@ -498,7 +498,7 @@ vga_red[7]                   : H10       : output : 2.5 V             :         
 VCCIO8                       : H11       : power  :                   : 2.5V    : 8         :                
 vga_green[3]                 : H12       : output : 2.5 V             :         : 8         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : H13       :        :                   :         : 8         :                
-vga_green[9]                 : H14       : output : 2.5 V             :         : 8         : N              
+vga_green[8]                 : H14       : output : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : H15       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H16       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H17       :        :                   :         : 7         :                
@@ -526,7 +526,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : J10       :        :                   :      
 GND                          : J11       : gnd    :                   :         :           :                
 vga_red[5]                   : J12       : output : 2.5 V             :         : 8         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : J13       :        :                   :         : 8         :                
-vga_blue[9]                  : J14       : output : 2.5 V             :         : 8         : N              
+vga_red[9]                   : J14       : output : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : J15       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J16       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J17       :        :                   :         : 7         :                

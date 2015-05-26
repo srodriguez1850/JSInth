@@ -85,7 +85,6 @@ set_location_assignment PIN_F12 -to vga_red[3]
 set_location_assignment PIN_D10 -to vga_red[2]
 set_location_assignment PIN_E11 -to vga_red[1]
 set_location_assignment PIN_E10 -to vga_red[0]
-set_location_assignment PIN_Y23 -to keys[16]
 set_location_assignment PIN_Y24 -to keys[15]
 set_location_assignment PIN_AA22 -to keys[14]
 set_location_assignment PIN_AA23 -to keys[13]
@@ -115,6 +114,12 @@ set_location_assignment PIN_B7 -to I2C_SCLK
 set_location_assignment PIN_A8 -to I2C_SDAT
 set_location_assignment PIN_M21 -to oct_sel
 set_location_assignment PIN_M23 -to synth_sel
+set_global_assignment -name VHDL_FILE FSM_synth.vhd
+set_global_assignment -name VHDL_FILE reverb_FIFO.vhd
+set_global_assignment -name VHDL_FILE reverb_adder.vhd
+set_global_assignment -name VHDL_FILE reverb.vhd
+set_global_assignment -name VHDL_FILE constants.vhd
+set_global_assignment -name VHDL_FILE AND16.vhd
 set_global_assignment -name VHDL_FILE audioROM.vhd
 set_global_assignment -name VHDL_FILE SampleAdder16.vhd
 set_global_assignment -name VHDL_FILE WM8731_Controller.vhd

@@ -6,6 +6,7 @@
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.all;
 USE IEEE.numeric_std.all;
+USE work.constants.all;
 
 ENTITY JSInth IS
 	PORT(
@@ -83,8 +84,16 @@ COMPONENT FSM_octave IS
 	);
 END COMPONENT FSM_octave;
 
-component WM8731_CONTROLLER is
-   port (
+COMPONENT FSM_synth IS
+	PORT(
+		button: in std_logic;
+		clk: in std_logic;
+		z: out std_logic_vector(1 downto 0)
+	);
+END COMPONENT FSM_synth;
+
+COMPONENT WM8731_CONTROLLER IS
+   PORT(
     clk : in std_logic;                 --    Audio CODEC Chip Clock AUD_XCK
     reset_n : in std_logic;
     test_mode : in std_logic;           --    Audio CODEC controller test mode
@@ -98,7 +107,7 @@ component WM8731_CONTROLLER is
     AUD_DACDAT   : out std_logic;       --    Audio CODEC DAC Data
     AUD_BCLK     : inout std_logic      --    Audio CODEC Bit-Stream Clock
   );
- end component WM8731_CONTROLLER;
+END COMPONENT WM8731_CONTROLLER;
  
 component de2_i2c_av_config is
   port (
@@ -109,6 +118,14 @@ component de2_i2c_av_config is
   );
 end component de2_i2c_av_config;
 
+component reverb is
+	port(
+		source_signal : in unsigned(DATA_SIZE - 1 downto 0);
+		clear_bit, clk, switch: in std_logic;
+		output: out unsigned(DATA_SIZE - 1 downto 0)
+		);
+end component reverb;
+
 SIGNAL current_volume: std_logic_vector (2 downto 0);
 SIGNAL current_octave: std_logic_vector (1 downto 0);
 SIGNAL current_synth: std_logic_vector(1 downto 0);
@@ -116,6 +133,8 @@ SIGNAL audio_clock: unsigned (1 downto 0) := "00";
 SIGNAL audio_request: std_logic;
 SIGNAL data_in: unsigned (15 downto 0);
 SIGNAL data_counter: unsigned (6 downto 0) := "0000000";
+
+SIGNAL controller_data: unsigned(15 downto 0);
 
 BEGIN
 
@@ -140,7 +159,7 @@ audiomap: WM8731_CONTROLLER port map (
     reset_n => '1',
     test_mode => '0',                   -- Output a sine wave
     audio_request => audio_request,
-    data_in => data_in,
+    data_in => controller_data,
   
     -- Audio interface signals
     AUD_ADCLRCK  => AUD_ADCLRCK,
@@ -153,10 +172,12 @@ audiomap: WM8731_CONTROLLER port map (
 --map FSMs
 volmap: FSM_volume port map(vol_up, vol_down, clk, current_volume);
 octmap: FSM_octave port map(oct_sel, clk, current_octave);
-synmap: FSM_octave port map(synth_sel, clk, current_synth);
+synmap: FSM_synth port map(synth_sel, clk, current_synth);
 --map VGA monitor
 vgamap: VGA_top_level port map(clk, reset, vga_red, vga_green, vga_blue, horiz_sync, vert_sync, vga_blank, vga_clk, keys, current_volume, current_octave, current_synth, mute_sel);
 --map ROM
 rommap: audioROM port map(audio_clock(1), audio_request, keys, current_octave, data_in);
+--map Reverb
+reverbmap: reverb port map(data_in, '0', clk, current_synth(0), controller_data);
 
 END ARCHITECTURE main;

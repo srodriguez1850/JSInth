@@ -5,8 +5,8 @@ use work.constants.all;
 
 entity reverb_adder is
 	port(
-		IN1,IN2: in std_logic_vector(15 downto 0);
-		SUM    : out std_logic_vector(15 downto 0)
+		IN1,IN2: in unsigned(15 downto 0);
+		SUM    : out unsigned(15 downto 0)
 	);
 
 end entity reverb_adder; 
@@ -20,6 +20,6 @@ begin
 int1 := to_integer(signed(IN1));
 int2 := to_integer(signed(IN2));
 int_sum := int1 + int2;
-SUM <= std_logic_vector(to_signed(int_sum, DATA_SIZE));
+SUM <= unsigned(to_signed(int_sum, DATA_SIZE));
 end process;
 end behavioral;

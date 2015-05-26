@@ -1,5 +1,5 @@
 Analysis & Synthesis report for JSInth
-Tue May 26 15:01:11 2015
+Tue May 26 16:57:35 2015
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -26,18 +26,22 @@ Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
  18. Source assignments for audioROM:rommap|altsyncram:Mux7_rtl_0|altsyncram_6701:auto_generated
  19. Parameter Settings for User Entity Instance: de2_i2c_av_config:i2c
  20. Parameter Settings for User Entity Instance: VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component
- 21. Parameter Settings for Inferred Entity Instance: de2_i2c_av_config:i2c|altsyncram:Ram0_rtl_0
- 22. Parameter Settings for Inferred Entity Instance: audioROM:rommap|altsyncram:Mux7_rtl_0
- 23. Parameter Settings for Inferred Entity Instance: audioROM:rommap|lpm_mult:Mult0
- 24. Parameter Settings for Inferred Entity Instance: audioROM:rommap|SampleAdder16:SAMPLE_ADDER|lpm_divide:Div0
- 25. altsyncram Parameter Settings by Entity Instance
- 26. lpm_mult Parameter Settings by Entity Instance
- 27. Port Connectivity Checks: "WM8731_CONTROLLER:audiomap"
- 28. Port Connectivity Checks: "de2_i2c_av_config:i2c|de2_i2c_controller:u0"
- 29. Port Connectivity Checks: "de2_i2c_av_config:i2c"
- 30. Post-Synthesis Netlist Statistics for Top Partition
- 31. Elapsed Time Per Partition
- 32. Analysis & Synthesis Messages
+ 21. Parameter Settings for User Entity Instance: reverb:reverbmap|reverb_FIFO:FIFO_0
+ 22. Parameter Settings for Inferred Entity Instance: de2_i2c_av_config:i2c|altsyncram:Ram0_rtl_0
+ 23. Parameter Settings for Inferred Entity Instance: audioROM:rommap|altsyncram:Mux7_rtl_0
+ 24. Parameter Settings for Inferred Entity Instance: audioROM:rommap|lpm_mult:Mult0
+ 25. Parameter Settings for Inferred Entity Instance: audioROM:rommap|SampleAdder16:SAMPLE_ADDER|lpm_divide:Div0
+ 26. altsyncram Parameter Settings by Entity Instance
+ 27. lpm_mult Parameter Settings by Entity Instance
+ 28. Port Connectivity Checks: "reverb:reverbmap|AND16:AND_0"
+ 29. Port Connectivity Checks: "reverb:reverbmap|reverb_FIFO:FIFO_0"
+ 30. Port Connectivity Checks: "reverb:reverbmap"
+ 31. Port Connectivity Checks: "WM8731_CONTROLLER:audiomap"
+ 32. Port Connectivity Checks: "de2_i2c_av_config:i2c|de2_i2c_controller:u0"
+ 33. Port Connectivity Checks: "de2_i2c_av_config:i2c"
+ 34. Post-Synthesis Netlist Statistics for Top Partition
+ 35. Elapsed Time Per Partition
+ 36. Analysis & Synthesis Messages
 
 
 
@@ -64,13 +68,13 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 26 15:01:11 2015      ;
+; Analysis & Synthesis Status        ; Successful - Tue May 26 16:57:35 2015      ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; JSInth                                     ;
 ; Top-level Entity Name              ; JSInth                                     ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 17,153                                     ;
-;     Total combinational functions  ; 17,093                                     ;
+; Total logic elements               ; 17,156                                     ;
+;     Total combinational functions  ; 17,096                                     ;
 ;     Dedicated logic registers      ; 465                                        ;
 ; Total registers                    ; 465                                        ;
 ; Total pins                         ; 65                                         ;
@@ -191,6 +195,12 @@ agreement for further details.
 +---------------------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path                  ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                 ; Library ;
 +---------------------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------------+---------+
+; FSM_synth.vhd                                     ; yes             ; User VHDL File                                        ; C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_synth.vhd                                     ;         ;
+; reverb_FIFO.vhd                                   ; yes             ; User VHDL File                                        ; C:/Users/Sebastian/Documents/GitHub/JSInth/reverb_FIFO.vhd                                   ;         ;
+; reverb_adder.vhd                                  ; yes             ; User VHDL File                                        ; C:/Users/Sebastian/Documents/GitHub/JSInth/reverb_adder.vhd                                  ;         ;
+; reverb.vhd                                        ; yes             ; User VHDL File                                        ; C:/Users/Sebastian/Documents/GitHub/JSInth/reverb.vhd                                        ;         ;
+; constants.vhd                                     ; yes             ; User VHDL File                                        ; C:/Users/Sebastian/Documents/GitHub/JSInth/constants.vhd                                     ;         ;
+; AND16.vhd                                         ; yes             ; User VHDL File                                        ; C:/Users/Sebastian/Documents/GitHub/JSInth/AND16.vhd                                         ;         ;
 ; audioROM.vhd                                      ; yes             ; User VHDL File                                        ; C:/Users/Sebastian/Documents/GitHub/JSInth/audioROM.vhd                                      ;         ;
 ; SampleAdder16.vhd                                 ; yes             ; User VHDL File                                        ; C:/Users/Sebastian/Documents/GitHub/JSInth/SampleAdder16.vhd                                 ;         ;
 ; WM8731_Controller.vhd                             ; yes             ; User VHDL File                                        ; C:/Users/Sebastian/Documents/GitHub/JSInth/WM8731_Controller.vhd                             ;         ;
@@ -250,16 +260,16 @@ agreement for further details.
 +---------------------------------------------+---------------------------------+
 ; Resource                                    ; Usage                           ;
 +---------------------------------------------+---------------------------------+
-; Estimated Total logic elements              ; 17,153                          ;
+; Estimated Total logic elements              ; 17,156                          ;
 ;                                             ;                                 ;
-; Total combinational functions               ; 17093                           ;
+; Total combinational functions               ; 17096                           ;
 ; Logic element usage by number of LUT inputs ;                                 ;
-;     -- 4 input functions                    ; 14947                           ;
-;     -- 3 input functions                    ; 1635                            ;
-;     -- <=2 input functions                  ; 511                             ;
+;     -- 4 input functions                    ; 14951                           ;
+;     -- 3 input functions                    ; 1633                            ;
+;     -- <=2 input functions                  ; 512                             ;
 ;                                             ;                                 ;
 ; Logic elements by mode                      ;                                 ;
-;     -- normal mode                          ; 16154                           ;
+;     -- normal mode                          ; 16157                           ;
 ;     -- arithmetic mode                      ; 939                             ;
 ;                                             ;                                 ;
 ; Total registers                             ; 465                             ;
@@ -272,8 +282,8 @@ agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0                               ;
 ;                                             ;                                 ;
 ; Maximum fan-out node                        ; audioROM:rommap|sample_index~49 ;
-; Maximum fan-out                             ; 6185                            ;
-; Total fan-out                               ; 67715                           ;
+; Maximum fan-out                             ; 6186                            ;
+; Total fan-out                               ; 67727                           ;
 ; Average fan-out                             ; 3.82                            ;
 +---------------------------------------------+---------------------------------+
 
@@ -283,12 +293,12 @@ agreement for further details.
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                            ; Library Name ;
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |JSInth                                         ; 17093 (2)         ; 465 (2)      ; 3312        ; 0            ; 0       ; 0         ; 65   ; 0            ; |JSInth                                                                                                                                        ; work         ;
+; |JSInth                                         ; 17096 (2)         ; 465 (2)      ; 3312        ; 0            ; 0       ; 0         ; 65   ; 0            ; |JSInth                                                                                                                                        ; work         ;
 ;    |FSM_octave:octmap|                          ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|FSM_octave:octmap                                                                                                                      ; work         ;
-;    |FSM_octave:synmap|                          ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|FSM_octave:synmap                                                                                                                      ; work         ;
-;    |FSM_volume:volmap|                          ; 11 (11)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|FSM_volume:volmap                                                                                                                      ; work         ;
-;    |VGA_top_level:vgamap|                       ; 248 (0)           ; 49 (0)       ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|VGA_top_level:vgamap                                                                                                                   ; work         ;
-;       |VGA_SYNC:videoSync|                      ; 60 (60)           ; 46 (46)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|VGA_top_level:vgamap|VGA_SYNC:videoSync                                                                                                ; work         ;
+;    |FSM_synth:synmap|                           ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|FSM_synth:synmap                                                                                                                       ; work         ;
+;    |FSM_volume:volmap|                          ; 15 (15)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|FSM_volume:volmap                                                                                                                      ; work         ;
+;    |VGA_top_level:vgamap|                       ; 249 (0)           ; 49 (0)       ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|VGA_top_level:vgamap                                                                                                                   ; work         ;
+;       |VGA_SYNC:videoSync|                      ; 61 (61)           ; 46 (46)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|VGA_top_level:vgamap|VGA_SYNC:videoSync                                                                                                ; work         ;
 ;       |pixelGenerator:videoGen|                 ; 188 (188)         ; 3 (3)        ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|VGA_top_level:vgamap|pixelGenerator:videoGen                                                                                           ; work         ;
 ;          |colorROM:colors|                      ; 0 (0)             ; 0 (0)        ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors                                                                           ; work         ;
 ;             |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component                                           ; work         ;
@@ -304,7 +314,7 @@ agreement for further details.
 ;          |altsyncram_6701:auto_generated|       ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|audioROM:rommap|altsyncram:Mux7_rtl_0|altsyncram_6701:auto_generated                                                                   ; work         ;
 ;       |lpm_mult:Mult0|                          ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|audioROM:rommap|lpm_mult:Mult0                                                                                                         ; work         ;
 ;          |multcore:mult_core|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|audioROM:rommap|lpm_mult:Mult0|multcore:mult_core                                                                                      ; work         ;
-;    |de2_i2c_av_config:i2c|                      ; 89 (41)           ; 57 (28)      ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|de2_i2c_av_config:i2c                                                                                                                  ; work         ;
+;    |de2_i2c_av_config:i2c|                      ; 87 (39)           ; 57 (28)      ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|de2_i2c_av_config:i2c                                                                                                                  ; work         ;
 ;       |altsyncram:Ram0_rtl_0|                   ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|de2_i2c_av_config:i2c|altsyncram:Ram0_rtl_0                                                                                            ; work         ;
 ;          |altsyncram_hl81:auto_generated|       ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|de2_i2c_av_config:i2c|altsyncram:Ram0_rtl_0|altsyncram_hl81:auto_generated                                                             ; work         ;
 ;       |de2_i2c_controller:u0|                   ; 48 (48)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JSInth|de2_i2c_av_config:i2c|de2_i2c_controller:u0                                                                                            ; work         ;
@@ -335,40 +345,75 @@ Encoding Type:  One-Hot
 +----------------+----------------+----------------+----------------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                            ;
++--------------------------------------------------------------+----------------------------------------------------------------+
+; Register name                                                ; Reason for Removal                                             ;
++--------------------------------------------------------------+----------------------------------------------------------------+
+; reverb:reverbmap|fifo_read_en                                ; Stuck at VCC due to stuck port data_in                         ;
+; reverb:reverbmap|fifo_write_en                               ; Stuck at VCC due to stuck port data_in                         ;
+; reverb:reverbmap|reverb_FIFO:FIFO_0|data_out[0..15]          ; Stuck at GND due to stuck port clock_enable                    ;
+; reverb:reverbmap|reverb_FIFO:FIFO_0|\FIFO_process:head[0..5] ; Lost fanout                                                    ;
+; reverb:reverbmap|reverb_FIFO:FIFO_0|\FIFO_process:tail[0..5] ; Lost fanout                                                    ;
+; reverb:reverbmap|reverb_FIFO:FIFO_0|\FIFO_process:flag       ; Lost fanout                                                    ;
+; audioROM:rommap|\sampling:max_index[8..31]                   ; Stuck at GND due to stuck port data_in                         ;
+; WM8731_CONTROLLER:audiomap|sin_counter[0..5]                 ; Lost fanout                                                    ;
+; de2_i2c_av_config:i2c|mI2C_DATA[16,17,19,23]                 ; Stuck at GND due to stuck port data_in                         ;
+; de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[16,17,19,23]  ; Stuck at GND due to stuck port data_in                         ;
+; de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[20,21]        ; Merged with de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[18] ;
+; de2_i2c_av_config:i2c|mI2C_DATA[20,21]                       ; Merged with de2_i2c_av_config:i2c|mI2C_DATA[18]                ;
+; de2_i2c_av_config:i2c|mI2C_DATA[18]                          ; Merged with de2_i2c_av_config:i2c|mI2C_DATA[22]                ;
+; de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[18]           ; Merged with de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[22] ;
+; VGA_top_level:vgamap|VGA_SYNC:videoSync|pixel_row[9]         ; Stuck at GND due to stuck port data_in                         ;
+; de2_i2c_av_config:i2c|mSetup_ST~9                            ; Lost fanout                                                    ;
+; de2_i2c_av_config:i2c|mSetup_ST~10                           ; Lost fanout                                                    ;
+; Total Number of Removed Registers = 78                       ;                                                                ;
++--------------------------------------------------------------+----------------------------------------------------------------+
+
+
 +------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                           ;
-+-------------------------------------------------------------+----------------------------------------------------------------+
-; Register name                                               ; Reason for Removal                                             ;
-+-------------------------------------------------------------+----------------------------------------------------------------+
-; audioROM:rommap|\sampling:max_index[8..31]                  ; Stuck at GND due to stuck port data_in                         ;
-; WM8731_CONTROLLER:audiomap|sin_counter[0..5]                ; Lost fanout                                                    ;
-; de2_i2c_av_config:i2c|mI2C_DATA[16,17,19,23]                ; Stuck at GND due to stuck port data_in                         ;
-; de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[16,17,19,23] ; Stuck at GND due to stuck port data_in                         ;
-; de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[20,21]       ; Merged with de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[18] ;
-; de2_i2c_av_config:i2c|mI2C_DATA[20,21]                      ; Merged with de2_i2c_av_config:i2c|mI2C_DATA[18]                ;
-; de2_i2c_av_config:i2c|mI2C_DATA[18]                         ; Merged with de2_i2c_av_config:i2c|mI2C_DATA[22]                ;
-; de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[18]          ; Merged with de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[22] ;
-; VGA_top_level:vgamap|VGA_SYNC:videoSync|pixel_row[9]        ; Stuck at GND due to stuck port data_in                         ;
-; de2_i2c_av_config:i2c|mSetup_ST~9                           ; Lost fanout                                                    ;
-; de2_i2c_av_config:i2c|mSetup_ST~10                          ; Lost fanout                                                    ;
-; Total Number of Removed Registers = 47                      ;                                                                ;
-+-------------------------------------------------------------+----------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                          ;
-+-------------------------------------+---------------------------+----------------------------------------------------+
-; Register name                       ; Reason for Removal        ; Registers Removed due to This Register             ;
-+-------------------------------------+---------------------------+----------------------------------------------------+
-; de2_i2c_av_config:i2c|mI2C_DATA[23] ; Stuck at GND              ; de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[23] ;
-;                                     ; due to stuck port data_in ;                                                    ;
-; de2_i2c_av_config:i2c|mI2C_DATA[19] ; Stuck at GND              ; de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[19] ;
-;                                     ; due to stuck port data_in ;                                                    ;
-; de2_i2c_av_config:i2c|mI2C_DATA[17] ; Stuck at GND              ; de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[17] ;
-;                                     ; due to stuck port data_in ;                                                    ;
-; de2_i2c_av_config:i2c|mI2C_DATA[16] ; Stuck at GND              ; de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[16] ;
-;                                     ; due to stuck port data_in ;                                                    ;
-+-------------------------------------+---------------------------+----------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                  ;
++-------------------------------------+---------------------------+------------------------------------------------------------+
+; Register name                       ; Reason for Removal        ; Registers Removed due to This Register                     ;
++-------------------------------------+---------------------------+------------------------------------------------------------+
+; reverb:reverbmap|fifo_read_en       ; Stuck at VCC              ; reverb:reverbmap|reverb_FIFO:FIFO_0|data_out[3],           ;
+;                                     ; due to stuck port data_in ; reverb:reverbmap|reverb_FIFO:FIFO_0|data_out[2],           ;
+;                                     ;                           ; reverb:reverbmap|reverb_FIFO:FIFO_0|data_out[1],           ;
+;                                     ;                           ; reverb:reverbmap|reverb_FIFO:FIFO_0|data_out[0],           ;
+;                                     ;                           ; reverb:reverbmap|reverb_FIFO:FIFO_0|data_out[4],           ;
+;                                     ;                           ; reverb:reverbmap|reverb_FIFO:FIFO_0|data_out[5],           ;
+;                                     ;                           ; reverb:reverbmap|reverb_FIFO:FIFO_0|data_out[6],           ;
+;                                     ;                           ; reverb:reverbmap|reverb_FIFO:FIFO_0|data_out[7],           ;
+;                                     ;                           ; reverb:reverbmap|reverb_FIFO:FIFO_0|data_out[8],           ;
+;                                     ;                           ; reverb:reverbmap|reverb_FIFO:FIFO_0|data_out[9],           ;
+;                                     ;                           ; reverb:reverbmap|reverb_FIFO:FIFO_0|data_out[10],          ;
+;                                     ;                           ; reverb:reverbmap|reverb_FIFO:FIFO_0|data_out[11],          ;
+;                                     ;                           ; reverb:reverbmap|reverb_FIFO:FIFO_0|data_out[12],          ;
+;                                     ;                           ; reverb:reverbmap|reverb_FIFO:FIFO_0|data_out[13],          ;
+;                                     ;                           ; reverb:reverbmap|reverb_FIFO:FIFO_0|data_out[14],          ;
+;                                     ;                           ; reverb:reverbmap|reverb_FIFO:FIFO_0|data_out[15],          ;
+;                                     ;                           ; reverb:reverbmap|reverb_FIFO:FIFO_0|\FIFO_process:head[5], ;
+;                                     ;                           ; reverb:reverbmap|reverb_FIFO:FIFO_0|\FIFO_process:head[4], ;
+;                                     ;                           ; reverb:reverbmap|reverb_FIFO:FIFO_0|\FIFO_process:head[3], ;
+;                                     ;                           ; reverb:reverbmap|reverb_FIFO:FIFO_0|\FIFO_process:head[2], ;
+;                                     ;                           ; reverb:reverbmap|reverb_FIFO:FIFO_0|\FIFO_process:head[1], ;
+;                                     ;                           ; reverb:reverbmap|reverb_FIFO:FIFO_0|\FIFO_process:tail[4], ;
+;                                     ;                           ; reverb:reverbmap|reverb_FIFO:FIFO_0|\FIFO_process:tail[3], ;
+;                                     ;                           ; reverb:reverbmap|reverb_FIFO:FIFO_0|\FIFO_process:tail[2], ;
+;                                     ;                           ; reverb:reverbmap|reverb_FIFO:FIFO_0|\FIFO_process:tail[1], ;
+;                                     ;                           ; reverb:reverbmap|reverb_FIFO:FIFO_0|\FIFO_process:tail[0], ;
+;                                     ;                           ; reverb:reverbmap|reverb_FIFO:FIFO_0|\FIFO_process:flag     ;
+; reverb:reverbmap|fifo_write_en      ; Stuck at VCC              ; reverb:reverbmap|reverb_FIFO:FIFO_0|\FIFO_process:tail[5]  ;
+;                                     ; due to stuck port data_in ;                                                            ;
+; de2_i2c_av_config:i2c|mI2C_DATA[23] ; Stuck at GND              ; de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[23]         ;
+;                                     ; due to stuck port data_in ;                                                            ;
+; de2_i2c_av_config:i2c|mI2C_DATA[19] ; Stuck at GND              ; de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[19]         ;
+;                                     ; due to stuck port data_in ;                                                            ;
+; de2_i2c_av_config:i2c|mI2C_DATA[17] ; Stuck at GND              ; de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[17]         ;
+;                                     ; due to stuck port data_in ;                                                            ;
+; de2_i2c_av_config:i2c|mI2C_DATA[16] ; Stuck at GND              ; de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD[16]         ;
+;                                     ; due to stuck port data_in ;                                                            ;
++-------------------------------------+---------------------------+------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -391,10 +436,9 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; FSM_octave:synmap|current[0]           ; 4       ;
-; FSM_volume:volmap|current[1]           ; 5       ;
+; FSM_volume:volmap|current[1]           ; 7       ;
 ; FSM_octave:octmap|current[0]           ; 4       ;
-; Total number of inverted registers = 3 ;         ;
+; Total number of inverted registers = 2 ;         ;
 +----------------------------------------+---------+
 
 
@@ -421,30 +465,30 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
 ; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |JSInth|VGA_top_level:vgamap|VGA_SYNC:videoSync|v_count[5]        ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |JSInth|FSM_octave:synmap|z[0]                                    ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |JSInth|FSM_synth:synmap|z[0]                                     ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |JSInth|de2_i2c_av_config:i2c|de2_i2c_controller:u0|SD_COUNTER[5] ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |JSInth|WM8731_CONTROLLER:audiomap|shift_out[14]                  ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |JSInth|WM8731_CONTROLLER:audiomap|shift_out[1]                   ;
 ; 4:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |JSInth|audioROM:rommap|\sampling:sample_index[21]                ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |JSInth|FSM_volume:volmap|z[2]                                    ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |JSInth|audioROM:rommap|k1[8]                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |JSInth|audioROM:rommap|k0[8]                                     ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |JSInth|FSM_volume:volmap|z[1]                                    ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |JSInth|audioROM:rommap|k1[9]                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |JSInth|audioROM:rommap|k0[13]                                    ;
 ; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k15[11]                                   ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k14[4]                                    ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k14[15]                                   ;
 ; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k13[2]                                    ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k12[14]                                   ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k11[0]                                    ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k10[8]                                    ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k9[7]                                     ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k8[4]                                     ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k7[1]                                     ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k6[11]                                    ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k5[15]                                    ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k4[1]                                     ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k3[9]                                     ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k12[5]                                    ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k11[1]                                    ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k10[5]                                    ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k9[1]                                     ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k8[2]                                     ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k7[8]                                     ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k6[12]                                    ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k5[2]                                     ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k4[9]                                     ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k3[14]                                    ;
 ; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k2[10]                                    ;
 ; 7:1                ; 12 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k1[15]                                    ;
-; 7:1                ; 14 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k0[7]                                     ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |JSInth|FSM_octave:octmap|z[0]                                    ;
+; 7:1                ; 14 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |JSInth|audioROM:rommap|k0[12]                                    ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |JSInth|FSM_octave:octmap|z[1]                                    ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |JSInth|audioROM:rommap|sample_index                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
 
@@ -557,6 +601,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                                                       ;
 ; CBXI_PARAMETER                     ; altsyncram_b481      ; Untyped                                                                       ;
 +------------------------------------+----------------------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reverb:reverbmap|reverb_FIFO:FIFO_0 ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; data_size      ; 16    ; Signed Integer                                          ;
+; fifo_size      ; 48    ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -802,6 +857,38 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------+--------------------------------+
 
 
++----------------------------------------------------------+
+; Port Connectivity Checks: "reverb:reverbmap|AND16:AND_0" ;
++-----------+-------+----------+---------------------------+
+; Port      ; Type  ; Severity ; Details                   ;
++-----------+-------+----------+---------------------------+
+; b[15..13] ; Input ; Info     ; Stuck at GND              ;
+; b[11..9]  ; Input ; Info     ; Stuck at GND              ;
+; b[7..5]   ; Input ; Info     ; Stuck at GND              ;
+; b[3..1]   ; Input ; Info     ; Stuck at GND              ;
++-----------+-------+----------+---------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "reverb:reverbmap|reverb_FIFO:FIFO_0"                                                 ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; reset ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; empty ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; full  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "reverb:reverbmap" ;
++-----------+-------+----------+---------------+
+; Port      ; Type  ; Severity ; Details       ;
++-----------+-------+----------+---------------+
+; clear_bit ; Input ; Info     ; Stuck at GND  ;
++-----------+-------+----------+---------------+
+
+
 +--------------------------------------------------------+
 ; Port Connectivity Checks: "WM8731_CONTROLLER:audiomap" ;
 +-----------+-------+----------+-------------------------+
@@ -845,16 +932,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SCLR              ; 16                          ;
 ;     plain             ; 91                          ;
 ; cycloneiii_io_obuf    ; 4                           ;
-; cycloneiii_lcell_comb ; 17093                       ;
+; cycloneiii_lcell_comb ; 17096                       ;
 ;     arith             ; 939                         ;
 ;         2 data inputs ; 202                         ;
 ;         3 data inputs ; 737                         ;
-;     normal            ; 16154                       ;
+;     normal            ; 16157                       ;
 ;         0 data inputs ; 53                          ;
 ;         1 data inputs ; 14                          ;
-;         2 data inputs ; 242                         ;
-;         3 data inputs ; 898                         ;
-;         4 data inputs ; 14947                       ;
+;         2 data inputs ; 243                         ;
+;         3 data inputs ; 896                         ;
+;         4 data inputs ; 14951                       ;
 ; cycloneiii_ram_block  ; 54                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 125.30                      ;
@@ -867,7 +954,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:06:16     ;
+; Top            ; 00:05:23     ;
 +----------------+--------------+
 
 
@@ -877,9 +964,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
-    Info: Processing started: Tue May 26 14:54:30 2015
+    Info: Processing started: Tue May 26 16:51:50 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off JSInth -c JSInth
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (12021): Found 2 design units, including 1 entities, in source file fsm_synth.vhd
+    Info (12022): Found design unit 1: FSM_synth-states
+    Info (12023): Found entity 1: FSM_synth
+Info (12021): Found 2 design units, including 1 entities, in source file reverb_fifo.vhd
+    Info (12022): Found design unit 1: reverb_FIFO-behavioral
+    Info (12023): Found entity 1: reverb_FIFO
+Info (12021): Found 2 design units, including 1 entities, in source file reverb_adder.vhd
+    Info (12022): Found design unit 1: reverb_adder-behavioral
+    Info (12023): Found entity 1: reverb_adder
+Info (12021): Found 2 design units, including 1 entities, in source file reverb.vhd
+    Info (12022): Found design unit 1: reverb-behavioral
+    Info (12023): Found entity 1: reverb
+Info (12021): Found 2 design units, including 0 entities, in source file constants.vhd
+    Info (12022): Found design unit 1: constants
+    Info (12022): Found design unit 2: constants-body
+Info (12021): Found 2 design units, including 1 entities, in source file and16.vhd
+    Info (12022): Found design unit 1: AND16-dataflow
+    Info (12023): Found entity 1: AND16
 Info (12021): Found 2 design units, including 1 entities, in source file audiorom.vhd
     Info (12022): Found design unit 1: audioROM-rom
     Info (12023): Found entity 1: audioROM
@@ -925,6 +1030,7 @@ Warning (10230): Verilog HDL assignment warning at de2_i2c_controller.v(61): tru
 Info (12128): Elaborating entity "WM8731_CONTROLLER" for hierarchy "WM8731_CONTROLLER:audiomap"
 Info (12128): Elaborating entity "FSM_volume" for hierarchy "FSM_volume:volmap"
 Info (12128): Elaborating entity "FSM_octave" for hierarchy "FSM_octave:octmap"
+Info (12128): Elaborating entity "FSM_synth" for hierarchy "FSM_synth:synmap"
 Info (12128): Elaborating entity "VGA_top_level" for hierarchy "VGA_top_level:vgamap"
 Info (12128): Elaborating entity "pixelGenerator" for hierarchy "VGA_top_level:vgamap|pixelGenerator:videoGen"
 Info (12128): Elaborating entity "colorROM" for hierarchy "VGA_top_level:vgamap|pixelGenerator:videoGen|colorROM:colors"
@@ -951,6 +1057,16 @@ Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_top_level:vgamap|
 Info (12128): Elaborating entity "audioROM" for hierarchy "audioROM:rommap"
 Warning (10036): Verilog HDL or VHDL warning at audioROM.vhd(10179): object "octave_int" assigned a value but never read
 Info (12128): Elaborating entity "SampleAdder16" for hierarchy "audioROM:rommap|SampleAdder16:SAMPLE_ADDER"
+Info (12128): Elaborating entity "reverb" for hierarchy "reverb:reverbmap"
+Warning (10036): Verilog HDL or VHDL warning at reverb.vhd(44): object "fifo_empty" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at reverb.vhd(44): object "fifo_full" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at reverb.vhd(45): used implicit default value for signal "fifo_in_data" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10492): VHDL Process Statement warning at reverb.vhd(64): signal "clear_bit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at reverb.vhd(63): inferring latch(es) for signal or variable "fifo_reset", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "fifo_reset" at reverb.vhd(63)
+Info (12128): Elaborating entity "reverb_FIFO" for hierarchy "reverb:reverbmap|reverb_FIFO:FIFO_0"
+Info (12128): Elaborating entity "AND16" for hierarchy "reverb:reverbmap|AND16:AND_0"
+Info (12128): Elaborating entity "reverb_adder" for hierarchy "reverb:reverbmap|reverb_adder:ADDER_0"
 Info (19000): Inferred 2 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "de2_i2c_av_config:i2c|Ram0_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to ROM
@@ -1042,22 +1158,22 @@ Warning (13009): TRI or OPNDRN buffers permanently enabled
     Warning (13010): Node "AUD_DACLRCK~synth"
     Warning (13010): Node "AUD_BCLK~synth"
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 8 registers lost all their fanouts during netlist optimizations.
+Info (17049): 21 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "reset"
     Warning (15610): No output dependent on input pin "AUD_ADCDAT"
-Info (21057): Implemented 17282 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 17285 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 24 input pins
     Info (21059): Implemented 37 output pins
     Info (21060): Implemented 4 bidirectional pins
-    Info (21061): Implemented 17163 logic cells
+    Info (21061): Implemented 17166 logic cells
     Info (21064): Implemented 54 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 741 megabytes
-    Info: Processing ended: Tue May 26 15:01:11 2015
-    Info: Elapsed time: 00:06:41
-    Info: Total CPU time (on all processors): 00:06:55
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 23 warnings
+    Info: Peak virtual memory: 744 megabytes
+    Info: Processing ended: Tue May 26 16:57:35 2015
+    Info: Elapsed time: 00:05:45
+    Info: Total CPU time (on all processors): 00:06:08
 
 
