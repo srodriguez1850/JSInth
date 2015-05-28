@@ -1,3 +1,4 @@
+# Compile of typeDeclarations.vhd was successful.
 # Compile of de2_i2c_av_config.v was successful.
 # Compile of de2_i2c_controller.v was successful.
 # Compile of WM8731_Controller.vhd was successful.
@@ -7,51 +8,30 @@
 # Compile of VGA_top_level.vhd was successful.
 # Compile of FSM_octave.vhd was successful.
 # Compile of FSM_volume.vhd was successful.
-# Compile of SampleAdder16.vhd failed with 2 errors.
-# Compile of JSInth.vhd was successful.
-# Compile of JSInth_tb.vhd was successful.
-# 12 compiles, 1 failed with 2 errors.
-# Compile of de2_i2c_av_config.v was successful.
-# Compile of de2_i2c_controller.v was successful.
-# Compile of WM8731_Controller.vhd was successful.
-# Compile of colorROM.vhd was successful.
-# Compile of pixelGenerator.vhd was successful.
-# Compile of vga_sync.vhd was successful.
-# Compile of VGA_top_level.vhd was successful.
-# Compile of FSM_octave.vhd was successful.
-# Compile of FSM_volume.vhd was successful.
+# Compile of FIFO.vhd was successful.
+# Compile of SampleContainer.vhd was successful.
 # Compile of SampleAdder16.vhd was successful.
-# Compile of JSInth.vhd was successful.
-# Compile of JSInth_tb.vhd was successful.
-# 12 compiles, 0 failed with no errors.
-# Compile of de2_i2c_av_config.v was successful.
-# Compile of de2_i2c_controller.v was successful.
-# Compile of WM8731_Controller.vhd was successful.
-# Compile of colorROM.vhd was successful.
-# Compile of pixelGenerator.vhd was successful.
-# Compile of vga_sync.vhd was successful.
-# Compile of VGA_top_level.vhd was successful.
-# Compile of FSM_octave.vhd was successful.
-# Compile of FSM_volume.vhd was successful.
-# Compile of SampleAdder16.vhd was successful.
-# Compile of JSInth.vhd was successful.
-# Compile of SampleAdder16_tb.vhd failed with 1 errors.
-# Compile of JSInth_tb.vhd was successful.
-# 13 compiles, 1 failed with 1 error.
-# Compile of de2_i2c_av_config.v was successful.
-# Compile of de2_i2c_controller.v was successful.
-# Compile of WM8731_Controller.vhd was successful.
-# Compile of colorROM.vhd was successful.
-# Compile of pixelGenerator.vhd was successful.
-# Compile of vga_sync.vhd was successful.
-# Compile of VGA_top_level.vhd was successful.
-# Compile of FSM_octave.vhd was successful.
-# Compile of FSM_volume.vhd was successful.
-# Compile of SampleAdder16.vhd was successful.
-# Compile of JSInth.vhd was successful.
-# Compile of SampleAdder16_tb.vhd failed with 6 errors.
-# Compile of JSInth_tb.vhd was successful.
-# 13 compiles, 1 failed with 6 errors.
-# Compile of SampleAdder16_tb.vhd failed with 3 errors.
 # Compile of SampleAdder16_tb.vhd was successful.
-vsim +altera -do JSInth_run_msim_rtl_vhdl.do -l msim_transcript -gui work.sampleadder16_tb
+# Compile of audioROM.vhd was successful.
+# Compile of JSInth.vhd was successful.
+# Compile of JSInth_tb.vhd was successful.
+# 17 compiles, 0 failed with no errors.
+# Compile of typeDeclarations.vhd was successful.
+# Compile of de2_i2c_av_config.v was successful.
+# Compile of de2_i2c_controller.v was successful.
+# Compile of WM8731_Controller.vhd was successful.
+# Compile of colorROM.vhd was successful.
+# Compile of pixelGenerator.vhd was successful.
+# Compile of vga_sync.vhd was successful.
+# Compile of VGA_top_level.vhd was successful.
+# Compile of FSM_octave.vhd was successful.
+# Compile of FSM_volume.vhd was successful.
+# Compile of FIFO.vhd was successful.
+# Compile of SampleContainer.vhd was successful.
+# Compile of SampleAdder16.vhd was successful.
+# Compile of SampleAdder16_tb.vhd was successful.
+# Compile of audioROM.vhd was successful.
+# Compile of JSInth.vhd was successful.
+# Compile of JSInth_tb.vhd was successful.
+# 17 compiles, 0 failed with no errors.
+vsim +altera -do JSInth_run_msim_rtl_vhdl.do -l msim_transcript -gui work.jsinth_tb

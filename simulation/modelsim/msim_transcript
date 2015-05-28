@@ -1,49 +1,112 @@
 # vsim -gui "+altera" -l msim_transcript -do "JSInth_run_msim_rtl_vhdl.do" 
-# Start time: 12:57:41 on May 10,2015
+# Start time: 15:28:30 on May 28,2015
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading work.sampleadder16_tb(rtl)
+# Loading work.jsinth_tb(rtl)
+# Loading work.constants(body)
+# Loading work.jsinth(main)
+# Loading work.wm8731_controller(rtl)
+# Loading ieee.std_logic_arith(body)
+# Loading work.fsm_volume(states)
+# Loading work.fsm_octave(states)
+# Loading work.fsm_synth(states)
+# Loading work.vga_top_level(structural)
+# Loading work.pixelgenerator(behavioral)
+# Loading work.colorrom(syn)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+# Loading work.vga_sync(behavioral)
+# Loading synopsys.attributes
+# Loading ieee.std_logic_misc(body)
+# Loading work.typedeclarations
+# Loading work.audiorom(rom)
+# Loading work.samplecontainer(rtl)
+# Loading work.fifo(behavioral)
 # Loading work.sampleadder16(rtl)
+# ** Warning: (vsim-8683) Uninitialized inout port /jsinth_tb/DUT/I2C_SDAT has no driver.
+# 
+# This port will contribute value (U) to the signal network.
+# 
+# ** Warning: (vsim-8683) Uninitialized out port /jsinth_tb/DUT/I2C_SCLK has no driver.
+# 
+# This port will contribute value (U) to the signal network.
+# 
 # do JSInth_run_msim_rtl_vhdl.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
 # }
-# Error 31: Unable to unlink file "C:/Users/Sebastian/Documents/GitHub/JSInth/simulation/modelsim/rtl_work/_lib.qdb".
-# Error 133: Unable to remove directory "C:/Users/Sebastian/Documents/GitHub/JSInth/simulation/modelsim/rtl_work".
 # vlib rtl_work
-# ** Error: (vlib-35) Failed to create directory "rtl_work".
-# 
-# File exists. (errno = EEXIST)
 # vmap work rtl_work
 # Model Technology ModelSim PE vmap 10.3c Lib Mapping Utility 2014.09 Sep 20 2014
 # vmap -modelsim_quiet work rtl_work 
 # Modifying C:/Users/Sebastian/Documents/GitHub/JSInth/simulation/modelsim/JSInth.mpf
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/Sebastian/Documents/GitHub/JSInth {C:/Users/Sebastian/Documents/GitHub/JSInth/de2_i2c_controller.v}
-# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 12:57:44 on May 10,2015
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sebastian/Documents/GitHub/JSInth" C:/Users/Sebastian/Documents/GitHub/JSInth/de2_i2c_controller.v 
-# -- Compiling module de2_i2c_controller
-# 
-# Top level modules:
-# 	de2_i2c_controller
-# End time: 12:57:44 on May 10,2015, Elapsed time: 0:00:00
+# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/typeDeclarations.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 15:28:33 on May 28,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/typeDeclarations.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package typeDeclarations
+# End time: 15:28:33 on May 28,2015, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sebastian/Documents/GitHub/JSInth {C:/Users/Sebastian/Documents/GitHub/JSInth/de2_i2c_av_config.v}
-# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 12:57:45 on May 10,2015
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sebastian/Documents/GitHub/JSInth" C:/Users/Sebastian/Documents/GitHub/JSInth/de2_i2c_av_config.v 
-# -- Compiling module de2_i2c_av_config
-# 
-# Top level modules:
-# 	de2_i2c_av_config
-# End time: 12:57:45 on May 10,2015, Elapsed time: 0:00:00
+# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/FIFO.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 15:28:33 on May 28,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/FIFO.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity FIFO
+# -- Compiling architecture Behavioral of FIFO
+# End time: 15:28:34 on May 28,2015, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_synth.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 15:28:34 on May 28,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_synth.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity FSM_synth
+# -- Compiling architecture states of FSM_synth
+# End time: 15:28:34 on May 28,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/constants.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 15:28:34 on May 28,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/constants.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package constants
+# -- Compiling package body constants
+# -- Loading package constants
+# End time: 15:28:34 on May 28,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/SampleAdder16.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 15:28:34 on May 28,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/SampleAdder16.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity SampleAdder16
+# -- Compiling architecture rtl of SampleAdder16
+# End time: 15:28:35 on May 28,2015, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/WM8731_Controller.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 12:57:45 on May 10,2015
+# Start time: 15:28:35 on May 28,2015
 # vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/WM8731_Controller.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -51,22 +114,22 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity WM8731_CONTROLLER
 # -- Compiling architecture rtl of WM8731_CONTROLLER
-# End time: 12:57:46 on May 10,2015, Elapsed time: 0:00:01
+# End time: 15:28:35 on May 28,2015, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/VGA_top_level.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 12:57:46 on May 10,2015
+# Start time: 15:28:35 on May 28,2015
 # vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/VGA_top_level.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity VGA_top_level
 # -- Compiling architecture structural of VGA_top_level
-# End time: 12:57:46 on May 10,2015, Elapsed time: 0:00:00
+# End time: 15:28:36 on May 28,2015, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/vga_sync.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 12:57:46 on May 10,2015
+# Start time: 15:28:36 on May 28,2015
 # vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/vga_sync.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -75,48 +138,38 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity VGA_SYNC
 # -- Compiling architecture behavioral of VGA_SYNC
-# End time: 12:57:47 on May 10,2015, Elapsed time: 0:00:01
+# End time: 15:28:36 on May 28,2015, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/pixelGenerator.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 12:57:47 on May 10,2015
+# Start time: 15:28:36 on May 28,2015
 # vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/pixelGenerator.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
+# ** Warning: (vsim-6) -- Waiting for lock by "Sebastian@SSRODRIGUEZ-LC, pid = 9528
+# ". Lockfile is "C:/Users/Sebastian/Documents/GitHub/JSInth/simulation/modelsim/rtl_work/_lock".
+# 
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity pixelGenerator
 # -- Compiling architecture behavioral of pixelGenerator
-# End time: 12:57:47 on May 10,2015, Elapsed time: 0:00:00
+# End time: 15:28:37 on May 28,2015, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/colorROM.vhd}
+add wave -r sim:/jsinth_tb/DUT/rommap/*
 # Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 12:57:47 on May 10,2015
+# Start time: 15:28:41 on May 28,2015
 # vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/colorROM.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity colorROM
 # -- Compiling architecture SYN of colorrom
-# End time: 12:57:48 on May 10,2015, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/JSInth.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 12:57:48 on May 10,2015
-# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/JSInth.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity JSInth
-# -- Compiling architecture main of JSInth
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/Sebastian/Documents/GitHub/JSInth/simulation/modelsim/rtl_work/sampleadder16_tb/_primary.dbs (3:3 1:1 380 0 0 495 0x0:0x554f9c09)
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/Sebastian/Documents/GitHub/JSInth/simulation/modelsim/rtl_work/sampleadder16_tb/rtl.dbs (3:3 1:1 382 0 0 1773 0x0:0x554f9c09)
-# End time: 12:57:48 on May 10,2015, Elapsed time: 0:00:00
+# End time: 15:28:42 on May 28,2015, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_volume.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 12:57:48 on May 10,2015
+# Start time: 15:28:42 on May 28,2015
 # vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_volume.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -124,11 +177,11 @@
 # -- Loading package std_logic_arith
 # -- Compiling entity FSM_volume
 # -- Compiling architecture states of FSM_volume
-# End time: 12:57:49 on May 10,2015, Elapsed time: 0:00:01
+# End time: 15:28:42 on May 28,2015, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_octave.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 12:57:49 on May 10,2015
+# Start time: 15:28:42 on May 28,2015
 # vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_octave.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -136,466 +189,74 @@
 # -- Loading package std_logic_arith
 # -- Compiling entity FSM_octave
 # -- Compiling architecture states of FSM_octave
-# End time: 12:57:49 on May 10,2015, Elapsed time: 0:00:00
+# End time: 15:28:43 on May 28,2015, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# 
-add wave -r sim:/sampleadder16_tb/DUT/*
-run
-# ** Error: (vsim-86) Arg Value -2147483648 is out of NATURAL range 0 to 2147483647.
-#    Time: 0 ps  Iteration: 0  Instance: /sampleadder16_tb/DUT
-run
-run
-run
-run
-run
-quit -sim
-# Compile of SampleAdder16.vhd was successful.
-# Load canceled
-# Compile of de2_i2c_av_config.v was successful.
-# Compile of de2_i2c_controller.v was successful.
-# Compile of WM8731_Controller.vhd was successful.
-# Compile of colorROM.vhd was successful.
-# Compile of pixelGenerator.vhd was successful.
-# Compile of vga_sync.vhd was successful.
-# Compile of VGA_top_level.vhd was successful.
-# Compile of FSM_octave.vhd was successful.
-# Compile of FSM_volume.vhd was successful.
-# Compile of SampleAdder16.vhd was successful.
-# Compile of JSInth.vhd was successful.
-# Compile of SampleAdder16_tb.vhd was successful.
-# Compile of JSInth_tb.vhd was successful.
-# 13 compiles, 0 failed with no errors.
-vsim +altera -do JSInth_run_msim_rtl_vhdl.do -l msim_transcript -gui work.sampleadder16_tb
-# vsim 
-# Start time: 13:02:43 on May 10,2015
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.sampleadder16_tb(rtl)
-# Loading work.sampleadder16(rtl)
-# do JSInth_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# Error 31: Unable to unlink file "C:/Users/Sebastian/Documents/GitHub/JSInth/simulation/modelsim/rtl_work/_lib.qdb".
-# Error 133: Unable to remove directory "C:/Users/Sebastian/Documents/GitHub/JSInth/simulation/modelsim/rtl_work".
-# vlib rtl_work
-# ** Error: (vlib-35) Failed to create directory "rtl_work".
-# 
-# File exists. (errno = EEXIST)
-# vmap work rtl_work
-# Model Technology ModelSim PE vmap 10.3c Lib Mapping Utility 2014.09 Sep 20 2014
-# vmap -modelsim_quiet work rtl_work 
-# Modifying C:/Users/Sebastian/Documents/GitHub/JSInth/simulation/modelsim/JSInth.mpf
-# 
-# vlog -vlog01compat -work work +incdir+C:/Users/Sebastian/Documents/GitHub/JSInth {C:/Users/Sebastian/Documents/GitHub/JSInth/de2_i2c_controller.v}
-# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 13:02:44 on May 10,2015
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sebastian/Documents/GitHub/JSInth" C:/Users/Sebastian/Documents/GitHub/JSInth/de2_i2c_controller.v 
-# -- Compiling module de2_i2c_controller
-# 
-# Top level modules:
-# 	de2_i2c_controller
-# End time: 13:02:44 on May 10,2015, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sebastian/Documents/GitHub/JSInth {C:/Users/Sebastian/Documents/GitHub/JSInth/de2_i2c_av_config.v}
-# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 13:02:45 on May 10,2015
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sebastian/Documents/GitHub/JSInth" C:/Users/Sebastian/Documents/GitHub/JSInth/de2_i2c_av_config.v 
-# -- Compiling module de2_i2c_av_config
-# 
-# Top level modules:
-# 	de2_i2c_av_config
-# End time: 13:02:45 on May 10,2015, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/WM8731_Controller.vhd}
+# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/audioROM.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 13:02:45 on May 10,2015
-# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/WM8731_Controller.vhd 
+# Start time: 15:28:43 on May 28,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/audioROM.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Compiling entity WM8731_CONTROLLER
-# -- Compiling architecture rtl of WM8731_CONTROLLER
-# End time: 13:02:45 on May 10,2015, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/VGA_top_level.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 13:02:45 on May 10,2015
-# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/VGA_top_level.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity VGA_top_level
-# -- Compiling architecture structural of VGA_top_level
-# End time: 13:02:46 on May 10,2015, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/vga_sync.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 13:02:46 on May 10,2015
-# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/vga_sync.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Compiling entity VGA_SYNC
-# -- Compiling architecture behavioral of VGA_SYNC
-# End time: 13:02:46 on May 10,2015, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/pixelGenerator.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 13:02:46 on May 10,2015
-# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/pixelGenerator.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity pixelGenerator
-# -- Compiling architecture behavioral of pixelGenerator
-# End time: 13:02:47 on May 10,2015, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/colorROM.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 13:02:47 on May 10,2015
-# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/colorROM.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity colorROM
-# -- Compiling architecture SYN of colorrom
-# End time: 13:02:48 on May 10,2015, Elapsed time: 0:00:01
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package typeDeclarations
+# -- Compiling entity audioROM
+# -- Compiling architecture rom of audioROM
+# End time: 15:28:43 on May 28,2015, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/JSInth.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 13:02:48 on May 10,2015
+# Start time: 15:28:43 on May 28,2015
 # vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/JSInth.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
+# -- Loading package constants
 # -- Compiling entity JSInth
 # -- Compiling architecture main of JSInth
-# End time: 13:02:48 on May 10,2015, Elapsed time: 0:00:00
+# End time: 15:28:44 on May 28,2015, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_volume.vhd}
+# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/SampleContainer.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 13:02:48 on May 10,2015
-# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_volume.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity FSM_volume
-# -- Compiling architecture states of FSM_volume
-# End time: 13:02:49 on May 10,2015, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_octave.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 13:02:49 on May 10,2015
-# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_octave.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity FSM_octave
-# -- Compiling architecture states of FSM_octave
-# End time: 13:02:49 on May 10,2015, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-add wave -r sim:/sampleadder16_tb/DUT/*
-run
-# ** Error: (vsim-86) Arg Value -2147483648 is out of NATURAL range 0 to 2147483647.
-#    Time: 0 ps  Iteration: 0  Instance: /sampleadder16_tb/DUT
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-quit -sim
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/Sebastian/Documents/GitHub/JSInth/simulation/modelsim/rtl_work/sampleadder16/rtl.dbs (4:4 1:1 410 0 0 2191 0x0:0x554f9d36)
-# Compile of de2_i2c_av_config.v was successful.
-# Compile of de2_i2c_controller.v was successful.
-# Compile of WM8731_Controller.vhd was successful.
-# Compile of colorROM.vhd was successful.
-# Compile of pixelGenerator.vhd was successful.
-# Compile of vga_sync.vhd was successful.
-# Compile of VGA_top_level.vhd was successful.
-# Compile of FSM_octave.vhd was successful.
-# Compile of FSM_volume.vhd was successful.
-# Compile of SampleAdder16.vhd failed with 2 errors.
-# Compile of JSInth.vhd was successful.
-# Compile of SampleAdder16_tb.vhd was successful.
-# Compile of JSInth_tb.vhd was successful.
-# 13 compiles, 1 failed with 2 errors.
-# Compile of SampleAdder16.vhd failed with 1 errors.
-# Compile of SampleAdder16.vhd was successful.
-# Compile of de2_i2c_av_config.v was successful.
-# Compile of de2_i2c_controller.v was successful.
-# Compile of WM8731_Controller.vhd was successful.
-# Compile of colorROM.vhd was successful.
-# Compile of pixelGenerator.vhd was successful.
-# Compile of vga_sync.vhd was successful.
-# Compile of VGA_top_level.vhd was successful.
-# Compile of FSM_octave.vhd was successful.
-# Compile of FSM_volume.vhd was successful.
-# Compile of SampleAdder16.vhd failed with 2 errors.
-# Compile of JSInth.vhd was successful.
-# Compile of SampleAdder16_tb.vhd failed with 22 errors.
-# Compile of JSInth_tb.vhd was successful.
-# 13 compiles, 2 failed with 24 errors.
-# Compile of de2_i2c_av_config.v was successful.
-# Compile of de2_i2c_controller.v was successful.
-# Compile of WM8731_Controller.vhd was successful.
-# Compile of colorROM.vhd was successful.
-# Compile of pixelGenerator.vhd was successful.
-# Compile of vga_sync.vhd was successful.
-# Compile of VGA_top_level.vhd was successful.
-# Compile of FSM_octave.vhd was successful.
-# Compile of FSM_volume.vhd was successful.
-# Compile of SampleAdder16.vhd was successful.
-# Compile of JSInth.vhd was successful.
-# Compile of SampleAdder16_tb.vhd failed with 22 errors.
-# Compile of JSInth_tb.vhd was successful.
-# 13 compiles, 1 failed with 22 errors.
-# Compile of SampleAdder16.vhd was successful.
-# Compile of de2_i2c_av_config.v was successful.
-# Compile of de2_i2c_controller.v was successful.
-# Compile of WM8731_Controller.vhd was successful.
-# Compile of colorROM.vhd was successful.
-# Compile of pixelGenerator.vhd was successful.
-# Compile of vga_sync.vhd was successful.
-# Compile of VGA_top_level.vhd was successful.
-# Compile of FSM_octave.vhd was successful.
-# Compile of FSM_volume.vhd was successful.
-# Compile of SampleAdder16.vhd was successful.
-# Compile of JSInth.vhd was successful.
-# Compile of SampleAdder16_tb.vhd failed with 2 errors.
-# Compile of JSInth_tb.vhd was successful.
-# 13 compiles, 1 failed with 2 errors.
-# Compile of de2_i2c_av_config.v was successful.
-# Compile of de2_i2c_controller.v was successful.
-# Compile of WM8731_Controller.vhd was successful.
-# Compile of colorROM.vhd was successful.
-# Compile of pixelGenerator.vhd was successful.
-# Compile of vga_sync.vhd was successful.
-# Compile of VGA_top_level.vhd was successful.
-# Compile of FSM_octave.vhd was successful.
-# Compile of FSM_volume.vhd was successful.
-# Compile of SampleAdder16.vhd failed with 1 errors.
-# Compile of JSInth.vhd was successful.
-# Compile of SampleAdder16_tb.vhd failed with 2 errors.
-# Compile of JSInth_tb.vhd was successful.
-# 13 compiles, 2 failed with 3 errors.
-# Compile of de2_i2c_av_config.v was successful.
-# Compile of de2_i2c_controller.v was successful.
-# Compile of WM8731_Controller.vhd was successful.
-# Compile of colorROM.vhd was successful.
-# Compile of pixelGenerator.vhd was successful.
-# Compile of vga_sync.vhd was successful.
-# Compile of VGA_top_level.vhd was successful.
-# Compile of FSM_octave.vhd was successful.
-# Compile of FSM_volume.vhd was successful.
-# Compile of SampleAdder16.vhd was successful.
-# Compile of JSInth.vhd was successful.
-# Compile of SampleAdder16_tb.vhd failed with 2 errors.
-# Compile of JSInth_tb.vhd was successful.
-# 13 compiles, 1 failed with 2 errors.
-# Compile of SampleAdder16.vhd was successful.
-# Compile of de2_i2c_av_config.v was successful.
-# Compile of de2_i2c_controller.v was successful.
-# Compile of WM8731_Controller.vhd was successful.
-# Compile of colorROM.vhd was successful.
-# Compile of pixelGenerator.vhd was successful.
-# Compile of vga_sync.vhd was successful.
-# Compile of VGA_top_level.vhd was successful.
-# Compile of FSM_octave.vhd was successful.
-# Compile of FSM_volume.vhd was successful.
-# Compile of SampleAdder16.vhd was successful.
-# Compile of JSInth.vhd was successful.
-# Compile of SampleAdder16_tb.vhd was successful.
-# Compile of JSInth_tb.vhd was successful.
-# 13 compiles, 0 failed with no errors.
-vsim +altera -do JSInth_run_msim_rtl_vhdl.do -l msim_transcript -gui work.sampleadder16_tb
-# vsim 
-# Start time: 13:21:17 on May 10,2015
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.sampleadder16_tb(rtl)
-# Loading work.sampleadder16(rtl)
-# do JSInth_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# Error 31: Unable to unlink file "C:/Users/Sebastian/Documents/GitHub/JSInth/simulation/modelsim/rtl_work/_lib.qdb".
-# Error 31: Unable to unlink file "C:/Users/Sebastian/Documents/GitHub/JSInth/simulation/modelsim/rtl_work/_lib1_4.qpg".
-# Error 31: Unable to unlink file "C:/Users/Sebastian/Documents/GitHub/JSInth/simulation/modelsim/rtl_work/_lib1_4.qtl".
-# Error 133: Unable to remove directory "C:/Users/Sebastian/Documents/GitHub/JSInth/simulation/modelsim/rtl_work".
-# vlib rtl_work
-# ** Error: (vlib-35) Failed to create directory "rtl_work".
-# 
-# File exists. (errno = EEXIST)
-# vmap work rtl_work
-# Model Technology ModelSim PE vmap 10.3c Lib Mapping Utility 2014.09 Sep 20 2014
-# vmap -modelsim_quiet work rtl_work 
-# Modifying C:/Users/Sebastian/Documents/GitHub/JSInth/simulation/modelsim/JSInth.mpf
-# 
-# vlog -vlog01compat -work work +incdir+C:/Users/Sebastian/Documents/GitHub/JSInth {C:/Users/Sebastian/Documents/GitHub/JSInth/de2_i2c_controller.v}
-# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 13:21:19 on May 10,2015
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sebastian/Documents/GitHub/JSInth" C:/Users/Sebastian/Documents/GitHub/JSInth/de2_i2c_controller.v 
-# -- Compiling module de2_i2c_controller
-# 
-# Top level modules:
-# 	de2_i2c_controller
-# End time: 13:21:19 on May 10,2015, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sebastian/Documents/GitHub/JSInth {C:/Users/Sebastian/Documents/GitHub/JSInth/de2_i2c_av_config.v}
-# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 13:21:19 on May 10,2015
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sebastian/Documents/GitHub/JSInth" C:/Users/Sebastian/Documents/GitHub/JSInth/de2_i2c_av_config.v 
-# -- Compiling module de2_i2c_av_config
-# 
-# Top level modules:
-# 	de2_i2c_av_config
-# End time: 13:21:19 on May 10,2015, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/WM8731_Controller.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 13:21:19 on May 10,2015
-# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/WM8731_Controller.vhd 
+# Start time: 15:28:44 on May 28,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/SampleContainer.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Compiling entity WM8731_CONTROLLER
-# -- Compiling architecture rtl of WM8731_CONTROLLER
-# End time: 13:21:19 on May 10,2015, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/VGA_top_level.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 13:21:20 on May 10,2015
-# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/VGA_top_level.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity VGA_top_level
-# -- Compiling architecture structural of VGA_top_level
-# End time: 13:21:20 on May 10,2015, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/vga_sync.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 13:21:20 on May 10,2015
-# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/vga_sync.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Compiling entity VGA_SYNC
-# -- Compiling architecture behavioral of VGA_SYNC
-# End time: 13:21:21 on May 10,2015, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/pixelGenerator.vhd}
-add wave -r sim:/sampleadder16_tb/DUT/*
-# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 13:21:23 on May 10,2015
-# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/pixelGenerator.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity pixelGenerator
-# -- Compiling architecture behavioral of pixelGenerator
-# End time: 13:21:23 on May 10,2015, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/colorROM.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 13:21:23 on May 10,2015
-# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/colorROM.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity colorROM
-# -- Compiling architecture SYN of colorrom
-# End time: 13:21:24 on May 10,2015, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/JSInth.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 13:21:24 on May 10,2015
-# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/JSInth.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity JSInth
-# -- Compiling architecture main of JSInth
-# End time: 13:21:24 on May 10,2015, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_volume.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 13:21:24 on May 10,2015
-# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_volume.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity FSM_volume
-# -- Compiling architecture states of FSM_volume
-# End time: 13:21:25 on May 10,2015, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_octave.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 13:21:25 on May 10,2015
-# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_octave.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity FSM_octave
-# -- Compiling architecture states of FSM_octave
-# End time: 13:21:26 on May 10,2015, Elapsed time: 0:00:01
+# -- Loading package typeDeclarations
+# -- Compiling entity SampleContainer
+# -- Compiling architecture rtl of SampleContainer
+# End time: 15:28:44 on May 28,2015, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 run
-# ** Error: (vsim-86) Arg Value -2147483648 is out of NATURAL range 0 to 2147483647.
-#    Time: 0 ps  Iteration: 0  Instance: /sampleadder16_tb/DUT
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /jsinth_tb/DUT/rommap/sample_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /jsinth_tb/DUT/rommap/sample_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /jsinth_tb/DUT/rommap/sample_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /jsinth_tb/DUT/rommap/sample_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /jsinth_tb/DUT/rommap/sample_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /jsinth_tb/DUT/rommap/sample_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /jsinth_tb/DUT/rommap/sample_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /jsinth_tb/DUT/vgamap/videoGen
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /jsinth_tb/DUT/vgamap/videoGen
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ns  Iteration: 2  Instance: /jsinth_tb/DUT/rommap/sample_adder
 quit -sim
 # Load canceled
+# Compile of typeDeclarations.vhd was successful.
 # Compile of de2_i2c_av_config.v was successful.
 # Compile of de2_i2c_controller.v was successful.
 # Compile of WM8731_Controller.vhd was successful.
@@ -605,36 +266,52 @@ quit -sim
 # Compile of VGA_top_level.vhd was successful.
 # Compile of FSM_octave.vhd was successful.
 # Compile of FSM_volume.vhd was successful.
+# Compile of FIFO.vhd was successful.
+# Compile of SampleContainer.vhd was successful.
 # Compile of SampleAdder16.vhd was successful.
-# Compile of JSInth.vhd was successful.
 # Compile of SampleAdder16_tb.vhd was successful.
-# Compile of JSInth_tb.vhd was successful.
-# Compile of audioROM.vhd failed with 1 errors.
-# 14 compiles, 1 failed with 1 error.
-# Compile of de2_i2c_av_config.v was successful.
-# Compile of de2_i2c_controller.v was successful.
-# Compile of WM8731_Controller.vhd was successful.
-# Compile of colorROM.vhd was successful.
-# Compile of pixelGenerator.vhd was successful.
-# Compile of vga_sync.vhd was successful.
-# Compile of VGA_top_level.vhd was successful.
-# Compile of FSM_octave.vhd was successful.
-# Compile of FSM_volume.vhd was successful.
-# Compile of SampleAdder16.vhd was successful.
-# Compile of JSInth.vhd was successful.
-# Compile of SampleAdder16_tb.vhd was successful.
-# Compile of JSInth_tb.vhd was successful.
 # Compile of audioROM.vhd was successful.
-# 14 compiles, 0 failed with no errors.
-vsim +altera -do JSInth_run_msim_rtl_vhdl.do -l msim_transcript -gui work.sampleadder16_tb
+# Compile of JSInth.vhd was successful.
+# Compile of JSInth_tb.vhd was successful.
+# 17 compiles, 0 failed with no errors.
+vsim +altera -do JSInth_run_msim_rtl_vhdl.do -l msim_transcript -gui work.jsinth_tb
 # vsim 
-# Start time: 15:05:23 on May 10,2015
+# Start time: 15:30:24 on May 28,2015
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading work.sampleadder16_tb(rtl)
+# Loading work.jsinth_tb(rtl)
+# Loading work.constants(body)
+# Loading work.jsinth(main)
+# Loading work.wm8731_controller(rtl)
+# Loading ieee.std_logic_arith(body)
+# Loading work.fsm_volume(states)
+# Loading work.fsm_octave(states)
+# Loading work.fsm_synth(states)
+# Loading work.vga_top_level(structural)
+# Loading work.pixelgenerator(behavioral)
+# Loading work.colorrom(syn)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+# Loading work.vga_sync(behavioral)
+# Loading synopsys.attributes
+# Loading ieee.std_logic_misc(body)
+# Loading work.typedeclarations
+# Loading work.audiorom(rom)
+# Loading work.samplecontainer(rtl)
+# Loading work.fifo(behavioral)
 # Loading work.sampleadder16(rtl)
+# ** Warning: (vsim-8683) Uninitialized inout port /jsinth_tb/DUT/I2C_SDAT has no driver.
+# 
+# This port will contribute value (U) to the signal network.
+# 
+# ** Warning: (vsim-8683) Uninitialized out port /jsinth_tb/DUT/I2C_SCLK has no driver.
+# 
+# This port will contribute value (U) to the signal network.
+# 
 # do JSInth_run_msim_rtl_vhdl.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -650,29 +327,68 @@ vsim +altera -do JSInth_run_msim_rtl_vhdl.do -l msim_transcript -gui work.sample
 # vmap -modelsim_quiet work rtl_work 
 # Modifying C:/Users/Sebastian/Documents/GitHub/JSInth/simulation/modelsim/JSInth.mpf
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/Sebastian/Documents/GitHub/JSInth {C:/Users/Sebastian/Documents/GitHub/JSInth/de2_i2c_controller.v}
-# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 15:05:25 on May 10,2015
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sebastian/Documents/GitHub/JSInth" C:/Users/Sebastian/Documents/GitHub/JSInth/de2_i2c_controller.v 
-# -- Compiling module de2_i2c_controller
-# 
-# Top level modules:
-# 	de2_i2c_controller
-# End time: 15:05:25 on May 10,2015, Elapsed time: 0:00:00
+# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/typeDeclarations.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 15:30:26 on May 28,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/typeDeclarations.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package typeDeclarations
+# End time: 15:30:26 on May 28,2015, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sebastian/Documents/GitHub/JSInth {C:/Users/Sebastian/Documents/GitHub/JSInth/de2_i2c_av_config.v}
-# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 15:05:25 on May 10,2015
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sebastian/Documents/GitHub/JSInth" C:/Users/Sebastian/Documents/GitHub/JSInth/de2_i2c_av_config.v 
-# -- Compiling module de2_i2c_av_config
-# 
-# Top level modules:
-# 	de2_i2c_av_config
-# End time: 15:05:25 on May 10,2015, Elapsed time: 0:00:00
+# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/FIFO.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 15:30:26 on May 28,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/FIFO.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity FIFO
+# -- Compiling architecture Behavioral of FIFO
+# End time: 15:30:26 on May 28,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_synth.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 15:30:26 on May 28,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_synth.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity FSM_synth
+# -- Compiling architecture states of FSM_synth
+# End time: 15:30:27 on May 28,2015, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/constants.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 15:30:27 on May 28,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/constants.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package constants
+# -- Compiling package body constants
+# -- Loading package constants
+# End time: 15:30:27 on May 28,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/SampleAdder16.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 15:30:27 on May 28,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/SampleAdder16.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity SampleAdder16
+# -- Compiling architecture rtl of SampleAdder16
+# End time: 15:30:28 on May 28,2015, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/WM8731_Controller.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 15:05:25 on May 10,2015
+# Start time: 15:30:30 on May 28,2015
 # vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/WM8731_Controller.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -680,22 +396,22 @@ vsim +altera -do JSInth_run_msim_rtl_vhdl.do -l msim_transcript -gui work.sample
 # -- Loading package NUMERIC_STD
 # -- Compiling entity WM8731_CONTROLLER
 # -- Compiling architecture rtl of WM8731_CONTROLLER
-# End time: 15:05:25 on May 10,2015, Elapsed time: 0:00:00
+# End time: 15:30:31 on May 28,2015, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/VGA_top_level.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 15:05:25 on May 10,2015
+# Start time: 15:30:31 on May 28,2015
 # vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/VGA_top_level.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity VGA_top_level
 # -- Compiling architecture structural of VGA_top_level
-# End time: 15:05:26 on May 10,2015, Elapsed time: 0:00:01
+# End time: 15:30:31 on May 28,2015, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/vga_sync.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 15:05:26 on May 10,2015
+# Start time: 15:30:32 on May 28,2015
 # vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/vga_sync.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -704,11 +420,11 @@ vsim +altera -do JSInth_run_msim_rtl_vhdl.do -l msim_transcript -gui work.sample
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity VGA_SYNC
 # -- Compiling architecture behavioral of VGA_SYNC
-# End time: 15:05:27 on May 10,2015, Elapsed time: 0:00:01
+# End time: 15:30:32 on May 28,2015, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/pixelGenerator.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 15:05:27 on May 10,2015
+# Start time: 15:30:32 on May 28,2015
 # vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/pixelGenerator.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -716,34 +432,22 @@ vsim +altera -do JSInth_run_msim_rtl_vhdl.do -l msim_transcript -gui work.sample
 # -- Loading package NUMERIC_STD
 # -- Compiling entity pixelGenerator
 # -- Compiling architecture behavioral of pixelGenerator
-# End time: 15:05:27 on May 10,2015, Elapsed time: 0:00:00
+# End time: 15:30:33 on May 28,2015, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/colorROM.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 15:05:27 on May 10,2015
+# Start time: 15:30:33 on May 28,2015
 # vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/colorROM.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity colorROM
 # -- Compiling architecture SYN of colorrom
-# End time: 15:05:28 on May 10,2015, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/JSInth.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 15:05:28 on May 10,2015
-# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/JSInth.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity JSInth
-# -- Compiling architecture main of JSInth
-# End time: 15:05:28 on May 10,2015, Elapsed time: 0:00:00
+# End time: 15:30:33 on May 28,2015, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_volume.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 15:05:28 on May 10,2015
+# Start time: 15:30:33 on May 28,2015
 # vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_volume.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -751,11 +455,12 @@ vsim +altera -do JSInth_run_msim_rtl_vhdl.do -l msim_transcript -gui work.sample
 # -- Loading package std_logic_arith
 # -- Compiling entity FSM_volume
 # -- Compiling architecture states of FSM_volume
-# End time: 15:05:29 on May 10,2015, Elapsed time: 0:00:01
+# End time: 15:30:34 on May 28,2015, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_octave.vhd}
+add wave -r sim:/jsinth_tb/DUT/rommap/*
 # Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 15:05:29 on May 10,2015
+# Start time: 15:30:36 on May 28,2015
 # vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_octave.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -763,16 +468,369 @@ vsim +altera -do JSInth_run_msim_rtl_vhdl.do -l msim_transcript -gui work.sample
 # -- Loading package std_logic_arith
 # -- Compiling entity FSM_octave
 # -- Compiling architecture states of FSM_octave
-# End time: 15:05:29 on May 10,2015, Elapsed time: 0:00:00
+# End time: 15:30:36 on May 28,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/audioROM.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 15:30:36 on May 28,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/audioROM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package typeDeclarations
+# -- Compiling entity audioROM
+# -- Compiling architecture rom of audioROM
+# End time: 15:30:37 on May 28,2015, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/JSInth.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 15:30:37 on May 28,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/JSInth.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package constants
+# -- Compiling entity JSInth
+# -- Compiling architecture main of JSInth
+# End time: 15:30:38 on May 28,2015, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/SampleContainer.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 15:30:38 on May 28,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/SampleContainer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package typeDeclarations
+# -- Compiling entity SampleContainer
+# -- Compiling architecture rtl of SampleContainer
+# End time: 15:30:38 on May 28,2015, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-add wave -position insertpoint sim:/sampleadder16_tb/DUT/*
 run
-# ** Error: (vsim-86) Arg Value -2147483648 is out of NATURAL range 0 to 2147483647.
-#    Time: 0 ps  Iteration: 0  Instance: /sampleadder16_tb/DUT
-run
-run
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /jsinth_tb/DUT/rommap/sample_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /jsinth_tb/DUT/rommap/sample_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /jsinth_tb/DUT/rommap/sample_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /jsinth_tb/DUT/rommap/sample_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /jsinth_tb/DUT/rommap/sample_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /jsinth_tb/DUT/rommap/sample_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /jsinth_tb/DUT/rommap/sample_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /jsinth_tb/DUT/vgamap/videoGen
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /jsinth_tb/DUT/vgamap/videoGen
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ns  Iteration: 2  Instance: /jsinth_tb/DUT/rommap/sample_adder
 run
 run
 run
 quit -sim
+# Compile of typeDeclarations.vhd was successful.
+# Compile of de2_i2c_av_config.v was successful.
+# Compile of de2_i2c_controller.v was successful.
+# Compile of WM8731_Controller.vhd was successful.
+# Compile of colorROM.vhd was successful.
+# Compile of pixelGenerator.vhd was successful.
+# Compile of vga_sync.vhd was successful.
+# Compile of VGA_top_level.vhd was successful.
+# Compile of FSM_octave.vhd was successful.
+# Compile of FSM_volume.vhd was successful.
+# Compile of FIFO.vhd was successful.
+# Compile of SampleContainer.vhd was successful.
+# Compile of SampleAdder16.vhd was successful.
+# Compile of SampleAdder16_tb.vhd was successful.
+# Compile of audioROM.vhd was successful.
+# Compile of JSInth.vhd was successful.
+# Compile of JSInth_tb.vhd was successful.
+# 17 compiles, 0 failed with no errors.
+# Compile of typeDeclarations.vhd was successful.
+# Compile of de2_i2c_av_config.v was successful.
+# Compile of de2_i2c_controller.v was successful.
+# Compile of WM8731_Controller.vhd was successful.
+# Compile of colorROM.vhd was successful.
+# Compile of pixelGenerator.vhd was successful.
+# Compile of vga_sync.vhd was successful.
+# Compile of VGA_top_level.vhd was successful.
+# Compile of FSM_octave.vhd was successful.
+# Compile of FSM_volume.vhd was successful.
+# Compile of FIFO.vhd was successful.
+# Compile of SampleContainer.vhd was successful.
+# Compile of SampleAdder16.vhd was successful.
+# Compile of SampleAdder16_tb.vhd was successful.
+# Compile of audioROM.vhd was successful.
+# Compile of JSInth.vhd was successful.
+# Compile of JSInth_tb.vhd was successful.
+# 17 compiles, 0 failed with no errors.
+vsim +altera -do JSInth_run_msim_rtl_vhdl.do -l msim_transcript -gui work.jsinth_tb
+# vsim 
+# Start time: 15:43:50 on May 28,2015
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.jsinth_tb(rtl)
+# Loading work.constants(body)
+# Loading work.jsinth(main)
+# Loading work.wm8731_controller(rtl)
+# Loading ieee.std_logic_arith(body)
+# Loading work.fsm_volume(states)
+# Loading work.fsm_octave(states)
+# Loading work.fsm_synth(states)
+# Loading work.vga_top_level(structural)
+# Loading work.pixelgenerator(behavioral)
+# Loading work.colorrom(syn)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+# Loading work.vga_sync(behavioral)
+# Loading synopsys.attributes
+# Loading ieee.std_logic_misc(body)
+# Loading work.typedeclarations
+# Loading work.audiorom(rom)
+# Loading work.samplecontainer(rtl)
+# Loading work.fifo(behavioral)
+# Loading work.sampleadder16(rtl)
+# ** Warning: (vsim-8683) Uninitialized inout port /jsinth_tb/DUT/I2C_SDAT has no driver.
+# 
+# This port will contribute value (U) to the signal network.
+# 
+# ** Warning: (vsim-8683) Uninitialized out port /jsinth_tb/DUT/I2C_SCLK has no driver.
+# 
+# This port will contribute value (U) to the signal network.
+# 
+# do JSInth_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# Error 31: Unable to unlink file "C:/Users/Sebastian/Documents/GitHub/JSInth/simulation/modelsim/rtl_work/_lib.qdb".
+# Error 133: Unable to remove directory "C:/Users/Sebastian/Documents/GitHub/JSInth/simulation/modelsim/rtl_work".
+# vlib rtl_work
+# ** Error: (vlib-35) Failed to create directory "rtl_work".
+# 
+# File exists. (errno = EEXIST)
+# vmap work rtl_work
+# Model Technology ModelSim PE vmap 10.3c Lib Mapping Utility 2014.09 Sep 20 2014
+# vmap -modelsim_quiet work rtl_work 
+# Modifying C:/Users/Sebastian/Documents/GitHub/JSInth/simulation/modelsim/JSInth.mpf
+# 
+# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/typeDeclarations.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 15:43:51 on May 28,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/typeDeclarations.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package typeDeclarations
+# End time: 15:43:51 on May 28,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/FIFO.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 15:43:51 on May 28,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/FIFO.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity FIFO
+# -- Compiling architecture Behavioral of FIFO
+# End time: 15:43:52 on May 28,2015, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_synth.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 15:43:52 on May 28,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_synth.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity FSM_synth
+# -- Compiling architecture states of FSM_synth
+# End time: 15:43:52 on May 28,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/constants.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 15:43:52 on May 28,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/constants.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package constants
+# -- Compiling package body constants
+# -- Loading package constants
+# End time: 15:43:52 on May 28,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/SampleAdder16.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 15:43:52 on May 28,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/SampleAdder16.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity SampleAdder16
+# -- Compiling architecture rtl of SampleAdder16
+# End time: 15:43:53 on May 28,2015, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/WM8731_Controller.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 15:43:53 on May 28,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/WM8731_Controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity WM8731_CONTROLLER
+# -- Compiling architecture rtl of WM8731_CONTROLLER
+# End time: 15:43:53 on May 28,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/VGA_top_level.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 15:43:54 on May 28,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/VGA_top_level.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity VGA_top_level
+# -- Compiling architecture structural of VGA_top_level
+# End time: 15:43:54 on May 28,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/vga_sync.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 15:43:54 on May 28,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/vga_sync.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity VGA_SYNC
+# -- Compiling architecture behavioral of VGA_SYNC
+# End time: 15:43:55 on May 28,2015, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/pixelGenerator.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 15:43:55 on May 28,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/pixelGenerator.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pixelGenerator
+# -- Compiling architecture behavioral of pixelGenerator
+# End time: 15:43:55 on May 28,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/colorROM.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 15:43:55 on May 28,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/colorROM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity colorROM
+# -- Compiling architecture SYN of colorrom
+# End time: 15:43:56 on May 28,2015, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_volume.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 15:43:56 on May 28,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_volume.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity FSM_volume
+# -- Compiling architecture states of FSM_volume
+# End time: 15:43:56 on May 28,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_octave.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 15:43:56 on May 28,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_octave.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity FSM_octave
+# -- Compiling architecture states of FSM_octave
+# End time: 15:43:57 on May 28,2015, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/audioROM.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 15:43:57 on May 28,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/audioROM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package typeDeclarations
+# -- Compiling entity audioROM
+# -- Compiling architecture rom of audioROM
+# End time: 15:43:57 on May 28,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/JSInth.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 15:43:57 on May 28,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/JSInth.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package constants
+# -- Compiling entity JSInth
+# -- Compiling architecture main of JSInth
+# End time: 15:43:58 on May 28,2015, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Sebastian/Documents/GitHub/JSInth/SampleContainer.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 15:43:58 on May 28,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Sebastian/Documents/GitHub/JSInth/SampleContainer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package typeDeclarations
+# -- Compiling entity SampleContainer
+# -- Compiling architecture rtl of SampleContainer
+# End time: 15:43:58 on May 28,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+add wave -r sim:/jsinth_tb/DUT/rommap/*
+run
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /jsinth_tb/DUT/rommap/sample_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /jsinth_tb/DUT/rommap/sample_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /jsinth_tb/DUT/rommap/sample_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /jsinth_tb/DUT/rommap/sample_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /jsinth_tb/DUT/rommap/sample_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /jsinth_tb/DUT/rommap/sample_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /jsinth_tb/DUT/rommap/sample_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /jsinth_tb/DUT/vgamap/videoGen
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /jsinth_tb/DUT/vgamap/videoGen
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ns  Iteration: 2  Instance: /jsinth_tb/DUT/rommap/sample_adder
+# End time: 16:17:04 on May 28,2015, Elapsed time: 0:33:14
+# Errors: 0, Warnings: 12

@@ -29,7 +29,7 @@ END ENTITY SampleAdder16;
 
 ARCHITECTURE rtl OF SampleAdder16 IS
 
-FUNCTION count_ones(s : unsigned) RETURN integer IS
+FUNCTION count_ones(s : std_logic_vector) RETURN integer IS
 VARIABLE temp : natural := 0;
 BEGIN
   FOR i IN s'RANGE LOOP
@@ -65,6 +65,6 @@ BEGIN
 	
 	zi <= 0 when keys_pressed = 0 else ((ai + bi + ci + di + ei + fi + gi + hi + ii + ji + ki + li + mi + ni + oi + pi) / keys_pressed);
 	
-	z <= to_unsigned(zi, 16);
+	z <= unsigned(to_signed(zi, 16));
 	
 END ARCHITECTURE rtl;

@@ -31,7 +31,7 @@ PORT(
 		
 		reset		: in std_logic; --N/A
 		clk		: in std_logic;
-		keys		: in std_logic_vector(16 downto 0);
+		keys		: in std_logic_vector(15 downto 0);
 		vol_up	: in std_logic;
 		vol_down	: in std_logic;
 		oct_sel	: in std_logic;
@@ -61,7 +61,7 @@ END COMPONENT JSInth;
 
 SIGNAL reset_tb: std_logic := '0';
 SIGNAL clk_tb: std_logic := '0';
-SIGNAL keys_tb: std_logic_vector (16 downto 0) := "00000000000000000";
+SIGNAL keys_tb: std_logic_vector (15 downto 0) := "0000000000000000";
 SIGNAL vol_up_tb: std_logic := '1';
 SIGNAL vol_down_tb: std_logic := '1';
 SIGNAL oct_sel_tb: std_logic := '1';
@@ -76,6 +76,19 @@ CLK_P: PROCESS IS
 BEGIN
 	clk_tb <= NOT clk_tb;
 	WAIT FOR 10 ns;
+END PROCESS;
+
+INPUT_P: PROCESS IS
+BEGIN
+	WAIT FOR 10 ns;
+	keys_tb <= "1000000000000000";
+	WAIT FOR 25 ms;
+	keys_tb <= "1100000000000000";
+	WAIT FOR 25 ms;
+	keys_tb <= "1111000000000000";
+	WAIT FOR 25 ms;
+	keys_tb <= "0000000000000000";
+	WAIT;
 END PROCESS;
 
 DUT: JSInth port map (reset_tb, clk_tb, keys_tb, vol_up_tb, vol_down_tb, oct_sel_tb, synth_sel_tb, mute_sel_tb, vga_red, vga_green, vga_blue,

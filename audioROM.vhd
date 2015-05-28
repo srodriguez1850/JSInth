@@ -2,6 +2,7 @@ LIBRARY IEEE;
 USE IEEE.std_logic_1164.all;
 USE IEEE.numeric_std.all;
 USE IEEE.std_logic_misc.all;
+USE work.typeDeclarations.all;
 
 ENTITY audioROM IS
 PORT(
@@ -14,6 +15,7 @@ PORT(
 END ENTITY audioROM;
 
 ARCHITECTURE rom OF audioROM IS
+
 COMPONENT SampleAdder16 IS
 PORT(
 		keys: in std_logic_vector(15 downto 0);
@@ -39,60 +41,70 @@ PORT(
 );
 END COMPONENT SampleAdder16;
 
-SIGNAL k0, k1, k2, k3, k4, k5, k6, k7, k8, k9, k10, k11, k12, k13, k14, k15: unsigned (15 downto 0);
+COMPONENT SampleContainer IS
+PORT(
+		clk: in std_logic;
+		stream: in std_logic;
+		rom1, rom2, rom3: in hex;
+		loop1, loop2, loop3: in natural;
+		octave: in std_logic_vector (1 downto 0);
+		audio_request: in std_logic;
+		z: out unsigned (15 downto 0)
+);
+END COMPONENT SampleContainer;
 
-TYPE nat_num IS ARRAY (0 to 2**8 - 1) OF natural;
-TYPE hex IS ARRAY (0 to 2**8 - 1) OF unsigned(15 downto 0);
+SIGNAL k0, k1, k2, k3, k4, k5, k6, k7, k8, k9, k10, k11, k12, k13, k14, k15: unsigned (15 downto 0) := X"0000";
+
 CONSTANT num_samples: nat_num := (
 	--indexing set by octave(1) - tone(2)
-	000 => 104,
-	001 => 110,
-	002 => 117,
-	003 => 124,
-	004 => 131,
-	005 => 139,
-	006 => 148,
-	007 => 156,
-	008 => 166,
-	009 => 175,
-	010 => 186,
-	011 => 197,
-	012 => 208,
-	013 => 221,
-	014 => 234,
-	015 => 248,
-	100 => 52,
-	101 => 55,
-	102 => 59,
-	103 => 62,
-	104 => 66,
-	105 => 70,
-	106 => 74,
-	107 => 78,
-	108 => 83,
-	109 => 88,
-	110 => 93,
-	111 => 98,
-	112 => 104,
-	113 => 110,
-	114 => 117,
-	115 => 124,
-	200 => 52,
-	201 => 55,
-	202 => 59,
-	203 => 62,
-	204 => 26,
-	205 => 28,
-	206 => 29,
-	207 => 31,
-	208 => 33,
-	209 => 35,
-	210 => 37,
-	211 => 39,
-	212 => 42,
-	213 => 44,
-	214 => 47,
-	215 => 49,
+	000 => 103,
+	001 => 109,
+	002 => 116,
+	003 => 123,
+	004 => 130,
+	005 => 138,
+	006 => 147,
+	007 => 155,
+	008 => 165,
+	009 => 174,
+	010 => 185,
+	011 => 196,
+	012 => 207,
+	013 => 220,
+	014 => 233,
+	015 => 247,
+	100 => 51,
+	101 => 54,
+	102 => 58,
+	103 => 61,
+	104 => 65,
+	105 => 69,
+	106 => 73,
+	107 => 77,
+	108 => 82,
+	109 => 87,
+	110 => 92,
+	111 => 97,
+	112 => 103,
+	113 => 109,
+	114 => 116,
+	115 => 123,
+	200 => 51,
+	201 => 54,
+	202 => 58,
+	203 => 61,
+	204 => 25,
+	205 => 27,
+	206 => 28,
+	207 => 30,
+	208 => 32,
+	209 => 34,
+	210 => 36,
+	211 => 38,
+	212 => 41,
+	213 => 43,
+	214 => 46,
+	215 => 48,
 	others => 0
 );
 
@@ -10176,307 +10188,26 @@ CONSTANT DS6: hex := (
 	others => X"0000"
 );
 
-SIGNAL octave_int: integer;
-SIGNAL key_change: std_logic;
-SIGNAL last_keys: std_logic_vector(15 downto 0);
-SIGNAL octave_change: std_logic;
-SIGNAL last_octave: std_logic_vector(1 downto 0);
-
-FUNCTION highest_one(s : std_logic_vector) RETURN integer IS
-VARIABLE index : integer := 15;
-BEGIN
-	WHILE index >= 0 LOOP
-		IF s(index) = '1' THEN RETURN index;
-		ELSE index := index - 1;
-		END IF;
-	END LOOP;
-  
-	RETURN 0;
-END FUNCTION highest_one;
-
 BEGIN
 
-key_event: PROCESS (clk, keys) IS
-BEGIN
-    IF rising_edge(clk) then
-        last_keys <= keys;
-		  key_change <= or_reduce(keys xor last_keys);
-    END IF;
-END PROCESS key_event;
+--map all notes
+key15_map: SampleContainer port map(clk, keys(15), C3, C4, C5, num_samples(015), num_samples(115), num_samples(215), octave, audio_request, k15);
+key14_map: SampleContainer port map(clk, keys(14), CS3, CS4, CS5, num_samples(014), num_samples(114), num_samples(214), octave, audio_request, k14);
+key13_map: SampleContainer port map(clk, keys(13), D3, D4, D5, num_samples(013), num_samples(113), num_samples(213), octave, audio_request, k13);
+key12_map: SampleContainer port map(clk, keys(12), DS3, DS4, DS5, num_samples(012), num_samples(112), num_samples(212), octave, audio_request, k12);
+key11_map: SampleContainer port map(clk, keys(11), E3, E4, E5, num_samples(011), num_samples(111), num_samples(211), octave, audio_request, k11);
+key10_map: SampleContainer port map(clk, keys(10), F3, F4, F5, num_samples(010), num_samples(110), num_samples(210), octave, audio_request, k10);
+--key9_map: SampleContainer port map(clk, keys(9), FS3, FS4, FS5, num_samples(009), num_samples(109), num_samples(209), octave, audio_request, k9);
+--key8_map: SampleContainer port map(clk, keys(8), G3, G4, G5, num_samples(008), num_samples(108), num_samples(208), octave, audio_request, k8);
+--key7_map: SampleContainer port map(clk, keys(7), GS3, GS4, GS5, num_samples(007), num_samples(107), num_samples(207), octave, audio_request, k7);
+--key6_map: SampleContainer port map(clk, keys(6), A3, A4, A5, num_samples(006), num_samples(106), num_samples(206), octave, audio_request, k6);
+--key5_map: SampleContainer port map(clk, keys(5), AS3, AS4, AS5, num_samples(005), num_samples(105), num_samples(205), octave, audio_request, k5);
+--key4_map: SampleContainer port map(clk, keys(4), B3, B4, B5, num_samples(004), num_samples(104), num_samples(204), octave, audio_request, k4);
+--key3_map: SampleContainer port map(clk, keys(3), C4, C5, C6, num_samples(003), num_samples(103), num_samples(203), octave, audio_request, k3);
+--key2_map: SampleContainer port map(clk, keys(2), CS4, CS5, CS6, num_samples(002), num_samples(102), num_samples(202), octave, audio_request, k2);
+--key1_map: SampleContainer port map(clk, keys(1), D4, D5, D6, num_samples(001), num_samples(101), num_samples(201), octave, audio_request, k1);
+--key0_map: SampleContainer port map(clk, keys(0), DS4, DS5, DS6, num_samples(000), num_samples(100), num_samples(200), octave, audio_request, k0);
 
-octave_event: PROCESS (clk, octave) IS
-BEGIN
-	IF rising_edge(clk) then
-        last_octave <= octave;
-		  octave_change <= or_reduce(octave xor last_octave);
-    END IF;
-END PROCESS octave_event;
-
---create index from bit samples
-sampling: PROCESS (clk, keys) IS
-VARIABLE sample_index: integer := 0;
-VARIABLE max_index: integer := 247;
-BEGIN
-	IF rising_edge(clk) THEN
-		IF audio_request = '1' THEN
-			IF sample_index = max_index THEN
-				sample_index := 0;
-			ELSE
-				sample_index := sample_index + 1;
-			END IF;
-		END IF;
-		IF key_change = '1' OR octave_change = '1' THEN
-			sample_index := 0;
-			max_index := num_samples((to_integer(unsigned(octave)) * 100) + highest_one(keys));
-		END IF;
-		IF octave = "00" THEN
-			IF keys(0) = '1' THEN
-				k0 <= DS4(sample_index);
-			ELSE
-				k0 <= X"0000";
-			END IF;
-			IF keys(1) = '1' THEN
-				k1 <= D4(sample_index);
-			ELSE
-				k1 <= X"0000";
-			END IF;
-			IF keys(2) = '1' THEN
-				k2 <= CS4(sample_index);
-			ELSE
-				k2 <= X"0000";
-			END IF;
-			IF keys(3) = '1' THEN
-				k3 <= C4(sample_index);
-			ELSE
-				k3 <= X"0000";
-			END IF;
-			IF keys(4) = '1' THEN
-				k4 <= B3(sample_index);
-			ELSE
-				k4 <= X"0000";
-			END IF;
-			IF keys(5) = '1' THEN
-				k5 <= AS3(sample_index);
-			ELSE
-				k5 <= X"0000";
-			END IF;
-			IF keys(6) = '1' THEN
-				k6 <= A3(sample_index);
-			ELSE
-				k6 <= X"0000";
-			END IF;
-			IF keys(7) = '1' THEN
-				k7 <= GS3(sample_index);
-			ELSE
-				k7 <= X"0000";
-			END IF;
-			IF keys(8) = '1' THEN
-				k8 <= G3(sample_index);
-			ELSE
-				k8 <= X"0000";
-			END IF;
-			IF keys(9) = '1' THEN
-				k9 <= FS3(sample_index);
-			ELSE
-				k9 <= X"0000";
-			END IF;
-			IF keys(10) = '1' THEN
-				k10 <= F3(sample_index);
-			ELSE
-				k10 <= X"0000";
-			END IF;
-			IF keys(11) = '1' THEN
-				k11 <= E3(sample_index);
-			ELSE
-				k11 <= X"0000";
-			END IF;
-			IF keys(12) = '1' THEN
-				k12 <= DS3(sample_index);
-			ELSE
-				k12 <= X"0000";
-			END IF;
-			IF keys(13) = '1' THEN
-				k13 <= D3(sample_index);
-			ELSE
-				k13 <= X"0000";
-			END IF;
-			IF keys(14) = '1' THEN
-				k14 <= CS3(sample_index);
-			ELSE
-				k14 <= X"0000";
-			END IF;
-			IF keys(15) = '1' THEN
-				k15 <= C3(sample_index);
-			ELSE
-				k15 <= X"0000";
-			END IF;
-		ELSIF octave = "01" THEN
-			IF keys(0) = '1' THEN
-				k0 <= DS5(sample_index);
-			ELSE
-				k0 <= X"0000";
-			END IF;
-			IF keys(1) = '1' THEN
-				k1 <= D5(sample_index);
-			ELSE
-				k1 <= X"0000";
-			END IF;
-			IF keys(2) = '1' THEN
-				k2 <= CS5(sample_index);
-			ELSE
-				k2 <= X"0000";
-			END IF;
-			IF keys(3) = '1' THEN
-				k3 <= C5(sample_index);
-			ELSE
-				k3 <= X"0000";
-			END IF;
-			IF keys(4) = '1' THEN
-				k4 <= B4(sample_index);
-			ELSE
-				k4 <= X"0000";
-			END IF;
-			IF keys(5) = '1' THEN
-				k5 <= AS4(sample_index);
-			ELSE
-				k5 <= X"0000";
-			END IF;
-			IF keys(6) = '1' THEN
-				k6 <= A4(sample_index);
-			ELSE
-				k6 <= X"0000";
-			END IF;
-			IF keys(7) = '1' THEN
-				k7 <= GS4(sample_index);
-			ELSE
-				k7 <= X"0000";
-			END IF;
-			IF keys(8) = '1' THEN
-				k8 <= G4(sample_index);
-			ELSE
-				k8 <= X"0000";
-			END IF;
-			IF keys(9) = '1' THEN
-				k9 <= FS4(sample_index);
-			ELSE
-				k9 <= X"0000";
-			END IF;
-			IF keys(10) = '1' THEN
-				k10 <= F4(sample_index);
-			ELSE
-				k10 <= X"0000";
-			END IF;
-			IF keys(11) = '1' THEN
-				k11 <= E4(sample_index);
-			ELSE
-				k11 <= X"0000";
-			END IF;
-			IF keys(12) = '1' THEN
-				k12 <= DS4(sample_index);
-			ELSE
-				k12 <= X"0000";
-			END IF;
-			IF keys(13) = '1' THEN
-				k13 <= D4(sample_index);
-			ELSE
-				k13 <= X"0000";
-			END IF;
-			IF keys(14) = '1' THEN
-				k14 <= CS4(sample_index);
-			ELSE
-				k14 <= X"0000";
-			END IF;
-			IF keys(15) = '1' THEN
-				k15 <= C4(sample_index);
-			ELSE
-				k15 <= X"0000";
-			END IF;
-		ELSIF octave = "10" THEN
-			IF keys(0) = '1' THEN
-				k0 <= DS6(sample_index);
-			ELSE
-				k0 <= X"0000";
-			END IF;
-			IF keys(1) = '1' THEN
-				k1 <= D6(sample_index);
-			ELSE
-				k1 <= X"0000";
-			END IF;
-			IF keys(2) = '1' THEN
-				k2 <= CS6(sample_index);
-			ELSE
-				k2 <= X"0000";
-			END IF;
-			IF keys(3) = '1' THEN
-				k3 <= C6(sample_index);
-			ELSE
-				k3 <= X"0000";
-			END IF;
-			IF keys(4) = '1' THEN
-				k4 <= B5(sample_index);
-			ELSE
-				k4 <= X"0000";
-			END IF;
-			IF keys(5) = '1' THEN
-				k5 <= AS5(sample_index);
-			ELSE
-				k5 <= X"0000";
-			END IF;
-			IF keys(6) = '1' THEN
-				k6 <= A5(sample_index);
-			ELSE
-				k6 <= X"0000";
-			END IF;
-			IF keys(7) = '1' THEN
-				k7 <= GS5(sample_index);
-			ELSE
-				k7 <= X"0000";
-			END IF;
-			IF keys(8) = '1' THEN
-				k8 <= G5(sample_index);
-			ELSE
-				k8 <= X"0000";
-			END IF;
-			IF keys(9) = '1' THEN
-				k9 <= FS5(sample_index);
-			ELSE
-				k9 <= X"0000";
-			END IF;
-			IF keys(10) = '1' THEN
-				k10 <= F5(sample_index);
-			ELSE
-				k10 <= X"0000";
-			END IF;
-			IF keys(11) = '1' THEN
-				k11 <= E5(sample_index);
-			ELSE
-				k11 <= X"0000";
-			END IF;
-			IF keys(12) = '1' THEN
-				k12 <= DS5(sample_index);
-			ELSE
-				k12 <= X"0000";
-			END IF;
-			IF keys(13) = '1' THEN
-				k13 <= D5(sample_index);
-			ELSE
-				k13 <= X"0000";
-			END IF;
-			IF keys(14) = '1' THEN
-				k14 <= CS5(sample_index);
-			ELSE
-				k14 <= X"0000";
-			END IF;
-			IF keys(15) = '1' THEN
-				k15 <= C5(sample_index);
-			ELSE
-				k15 <= X"0000";
-			END IF;
-		END IF;
-	END IF;
-END PROCESS sampling;
-
-octave_int <= to_integer(unsigned(octave)) * 12000;
-SAMPLE_ADDER: SampleAdder16 port map(keys, k0, k1, k2, k3, k4, k5, k6, k7, k8, k9, k10, k11, k12, k13, k14, k15, z);
+sample_adder: SampleAdder16 port map(keys, k0, k1, k2, k3, k4, k5, k6, k7, k8, k9, k10, k11, k12, k13, k14, k15, z);
 
 END ARCHITECTURE rom;

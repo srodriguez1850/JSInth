@@ -46,25 +46,25 @@ SIGNAL ai, bi, ci, di, ei, fi, gi, hi, ii, ji, ki, li, mi, ni, oi, pi, zi: integ
 BEGIN
 	keys_pressed <= count_ones(keys);
 
-	ai <= to_integer(a);
-	bi <= to_integer(b);
-	ci <= to_integer(c);
-	di <= to_integer(d);
-	ei <= to_integer(e);
-	fi <= to_integer(f);
-	gi <= to_integer(g);
-	hi <= to_integer(h);
-	ii <= to_integer(i);
-	ji <= to_integer(j);
-	ki <= to_integer(k);
-	li <= to_integer(l);
-	mi <= to_integer(m);
-	ni <= to_integer(n);
-	oi <= to_integer(o);
-	pi <= to_integer(p);
+	ai <= to_integer(signed(a));
+	bi <= to_integer(signed(b));
+	ci <= to_integer(signed(c));
+	di <= to_integer(signed(d));
+	ei <= to_integer(signed(e));
+	fi <= to_integer(signed(f));
+	gi <= to_integer(signed(g));
+	hi <= to_integer(signed(h));
+	ii <= to_integer(signed(i));
+	ji <= to_integer(signed(j));
+	ki <= to_integer(signed(k));
+	li <= to_integer(signed(l));
+	mi <= to_integer(signed(m));
+	ni <= to_integer(signed(n));
+	oi <= to_integer(signed(o));
+	pi <= to_integer(signed(p));
 	
 	zi <= 0 when keys_pressed = 0 else ((ai + bi + ci + di + ei + fi + gi + hi + ii + ji + ki + li + mi + ni + oi + pi) / keys_pressed);
 	
-	z <= to_unsigned(zi, 16);
+	z <= unsigned(to_signed(zi, 16));
 	
 END ARCHITECTURE rtl;

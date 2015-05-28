@@ -1,0 +1,6 @@
+USE IEEE;
+USE IEEE.std_logic_1164.all;
+
+PACKAGE typeDeclarations IS
+	TYPE hex IS ARRAY (0 to 2**8 - 1) OF unsigned(15 downto 0);
+END PACKAGE typeDeclarations;

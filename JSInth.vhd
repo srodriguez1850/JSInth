@@ -131,8 +131,7 @@ SIGNAL current_octave: std_logic_vector (1 downto 0);
 SIGNAL current_synth: std_logic_vector(1 downto 0);
 SIGNAL audio_clock: unsigned (1 downto 0) := "00";
 SIGNAL audio_request: std_logic;
-SIGNAL data_in: unsigned (15 downto 0);
-SIGNAL data_counter: unsigned (6 downto 0) := "0000000";
+SIGNAL data_buffer: unsigned (15 downto 0);
 
 SIGNAL controller_data: unsigned(15 downto 0);
 
@@ -147,12 +146,12 @@ END PROCESS CLK_DIV_AUD;
 
 AUD_XCK <= audio_clock(1);
 
-i2c : de2_i2c_av_config port map (
-    iCLK     => clk,
-    iRST_n   => '1',
-    I2C_SCLK => I2C_SCLK,
-    I2C_SDAT => I2C_SDAT
-);
+--i2c : de2_i2c_av_config port map (
+--    iCLK     => clk,
+--    iRST_n   => '1',
+--    I2C_SCLK => I2C_SCLK,
+--    I2C_SDAT => I2C_SDAT
+--);
 
 audiomap: WM8731_CONTROLLER port map (
     clk => audio_clock(1),
@@ -176,8 +175,8 @@ synmap: FSM_synth port map(synth_sel, clk, current_synth);
 --map VGA monitor
 vgamap: VGA_top_level port map(clk, reset, vga_red, vga_green, vga_blue, horiz_sync, vert_sync, vga_blank, vga_clk, keys, current_volume, current_octave, current_synth, mute_sel);
 --map ROM
-rommap: audioROM port map(audio_clock(1), audio_request, keys, current_octave, data_in);
+rommap: audioROM port map(audio_clock(1), audio_request, keys, current_octave, controller_data);
 --map Reverb
-reverbmap: reverb port map(data_in, '0', clk, current_synth(0), controller_data);
+--reverbmap: reverb port map(data_in, '0', clk, current_synth(0), controller_data);
 
 END ARCHITECTURE main;

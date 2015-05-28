@@ -1,13 +1,4 @@
-C:/Users/Sebastian/Documents/GitHub/JSInth/WM8731_Controller.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Sebastian/Documents/GitHub/JSInth/WM8731_Controller.vhd
-Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity WM8731_CONTROLLER
--- Compiling architecture rtl of WM8731_CONTROLLER
-
-} {} {}} C:/Users/Sebastian/Documents/GitHub/JSInth/simulation/modelsim/JSInth_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Sebastian/Documents/GitHub/JSInth/simulation/modelsim/JSInth_tb.vhd
+C:/Users/Sebastian/Documents/GitHub/JSInth/simulation/modelsim/JSInth_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\Sebastian\Documents\GitHub\JSInth\simulation\modelsim\JSInth_tb.vhd}
 Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -15,6 +6,15 @@ Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
 -- Loading package NUMERIC_STD
 -- Compiling entity JSInth_tb
 -- Compiling architecture rtl of JSInth_tb
+
+} {} {}} C:/Users/Sebastian/Documents/GitHub/JSInth/WM8731_Controller.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Sebastian/Documents/GitHub/JSInth/WM8731_Controller.vhd
+Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity WM8731_CONTROLLER
+-- Compiling architecture rtl of WM8731_CONTROLLER
 
 } {} {}} C:/Users/Sebastian/Documents/GitHub/JSInth/simulation/modelsim/SampleAdder16_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Sebastian/Documents/GitHub/JSInth/simulation/modelsim/SampleAdder16_tb.vhd
 Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
@@ -25,14 +25,14 @@ Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
 -- Compiling entity SampleAdder16_tb
 -- Compiling architecture rtl of SampleAdder16_tb
 
-} {} {}} C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_octave.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_octave.vhd
+} {} {}} C:/Users/Sebastian/Documents/GitHub/JSInth/FIFO.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Sebastian/Documents/GitHub/JSInth/FIFO.vhd
 Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Compiling entity FSM_octave
--- Compiling architecture states of FSM_octave
+-- Loading package NUMERIC_STD
+-- Compiling entity FIFO
+-- Compiling architecture Behavioral of FIFO
 
 } {} {}} C:/Users/Sebastian/Documents/GitHub/JSInth/VGA_top_level.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Sebastian/Documents/GitHub/JSInth/VGA_top_level.vhd
 Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
@@ -42,13 +42,26 @@ Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
 -- Compiling entity VGA_top_level
 -- Compiling architecture structural of VGA_top_level
 
+} {} {}} C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_octave.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_octave.vhd
+Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity FSM_octave
+-- Compiling architecture states of FSM_octave
+
 } {} {}} C:/Users/Sebastian/Documents/GitHub/JSInth/audioROM.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Sebastian/Documents/GitHub/JSInth/audioROM.vhd
 Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
+-- Loading package ATTRIBUTES
+-- Loading package std_logic_misc
+-- Loading package typeDeclarations
 -- Compiling entity audioROM
+-- Compiling architecture rom of audioROM
 
 } {} {}} C:/Users/Sebastian/Documents/GitHub/JSInth/JSInth.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Sebastian/Documents/GitHub/JSInth/JSInth.vhd
 Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
@@ -56,6 +69,7 @@ Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
+-- Loading package constants
 -- Compiling entity JSInth
 -- Compiling architecture main of JSInth
 
@@ -87,13 +101,23 @@ Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
 -- Compiling entity VGA_SYNC
 -- Compiling architecture behavioral of VGA_SYNC
 
-} {} {}} C:/Users/Sebastian/Documents/GitHub/JSInth/colorROM.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Sebastian/Documents/GitHub/JSInth/colorROM.vhd
+} {} {}} C:/Users/Sebastian/Documents/GitHub/JSInth/typeDeclarations.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Sebastian/Documents/GitHub/JSInth/typeDeclarations.vhd
 Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity colorROM
--- Compiling architecture SYN of colorrom
+-- Loading package NUMERIC_STD
+-- Compiling package typeDeclarations
+
+} {} {}} C:/Users/Sebastian/Documents/GitHub/JSInth/SampleContainer.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Sebastian/Documents/GitHub/JSInth/SampleContainer.vhd
+Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package typeDeclarations
+-- Compiling entity SampleContainer
+-- Compiling architecture rtl of SampleContainer
 
 } {} {}} C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_volume.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_volume.vhd
 Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
@@ -103,6 +127,14 @@ Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
 -- Loading package std_logic_arith
 -- Compiling entity FSM_volume
 -- Compiling architecture states of FSM_volume
+
+} {} {}} C:/Users/Sebastian/Documents/GitHub/JSInth/colorROM.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Sebastian/Documents/GitHub/JSInth/colorROM.vhd
+Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity colorROM
+-- Compiling architecture SYN of colorrom
 
 } {} {}} C:/Users/Sebastian/Documents/GitHub/JSInth/de2_i2c_av_config.v {1 {vlog -work work -stats=none C:/Users/Sebastian/Documents/GitHub/JSInth/de2_i2c_av_config.v
 Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
