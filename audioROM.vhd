@@ -10191,22 +10191,22 @@ CONSTANT DS6: hex := (
 BEGIN
 
 --map all notes
-key15_map: SampleContainer port map(clk, keys(15), C3, C4, C5, num_samples(015), num_samples(115), num_samples(215), octave, audio_request, k15);
-key14_map: SampleContainer port map(clk, keys(14), CS3, CS4, CS5, num_samples(014), num_samples(114), num_samples(214), octave, audio_request, k14);
-key13_map: SampleContainer port map(clk, keys(13), D3, D4, D5, num_samples(013), num_samples(113), num_samples(213), octave, audio_request, k13);
-key12_map: SampleContainer port map(clk, keys(12), DS3, DS4, DS5, num_samples(012), num_samples(112), num_samples(212), octave, audio_request, k12);
-key11_map: SampleContainer port map(clk, keys(11), E3, E4, E5, num_samples(011), num_samples(111), num_samples(211), octave, audio_request, k11);
-key10_map: SampleContainer port map(clk, keys(10), F3, F4, F5, num_samples(010), num_samples(110), num_samples(210), octave, audio_request, k10);
+--key15_map: SampleContainer port map(clk, keys(15), C3, C4, C5, num_samples(015), num_samples(115), num_samples(215), octave, audio_request, k15);
+--key14_map: SampleContainer port map(clk, keys(14), CS3, CS4, CS5, num_samples(014), num_samples(114), num_samples(214), octave, audio_request, k14);
+--key13_map: SampleContainer port map(clk, keys(13), D3, D4, D5, num_samples(013), num_samples(113), num_samples(213), octave, audio_request, k13);
+--key12_map: SampleContainer port map(clk, keys(12), DS3, DS4, DS5, num_samples(012), num_samples(112), num_samples(212), octave, audio_request, k12);
+--key11_map: SampleContainer port map(clk, keys(11), E3, E4, E5, num_samples(011), num_samples(111), num_samples(211), octave, audio_request, k11);
+--key10_map: SampleContainer port map(clk, keys(10), F3, F4, F5, num_samples(010), num_samples(110), num_samples(210), octave, audio_request, k10);
 --key9_map: SampleContainer port map(clk, keys(9), FS3, FS4, FS5, num_samples(009), num_samples(109), num_samples(209), octave, audio_request, k9);
 --key8_map: SampleContainer port map(clk, keys(8), G3, G4, G5, num_samples(008), num_samples(108), num_samples(208), octave, audio_request, k8);
 --key7_map: SampleContainer port map(clk, keys(7), GS3, GS4, GS5, num_samples(007), num_samples(107), num_samples(207), octave, audio_request, k7);
 --key6_map: SampleContainer port map(clk, keys(6), A3, A4, A5, num_samples(006), num_samples(106), num_samples(206), octave, audio_request, k6);
 --key5_map: SampleContainer port map(clk, keys(5), AS3, AS4, AS5, num_samples(005), num_samples(105), num_samples(205), octave, audio_request, k5);
 --key4_map: SampleContainer port map(clk, keys(4), B3, B4, B5, num_samples(004), num_samples(104), num_samples(204), octave, audio_request, k4);
---key3_map: SampleContainer port map(clk, keys(3), C4, C5, C6, num_samples(003), num_samples(103), num_samples(203), octave, audio_request, k3);
---key2_map: SampleContainer port map(clk, keys(2), CS4, CS5, CS6, num_samples(002), num_samples(102), num_samples(202), octave, audio_request, k2);
---key1_map: SampleContainer port map(clk, keys(1), D4, D5, D6, num_samples(001), num_samples(101), num_samples(201), octave, audio_request, k1);
---key0_map: SampleContainer port map(clk, keys(0), DS4, DS5, DS6, num_samples(000), num_samples(100), num_samples(200), octave, audio_request, k0);
+key3_map: SampleContainer port map(clk, keys(3), C4, C5, C6, num_samples(003), num_samples(103), num_samples(203), octave, audio_request, k3);
+key2_map: SampleContainer port map(clk, keys(2), CS4, CS5, CS6, num_samples(002), num_samples(102), num_samples(202), octave, audio_request, k2);
+key1_map: SampleContainer port map(clk, keys(1), D4, D5, D6, num_samples(001), num_samples(101), num_samples(201), octave, audio_request, k1);
+key0_map: SampleContainer port map(clk, keys(0), DS4, DS5, DS6, num_samples(000), num_samples(100), num_samples(200), octave, audio_request, k0);
 
 sample_adder: SampleAdder16 port map(keys, k0, k1, k2, k3, k4, k5, k6, k7, k8, k9, k10, k11, k12, k13, k14, k15, z);
 

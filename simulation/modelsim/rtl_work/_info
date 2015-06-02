@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/Sebastian/Documents/GitHub/JSInth/simulation/modelsim
 Eaudiorom
-Z1 w1432835608
+Z1 w1432852482
 Z2 DPx4 work 16 typedeclarations 0 22 RkOUji5gGECN[DcnXcaki0
 Z3 DPx8 synopsys 10 attributes 0 22 liCm]LV3<lX4Zl>o6^8IV1
 Z4 DPx4 ieee 14 std_logic_misc 0 22 BLzBaQbXS>Q1z>5YO]m[52
@@ -25,9 +25,9 @@ VK?[9IHCmd5_25Sdo[:fd40
 !s100 >RlBFgXE6LLJHS6o<fXIa0
 Z10 OV;C;10.3c;59
 31
-Z11 !s110 1432845837
+Z11 !s110 1433118184
 !i10b 1
-Z12 !s108 1432845837.237000
+Z12 !s108 1433118184.267000
 Z13 !s90 -reportprogress|300|-93|-work|work|C:/Users/Sebastian/Documents/GitHub/JSInth/audioROM.vhd|
 Z14 !s107 C:/Users/Sebastian/Documents/GitHub/JSInth/audioROM.vhd|
 !i113 1
@@ -43,8 +43,8 @@ R7
 DEx4 work 8 audiorom 0 22 K?[9IHCmd5_25Sdo[:fd40
 l10191
 L17
-VmH0JHG`3CJPTDfP<7N2A93
-!s100 3dIOKP6jL>O`]N<SR:VNB3
+V7gN84Ui5kQK;0eo<PPg400
+!s100 [<kI6fXM7jm`4G1ZS6HU11
 R10
 31
 R11
@@ -68,9 +68,9 @@ Vbd5D_7Bc5cW7PVMnhD3Fz2
 !s100 bbG6S9C@XAY;0IEfI?PMB1
 R10
 31
-Z20 !s110 1432845835
+Z20 !s110 1433118178
 !i10b 1
-Z21 !s108 1432845835.704000
+Z21 !s108 1433118178.954000
 Z22 !s90 -reportprogress|300|-93|-work|work|C:/Users/Sebastian/Documents/GitHub/JSInth/colorROM.vhd|
 Z23 !s107 C:/Users/Sebastian/Documents/GitHub/JSInth/colorROM.vhd|
 !i113 1
@@ -107,9 +107,9 @@ V7N]jOk4=]7nF8]=KUaeFJ3
 !s100 n0<e7OXJSYER3jXI5FYYL1
 R10
 31
-Z27 !s110 1432845832
+Z27 !s110 1433118176
 !i10b 1
-Z28 !s108 1432845832.911000
+Z28 !s108 1433118176.037000
 Z29 !s90 -reportprogress|300|-93|-work|work|C:/Users/Sebastian/Documents/GitHub/JSInth/constants.vhd|
 Z30 !s107 C:/Users/Sebastian/Documents/GitHub/JSInth/constants.vhd|
 !i113 1
@@ -135,7 +135,7 @@ R15
 R16
 nbody
 Efifo
-Z32 w1432684120
+Z32 w1432851956
 R5
 R6
 R7
@@ -148,9 +148,9 @@ V0K>Lz0D2ceCgAiKTTMmSP2
 !s100 ABl4]=GBhmHm4MT1CfEe00
 R10
 31
-Z35 !s110 1432845831
+Z35 !s110 1433118174
 !i10b 1
-Z36 !s108 1432845831.876000
+Z36 !s108 1433118174.963000
 Z37 !s90 -reportprogress|300|-93|-work|work|C:/Users/Sebastian/Documents/GitHub/JSInth/FIFO.vhd|
 Z38 !s107 C:/Users/Sebastian/Documents/GitHub/JSInth/FIFO.vhd|
 !i113 1
@@ -189,9 +189,9 @@ V^1cFMmRd@?YN0@@RgXFUG1
 !s100 WQ?V37A6JnUHHm99O>;IG1
 R10
 31
-Z43 !s110 1432845836
+Z43 !s110 1433118183
 !i10b 1
-Z44 !s108 1432845836.720000
+Z44 !s108 1433118183.720000
 Z45 !s90 -reportprogress|300|-93|-work|work|C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_octave.vhd|
 Z46 !s107 C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_octave.vhd|
 !i113 1
@@ -230,11 +230,11 @@ VnF>MEh7LbE2KhQ`nA;k`X3
 !s100 Q86=L>E5RokKK[^QDjPPP1
 R10
 31
-R27
+Z50 !s110 1433118175
 !i10b 1
-Z50 !s108 1432845832.382000
-Z51 !s90 -reportprogress|300|-93|-work|work|C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_synth.vhd|
-Z52 !s107 C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_synth.vhd|
+Z51 !s108 1433118175.528000
+Z52 !s90 -reportprogress|300|-93|-work|work|C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_synth.vhd|
+Z53 !s107 C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_synth.vhd|
 !i113 1
 R15
 R16
@@ -249,33 +249,33 @@ V^NfXFdCmhGEL19aUTJ<783
 !s100 ;DNdNY=d07RD2j1_J2O>a2
 R10
 31
-R27
-!i10b 1
 R50
+!i10b 1
 R51
 R52
+R53
 !i113 1
 R15
 R16
 Efsm_volume
-Z53 w1430859273
+Z54 w1430859273
 R40
 R6
 R7
 R0
-Z54 8C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_volume.vhd
-Z55 FC:/Users/Sebastian/Documents/GitHub/JSInth/FSM_volume.vhd
+Z55 8C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_volume.vhd
+Z56 FC:/Users/Sebastian/Documents/GitHub/JSInth/FSM_volume.vhd
 l0
 L10
 V:zIVYoFJL[4D:8?`Sa>:D1
 !s100 62i@i=JGDaD[W<BfGeA_W3
 R10
 31
-R43
+Z57 !s110 1433118179
 !i10b 1
-Z56 !s108 1432845836.221000
-Z57 !s90 -reportprogress|300|-93|-work|work|C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_volume.vhd|
-Z58 !s107 C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_volume.vhd|
+Z58 !s108 1433118179.490000
+Z59 !s90 -reportprogress|300|-93|-work|work|C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_volume.vhd|
+Z60 !s107 C:/Users/Sebastian/Documents/GitHub/JSInth/FSM_volume.vhd|
 !i113 1
 R15
 R16
@@ -290,34 +290,34 @@ Vfaa1RhZcQ>>6dhYm>dlDm2
 !s100 0zdhA8?02BG92;Om`<4K31
 R10
 31
-R43
-!i10b 1
-R56
 R57
+!i10b 1
 R58
+R59
+R60
 !i113 1
 R15
 R16
 Ejsinth
-Z59 w1432690567
+R32
 R31
 R5
 R6
 R7
 R0
-Z60 8C:/Users/Sebastian/Documents/GitHub/JSInth/JSInth.vhd
-Z61 FC:/Users/Sebastian/Documents/GitHub/JSInth/JSInth.vhd
+Z61 8C:/Users/Sebastian/Documents/GitHub/JSInth/JSInth.vhd
+Z62 FC:/Users/Sebastian/Documents/GitHub/JSInth/JSInth.vhd
 l0
 L11
 Vf2B_bocfY2Fm>CH7iMHP01
 !s100 bZ6NJajXZE2Sk::V=07PO2
 R10
 31
-R11
+Z63 !s110 1433118185
 !i10b 1
-Z62 !s108 1432845837.880000
-Z63 !s90 -reportprogress|300|-93|-work|work|C:/Users/Sebastian/Documents/GitHub/JSInth/JSInth.vhd|
-Z64 !s107 C:/Users/Sebastian/Documents/GitHub/JSInth/JSInth.vhd|
+Z64 !s108 1433118185.004000
+Z65 !s90 -reportprogress|300|-93|-work|work|C:/Users/Sebastian/Documents/GitHub/JSInth/JSInth.vhd|
+Z66 !s107 C:/Users/Sebastian/Documents/GitHub/JSInth/JSInth.vhd|
 !i113 1
 R15
 R16
@@ -333,22 +333,22 @@ VRNWHD^3UIQ08BD8bDbUiV2
 !s100 jM;XZKU=;HNCA8a_Y`4Wm3
 R10
 31
-R11
-!i10b 1
-R62
 R63
+!i10b 1
 R64
+R65
+R66
 !i113 1
 R15
 R16
 Epixelgenerator
-Z65 w1432676315
+Z67 w1432676315
 R5
 R6
 R7
 R0
-Z66 8C:/Users/Sebastian/Documents/GitHub/JSInth/pixelGenerator.vhd
-Z67 FC:/Users/Sebastian/Documents/GitHub/JSInth/pixelGenerator.vhd
+Z68 8C:/Users/Sebastian/Documents/GitHub/JSInth/pixelGenerator.vhd
+Z69 FC:/Users/Sebastian/Documents/GitHub/JSInth/pixelGenerator.vhd
 l0
 L11
 VQCd[[hCQB^RK97Co4<6iz2
@@ -357,9 +357,9 @@ R10
 31
 R20
 !i10b 1
-Z68 !s108 1432845835.175000
-Z69 !s90 -reportprogress|300|-93|-work|work|C:/Users/Sebastian/Documents/GitHub/JSInth/pixelGenerator.vhd|
-Z70 !s107 C:/Users/Sebastian/Documents/GitHub/JSInth/pixelGenerator.vhd|
+Z70 !s108 1433118178.404000
+Z71 !s90 -reportprogress|300|-93|-work|work|C:/Users/Sebastian/Documents/GitHub/JSInth/pixelGenerator.vhd|
+Z72 !s107 C:/Users/Sebastian/Documents/GitHub/JSInth/pixelGenerator.vhd|
 !i113 1
 R15
 R16
@@ -376,29 +376,29 @@ R10
 31
 R20
 !i10b 1
-R68
-R69
 R70
+R71
+R72
 !i113 1
 R15
 R16
 Esampleadder16
-Z71 w1432834011
+R32
 R5
 R6
 R7
 R0
-Z72 8C:/Users/Sebastian/Documents/GitHub/JSInth/SampleAdder16.vhd
-Z73 FC:/Users/Sebastian/Documents/GitHub/JSInth/SampleAdder16.vhd
+Z73 8C:/Users/Sebastian/Documents/GitHub/JSInth/SampleAdder16.vhd
+Z74 FC:/Users/Sebastian/Documents/GitHub/JSInth/SampleAdder16.vhd
 l0
 L5
 V9`hbK[<K78[Zgd9nU43Gi3
 !s100 fTX<zIB1:>_HQ04OV=@J93
 R10
 31
-Z74 !s110 1432845833
+R27
 !i10b 1
-Z75 !s108 1432845832.987000
+Z75 !s108 1433118176.110000
 Z76 !s90 -reportprogress|300|-93|-work|work|C:/Users/Sebastian/Documents/GitHub/JSInth/SampleAdder16.vhd|
 Z77 !s107 C:/Users/Sebastian/Documents/GitHub/JSInth/SampleAdder16.vhd|
 !i113 1
@@ -415,7 +415,7 @@ Vg2g146F8]fX:2Jf<2T6SZ0
 !s100 a]jDR0CNac]HGPhPmWPH<0
 R10
 31
-R74
+R27
 !i10b 1
 R75
 R76
@@ -424,25 +424,25 @@ R77
 R15
 R16
 Esamplecontainer
-Z78 w1432705493
+R32
 R2
 R5
 R6
 R7
 R0
-Z79 8C:/Users/Sebastian/Documents/GitHub/JSInth/SampleContainer.vhd
-Z80 FC:/Users/Sebastian/Documents/GitHub/JSInth/SampleContainer.vhd
+Z78 8C:/Users/Sebastian/Documents/GitHub/JSInth/SampleContainer.vhd
+Z79 FC:/Users/Sebastian/Documents/GitHub/JSInth/SampleContainer.vhd
 l0
 L6
 V;kgGijG67Y88<F3S]mj3o1
 !s100 gemSm^f2GD9?BkdS9AZe<0
 R10
 31
-Z81 !s110 1432845838
+R63
 !i10b 1
-Z82 !s108 1432845838.406000
-Z83 !s90 -reportprogress|300|-93|-work|work|C:/Users/Sebastian/Documents/GitHub/JSInth/SampleContainer.vhd|
-Z84 !s107 C:/Users/Sebastian/Documents/GitHub/JSInth/SampleContainer.vhd|
+Z80 !s108 1433118185.518000
+Z81 !s90 -reportprogress|300|-93|-work|work|C:/Users/Sebastian/Documents/GitHub/JSInth/SampleContainer.vhd|
+Z82 !s107 C:/Users/Sebastian/Documents/GitHub/JSInth/SampleContainer.vhd|
 !i113 1
 R15
 R16
@@ -458,11 +458,11 @@ Vb<b:aG]G9UTlhTkEoO2j71
 !s100 QiGm95=]TQHQ>fj8d49ln2
 R10
 31
-R81
+R63
 !i10b 1
+R80
+R81
 R82
-R83
-R84
 !i113 1
 R15
 R16
@@ -470,7 +470,7 @@ Ptypedeclarations
 R5
 R6
 R7
-w1432682223
+w1432851958
 R0
 8C:/Users/Sebastian/Documents/GitHub/JSInth/typeDeclarations.vhd
 FC:/Users/Sebastian/Documents/GitHub/JSInth/typeDeclarations.vhd
@@ -482,37 +482,37 @@ R10
 31
 R35
 !i10b 1
-!s108 1432845831.792000
+!s108 1433118174.878000
 !s90 -reportprogress|300|-93|-work|work|C:/Users/Sebastian/Documents/GitHub/JSInth/typeDeclarations.vhd|
 !s107 C:/Users/Sebastian/Documents/GitHub/JSInth/typeDeclarations.vhd|
 !i113 1
 R15
 R16
 Evga_sync
-Z85 w1430894912
-Z86 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z83 w1430894912
+Z84 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 R40
 R6
 R7
 R0
-Z87 8C:/Users/Sebastian/Documents/GitHub/JSInth/vga_sync.vhd
-Z88 FC:/Users/Sebastian/Documents/GitHub/JSInth/vga_sync.vhd
+Z85 8C:/Users/Sebastian/Documents/GitHub/JSInth/vga_sync.vhd
+Z86 FC:/Users/Sebastian/Documents/GitHub/JSInth/vga_sync.vhd
 l0
 L11
 VS@gIKP7hS7Hc2eU[oPQjd1
 !s100 :z>dk@=hH=DBKiBKaYES@3
 R10
 31
-Z89 !s110 1432845834
+Z87 !s110 1433118177
 !i10b 1
-Z90 !s108 1432845834.596000
-Z91 !s90 -reportprogress|300|-93|-work|work|C:/Users/Sebastian/Documents/GitHub/JSInth/vga_sync.vhd|
-Z92 !s107 C:/Users/Sebastian/Documents/GitHub/JSInth/vga_sync.vhd|
+Z88 !s108 1433118177.881000
+Z89 !s90 -reportprogress|300|-93|-work|work|C:/Users/Sebastian/Documents/GitHub/JSInth/vga_sync.vhd|
+Z90 !s107 C:/Users/Sebastian/Documents/GitHub/JSInth/vga_sync.vhd|
 !i113 1
 R15
 R16
 Abehavioral
-R86
+R84
 R40
 R6
 R7
@@ -523,32 +523,32 @@ VK2k6KkSi9O^jn`Z7GQNZ70
 !s100 ^<@<^?VeYmdX9YGE:DVc@1
 R10
 31
-R89
+R87
 !i10b 1
+R88
+R89
 R90
-R91
-R92
 !i113 1
 R15
 R16
 Evga_top_level
-Z93 w1432495537
+Z91 w1432495537
 R6
 R7
 R0
-Z94 8C:/Users/Sebastian/Documents/GitHub/JSInth/VGA_top_level.vhd
-Z95 FC:/Users/Sebastian/Documents/GitHub/JSInth/VGA_top_level.vhd
+Z92 8C:/Users/Sebastian/Documents/GitHub/JSInth/VGA_top_level.vhd
+Z93 FC:/Users/Sebastian/Documents/GitHub/JSInth/VGA_top_level.vhd
 l0
 L10
 VAmdVN3?VWBb=dGHz3`5D:1
 !s100 SWQ`8_gW_Zjmg5VKK?W^N3
 R10
 31
-R89
+R87
 !i10b 1
-Z96 !s108 1432845834.028000
-Z97 !s90 -reportprogress|300|-93|-work|work|C:/Users/Sebastian/Documents/GitHub/JSInth/VGA_top_level.vhd|
-Z98 !s107 C:/Users/Sebastian/Documents/GitHub/JSInth/VGA_top_level.vhd|
+Z94 !s108 1433118177.364000
+Z95 !s90 -reportprogress|300|-93|-work|work|C:/Users/Sebastian/Documents/GitHub/JSInth/VGA_top_level.vhd|
+Z96 !s107 C:/Users/Sebastian/Documents/GitHub/JSInth/VGA_top_level.vhd|
 !i113 1
 R15
 R16
@@ -562,33 +562,33 @@ VPITf0zd=4`O=VKo?nOife0
 !s100 GJ`]Moj1C@zi6<HbUa1;z0
 R10
 31
-R89
+R87
 !i10b 1
+R94
+R95
 R96
-R97
-R98
 !i113 1
 R15
 R16
 Ewm8731_controller
-Z99 w1431027021
+Z97 w1431027021
 R5
 R6
 R7
 R0
-Z100 8C:/Users/Sebastian/Documents/GitHub/JSInth/WM8731_Controller.vhd
-Z101 FC:/Users/Sebastian/Documents/GitHub/JSInth/WM8731_Controller.vhd
+Z98 8C:/Users/Sebastian/Documents/GitHub/JSInth/WM8731_Controller.vhd
+Z99 FC:/Users/Sebastian/Documents/GitHub/JSInth/WM8731_Controller.vhd
 l0
 L5
 VnVaoU>PfE3RZ8ZDFLi`bm1
 !s100 Gkk]1hIN21Hl1zG@d?BR91
 R10
 31
-R74
+R27
 !i10b 1
-Z102 !s108 1432845833.506000
-Z103 !s90 -reportprogress|300|-93|-work|work|C:/Users/Sebastian/Documents/GitHub/JSInth/WM8731_Controller.vhd|
-Z104 !s107 C:/Users/Sebastian/Documents/GitHub/JSInth/WM8731_Controller.vhd|
+Z100 !s108 1433118176.788000
+Z101 !s90 -reportprogress|300|-93|-work|work|C:/Users/Sebastian/Documents/GitHub/JSInth/WM8731_Controller.vhd|
+Z102 !s107 C:/Users/Sebastian/Documents/GitHub/JSInth/WM8731_Controller.vhd|
 !i113 1
 R15
 R16
@@ -603,11 +603,11 @@ V0>:n2he@d0khA`a51A_3m0
 !s100 B]cLgPoF]If7oX4SIU`4:1
 R10
 31
-R74
+R27
 !i10b 1
+R100
+R101
 R102
-R103
-R104
 !i113 1
 R15
 R16
