@@ -5,57 +5,65 @@ use work.constants.all;
 
 entity reverb_tb is
 	port(
-		source_signal, switch : in std_logic_vector(DATA_SIZE - 1 downto 0);
-		clear_bit, clk: in std_logic;
-		flanger_output: out std_logic_vector(DATA_SIZE - 1 downto 0)
-		);
-
+	   output: out unsigned(DATA_SIZE - 1 downto 0)
+	     );
 end entity reverb_tb;
 
 architecture behavioral of reverb_tb is
 
-	component reverb_FIFO is
-		generic(
-			constant DATA_SIZE : positive := 16;
-			constant FIFO_SIZE : positive := 48);
-		port(
-			clk : in std_logic;
-			reset : in std_logic;
-			write_enable : in std_logic;
-			read_enable : in std_logic;
-			data_in : in std_logic_vector (DATA_SIZE - 1 downto 0);
-			data_out : out std_logic_vector (DATA_SIZE - 1 downto 0);
-			empty : out std_logic;
-			full : out std_logic);
-			
-	end component reverb_FIFO;
+component reverb is
+	port(
+	    source_signal : in unsigned(DATA_SIZE - 1 downto 0);
+	    clear_bit, clk, switch: in std_logic;
+	    output: out unsigned(DATA_SIZE - 1 downto 0)
+	     );
+	end component reverb;
 	
-	component reverb_adder is
-		port(
-		IN1,IN2: in std_logic_vector(DATA_SIZE - 1 downto 0);
-		SUM    : out std_logic_vector(DATA_SIZE - 1 downto 0));
-	end component reverb_adder;
+signal source_signal_tb : unsigned(DATA_SIZE - 1 downto 0);
+signal clear_bit_tb, clk_tb, switch_tb: std_logic;
 	
-	component AND16 is
-		port(
-		A,B: in std_logic_vector(DATA_SIZE - 1 downto 0);
-		C  : out std_logic_vector(DATA_SIZE - 1 downto 0));
-	end component AND16;
+	--signal fifo_output, and_output: unsigned(DATA_SIZE - 1 downto 0);
+	--signal fifo_reset, fifo_write_en, fifo_read_en, fifo_empty, fifo_full : std_logic;
+	--signal fifo_in_data, fifo_out_data, AND_switch : unsigned (DATA_SIZE - 1 downto 0);
 	
+begin
 	
-	signal fifo_output, and_output: std_logic_vector(DATA_SIZE - 1 downto 0);
-	
-	signal fifo_reset, fifo_write_en, fifo_read_en, fifo_empty, fifo_full : std_logic;
-	signal fifo_in_data, fifo_out_data : std_logic_vector (DATA_SIZE - 1 downto 0);
-	signal and_result : std_logic_vector(DATA_SIZE - 1 downto 0);
-	
-	begin
-	
-	FIFO_0: reverb_FIFO port map(clk, fifo_reset, fifo_write_en, fifo_read_en, fifo_in_data, fifo_out_data, fifo_empty, fifo_full);
-	
-	AND_0: AND16 port map(fifo_out_data, switch, and_result);
-	
-	ADDER_0: reverb_adder port map(source_signal, and_output, flanger_output);
-	
-	
+REVERB_0: reverb port map(source_signal_tb, clear_bit_tb, clk_tb, switch_tb, output);
+
+clock: process is 
+variable count : natural := 0;
+begin
+if (count < 21) then
+    clk_tb <= '0';
+    wait for 3ns;
+    clk_tb <= '1';
+    wait for 3ns;
+    count := count + 1;
+else
+    wait;
+end if;
+end process;
+
+simulation: process is begin
+switch_tb <= '0';
+source_signal_tb <= x"4b6f";
+wait for 15ns;
+switch_tb <= '1';
+wait for 15ns;
+source_signal_tb <= x"dead";
+wait for 15ns;
+source_signal_tb <= x"0000";
+wait for 15ns;
+source_signal_tb <= x"7fff";
+wait for 15ns;
+source_signal_tb <= x"80a3";
+wait for 15ns;
+source_signal_tb <= x"3333";
+wait for 15ns;
+source_signal_tb <= x"ffff";
+wait for 15ns;
+source_signal_tb <= x"0000";
+wait;
+end process;
+
 end behavioral;

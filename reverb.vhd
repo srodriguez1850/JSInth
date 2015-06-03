@@ -46,17 +46,21 @@ architecture behavioral of reverb is
 	
 	begin
 	
+	fifo_in_data <= source_signal;
+	
 	FIFO_0: reverb_FIFO port map(clk, fifo_reset, fifo_write_en, fifo_read_en, fifo_in_data, fifo_out_data, fifo_empty, fifo_full);
 	
 	AND_0: AND16 port map(fifo_out_data, AND_switch, and_output);
 	
 	ADDER_0: reverb_adder port map(source_signal, and_output, output);
+
+	output <= fifo_out_data;
 	
 	process(switch) is begin
 	if (switch = '0') then
 	  AND_switch <= x"0000";
 	else
-	  AND_switch <= x"1111";
+	  AND_switch <= x"ffff";
 	end if;
 	end process;
 	  

@@ -8,18 +8,19 @@ entity reverb_adder is
 		IN1,IN2: in unsigned(15 downto 0);
 		SUM    : out unsigned(15 downto 0)
 	);
-
 end entity reverb_adder; 
 
 
-ARCHITECTURE behavioral OF reverb_adder is
+ARCHITECTURE dataflow OF reverb_adder is
+
+signal int1, int2, int_sum : integer;
+
 begin
-process(IN1, IN2)
-variable int1, int2, int_sum : integer;
-begin
-int1 := to_integer(signed(IN1));
-int2 := to_integer(signed(IN2));
-int_sum := int1 + int2;
-SUM <= unsigned(to_signed(int_sum, DATA_SIZE));
-end process;
-end behavioral;
+
+int1 <= to_integer(signed(IN1));
+int2 <= to_integer(signed(IN2));
+int_sum <= (int1 + int2)/2;
+
+SUM <= unsigned(to_signed(int_sum, 16));
+
+end dataflow;
