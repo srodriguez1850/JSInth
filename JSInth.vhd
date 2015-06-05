@@ -3,6 +3,25 @@
 -- top-level entity
 --
 
+-- README
+-- Here's the things you guys gotta do.
+--
+-- Ian / Sebastian:
+-- I set up the multiplexer at the end of this file to select the correct synth (no synth,
+-- reverb, flanger) depending of the current state of the synth FSM. It also incorporates the mute (sends 0x0000 when mute is on).
+-- I set up Ian's reverb similar to Sebastian's flanger, feel free to modify the port map as you see fit. Uncomment the port map to
+-- synthesize the reverb/flanger. Since the reverb had an
+-- enable bit (which is the 0 bit of the current_synth signal), I also assigned an enable bit to the flanger (which is bit 1 of
+-- current_synth). Testbench thoroughly as you'll probably find bugs when you try to compile it in Quartus.
+--
+-- Spencer:
+-- Replace the de2_i2c_av_config.v with the new version that takes current_volume as a parameter, compile and test it. There's no way
+-- you can testbench that. If you wanna speed up the compiling, go to audioROM.vhd and comment all except one of the keyxx_map port
+-- maps to avoid synthesizing the roms (speeds it up tons). Don't forget to uncomment them if you wanna hear full sounds.
+-- Also, the 4 notes of octave 6 are not the correct samples (I used the app and their frequency is much lower than what they should be).
+-- Double check the samples and the num_samples ROM (maybe it has a much higher sample count but that shouldn't matter). Else it could be
+-- a hardware limitation but double check if you can regardless.
+
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.all;
 USE IEEE.numeric_std.all;
@@ -94,18 +113,16 @@ END COMPONENT FSM_synth;
 
 COMPONENT WM8731_CONTROLLER IS
    PORT(
-    clk : in std_logic;                 --    Audio CODEC Chip Clock AUD_XCK
+    clk : in std_logic;
     reset_n : in std_logic;
-    test_mode : in std_logic;           --    Audio CODEC controller test mode
-    audio_request : out std_logic;      --    Audio controller request new data
+    audio_request : out std_logic;
     data_in: in unsigned (15 downto 0);
   
-    -- Audio interface signals
-    AUD_ADCLRCK  : out std_logic;       --    Audio CODEC ADC LR Clock
-    AUD_ADCDAT   : in  std_logic;       --    Audio CODEC ADC Data
-    AUD_DACLRCK  : out std_logic;       --    Audio CODEC DAC LR Clock
-    AUD_DACDAT   : out std_logic;       --    Audio CODEC DAC Data
-    AUD_BCLK     : inout std_logic      --    Audio CODEC Bit-Stream Clock
+    AUD_ADCLRCK: out std_logic;
+    AUD_ADCDAT: in  std_logic;
+    AUD_DACLRCK: out std_logic;
+    AUD_DACDAT: out std_logic;
+    AUD_BCLK: inout std_logic
   );
 END COMPONENT WM8731_CONTROLLER;
  
@@ -129,11 +146,16 @@ end component reverb;
 SIGNAL current_volume: std_logic_vector (2 downto 0);
 SIGNAL current_octave: std_logic_vector (1 downto 0);
 SIGNAL current_synth: std_logic_vector(1 downto 0);
+
 SIGNAL audio_clock: unsigned (1 downto 0) := "00";
 SIGNAL audio_request: std_logic;
 SIGNAL data_buffer: unsigned (15 downto 0);
 
+SIGNAL synth_data: unsigned(15 downto 0);
 SIGNAL controller_data: unsigned(15 downto 0);
+
+SIGNAL reverb_data: unsigned(15 downto 0);
+SIGNAL flanger_data: unsigned(15 downto 0);
 
 BEGIN
 
@@ -146,17 +168,16 @@ END PROCESS CLK_DIV_AUD;
 
 AUD_XCK <= audio_clock(1);
 
---i2c : de2_i2c_av_config port map (
---    iCLK     => clk,
---    iRST_n   => '1',
---    I2C_SCLK => I2C_SCLK,
---    I2C_SDAT => I2C_SDAT
---);
+i2c : de2_i2c_av_config port map (
+    iCLK     => clk,
+    iRST_n   => '1',
+    I2C_SCLK => I2C_SCLK,
+    I2C_SDAT => I2C_SDAT
+);
 
 audiomap: WM8731_CONTROLLER port map (
     clk => audio_clock(1),
     reset_n => '1',
-    test_mode => '0',                   -- Output a sine wave
     audio_request => audio_request,
     data_in => controller_data,
   
@@ -175,8 +196,17 @@ synmap: FSM_synth port map(synth_sel, clk, current_synth);
 --map VGA monitor
 vgamap: VGA_top_level port map(clk, reset, vga_red, vga_green, vga_blue, horiz_sync, vert_sync, vga_blank, vga_clk, keys, current_volume, current_octave, current_synth, mute_sel);
 --map ROM
-rommap: audioROM port map(audio_clock(1), audio_request, keys, current_octave, controller_data);
+rommap: audioROM port map(audio_clock(1), audio_request, keys, current_octave, synth_data);
 --map Reverb
---reverbmap: reverb port map(data_in, '0', clk, current_synth(0), controller_data);
+--reverbmap: reverb port map(synth_data, '0', clk, current_synth(0), reverb_data);
+--map Flanger
+--flangermap: flanger port map(synth_data, '0', clk, current_synth(1), flanger_data);
+
+--multiplexer to choose data to go into the WM8731 controller_data, also incorporates mute
+controller_data <= X"0000" WHEN mute_sel = '1' ELSE
+						 synth_data WHEN current_synth = "00" ELSE
+						 reverb_data WHEN current_synth = "01" ELSE
+						 flanger_data WHEN current_synth = "10" ELSE
+						 X"0000";
 
 END ARCHITECTURE main;

@@ -1,5 +1,5 @@
 Flow report for JSInth
-Mon Jun 01 14:32:00 2015
+Thu Jun 04 23:56:02 2015
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -41,20 +41,20 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Mon Jun 01 14:32:00 2015      ;
+; Flow Status                        ; Successful - Thu Jun 04 23:56:02 2015      ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; JSInth                                     ;
 ; Top-level Entity Name              ; JSInth                                     ;
 ; Family                             ; Cyclone IV E                               ;
 ; Device                             ; EP4CE115F29C7                              ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 21,331 / 114,480 ( 19 % )                  ;
-;     Total combinational functions  ; 21,173 / 114,480 ( 18 % )                  ;
-;     Dedicated logic registers      ; 2,039 / 114,480 ( 2 % )                    ;
-; Total registers                    ; 2039                                       ;
+; Total logic elements               ; 21,429 / 114,480 ( 19 % )                  ;
+;     Total combinational functions  ; 21,260 / 114,480 ( 19 % )                  ;
+;     Dedicated logic registers      ; 2,080 / 114,480 ( 2 % )                    ;
+; Total registers                    ; 2080                                       ;
 ; Total pins                         ; 65 / 529 ( 12 % )                          ;
 ; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 8,432 / 3,981,312 ( < 1 % )                ;
+; Total memory bits                  ; 9,456 / 3,981,312 ( < 1 % )                ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                            ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                              ;
 +------------------------------------+--------------------------------------------+
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/01/2015 14:18:45 ;
+; Start date & time ; 06/04/2015 23:43:14 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; JSInth              ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 1096010756256.143318632407588         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 1096010756256.143347939410464         ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --             ;
@@ -96,12 +96,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:05:06     ; 1.0                     ; 962 MB              ; 00:05:12                           ;
-; Fitter                    ; 00:06:24     ; 1.7                     ; 1655 MB             ; 00:08:33                           ;
-; Assembler                 ; 00:00:09     ; 1.0                     ; 635 MB              ; 00:00:07                           ;
-; TimeQuest Timing Analyzer ; 00:00:25     ; 1.1                     ; 990 MB              ; 00:00:25                           ;
-; EDA Netlist Writer        ; 00:00:37     ; 1.0                     ; 863 MB              ; 00:00:34                           ;
-; Total                     ; 00:12:41     ; --                      ; --                  ; 00:14:51                           ;
+; Analysis & Synthesis      ; 00:05:09     ; 1.0                     ; 953 MB              ; 00:05:29                           ;
+; Fitter                    ; 00:06:08     ; 1.7                     ; 1639 MB             ; 00:08:25                           ;
+; Assembler                 ; 00:00:07     ; 1.0                     ; 634 MB              ; 00:00:07                           ;
+; TimeQuest Timing Analyzer ; 00:00:25     ; 1.1                     ; 988 MB              ; 00:00:25                           ;
+; EDA Netlist Writer        ; 00:00:36     ; 1.0                     ; 861 MB              ; 00:00:35                           ;
+; Total                     ; 00:12:25     ; --                      ; --                  ; 00:15:01                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

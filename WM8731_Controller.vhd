@@ -4,18 +4,16 @@ USE IEEE.numeric_std.all;
 
 ENTITY WM8731_CONTROLLER IS
 PORT(
-    clk 				: in std_logic;       --  Audio CODEC Chip Clock AUD_XCK (18.43 MHz)
+    clk 				: in std_logic;
     reset_n 		: in std_logic;
-    test_mode 		: in std_logic;       --    Audio CODEC controller test mode
-    audio_request : out std_logic;  	 --    Audio controller request new data
+    audio_request : out std_logic;
     data_in			: in unsigned (15 downto 0);
 
-    -- Audio interface signals
-    AUD_ADCLRCK  : out  std_logic;   --    Audio CODEC ADC LR Clock
-    AUD_ADCDAT   : in   std_logic;  --    Audio CODEC ADC Data
-    AUD_DACLRCK  : out  std_logic;   --    Audio CODEC DAC LR Clock
-    AUD_DACDAT   : out  std_logic;   --    Audio CODEC DAC Data
-    AUD_BCLK     : inout std_logic   --    Audio CODEC Bit-Stream Clock
+    AUD_ADCLRCK  : out  std_logic;
+    AUD_ADCDAT   : in   std_logic;
+    AUD_DACLRCK  : out  std_logic;
+    AUD_DACDAT   : out  std_logic;
+    AUD_BCLK     : inout std_logic
   );
 END ENTITY WM8731_CONTROLLER;
 
@@ -34,9 +32,6 @@ ARCHITECTURE rtl OF WM8731_CONTROLLER IS
     SIGNAL lrck_lat : std_logic;
     
     SIGNAL shift_out : unsigned(15 downto 0);
-
-    SIGNAL sin_out     : unsigned(15 downto 0);
-    SIGNAL sin_counter : unsigned(5 downto 0) := "000000";
 
 BEGIN
   
@@ -108,11 +103,7 @@ BEGIN
       IF reset_n = '0' THEN
         shift_out <= (others => '0');
       ELSIF set_lrck = '1' THEN
-        IF test_mode = '1' THEN
-          shift_out <= sin_out;
-        ELSE
 			 shift_out <= data_in;
-        END IF;
       ELSIF clr_bclk = '1' THEN
         shift_out <= shift_out (14 downto 0) & '0';
       END IF;
@@ -125,23 +116,6 @@ BEGIN
     AUD_DACLRCK  <= lrck;          
     AUD_DACDAT   <= shift_out(15); 
     AUD_BCLK     <= bclk;          
-
-    -- Self test with Sin wave
-    
-    OUTPUT_SELECT: PROCESS (clk) IS
-    BEGIN
-      IF rising_edge(clk) THEN
-        IF reset_n = '0' THEN
-            sin_counter <= (others => '0');
-        ELSIF lrck_lat = '1' and lrck = '0' THEN 
-          IF sin_counter = "101111" THEN
-            sin_counter <= "000000";
-          ELSE  
-            sin_counter <= sin_counter + 1;
-          END IF;
-        END IF;
-      END IF;
-    END PROCESS OUTPUT_SELECT;
 
     LRCK_LATCH: PROCESS (clk) IS
     BEGIN
@@ -160,58 +134,6 @@ BEGIN
         END IF;
       END IF;
     END PROCESS REQ_AUDIO;
-
-  with sin_counter select sin_out <=
-    X"0000" when "000000",
-    X"10b4" when "000001",
-    X"2120" when "000010",
-    X"30fb" when "000011",
-    X"3fff" when "000100",
-    X"4deb" when "000101",
-    X"5a81" when "000110",
-    X"658b" when "000111",
-    X"6ed9" when "001000",
-    X"7640" when "001001",
-    X"7ba2" when "001010",
-    X"7ee6" when "001011",
-    X"7fff" when "001100",
-    X"7ee6" when "001101",
-    X"7ba2" when "001110",
-    X"7640" when "001111",
-    X"6ed9" when "010000",
-    X"658b" when "010001",
-    X"5a81" when "010010",
-    X"4deb" when "010011",
-    X"3fff" when "010100",
-    X"30fb" when "010101",
-    X"2120" when "010110",
-    X"10b4" when "010111",
-    X"0000" when "011000",
-    X"ef4b" when "011001",
-    X"dee0" when "011010",
-    X"cf05" when "011011",
-    X"c001" when "011100",
-    X"b215" when "011101",
-    X"a57e" when "011110",
-    X"9a74" when "011111",
-    X"9127" when "100000",
-    X"89bf" when "100001",
-    X"845d" when "100010",
-    X"8119" when "100011",
-    X"8000" when "100100",
-    X"8119" when "100101",
-    X"845d" when "100110",
-    X"89bf" when "100111",
-    X"9127" when "101000",
-    X"9a74" when "101001",
-    X"a57e" when "101010",
-    X"b215" when "101011",
-    X"c000" when "101100",
-    X"cf05" when "101101",
-    X"dee0" when "101110",
-    X"ef4b" when "101111",
-    X"0000" when others;
-
 END ARCHITECTURE rtl;
 
 
