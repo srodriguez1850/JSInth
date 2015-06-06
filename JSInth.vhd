@@ -152,10 +152,9 @@ SIGNAL audio_request: std_logic;
 SIGNAL data_buffer: unsigned (15 downto 0);
 
 SIGNAL synth_data: unsigned(15 downto 0);
-SIGNAL controller_data: unsigned(15 downto 0);
-
 SIGNAL reverb_data: unsigned(15 downto 0);
 SIGNAL flanger_data: unsigned(15 downto 0);
+SIGNAL controller_data: unsigned(15 downto 0);
 
 BEGIN
 

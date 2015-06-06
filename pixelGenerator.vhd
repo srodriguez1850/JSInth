@@ -70,130 +70,127 @@ begin
 	begin
 			
 		if (rising_edge(clk)) then
-			----draw keys
-			--key 0
-			--if (31 < pixel_column_int AND pixel_column_int < 87 AND 20 < pixel_row_int AND pixel_row_int < 160) then
-			--	if (keys_vga(16) = '1') then
-			--		colorAddress <= color_magenta;
-			--	else
-			--		colorAddress <= color_cyan;
-			--	end if;
-			--key 1
-			if (89 < pixel_column_int AND pixel_column_int < 145 AND 20 < pixel_row_int AND pixel_row_int < 160) then
-				if (keys_vga(14) = '1') then
-					colorAddress <= color_magenta;
-				else
-					colorAddress <= color_cyan;
-				end if;
-			--key 2
-			elsif (147 < pixel_column_int AND pixel_column_int < 203 AND 20 < pixel_row_int AND pixel_row_int < 160) then
-				if (keys_vga(12) = '1') then
-					colorAddress <= color_magenta;
-				else
-					colorAddress <= color_cyan;
-				end if;
-			--key 3
-			elsif (205 < pixel_column_int AND pixel_column_int < 261 AND 20 < pixel_row_int AND pixel_row_int < 160) then
-				if (keys_vga(11) = '1') then
-					colorAddress <= color_magenta;
-				else
-					colorAddress <= color_cyan;
-				end if;
-			--key 4
-			elsif (263 < pixel_column_int AND pixel_column_int < 319 AND 20 < pixel_row_int AND pixel_row_int < 160) then
-				if (keys_vga(9) = '1') then
-					colorAddress <= color_magenta;
-				else
-					colorAddress <= color_cyan;
-				end if;
-			--key 5
-			elsif (321 < pixel_column_int AND pixel_column_int < 377 AND 20 < pixel_row_int AND pixel_row_int < 160) then
-				if (keys_vga(7) = '1') then
-					colorAddress <= color_magenta;
-				else
-					colorAddress <= color_cyan;
-				end if;
-			--key 6
-			elsif (379 < pixel_column_int AND pixel_column_int < 435 AND 20 < pixel_row_int AND pixel_row_int < 160) then
-				if (keys_vga(5) = '1') then
-					colorAddress <= color_magenta;
-				else
-					colorAddress <= color_cyan;
-				end if;
-			--key 7
-			elsif (437 < pixel_column_int AND pixel_column_int < 493 AND 20 < pixel_row_int AND pixel_row_int < 160) then
-				if (keys_vga(4) = '1') then
-					colorAddress <= color_magenta;
-				else
-					colorAddress <= color_cyan;
-				end if;
-			--key 8
-			elsif (495 < pixel_column_int AND pixel_column_int < 551 AND 20 < pixel_row_int AND pixel_row_int < 160) then
-				if (keys_vga(2) = '1') then
-					colorAddress <= color_magenta;
-				else
-					colorAddress <= color_cyan;
-				end if;
-			--key 9
-			elsif (553 < pixel_column_int AND pixel_column_int < 609 AND 20 < pixel_row_int AND pixel_row_int < 160) then
-				if (keys_vga(0) = '1') then
-					colorAddress <= color_magenta;
-				else
-					colorAddress <= color_cyan;
-				end if;
+			----draw outline
+			if (6 < pixel_column_int AND pixel_column_int < 632 AND 15 < pixel_row_int AND pixel_row_int < 165) then
+				colorAddress <= color_blue;
 			else
 				colorAddress <= color_black;
 			end if;
+			----draw keys
+			--key 15
+			if (11 < pixel_column_int AND pixel_column_int < 75 AND 20 < pixel_row_int AND pixel_row_int < 160) then
+				if (keys_vga(15) = '1') then
+					colorAddress <= color_magenta;
+				else
+					colorAddress <= color_white;
+				end if;
+			--key 13
+			elsif (77 < pixel_column_int AND pixel_column_int < 141 AND 20 < pixel_row_int AND pixel_row_int < 160) then
+				if (keys_vga(13) = '1') then
+					colorAddress <= color_magenta;
+				else
+					colorAddress <= color_white;
+				end if;
+			--key 11
+			elsif (143 < pixel_column_int AND pixel_column_int < 207 AND 20 < pixel_row_int AND pixel_row_int < 160) then
+				if (keys_vga(11) = '1') then
+					colorAddress <= color_magenta;
+				else
+					colorAddress <= color_white;
+				end if;
+			--key 10
+			elsif (209 < pixel_column_int AND pixel_column_int < 273 AND 20 < pixel_row_int AND pixel_row_int < 160) then
+				if (keys_vga(10) = '1') then
+					colorAddress <= color_magenta;
+				else
+					colorAddress <= color_white;
+				end if;
+			--key 8
+			elsif (275 < pixel_column_int AND pixel_column_int < 339 AND 20 < pixel_row_int AND pixel_row_int < 160) then
+				if (keys_vga(8) = '1') then
+					colorAddress <= color_magenta;
+				else
+					colorAddress <= color_white;
+				end if;
+			--key 6
+			elsif (341 < pixel_column_int AND pixel_column_int < 405 AND 20 < pixel_row_int AND pixel_row_int < 160) then
+				if (keys_vga(6) = '1') then
+					colorAddress <= color_magenta;
+				else
+					colorAddress <= color_white;
+				end if;
+			--key 4
+			elsif (407 < pixel_column_int AND pixel_column_int < 471 AND 20 < pixel_row_int AND pixel_row_int < 160) then
+				if (keys_vga(4) = '1') then
+					colorAddress <= color_magenta;
+				else
+					colorAddress <= color_white;
+				end if;
+			--key 3
+			elsif (473 < pixel_column_int AND pixel_column_int < 537 AND 20 < pixel_row_int AND pixel_row_int < 160) then
+				if (keys_vga(3) = '1') then
+					colorAddress <= color_magenta;
+				else
+					colorAddress <= color_white;
+				end if;
+			--key 1
+			elsif (539 < pixel_column_int AND pixel_column_int < 603 AND 20 < pixel_row_int AND pixel_row_int < 160) then
+				if (keys_vga(1) = '1') then
+					colorAddress <= color_magenta;
+				else
+					colorAddress <= color_white;
+				end if;
+			end if;
 			
 			----draw sharp keys
-			--key sharp 0
-			if (65 < pixel_column_int AND pixel_column_int < 110 AND 20 < pixel_row_int AND pixel_row_int < 100) then
-				if (keys_vga(15) = '1') then
+			--key 14
+			if (51 < pixel_column_int AND pixel_column_int < 95 AND 20 < pixel_row_int AND pixel_row_int < 100) then
+				if (keys_vga(14) = '1') then
 					colorAddress <= color_red;
 				else
-					colorAddress <= color_blue;
+					colorAddress <= color_black;
 				end if;
-			--key sharp 1
-			elsif (120 < pixel_column_int AND pixel_column_int < 169 AND 20 < pixel_row_int AND pixel_row_int < 100) then
-				if (keys_vga(13) = '1') then
+			--key 12
+			elsif (117 < pixel_column_int AND pixel_column_int < 161 AND 20 < pixel_row_int AND pixel_row_int < 100) then
+				if (keys_vga(12) = '1') then
 					colorAddress <= color_red;
 				else
-					colorAddress <= color_blue;
+					colorAddress <= color_black;
 				end if;
-			--key sharp 2
-			elsif (239 < pixel_column_int AND pixel_column_int < 284 AND 20 < pixel_row_int AND pixel_row_int < 100) then
-				if (keys_vga(10) = '1') then
+			--key 9
+			elsif (249 < pixel_column_int AND pixel_column_int < 293 AND 20 < pixel_row_int AND pixel_row_int < 100) then
+				if (keys_vga(9) = '1') then
 					colorAddress <= color_red;
 				else
-					colorAddress <= color_blue;
+					colorAddress <= color_black;
 				end if;
-			--key sharp 3
-			elsif (294 < pixel_column_int AND pixel_column_int < 339 AND 20 < pixel_row_int AND pixel_row_int < 100) then
-				if (keys_vga(8) = '1') then
+			--key 7
+			elsif (315 < pixel_column_int AND pixel_column_int < 359 AND 20 < pixel_row_int AND pixel_row_int < 100) then
+				if (keys_vga(7) = '1') then
 					colorAddress <= color_red;
 				else
-					colorAddress <= color_blue;
+					colorAddress <= color_black;
 				end if;
-			--key sharp 4
-			elsif (349 < pixel_column_int AND pixel_column_int < 394 AND 20 < pixel_row_int AND pixel_row_int < 100) then
-				if (keys_vga(6) = '1') then
+			--key 5
+			elsif (381 < pixel_column_int AND pixel_column_int < 425 AND 20 < pixel_row_int AND pixel_row_int < 100) then
+				if (keys_vga(5) = '1') then
 					colorAddress <= color_red;
 				else
-					colorAddress <= color_blue;
+					colorAddress <= color_black;
 				end if;
-			--key sharp 5
-			elsif (471 < pixel_column_int AND pixel_column_int < 516 AND 20 < pixel_row_int AND pixel_row_int < 100) then
-				if (keys_vga(3) = '1') then
+			--key 2
+			elsif (513 < pixel_column_int AND pixel_column_int < 557 AND 20 < pixel_row_int AND pixel_row_int < 100) then
+				if (keys_vga(2) = '1') then
 					colorAddress <= color_red;
 				else
-					colorAddress <= color_blue;
+					colorAddress <= color_black;
 				end if;
-			--key sharp 6
-			elsif (526 < pixel_column_int AND pixel_column_int < 571 AND 20 < pixel_row_int AND pixel_row_int < 100) then
-				if (keys_vga(1) = '1') then
+			--key 0
+			elsif (583 < pixel_column_int AND pixel_column_int < 627 AND 20 < pixel_row_int AND pixel_row_int < 100) then
+				if (keys_vga(0) = '1') then
 					colorAddress <= color_red;
 				else
-					colorAddress <= color_blue;
+					colorAddress <= color_black;
 				end if;
 			end if;
 			

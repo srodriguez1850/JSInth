@@ -2,61 +2,41 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'audio_clock[1]'
-Slack : -153.075
-TNS   : -5134.358
-
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -7.119
-TNS   : -79.635
-
-Type  : Slow 1200mV 85C Model Setup 'WM8731_CONTROLLER:audiomap|audio_request'
-Slack : -5.728
-TNS   : -1974.561
-
-Type  : Slow 1200mV 85C Model Setup 'FSM_octave:octmap|z[0]'
-Slack : -5.660
-TNS   : -1172.427
+Slack : -6.726
+TNS   : -76.896
 
 Type  : Slow 1200mV 85C Model Setup 'VGA_top_level:vgamap|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : -2.644
-TNS   : -82.114
+Slack : -2.621
+TNS   : -85.349
+
+Type  : Slow 1200mV 85C Model Setup 'audio_clock[1]'
+Slack : -2.538
+TNS   : -57.978
 
 Type  : Slow 1200mV 85C Model Setup 'de2_i2c_av_config:i2c|mI2C_CTRL_CLK'
-Slack : -2.488
-TNS   : -78.374
-
-Type  : Slow 1200mV 85C Model Hold 'FSM_octave:octmap|z[0]'
-Slack : -0.376
-TNS   : -1.600
+Slack : -2.393
+TNS   : -77.973
 
 Type  : Slow 1200mV 85C Model Hold 'VGA_top_level:vgamap|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : 0.262
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'audio_clock[1]'
-Slack : 0.325
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'de2_i2c_av_config:i2c|mI2C_CTRL_CLK'
-Slack : 0.360
+Slack : 0.266
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.385
+Slack : 0.289
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'WM8731_CONTROLLER:audiomap|audio_request'
-Slack : 0.595
+Type  : Slow 1200mV 85C Model Hold 'de2_i2c_av_config:i2c|mI2C_CTRL_CLK'
+Slack : 0.376
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'audio_clock[1]'
+Slack : 0.386
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
 TNS   : -54.400
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'WM8731_CONTROLLER:audiomap|audio_request'
-Slack : -2.693
-TNS   : -984.391
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'de2_i2c_av_config:i2c|mI2C_CTRL_CLK'
 Slack : -2.693
@@ -68,67 +48,43 @@ TNS   : -60.518
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'audio_clock[1]'
 Slack : -1.285
-TNS   : -1634.520
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FSM_octave:octmap|z[0]'
-Slack : 0.385
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Setup 'audio_clock[1]'
-Slack : -138.125
-TNS   : -4484.007
+TNS   : -38.550
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -6.356
-TNS   : -69.977
-
-Type  : Slow 1200mV 0C Model Setup 'WM8731_CONTROLLER:audiomap|audio_request'
-Slack : -5.179
-TNS   : -1739.358
-
-Type  : Slow 1200mV 0C Model Setup 'FSM_octave:octmap|z[0]'
-Slack : -5.132
-TNS   : -1058.721
+Slack : -6.132
+TNS   : -67.644
 
 Type  : Slow 1200mV 0C Model Setup 'VGA_top_level:vgamap|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : -2.331
-TNS   : -71.240
+Slack : -2.332
+TNS   : -74.300
+
+Type  : Slow 1200mV 0C Model Setup 'audio_clock[1]'
+Slack : -2.239
+TNS   : -49.998
 
 Type  : Slow 1200mV 0C Model Setup 'de2_i2c_av_config:i2c|mI2C_CTRL_CLK'
-Slack : -2.175
-TNS   : -67.610
+Slack : -2.177
+TNS   : -67.354
 
-Type  : Slow 1200mV 0C Model Hold 'FSM_octave:octmap|z[0]'
-Slack : -0.261
-TNS   : -0.702
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.279
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'VGA_top_level:vgamap|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : 0.292
+Slack : 0.299
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'audio_clock[1]'
-Slack : 0.337
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.338
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'de2_i2c_av_config:i2c|mI2C_CTRL_CLK'
 Slack : 0.339
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'WM8731_CONTROLLER:audiomap|audio_request'
-Slack : 0.577
+Type  : Slow 1200mV 0C Model Hold 'de2_i2c_av_config:i2c|mI2C_CTRL_CLK'
+Slack : 0.340
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
 TNS   : -54.400
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'WM8731_CONTROLLER:audiomap|audio_request'
-Slack : -2.649
-TNS   : -982.983
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'de2_i2c_av_config:i2c|mI2C_CTRL_CLK'
 Slack : -2.649
@@ -140,71 +96,43 @@ TNS   : -60.474
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'audio_clock[1]'
 Slack : -1.285
-TNS   : -1634.520
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FSM_octave:octmap|z[0]'
-Slack : 0.418
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'audio_clock[1]'
-Slack : -75.282
-TNS   : -1928.650
+TNS   : -38.550
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -2.849
-TNS   : -19.921
-
-Type  : Fast 1200mV 0C Model Setup 'WM8731_CONTROLLER:audiomap|audio_request'
-Slack : -2.356
-TNS   : -621.587
-
-Type  : Fast 1200mV 0C Model Setup 'FSM_octave:octmap|z[0]'
-Slack : -2.332
-TNS   : -457.331
+Slack : -2.771
+TNS   : -18.350
 
 Type  : Fast 1200mV 0C Model Setup 'VGA_top_level:vgamap|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : -0.753
-TNS   : -17.530
+Slack : -0.761
+TNS   : -19.158
+
+Type  : Fast 1200mV 0C Model Setup 'audio_clock[1]'
+Slack : -0.749
+TNS   : -13.942
 
 Type  : Fast 1200mV 0C Model Setup 'de2_i2c_av_config:i2c|mI2C_CTRL_CLK'
-Slack : -0.682
-TNS   : -12.988
-
-Type  : Fast 1200mV 0C Model Hold 'FSM_octave:octmap|z[0]'
-Slack : -0.325
-TNS   : -4.385
+Slack : -0.710
+TNS   : -12.944
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.025
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'audio_clock[1]'
-Slack : 0.026
+Slack : 0.010
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'VGA_top_level:vgamap|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : 0.109
+Slack : 0.107
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'de2_i2c_av_config:i2c|mI2C_CTRL_CLK'
-Slack : 0.147
+Slack : 0.154
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'WM8731_CONTROLLER:audiomap|audio_request'
-Slack : 0.268
+Type  : Fast 1200mV 0C Model Hold 'audio_clock[1]'
+Slack : 0.173
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -45.490
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'audio_clock[1]'
-Slack : -1.000
-TNS   : -1272.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'WM8731_CONTROLLER:audiomap|audio_request'
-Slack : -1.000
-TNS   : -731.000
+TNS   : -45.494
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'VGA_top_level:vgamap|VGA_SYNC:videoSync|pixel_clock_int'
 Slack : -1.000
@@ -214,8 +142,8 @@ Type  : Fast 1200mV 0C Model Minimum Pulse Width 'de2_i2c_av_config:i2c|mI2C_CTR
 Slack : -1.000
 TNS   : -41.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FSM_octave:octmap|z[0]'
-Slack : 0.329
-TNS   : 0.000
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'audio_clock[1]'
+Slack : -1.000
+TNS   : -30.000
 
 ------------------------------------------------------------
